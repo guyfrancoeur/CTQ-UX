@@ -26,6 +26,7 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
 #### Objectif technique
 - Produire une application simple qui puisse être utilisée par tous.
 - Obtenir une expérience UI/UX qui soit optimale.
+- Multi-Langues (sans round-trip)
 
   ##### Buts technique
     - Tous les fureteurs
