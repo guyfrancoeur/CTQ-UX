@@ -8,15 +8,11 @@ Bienvenue à tous les développeurs qui désirent apprendre ou faire du code de 
 Ce projet vise l'accomplissement d'interfaces visuelles.
 
 Outils :
+- HTML 5
 - Bootstrap 4
 - JSON
 - JavaScript (JS)
 - JQuery UI
-
-But :
-- Code léger
-- dépendance minimale
-- JavaScript maximal : simple et rapide
 
 ### Rôles de l'application
 
@@ -30,6 +26,13 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
 #### Objectif technique
 - Produire une application simple qui puisse être utilisée par tous.
 - Obtenir une expérience UI/UX qui soit optimale.
+
+  ##### Buts technique
+    - Tous les fureteurs
+    - Sécuritaire
+    - Code léger
+    - dépendance minimale
+    - JavaScript maximal : simple et rapide
 
 ---
 Copyright 2020
