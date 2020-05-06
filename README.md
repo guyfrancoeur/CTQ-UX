@@ -10,9 +10,9 @@ Ce projet vise l'accomplissement d'interfaces visuelles.
 Outils :
 - HTML 5
 - Bootstrap 4
-- JSON
-- JavaScript (JS)
-- JQuery UI
+- JSON (pour les échanges)
+- JavaScript
+- JQuery (ajax)
 
 ### Rôles de l'application
 
@@ -31,7 +31,7 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
     - Tous les fureteurs
     - Sécuritaire
     - Code léger
-    - dépendance minimale
+    - Dépendance minimale
     - JavaScript maximal : simple et rapide
 
 ---
