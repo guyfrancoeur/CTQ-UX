@@ -43,9 +43,18 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
  - [ ] demande et réponse : d.html
  - [ ] password oublié : mf.html
  - [ ] aide (help) intéractive
- - [ ] langue dinamique
+ - [ ] langue dynamique
 
 - *m* dans le fichier veut dire qu'il s'agit d'une forme modale.
+
+
+### Consulter l'onglet project (github)
+
+- Pour participer consulter l'onglet *Project* de GitHub. 
+- Ajouter les **todo** et prennez des tâches (approuvé).
+
+Lorsque vous travaillez sur une tâches, assurez-vous quelle soit bougé dans **En cours**, par la suite vers **En révision**, finalement **Done**.
+
 
 ---
 Copyright 2020
