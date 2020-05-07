@@ -53,7 +53,7 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
 - Pour participer consulter l'onglet *Project* de GitHub. 
 - Ajouter les **todo** et prennez des tâches (approuvé).
 
-Lorsque vous travaillez sur une tâches, assurez-vous quelle soit bougé dans **En cours**, par la suite vers **En révision**, finalement **Done**.
+Lorsque vous travaillez sur une tâche, assurez-vous quelles soient bougées dans **En cours**, par la suite vers **En révision**, finalement vers **Done**.
 
 
 ---
