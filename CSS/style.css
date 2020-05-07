@@ -4,14 +4,14 @@
 }
 
 .bloc-blanc{
-	margin-top:-8%;
+	margin-top:-14%;
 }
 
 .section{
 	background-image: url(../images/highway-1031149_1920-12.png);
 	height: 450px;
 	background-size: cover;
-	background-position: 50% 40%;
+	background-position: 50% 60%;
 	background-repeat: no-repeat;
 }
 
@@ -22,9 +22,9 @@
 */
 
 .class-footer{
-	height: 80px;
+	height: 70px;
 }
 
 .navbar {
-  min-height: 80px;
+  min-height: 60px;
 }
