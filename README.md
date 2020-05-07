@@ -41,6 +41,8 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
  - [ ] transporteur (edition ajout): mt.html
  - [ ] demande et réponse : d.html
  - [ ] password oublié : mf.html
+ - [ ] aide (help) intéractive
+ - [ ] langue dinamique
 
 - *m* dans le fichier veut dire qu'il s'agit d'une forme modale.
 
