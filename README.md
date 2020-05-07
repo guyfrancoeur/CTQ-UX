@@ -10,7 +10,7 @@ Ce projet vise l'accomplissement d'interfaces visuelles.
 Outils :
 - HTML 5
 - Bootstrap 4
-- JSON (pour les échanges)
+- JSON (pour les échanges de données)
 - JavaScript
 - JQuery (ajax)
 
@@ -24,16 +24,17 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
 
 
 #### Objectif technique
-- Produire une application simple qui puisse être utilisée par tous.
-- Obtenir une expérience UI/UX qui soit optimale.
-- Multi-Langues (sans round-trip)
+- Produire une application simple qui puisse être utilisée par tous;
+- Obtenir une expérience UI/UX qui soit optimale;
+- Multi-Langues (sans round-trip);
+- Aide en mode intéractif.
 
   ##### Buts technique
-    - Tous les fureteurs
-    - Sécuritaire
-    - Code léger
-    - Dépendance minimale
-    - JavaScript maximal : simple et rapide
+    - Tous les fureteurs et mobile;
+    - Sécuritaire;
+    - Code léger;
+    - Dépendance minimale;
+    - JavaScript, simple et rapide.
 
 ### TODO
  - [ ] login : l.html
