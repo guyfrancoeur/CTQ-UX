@@ -1,0 +1,30 @@
+.bloc{
+	border-radius:15px;
+	background-color:white;
+}
+
+.bloc-blanc{
+	margin-top:-8%;
+}
+
+.section{
+	background-image: url(../images/highway-1031149_1920-12.png);
+	height: 450px;
+	background-size: cover;
+	background-position: 50% 40%;
+	background-repeat: no-repeat;
+}
+
+/*
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(148,87,27) !important;
+}
+*/
+
+.class-footer{
+	height: 80px;
+}
+
+.navbar {
+  min-height: 80px;
+}
