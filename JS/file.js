@@ -10,10 +10,11 @@ function modify(){
 	$('#div3').addClass('second-bloc');
 	$('#div4').addClass('interieur');
 	
+	/*
 	var div5 = document.getElementById("div5");
 	div5.style.marginTop = "-30%";
 	
-	/*
+	
 	var div6 = document.getElementById("div6");
 	div6.style.marginTop = "-30%";
 	*/
@@ -25,7 +26,17 @@ function modify(){
 
 
 
+var mydata = JSON.parse(data);
+alert(mydata[0].name);
+alert(mydata[0].age);
+alert(mydata[1].name);
+alert(mydata[1].age);
 
 
+
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+document.write(obj.count);
 
 
