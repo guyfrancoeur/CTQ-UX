@@ -4,10 +4,10 @@
 }
 
 @media (max-width: 1199px) {
-  .bloc-blanc2{
-    margin-top:15px;
-    margin-bottom:70px;
-  }
+	.bloc-blanc2{
+		margin-top:15px;
+		margin-bottom:70px;
+	}
 }
 
 #container{
@@ -15,13 +15,13 @@
 }
 
 .section::before {
-  position: absolute;
-  content: '';
-  z-index: -1;
-  width: 100%;
-  height: 450px;
-  background-position: 50% 65%;
-  background-image: url(../images/highway-1031149_1920-12.png);
+	position: absolute;
+	content: '';
+	z-index: -1;
+	width: 100%;
+	height: 450px;
+	background-position: 50% 65%;
+	background-image: url(../images/highway-1031149_1920-12.png);
 }
 
 .class-footer{
@@ -29,7 +29,7 @@
 }
 
 .navbar {
-  min-height: 50px;
+	min-height: 50px;
 }
 
 .bloc-formulaire{

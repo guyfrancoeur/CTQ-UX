@@ -9,6 +9,7 @@
 	<script src="../lib/font-awesome/js/all.js"></script>
 	<script src="../lib/bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
     <script src="../lib/bootstrap/JS/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.0/umd/popper.min.js"></script>
 </head>
 
 <body class="bg-light">
@@ -37,8 +38,8 @@
 			        </div>
 			    </li>
 			    <li>
-			      	<div class="btn-toolbar">
-			      		<a href="l.html" class="button btn btn-outline-light mr-3">Login</a>
+			      	<div class="btn-toolbar" id="login">
+			      		<a data-toggle="modal" data-target="#formulaire" class="button btn btn-dark btn-outline-light mr-3 text-light">Login</a>
 			      	</div>
 		      	</li>
 	      	</ul>
@@ -238,6 +239,50 @@
 </div>
 <br/>
 
+
+
+
+<!-- ************* LOGIN (MODAL) ************* -->
+	<div class="modal fade" id="formulaire">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content p-2">
+				<div class="modal-header">
+					<h4 class="modal-title">Login</h4>
+					<button type="button" class="close" data-dismiss="modal">
+						<span class=" text-right">&times;</span>
+					</button>
+					<br/>
+				</div>
+			 <div class="modal-body row">
+				<form class="col" action="d.html" id="login-form">
+					<div class="form-group row">
+						<label for="email" class="col-sm-2 form-control-label">Email</label>
+						<div class="col-10">
+							<input type="text" class="form-control" id="email" placeholder="email@example.com">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="password" class="col-sm-2 form-control-label">Password</label>
+						<div class="col-10">
+							<input type="password" class="form-control" id="password" placeholder="Password">
+						</div>
+					</div>
+					<br/>
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary bg-gray-300">Sign in</button>
+					</div>
+				</form>
+			</div>
+			<div class="dropdown-divider"></div>
+				<div class="text-center">
+					<a href="#">New around here? Sign up</a><br/>
+					<a href="#">Forgot password?</a>
+				</div>
+				<br/>
+			</div>
+		</div>
+	</div>
+<!-- ************* LOGIN (MODAL) ************* -->
 
 
 
