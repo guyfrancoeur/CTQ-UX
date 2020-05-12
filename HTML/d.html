@@ -23,7 +23,7 @@
 	  	<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 	    	<ul class="navbar-nav">
 		    	<li class="nav-item active mr-3">
-		        	<a class="nav-link" href="d.html">Home<span class="sr-only">(current)</span></a>
+		        	<a id="home" class="lang nav-link" href="d.html">Home<span class="sr-only">(current)</span></a>
 		      	</li>
 	      		<li class="nav-item dropdown mr-3">
 			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Imperial</a>
@@ -32,14 +32,14 @@
 			        </div>
 			    </li>
 	      		<li class="nav-item dropdown mr-3">
-			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
+			        <a id="en" class="nav-link dropdown-toggle lang lang-button btn"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			          <a class="dropdown-item" href="#">Fr</a>
+			          <a id="fr" class="dropdown-item translate lang other-lang-button btn">Fr</a>
 			        </div>
 			    </li>
 			    <li>
 			      	<div class="btn-toolbar" id="login">
-			      		<a data-toggle="modal" data-target="#formulaire" class="button btn btn-dark btn-outline-light mr-3 text-light">Login</a>
+			      		<a id="sign-in" data-toggle="modal" data-target="#formulaire" class="lang button btn btn-dark btn-outline-light mr-3 text-light">Login</a>
 			      	</div>
 		      	</li>
 	      	</ul>
@@ -75,19 +75,19 @@
 	<!-- ************* FORM ************* -->
 		<div id="div2">
 			<div class="mr-2">
-				<div id="div5"">
+				<div id="div5">
 					<div class="shadow bg-white position-relative bloc bloc-formulaire">
 						<div class="tab-content">
 							<form action="javascript:void(0);" onsubmit="modify()">
 								<br/>
 								<div class="form-row align-items-center col-12">
 									<div class="text-center col-12 col-md-6">
-										<label class="sr-only" for="destination">Origin</label>
+										<label class="sr-only" for="origin">Origin</label>
 										<div class="input-group mb-2">
 										  	<div class="input-group-prepend label-absolute">
 										    	<span class="input-group-text lighten-3  bg-light"><i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i></span>
 										  	</div>
-										   	<input type="text" class="form-control" id="origin" placeholder="ORIGIN - City or Postal Code">
+										   	<input type="text" class="form-control lang" id="origin" placeholder="ORIGIN - City or Postal Code">
 										</div>
 										<div class="invalid-feedback">
 									        	Please enter an origin.
@@ -99,7 +99,7 @@
 										  	<div class="input-group-prepend">
 										    	<span class="input-group-text lighten-3  bg-light"><i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i></span>
 										  	</div>
-										   	<input type="text" class="form-control" id="destination" placeholder="DESTINATION - City or Postal Code">
+										   	<input type="text" class="form-control lang" id="destination" placeholder="DESTINATION - City or Postal Code">
 										</div>
 										<div class="invalid-feedback">
 									        	Please enter a destination.
@@ -115,9 +115,9 @@
 								<div class="form-group row col-12 justify-content-md-center">
 									<div class="col-12 col-sm-4">
 										<fieldset>
-											<legend>Requirements</legend>
+											<legend class="lang" id="requirements">Requirements</legend>
 											<select id="demo_overview" class="form-control" data-role="select-dropdown" multiple>
-												<option value="1">refrigerated</option>
+												<option id="refrigerated" class="lang" value="1">refrigerated</option>
 											    <option value="2">limited-dock</option>
 											    <option value="3">hazardous</option>
 											    <option value="4">rush</option>
@@ -129,7 +129,7 @@
 											<legend>Info</legend>
 											<div class="form-row">
 												<div class="input-group">
-												  <input type="number" class="form-control" id="quantity" placeholder="Quantiy" aria-label="Quantiy (skid)">
+												  <input type="number" class="form-control lang" id="quantity" placeholder="Quantiy" aria-label="Quantiy (skid)">
 												  <div class="input-group-append">
 												    <span class="input-group-text">skid</span>
 												  </div>
@@ -138,7 +138,7 @@
 											<br/>
 											<div class="form-row">
 												<div class="input-group">
-												  <input type="number" class="form-control" id="weight" placeholder="Weight" aria-label="Weight (Lbs)" step=0.01>
+												  <input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight (Lbs)" step=0.01>
 												  <div class="input-group-append">
 												    <span class="input-group-text">lbs</span>
 												  </div>
@@ -148,21 +148,21 @@
 							  		</div>
 									<div class="col-12 col-sm-4">
 										<fieldset>
-											<legend>Loading</legend>
+											<legend class="lang" id="loading">Loading</legend>
 									  		<div class="form-row">
 												<div class="input-group">
-												  <input type="number" class="form-control" id="hours" placeholder="Hours" aria-label="Hours">
+												  <input id="time" type="number" class="form-control lang" placeholder="Time" aria-label="Hours">
 												  <div class="input-group-append">
-												    <span class="input-group-text">time</span>
+												    <span id="hours" class="input-group-text lang">hours</span>
 												  </div>
 												</div>
 											</div>
 											<br/>
 											<div class="form-row">
 												<div class="input-group">
-												  <input type="number" class="form-control" id="value" placeholder="Value" aria-label="Value ($)" step=0.01>
+												  <input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01>
 												  <div class="input-group-append">
-												    <span class="input-group-text">$</span>
+												    <span id="dollar" class="input-group-text lang">$</span>
 												  </div>
 												</div>
 											</div>
@@ -179,22 +179,22 @@
 				
 								<div class="col-12">
 									<fieldset>
-										<legend>Freight dimensions (feet)</legend>
+										<legend class="lang" id="dimensions">Freight dimensions (feet)</legend>
 										<div class="form-row">
 									    		<div class="form-group  col-12 col-sm-3">
-									      			<input type="number" class="form-control" id="length" placeholder="Length" step=0.01>
+									      			<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01>
 									    		</div>
 									    		<div class="col-1 text-center">
 									    			<p>x</p>
 									    		</div>
 									    		<div class="form-group  col-12 col-sm-3">
-												      <input type="number" class="form-control" id="width" placeholder="Width" step=0.01>
+												      <input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01>
 												</div>
 												<div class="col-1 text-center">
 									    			<p>x</p>
 									    		</div>
 												<div class="form-group  col-12 col-sm-3">
-												      <input type="number" class="form-control" id="height" placeholder="Height" step=0.01>
+												      <input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01>
 												</div>
 								  		</div>
 							  		</fieldset>
@@ -204,7 +204,7 @@
 						  
 						
 								<div class="text-center col-12">
-						  			<button type="submit" class="btn btn-primary btn-lg btn-block bg-gray-300">Get quote</button>
+						  			<button id="search" type="submit" class="lang btn btn-primary btn-lg btn-block bg-gray-300">Search</button>
 								</div>
 								<br/>
 								
@@ -247,36 +247,37 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content p-2">
 				<div class="modal-header">
-					<h4 class="modal-title">Login</h4>
+					<h4 id="login-title" class="modal-title lang">Login</h4>
 					<button type="button" class="close" data-dismiss="modal">
 						<span class=" text-right">&times;</span>
 					</button>
 					<br/>
 				</div>
 			 <div class="modal-body row">
-				<form class="col" action="d.html" id="login-form">
-					<div class="form-group row">
-						<label for="email" class="col-sm-2 form-control-label">Email</label>
-						<div class="col-10">
+				<form class="col-12" action="d.html" id="login-form">
+					<div class="form-group">
+						<label for="email" class="form-control-label">Email</label>
+						<div>
 							<input type="text" class="form-control" id="email" placeholder="email@example.com">
 						</div>
 					</div>
-					<div class="form-group row">
-						<label for="password" class="col-sm-2 form-control-label">Password</label>
-						<div class="col-10">
+					<br/>
+					<div class="form-group">
+						<label id="password" for="password" class="lang form-control-label">Password</label>
+						<div>
 							<input type="password" class="form-control" id="password" placeholder="Password">
 						</div>
 					</div>
 					<br/>
 					<div class="text-center">
-						<button type="submit" class="btn btn-primary bg-gray-300">Sign in</button>
+						<button id="sign-in2" type="submit" class="lang btn btn-primary bg-gray-300">Sign in</button>
 					</div>
 				</form>
 			</div>
 			<div class="dropdown-divider"></div>
 				<div class="text-center">
-					<a href="#">New around here? Sign up</a><br/>
-					<a href="#">Forgot password?</a>
+					<a id="sing-up" class="lang" href="#">New around here ? Sign up</a><br/>
+					<a id="forgot" class="lang" href="#">Forgot password ?</a>
 				</div>
 				<br/>
 			</div>
