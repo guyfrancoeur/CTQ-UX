@@ -3,15 +3,15 @@
 <head>
   	<meta charset="utf-8">
   	<title>CTQ</title>
-  	<link rel="stylesheet" type="text/css" href="./../lib/bootstrap/CSS/bootstrap.min.css">
-  	<link rel="stylesheet" href="./../css/style.css">
-  	<script src="./../data/en.json"></script>
-  	<script src="./../data/fr.json"></script>
-  	<script defer src="./../js/file.js"></script>
-	<script src="./../lib/font-awesome/js/all.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../lib/bootstrap/CSS/bootstrap.min.css">
+  	<link rel="stylesheet" href="../CSS/style.css">
+  	<script src="../data/en.json"></script>
+  	<script src="../data/fr.json"></script>
+  	<script defer src="../JS/file.js"></script>
+	<script src="../lib/font-awesome/js/all.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./../lib/bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
-    <script src="./../lib/bootstrap/JS/bootstrap.min.js"></script>
+	<script src="../lib/bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
+    <script src="../lib/bootstrap/JS/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.0/umd/popper.min.js"></script>
 </head>
 
@@ -21,14 +21,14 @@
  	
  	<!-- ************* NAVBAR ************* -->
 	<nav class="navbar navbar-expand-lg navbar-dark menu-bar">
-		<a class="navbar-brand font-weight-bold" href="./d.html">CTQ</a>
+		<a class="navbar-brand font-weight-bold" href="d.html">CTQ</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 	  	</button>
 	  	<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 	    	<ul class="navbar-nav">
 		    	<li class="nav-item active mr-3">
-		        	<a id="home" class="lang nav-link" href="./d.html">Home<span class="sr-only">(current)</span></a>
+		        	<a id="home" class="lang nav-link" href="d.html">Home<span class="sr-only">(current)</span></a>
 		      	</li>
 	      		<li class="nav-item dropdown mr-3">
 			        <a id="en" class="nav-link dropdown-toggle lang lang-button"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
@@ -38,7 +38,7 @@
 			    </li>
 			    <li>
 			      	<div class="btn-toolbar" id="login">
-			      		<a id="sign-in" href="./l.html" class="lang button btn btn-outline-light mr-3 text-light">Login</a>
+			      		<a id="sign-in" href="l.html" class="lang button btn btn-outline-light mr-3 text-light">Login</a>
 			      	</div>
 		      	</li>
 	      	</ul>
