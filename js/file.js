@@ -1,3 +1,7 @@
+$("#nsecure").slider({
+	tooltip: 'always'
+});
+
 /* ********* Espace résultats ********* */
 function modify(){
 	$('#container').addClass('col-12');
@@ -34,9 +38,6 @@ $(function(){
     $('input:first').focus()
   })
 })
-
-
-
 
 /* ********* Languages ********* */
 
