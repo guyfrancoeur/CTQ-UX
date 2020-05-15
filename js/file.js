@@ -1,6 +1,4 @@
-$("#nsecure").slider({
-	tooltip: 'always'
-});
+$("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 /* ********* Espace résultats ********* */
 function modify(){
@@ -16,9 +14,6 @@ function modify(){
 		
 	document.getElementById("contenu").innerHTML += "<h3>Results</h3>";
 }
-
-
-
 
 /* ********* LOGIN (modal) ********* */
 $(function(){
@@ -104,7 +99,6 @@ languages['en'] = {
 	"become-t" : "Become a Transporter",
 	"login-index" : "Login"
 }
-
 
 $(function() {
     $('.translate').click(function() {
