@@ -1,0 +1,29 @@
+[
+	{
+		"gros-titre" : "CTQ - Coopérative des Transporteurs du Québec",
+		"home" : "Accueil",
+		"sign-in" : "Se connecter",
+		"password" : "Mot de passe",
+		"password-text" : "Mot de passe",
+		"sing-up" : "Nouveau ici ? S'inscrire",
+		"forgot" : "Mot de passe oublié",
+		"quantity" : "Quantité",
+		"weight" : "Poids",
+		"sign-in2" : "Se connecter",
+		"time" : "Temps",
+		"value" : "Valeur",
+		"hours" : "heures",
+		"dollar" : "€",
+		"longueur" : "Longueur",
+		"width" : "Largeur",
+		"height" : "Hauteur",
+		"requirements" : "Exigences",
+		"loading" : "Chargement",
+		"dimensions" : "Dimensions du fret (pieds)",
+		"search" : "Rechercher",
+		"origin" : "DÉPART - Ville ou Code Postal",
+		"destination" : "DESTINATION - Ville ou Code Postal",
+		"login-title" : "Se connecter",
+		"refrigerated" : "réfrigéré"
+	}
+]

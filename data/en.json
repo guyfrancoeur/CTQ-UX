@@ -1,0 +1,29 @@
+[
+	{
+		"gros-titre" : "CTQ - Other",
+		"home" : "Home",
+		"sign-in" : "Sign in",
+		"password" : "Password",
+		"password-text" : "Password",
+		"sing-up" : "New around here ? Sign up",
+		"forgot" : "Forgot password ?",
+		"quantity" : "Quantity",
+		"weight" : "Weight",
+		"sign-in2" : "Sign in",
+		"time" : "Time",
+		"value" : "Value",
+		"hours" : "hours",
+		"dollar" : "$",
+		"longueur" : "Length",
+		"width" : "Width",
+		"height" : "Height",
+		"requirements" : "Requirements",
+		"loading" : "Loading",
+		"dimensions" : "Freight dimensions (feet)",
+		"search" : "Search",
+		"origin" : "ORIGIN - City or Postal Code",
+		"destination" : "DESTINATION - City or Postal Code",
+		"login-title" : "Login",
+		"refrigerated" : "refrigerated"
+	}
+]
