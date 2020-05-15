@@ -1,0 +1,53 @@
+/* ***********CSS STYLES FOR MODAL***************** */
+
+/* ***********CREATE ACCOUNT MODAL***************** */
+#creerCompte hr{
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#creerCompte .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+#creerCompte h6{
+    margin: 0.2rem;
+}
+
+#creerCompte__container>div{
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
+#signup-form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ***********CREATE ACCOUNT MODAL***************** */
+
+
+
+/* *********** MEDIA ***************** */
+
+@media (min-width:1200px){
+    #creerCompte__container{
+        max-width: 850px;
+    }
+    #signup-form{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #signup-form div{
+       width: 95%; 
+       margin:0;
+    }
+    #creerCompte hr{
+        display: none;
+    }
+    #login-title {
+        position: relative;
+        left: 50%;  
+        transform: translateX(-50%);
+    }
+}
