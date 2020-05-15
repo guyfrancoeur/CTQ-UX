@@ -1,3 +1,9 @@
+// /************* FOR DEV PREVIEW *************** */
+// $("#creerCompte").modal("show");
+
+
+/************* /FOR DEV PREVIEW *************** */
+
 /* ********* Espace résultats ********* */
 function modify(){
 	$('#container').addClass('col-12');
@@ -33,10 +39,23 @@ $(function(){
   $('.modal').on('shown.bs.modal', function(){
     $('input:first').focus()
   })
-})
+});
+$('#sign-in').click(()=>{
+	$("#formulaire").modal("show");
+});
 
+/* ********* SIGN UP (modal) ********* */
+$('#sign-up').click(()=>{
+	$("#formulaire").modal("hide");
+	$("#creerCompte").modal("show");
+});
 
+/* ********* RECOVER (modal) ********* */
 
+$('#forgot').click(()=>{
+	$("#formulaire").modal("hide");
+	$("#recupererPass").modal("show");
+});
 
 /* ********* Languages ********* */
 
@@ -65,12 +84,7 @@ languages['fr'] = {
 	"origin" : "DÉPART - Ville ou Code Postal",
 	"destination" : "DESTINATION - Ville ou Code Postal",
 	"login-title" : "Se connecter",
-	"refrigerated" : "réfrigéré",
-	"manufacturer" : "Donneur d'ouvrage",
-	"transporter" : "Transporteur",
-	"become-m" : "Devenir un donneur d'ouvrage",
-	"become-t" : "Become a Transporter",
-	"login-index" : "Se connecter"
+	"refrigerated" : "réfrigéré"
 }
 
 languages['en'] = {
@@ -96,12 +110,7 @@ languages['en'] = {
 	"origin" : "ORIGIN - City or Postal Code",
 	"destination" : "DESTINATION - City or Postal Code",
 	"login-title" : "Login",
-	"refrigerated" : "refrigerated",
-	"manufacturer" : "Manufacturer & broker",
-	"transporter" : "Transporter",
-	"become-m" : "Become a Manufacturer or a Broker",
-	"become-t" : "Become a Transporter",
-	"login-index" : "Login"
+	"refrigerated" : "refrigerated"
 }
 
 

@@ -3,42 +3,44 @@
 <head>
   	<meta charset="utf-8">
   	<title>CTQ</title>
-  	<link rel="stylesheet" type="text/css" href="./../lib/bootstrap/CSS/bootstrap.min.css">
-  	<link rel="stylesheet" href="./../css/style.css">
-  	<script src="./../data/en.json"></script>
-  	<script src="./../data/fr.json"></script>
-  	<script defer src="./../js/file.js"></script>
-	<script src="./../lib/font-awesome/js/all.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./../lib/bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
-    <script src="./../lib/bootstrap/JS/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../lib/bootstrap/CSS/bootstrap.min.css">
+	  <link rel="stylesheet" href="../CSS/style.css">
+	  <link rel="stylesheet" href="../CSS/modal-styles.css">
+  	<script defer src="../JS/file.js"></script>
+	<script src="../lib/font-awesome/js/all.js"></script>
+	<script src="../lib/bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
+    <script src="../lib/bootstrap/JS/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.0/umd/popper.min.js"></script>
 </head>
 
 <body class="bg-light">
-
- 	<section class="section"></section> <!-- Pour inclure l'image -->
- 	
+ 
  	<!-- ************* NAVBAR ************* -->
-	<nav class="navbar navbar-expand-lg navbar-dark menu-bar">
-		<a class="navbar-brand font-weight-bold" href="./d.html">CTQ</a>
+	<nav id="navabar" class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<a class="navbar-brand" href="d.html">CTQ</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 	  	</button>
 	  	<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 	    	<ul class="navbar-nav">
 		    	<li class="nav-item active mr-3">
-		        	<a id="home" class="lang nav-link" href="./d.html">Home<span class="sr-only">(current)</span></a>
+		        	<a id="home" class="lang nav-link" href="d.html">Home<span class="sr-only">(current)</span></a>
 		      	</li>
 	      		<li class="nav-item dropdown mr-3">
-			        <a id="en" class="nav-link dropdown-toggle lang lang-button"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Imperial</a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">Metrics</a>
+			        </div>
+			    </li>
+	      		<li class="nav-item dropdown mr-3">
+			        <a id="en" class="nav-link dropdown-toggle lang lang-button btn"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 			          <a id="fr" class="dropdown-item translate lang other-lang-button btn">Fr</a>
 			        </div>
 			    </li>
 			    <li>
 			      	<div class="btn-toolbar" id="login">
-			      		<a id="sign-in" href="./l.html" class="lang button btn btn-outline-light mr-3 text-light">Login</a>
+			      		<a id="sign-in" class="lang button btn btn-dark btn-outline-light mr-3 text-light">Login</a>
 			      	</div>
 		      	</li>
 	      	</ul>
@@ -52,12 +54,13 @@
 
 
 	<!-- ************* HEADER ************* -->
+	<section class="section"></section> <!-- Pour inclure l'image -->
 	 <div class="col-12">
 	 	<br/>
 		<div class="container text-center"> 
 	        <div class="row">
 	          <div class="text-light">
-	            <h1 id="gros-titre" class="display-4 font-weight-bold text-shadow lang"></br></br></h1>
+	            <h1 class="display-4 font-weight-bold text-shadow"></br></br></h1>
 	          </div>
 	        </div>
 	      </div>
@@ -183,13 +186,13 @@
 									      			<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01>
 									    		</div>
 									    		<div class="col-1 text-center">
-									    			<p class="x">x</p>
+									    			<p>x</p>
 									    		</div>
 									    		<div class="form-group  col-12 col-sm-3">
 												      <input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01>
 												</div>
 												<div class="col-1 text-center">
-									    			<p class="x">x</p>
+									    			<p>x</p>
 									    		</div>
 												<div class="form-group  col-12 col-sm-3">
 												      <input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01>
@@ -223,9 +226,8 @@
 				<div id="div6" class="bloc-blanc2">
 					<div id="div3" class="shadow bg-white position-relative">
 						<div id="div4" class="tab-content">
-						<!--  <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
 							<div class="interieur2">
-								<div><h3 id="contenu"></h3></div>
+								<div id="contenu"></div>
 							</div>
 						</div>
 					</div>
@@ -241,9 +243,180 @@
 
 
 
+<!-- ************* LOGIN (MODAL) ************* -->
+<div class="modal fade" id="formulaire">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content p-2">
+			<div class="modal-header">
+				<h4 id="login-title" class="modal-title lang">Login</h4>
+				<button type="button" class="close" data-dismiss="modal">
+					<span class=" text-right">&times;</span>
+				</button>
+				<br/>
+			</div>
+			<div class="modal-body row">
+			<form class="col-12" action="d.html" id="login-form">
+				<div class="form-group">
+					<label for="email" class="form-control-label">Email</label>
+					<div>
+						<input type="text" class="form-control" id="email" placeholder="email@example.com">
+					</div>
+				</div>
+				<br/>
+				<div class="form-group">
+					<label id="password" for="password" class="lang form-control-label">Password</label>
+					<div>
+						<input type="password" class="form-control" id="password" placeholder="Password">
+					</div>
+				</div>
+				<br/>
+				<div class="text-center">
+					<button id="sign-in2" type="submit" class="lang btn btn-primary bg-gray-300">Sign in</button>
+				</div>
+			</form>
+		</div>
+		<div class="dropdown-divider"></div>
+			<div class="text-center">
+				<a id="sign-up" class="lang" href="#">New around here ? Sign up</a><br/>
+				<a id="forgot" class="lang" href="#">Forgot password ?</a>
+			</div>
+			<br/>
+		</div>
+	</div>
+</div>
+<!-- ************* /LOGIN (MODAL) ************* -->
+
+<!-- ************* SIGN UP (MODAL) ************* -->
+<div class="modal fade" id="creerCompte">
+	<div id="creerCompte__container"class="modal-dialog modal-dialog-centered">
+		<div class="modal-content p-2">
+			<div class="modal-header">
+				<h4 id="login-title" class="modal-title lang">Sign up</h4>
+				<button type="button" class="close" data-dismiss="modal">
+					<span class=" text-right">&times;</span>
+				</button>
+				<br/>
+			</div>
+			<div class="modal-body">
+				<div class="modal-body__content">
+					<form class="col-12" action="d.html" id="signup-form">
+						<div class="user-data--col1">
+							<div class="form-group">
+								<label for="email" class="form-control-label">Email</label>
+								<div>
+									<input type="text" class="form-control" id="email" placeholder="email@example.com">
+								</div>
+								<label for="email-confirm" class="form-control-label mt-2">Verify email</label>
+								<div>
+									<input type="text" class="form-control" id="email-confirm" placeholder="email@example.com">
+								</div>
+							</div>
+							<div class="form-group">
+								<label id="password" for="password" class="lang form-control-label">Password</label>
+								<div>
+									<input type="password" class="form-control" id="password" placeholder="Password">
+								</div>
+								<label id="password" for="password-confirm" class="lang form-control-label mt-2">Confirm password</label>
+								<div>
+									<input type="password" class="form-control" id="password-confirm" placeholder="Password">
+								</div>
+							</div>
+						</div>
+						<hr/>
+						<div class="form-group personal-data--col1">
+								<!-- ************ Client name ****************** -->
+								<label class="lang form-control-label">First name</label>
+								<div>
+									<input type="text" class="form-control" id="firstName" placeholder="First name">
+								</div>
+								<label class="lang form-control-label mt-2">Last name</label>
+								<div>
+									<input type="text" class="form-control" id="lastName" placeholder="Last name">
+								</div>
+								<!-- ************** Phones **************** -->
+
+								<label class="lang form-control-label">Primary phone</label>
+								<div>
+									<input type="text" class="form-control" id="mainPhone" placeholder="(123) 456-7890)">
+								</div>
+								<label class="lang form-control-label mt-2">Second phone</label>
+								<div>
+									<input type="text" class="form-control" id="secondaryPhone" placeholder="(123) 456-7890)">
+								</div>
+						</div>
+						<div class="personal-data--col2">
+							<!-- *************** Address *************** -->
+							<label class="lang form-control-label">Street</label>
+							<div>
+								<input type="text" class="form-control" id="streetAddr" placeholder="First name">
+							</div>
+							<label class="lang form-control-label mt-2">City</label>
+							<div>
+								<input type="text" class="form-control" id="cityAddr" placeholder="Password">
+							</div>
+							<div class="row">
+								<label class="lang form-control-label mt-2 col-6 pl-0">Province</label>
+								<label class="lang form-control-label mt-2 col-6 pl-0">Country</label>
+							</div>
+							<div class="row">
+								<div class="col-6 p-0 pr-1">
+									<input type="text" class="form-control" id="provinceAddr" placeholder="Province">
+								</div>
+								<div class="col-6 p-0">
+									<input type="text" class="form-control" id="countryAddr" placeholder="Country">
+								</div>
+							</div>
+						</div>
+					</form>
+					<div class="text-center mt-4">
+						<button id="sign-in2" type="submit" class="lang btn btn-primary bg-gray-300">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ************* /SIGN UP (MODAL) ************* -->
+
+<!-- ************* RECOVER PASSWORD (MODAL) ************* -->
+<div class="modal fade" id="recupererPass">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content p-2">
+			<div class="modal-header">
+				<h4 id="login-title" class="modal-title lang">Sign up</h4>
+				<button type="button" class="close" data-dismiss="modal">
+					<span class=" text-right">&times;</span>
+				</button>
+				<br/>
+			</div>
+			<div class="modal-body row">
+				<form class="col-12" action="d.html" id="login-form">
+					<div class="form-group">
+						<label for="email" class="form-control-label">Email</label>
+						<div>
+							<input type="text" class="form-control" id="email" placeholder="email@example.com">
+						</div>
+					</div>
+					<br/>
+					<div class="form-group">
+						<label id="password" for="password" class="lang form-control-label">Password</label>
+						<div>
+							<input type="password" class="form-control" id="password" placeholder="Password">
+						</div>
+					</div>
+					<br/>
+					<div class="text-center">
+						<button id="sign-in2" type="submit" class="lang btn btn-primary bg-gray-300">Sign UP</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ************* /RECOVER PASSWORD (MODAL) ************* -->
 
 <!-- ************* FOOTER ************* -->
-<footer class="footer-page font-small bg-dark fixed-bottom">
+<footer id="footer"class="footer-page font-small bg-dark fixed-bottom">
 	<div class="footer-copyright text-center text-white text-sm font-weight-light py-4 class-footer">© 2020 Copyright  •  CTQ  •  All rights reserved.</div>	
 </footer>
 <!-- ************* FOOTER ************* -->
