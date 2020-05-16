@@ -1,12 +1,10 @@
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){
-  var mySlider = $("#nsecure").slider();
-  var value = mySlider.slider('getValue');
-  console.log(this.value);
-  if (value == 20) {
+  if (this.value == "20") {
+	  console.log("20");
     $("#bsubit").prop('disabled', false);
-  }
+  } else { console.log(this.value); }
 });
 
 /* ********* Espace résultats ********* */
