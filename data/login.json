@@ -1,7 +1,7 @@
 {
 "login":
   [
-    {"plogin":1,"clogin":"Usager Test","cemail":"t@ctq.ca","cpasword":"Test12},
-    {"plogin":2,"clogin":"Usager Deux","cemail":"d@ctq.ca","cpasword":"Deux22}
+    {"plogin":1,"clogin":"Usager Test","cemail":"t@ctq.ca","cpasword":"Test12"},
+    {"plogin":2,"clogin":"Usager Deux","cemail":"d@ctq.ca","cpasword":"Deux22"}
   ]
 }
