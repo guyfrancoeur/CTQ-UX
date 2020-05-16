@@ -3,7 +3,7 @@ $(function() {
       var lang = $(this).attr('id');
       console.log(lang);
           $.ajax({
-      url: lang + ".json",
+      url: "./../data/" + lang + ".json",
       dataType: "json",
       success:function(data){
     	  console.log('success');    	  
