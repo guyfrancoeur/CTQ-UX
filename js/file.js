@@ -8,30 +8,14 @@ $(function() {
       success:function(data){
       	
     	  console.log('success');
-    	  $('.translate').click(function() {
-					console.log('boucle translate');
-		      $('.lang').each(function(index, item) {
-		      	console.log('boucle lang');
-		        $(this).text(data[$(this).attr('id')]);
-		        console.log(data[$(this).attr('id')]);
-		        $(this).attr('placeholder', data[$(this).attr('id')]); 
-		      });
-		    });
-    
-		    $(".other-lang-button").click(function(){
-		    	var val1 = $(".lang-button").text();
-		    	var id1 = $(".lang-button").attr("id");
-		    	var val2 = $(".other-lang-button").text();
-		    	var id2 = $(".other-lang-button").attr("id");
-		    	
-		    	$(".other-lang-button").text(val1);
-		    	$(".other-lang-button").val(val1);
-		    	$(".other-lang-button").attr("id",id1);
-		        $(".lang-button").text(val2);
-		        $(".lang-button").val(val2);
-		        $(".lang-button").attr("id",id2);
+		    $('.lang').each(function(index, item) {
+		    	console.log('boucle lang');
+		      $(this).text(data[$(this).attr('id')]);
+		      console.log(data[$(this).attr('id')]);
+		      $(this).attr('placeholder', data[$(this).attr('id')]); 
 		    });
        },
+       
        error:function(xhr, ajaxOptions, thrownError){
     	   console.log('error');
          console.log(thrownError);
