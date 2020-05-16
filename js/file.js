@@ -1,5 +1,13 @@
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
+$("#nsecure").change(function(){
+  var mySlider = $("input.slider").slider();
+  var value = mySlider.slider('getValue');
+  if (value == 20) {
+    $("#bsubit").prop('disabled', false);
+  }
+});
+
 /* ********* Espace résultats ********* */
 function modify(){
 	$('#container').addClass('col-12');
