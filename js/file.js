@@ -3,11 +3,10 @@ $(function() {
       var lang = $(this).attr('id');
       console.log(lang);
           $.ajax({
-      url: "./../data/fr.json",
+      url: lang + ".json",
       dataType: "json",
       success:function(data){
-    	  console.log('success');
-    	  var jsondata = JSON.parse(data);
+    	  console.log('success');    	  
     	  alert('success');
        },
        error:function(xhr, ajaxOptions, thrownError){
