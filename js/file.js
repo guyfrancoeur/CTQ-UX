@@ -1,3 +1,25 @@
+$(function() {
+    $('.translate').click(function() {
+      var lang = $(this).attr('id');
+      console.log(lang);
+          $.ajax({
+      url: "./../data/fr.json",
+      dataType: "json",
+      success:function(data){
+    	  console.log('success');
+    	  var jsondata = JSON.parse(data);
+    	  alert('success');
+       },
+       error:function(xhr, ajaxOptions, thrownError){
+    	   console.log('error');
+    	   alert('error');
+           console.log(thrownError);
+       }
+})})});
+
+
+
+
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){
