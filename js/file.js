@@ -10,6 +10,7 @@ $(function() {
     	  console.log('success');
 		    $('.lang').each(function(index, item) {
 		    	var var2 = $(this).attr('id');
+		    	console.log(var2);
 		    	console.log(data.var2);
 		      $(this).text(data.var2);
 		      // $(this).attr('placeholder', data[$(this).attr('id')]); 
