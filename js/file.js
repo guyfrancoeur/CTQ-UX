@@ -1,8 +1,8 @@
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){
-  if (this.value == "20") {
-	  console.log("20");
+  if (parseInt(this.value) == 20) {
+    console.log("20 GOOD");
     $("#bsubit").prop('disabled', false);
   } else { console.log(this.value); }
 });
