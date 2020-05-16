@@ -100,6 +100,7 @@ ul.links-list li a:hover{
 
 .spe:hover .card-body{
 	background-color: rgb(247,247,247);
+	border-radius:15px;
 }
 
 .spe:hover{
@@ -136,11 +137,7 @@ ul.links-list li a:hover{
 	.bloc-login{
 		margin-bottom:70px;
 	}
-	
-		.bloc-login{
-		padding:500px;
-	}
-	
+
 	.bloc-index{
 		margin-bottom:70px;
 	}
