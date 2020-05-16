@@ -1,10 +1,30 @@
-/* ********* FORM VALIDATION ********* */
+/* ********* Languages ********* */
+$(function() {
+    $('.translate').click(function() {
+      var lang = $(this).attr('id');
+      console.log(lang);
+          $.ajax({
+      url: "./../data/" + lang + ".json",
+      dataType: "json",
+      success:function(data){
+      	
+    	  console.log('success');
+    	  $("#home").text(data.home);
+       },
+       
+       error:function(xhr, ajaxOptions, thrownError){
+    	   console.log('error');
+         console.log(thrownError);
+       }
+})})});
+
+
+
+/* ********* Validation Formulaire ********* */
 (function() {
 	'use strict';
 	window.addEventListener('load', function() {
-		// Fetch all the forms we want to apply custom Bootstrap validation styles to
 		var forms = document.getElementsByClassName('needs-validation');
-		// Loop over them and prevent submission
 		var validation = Array.prototype.filter.call(forms, function(form) {
 			form.addEventListener('submit', function(event) {
 				if (form.checkValidity() === false) {
@@ -16,7 +36,6 @@
 		});
 	}, false);
 })();
-
 
 
 /* ********* Sécurité Login ********* */
@@ -48,32 +67,7 @@ function modify(){
 
 
 
-/* ********* Languages ********* */
 
-$(function() {
-    $('.translate').click(function() {
-      var lang = $(this).attr('id');
-      console.log(lang);
-          $.ajax({
-      url: "./../data/" + lang + ".json",
-      dataType: "json",
-      success:function(data){
-      	
-    	  console.log('success');
-		    $('.lang').each(function(index, item) {
-		    	var var2 = $(this).attr('id');
-		    	console.log(var2);
-		    	console.log(data.var2);
-		      $(this).text(data.var2);
-		      // $(this).attr('placeholder', data[$(this).attr('id')]); 
-		    });
-       },
-       
-       error:function(xhr, ajaxOptions, thrownError){
-    	   console.log('error');
-         console.log(thrownError);
-       }
-})})});
 
 
 
