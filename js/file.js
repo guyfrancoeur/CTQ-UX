@@ -9,11 +9,10 @@ $(function() {
       	
     	  console.log('success');
     	  $('.translate').click(function() {
-		      var lang = $(this).attr('id');
 
 		      $('.lang').each(function(index, item) {
-		        $(this).text(languages[lang][$(this).attr('id')]);
-		        $(this).attr('placeholder', languages[lang][$(this).attr('id')]); 
+		        $(this).text(data.[$(this).attr('id')]);
+		        $(this).attr('placeholder', data[$(this).attr('id')]); 
 		      });
 		    });
     
