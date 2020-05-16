@@ -1,8 +1,9 @@
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){
-  var mySlider = $("input.slider").slider();
+  var mySlider = $("#nsecure").slider();
   var value = mySlider.slider('getValue');
+  console.log(this.value);
   if (value == 20) {
     $("#bsubit").prop('disabled', false);
   }
