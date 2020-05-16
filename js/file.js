@@ -127,7 +127,7 @@ languages['en'] = {
 	"become-t" : "Become a Transporter",
 	"login-index" : "Login"
 }
-
+/*
 $(function() {
     $('.translate').click(function() {
       var lang = $(this).attr('id');
@@ -152,3 +152,4 @@ $(function() {
         $(".lang-button").attr("id",id2);
     });
   }); 
+*/
