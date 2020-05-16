@@ -9,9 +9,10 @@ $(function() {
       	
     	  console.log('success');
 		    $('.lang').each(function(index, item) {
-		      $(this).text(data.($(this).attr('id')));
-		      console.log(data.($(this).attr('id')));
-		      $(this).attr('placeholder', data[$(this).attr('id')]); 
+		    	var = $(this).attr('id');
+		    	console.log(data.var);
+		      $(this).text(data.var);
+		      // $(this).attr('placeholder', data[$(this).attr('id')]); 
 		    });
        },
        
