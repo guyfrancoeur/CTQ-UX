@@ -9,9 +9,11 @@ $(function() {
       	
     	  console.log('success');
     	  $('.translate').click(function() {
-
+					console.log('boucle translate');
 		      $('.lang').each(function(index, item) {
+		      	console.log('boucle lang');
 		        $(this).text(data[$(this).attr('id')]);
+		        console.log(data[$(this).attr('id')]);
 		        $(this).attr('placeholder', data[$(this).attr('id')]); 
 		      });
 		    });
