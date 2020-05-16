@@ -6,13 +6,34 @@ $(function() {
       url: "./../data/" + lang + ".json",
       dataType: "json",
       success:function(data){
-    	  console.log('success');    	  
-    	  alert('success');
+      	
+    	  console.log('success');
+    	  $('.translate').click(function() {
+		      var lang = $(this).attr('id');
+
+		      $('.lang').each(function(index, item) {
+		        $(this).text(languages[lang][$(this).attr('id')]);
+		        $(this).attr('placeholder', languages[lang][$(this).attr('id')]); 
+		      });
+		    });
+    
+		    $(".other-lang-button").click(function(){
+		    	var val1 = $(".lang-button").text();
+		    	var id1 = $(".lang-button").attr("id");
+		    	var val2 = $(".other-lang-button").text();
+		    	var id2 = $(".other-lang-button").attr("id");
+		    	
+		    	$(".other-lang-button").text(val1);
+		    	$(".other-lang-button").val(val1);
+		    	$(".other-lang-button").attr("id",id1);
+		        $(".lang-button").text(val2);
+		        $(".lang-button").val(val2);
+		        $(".lang-button").attr("id",id2);
+		    });
        },
        error:function(xhr, ajaxOptions, thrownError){
     	   console.log('error');
-    	   alert('error');
-           console.log(thrownError);
+         console.log(thrownError);
        }
 })})});
 
