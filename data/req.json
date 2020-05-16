@@ -1,6 +1,20 @@
 {
-rows:[{"prequirement":1,"crequirement":"oversize"}],
-rows:[{"prequirement":2,"crequirement":"refrigerated"}],
-rows:[{"prequirement":4,"crequirement":"hazardous"}],
-rows:[{"prequirement":8,"crequirement":"rush"}]
+	"rows": [
+    {
+			"prequirement": 1,
+			"crequirement": "oversize"
+		},
+		{
+			"prequirement": 2,
+			"crequirement": "refrigerated"
+		},
+		{
+			"prequirement": 4,
+			"crequirement": "hazardous"
+		},
+		{
+			"prequirement": 8,
+			"crequirement": "rush"
+		}
+	]
 }
