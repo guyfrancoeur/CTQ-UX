@@ -11,7 +11,7 @@ $(function() {
     	  $('.translate').click(function() {
 
 		      $('.lang').each(function(index, item) {
-		        $(this).text(data.[$(this).attr('id')]);
+		        $(this).text(data[$(this).attr('id')]);
 		        $(this).attr('placeholder', data[$(this).attr('id')]); 
 		      });
 		    });
