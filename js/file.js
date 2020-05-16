@@ -9,7 +9,7 @@ $(function() {
       success:function(data){
       	
     	  console.log('success');
-    	  $("#home").text(data.home);
+    	  $("#home").text(data[0].home);
        },
        
        error:function(xhr, ajaxOptions, thrownError){
