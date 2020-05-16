@@ -1,3 +1,55 @@
+$("#nsecure").slider({tooltip: 'always'}); //a la JQuery
+
+$("#nsecure").change(function(){
+  if (parseInt(this.value) == 20) {
+    $("#bsubmit").prop('disabled', false);
+  }
+});
+
+
+
+/* ********* Espace résultats ********* */
+function modify(){
+	$('#container').addClass('col-12');
+	$('#div1').addClass('row');
+	$('#div2').addClass('col-12');
+	$('#div2').addClass('col-xl-6');
+	$('#div7').addClass('col-12');
+	$('#div7').addClass('col-xl-6');
+	$('#div3').addClass('bloc');
+	$('#div3').addClass('second-bloc');
+	$('#div4').addClass('interieur');
+		
+	document.getElementById("contenu").innerHTML += "<h3>Results</h3>";
+}
+
+
+
+/* ********* FORM VALIDATION ********* */
+(function() {
+	'use strict';
+	window.addEventListener('load', function() {
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.getElementsByClassName('needs-validation');
+		// Loop over them and prevent submission
+		var validation = Array.prototype.filter.call(forms, function(form) {
+			form.addEventListener('submit', function(event) {
+				if (form.checkValidity() === false) {
+					event.preventDefault();
+					event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			}, false);
+		});
+	}, false);
+})();
+
+
+
+
+
+/* ********* Languages ********* */
+
 $(function() {
     $('.translate').click(function() {
       var lang = $(this).attr('id');
@@ -25,50 +77,6 @@ $(function() {
 
 
 
-
-$("#nsecure").slider({tooltip: 'always'}); //a la JQuery
-
-$("#nsecure").change(function(){
-  if (parseInt(this.value) == 20) {
-    $("#bsubmit").prop('disabled', false);
-  }
-});
-
-/* ********* Espace résultats ********* */
-function modify(){
-	$('#container').addClass('col-12');
-	$('#div1').addClass('row');
-	$('#div2').addClass('col-12');
-	$('#div2').addClass('col-xl-6');
-	$('#div7').addClass('col-12');
-	$('#div7').addClass('col-xl-6');
-	$('#div3').addClass('bloc');
-	$('#div3').addClass('second-bloc');
-	$('#div4').addClass('interieur');
-		
-	document.getElementById("contenu").innerHTML += "<h3>Results</h3>";
-}
-
-/* ********* LOGIN (modal) ********* */
-$(function(){
-  $('#login-form').submit(function(e) {
-    e.preventDefault()
-    var $form = $(this)
-    $.post($form.attr('action'), $form.serialize())
-    .done(function(data) {
-      $('#login').html(data)
-      $('#formulaire').modal('hide')
-    })
-    .fail(function() {
-      alert('ça ne marche pas...')
-    })
-  })
-  $('.modal').on('shown.bs.modal', function(){
-    $('input:first').focus()
-  })
-})
-
-/* ********* Languages ********* */
 
 var languages = new Array();
 

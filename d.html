@@ -69,7 +69,7 @@
 				<div id="div5">
 					<div class="shadow bg-white position-relative bloc bloc-formulaire">
 						<div class="tab-content">
-							<form action="javascript:void(0);" onsubmit="modify()">
+							<form class="needs-validation" action="javascript:void(0);" onsubmit="modify()" novalidate>
 								<br/>
 								<div class="form-row align-items-center col-12">
 									<div class="text-center col-12 col-md-6">
@@ -78,11 +78,9 @@
 										  	<div class="input-group-prepend label-absolute">
 										    	<span class="input-group-text lighten-3  bg-light"><i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i></span>
 										  	</div>
-										   	<input type="text" class="form-control lang" id="origin" placeholder="ORIGIN - City or Postal Code">
+										   	<input type="text" class="form-control lang" id="origin" placeholder="ORIGIN - City or Postal Code" required>
 										</div>
-										<div class="invalid-feedback">
-									        	Please enter an origin.
-									    </div>
+										<div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
 									</div>
 								    <div class="text-center col-12 col-md-6">
 										<label class="sr-only" for="destination">Destination</label>
@@ -90,11 +88,9 @@
 										  	<div class="input-group-prepend">
 										    	<span class="input-group-text lighten-3  bg-light"><i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i></span>
 										  	</div>
-										   	<input type="text" class="form-control lang" id="destination" placeholder="DESTINATION - City or Postal Code">
+										   	<input type="text" class="form-control lang" id="destination" placeholder="DESTINATION - City or Postal Code" required>
 										</div>
-										<div class="invalid-feedback">
-									        	Please enter a destination.
-									    </div>
+										<div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
 									</div>
 							     </div>
 								<br/>
@@ -103,12 +99,13 @@
 									<div class="col-12 col-sm-4">
 										<fieldset>
 											<legend class="lang" id="requirements">Requirements</legend>
-											<select id="demo_overview" class="form-control" data-role="select-dropdown" multiple>
+											<select id="demo_overview" class="form-control" data-role="select-dropdown" multiple required>
 												<option id="refrigerated" class="lang" value="1">refrigerated</option>
 											    <option value="2">limited-dock</option>
 											    <option value="3">hazardous</option>
 											    <option value="4">rush</option>
 											</select>
+											<div class="invalid-feedback">Please select at least one requirement.</div>
 										</fieldset>
 					    			</div>
 					    			<div class="col-12 col-sm-4">
@@ -116,7 +113,7 @@
 											<legend>Info</legend>
 											<div class="form-row">
 												<div class="input-group">
-												  <input type="number" class="form-control lang" id="quantity" placeholder="Quantiy" aria-label="Quantiy (skid)">
+												  <input type="number" class="form-control lang" id="quantity" placeholder="Quantiy" aria-label="Quantiy (skid)" required>
 												  <div class="input-group-append">
 												    <span class="input-group-text">skid</span>
 												  </div>
@@ -125,7 +122,7 @@
 											<br/>
 											<div class="form-row">
 												<div class="input-group">
-												  <input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight (Lbs)" step=0.01>
+												  <input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight (Lbs)" step=0.01 required>
 												  <div class="input-group-append">
 												    <span class="input-group-text">lbs</span>
 												  </div>
@@ -138,7 +135,7 @@
 											<legend class="lang" id="loading">Loading</legend>
 									  		<div class="form-row">
 												<div class="input-group">
-												  <input id="time" type="number" class="form-control lang" placeholder="Time" aria-label="Hours">
+												  <input id="time" type="number" class="form-control lang" placeholder="Time" aria-label="Hours" required>
 												  <div class="input-group-append">
 												    <span id="hours" class="input-group-text lang">hours</span>
 												  </div>
@@ -147,7 +144,7 @@
 											<br/>
 											<div class="form-row">
 												<div class="input-group">
-												  <input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01>
+												  <input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01 required>
 												  <div class="input-group-append">
 												    <span id="dollar" class="input-group-text lang">$</span>
 												  </div>
@@ -163,19 +160,19 @@
 										<legend class="lang" id="dimensions">Freight dimensions (feet)</legend>
 										<div class="form-row">
 									    		<div class="form-group  col-12 col-sm-3">
-									      			<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01>
+									      			<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01 required>
 									    		</div>
 									    		<div class="col-1 text-center">
 									    			<p class="x">x</p>
 									    		</div>
 									    		<div class="form-group  col-12 col-sm-3">
-												      <input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01>
+												      <input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01 required>
 												</div>
 												<div class="col-1 text-center">
 									    			<p class="x">x</p>
 									    		</div>
 												<div class="form-group  col-12 col-sm-3">
-												      <input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01>
+												      <input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01 required>
 												</div>
 								  		</div>
 							  		</fieldset>
