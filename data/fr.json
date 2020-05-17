@@ -1,12 +1,11 @@
 [
 	{"home" : "Accueil"},
-	{"sign-in" : "Se connecter"},
+	{"bsubmit" : "Se connecter"},
 	{"password" : "Mot de passe"},
-	{"password-text" : "Mot de passe"},
+	{"lpass" : "Mot de passe"},
 	{"forgot" : "Mot de passe oublié"},
 	{"quantity" : "Quantité"},
 	{"weight" : "Poids"},
-	{"sign-in2" : "Se connecter"},
 	{"time" : "Temps"},
 	{"value" : "Valeur"},
 	{"hours" : "heures"},
@@ -19,6 +18,6 @@
 	{"search" : "Rechercher"},
 	{"origin" : "DÉPART - Ville ou Code Postal"},
 	{"destination" : "DESTINATION - Ville ou Code Postal"},
-	{"login-title" : "Se connecter"},
+	{"logintitle" : "Se connecter"},
 	{"refrigerated" : "réfrigéré"}
 ]

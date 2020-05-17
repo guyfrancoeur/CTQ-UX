@@ -1,12 +1,11 @@
 [
 	{"home" : "Home"},
-	{"sign-in" : "Sign in"},
+	{"bsubmit" : "Sign in"},
 	{"password" : "Password"},
-	{"password-text" : "Password"},
+	{"lpass" : "Password"},
 	{"forgot" : "Forgot password ?"},
 	{"quantity" : "Quantity"},
 	{"weight" : "Weight"},
-	{"sign-in2" : "Sign in"},
 	{"time" : "Time"},
 	{"value" : "Value"},
 	{"hours" : "hours"},
@@ -19,6 +18,6 @@
 	{"search" : "Search"},
 	{"origin" : "ORIGIN - City or Postal Code"},
 	{"destination" : "DESTINATION - City or Postal Code"},
-	{"login-title" : "Login"},
+	{"logintitle" : "Login"},
 	{"refrigerated" : "refrigerated"}
 ]

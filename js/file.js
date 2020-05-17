@@ -30,13 +30,12 @@ $(function() {
 	      	
 					// Changement des attributs :
 	    	  $("#home").text(data[0].home);
-	    	  $("#sign-in").text(data[0].sign-in);
+	    	  $("#bsubmit").text(data[0].bsubmit);
 	    	  $("#password").text(data[0].password);
-	    	  $("#password-text").text(data[0].password-text);
+	    	  $("#lpass").text(data[0].lpass);
 	    	  $("#forgot").text(data[0].forgot);
 	    	  $("#quantity").text(data[0].quantity);
 	    	  $("#weight").text(data[0].weight);
-	    	  $("#sign-in2").text(data[0].sign-in2);
 	    	  $("#time").text(data[0].time);
 	    	  $("#value").text(data[0].value);
 	    	  $("#hours").text(data[0].hours);
@@ -49,7 +48,7 @@ $(function() {
 	    	  $("#search").text(data[0].search);
 	    	  $("#origin").text(data[0].origin);
 	    	  $("#destination").text(data[0].destination);
-	    	  $("#login-title").text(data[0].login-title);
+	    	  $("#logintitle").text(data[0].logintitle);
 	    	  $("#refrigerated").text(data[0].refrigerated);
 
 	    	  // Bouton de langues :
