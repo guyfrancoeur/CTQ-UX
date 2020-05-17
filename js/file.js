@@ -31,25 +31,27 @@ $(function() {
 				// Changement des attributs :
 	  	  $("#home").text(data[0].home);
 	  	  $("#bsubmit").text(data[0].bsubmit);
-	  	  $("#password").text(data[0].password);
 	  	  $("#lpass").text(data[0].lpass);
 	  	  $("#forgot").text(data[0].forgot);
-	  	  $("#quantity").text(data[0].quantity);
-	  	  $("#weight").text(data[0].weight);
-	  	  $("#time").text(data[0].time);
-	  	  $("#value").text(data[0].value);
 	  	  $("#hours").text(data[0].hours);
-	  	  $("#longueur").text(data[0].longueur);
-	  	  $("#width").text(data[0].width);
-	  	  $("#height").text(data[0].height);
 	  	  $("#requirements").text(data[0].requirements);
 	  	  $("#loading").text(data[0].loading);
 	  	  $("#dimensions").text(data[0].dimensions);
 	  	  $("#search").text(data[0].search);
-	  	  $("#origin").text(data[0].origin);
-	  	  $("#destination").text(data[0].destination);
 	  	  $("#logintitle").text(data[0].logintitle);
 	  	  $("#refrigerated").text(data[0].refrigerated);
+	  	  
+	  	  // Changement des placeholder :
+	  	  $("#origin").attr('placeholder', data[0].origin);
+	  	  $("#destination").attr('placeholder', data[0].destination);
+	  	  $("#longueur").attr('placeholder', data[0].longueur);
+	  	  $("#quantity").attr('placeholder', data[0].quantity);
+	  	  $("#weight").attr('placeholder', data[0].weight);
+	  	  $("#time").attr('placeholder', data[0].time);
+	  	  $("#value").attr('placeholder', data[0].value);
+	  	  $("#password").attr('placeholder', data[0].password);
+	  	  $("width").attr('placeholder', data[0].width);
+	  	  $("height").attr('placeholder', data[0].height);
 	  	  
     	  // Bouton de langues :
 	  	  $(".other-lang-button").click(function(){
