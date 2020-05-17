@@ -31,7 +31,7 @@ $(function() {
 	      	console.log('success');
 	      	
 					// Changement des attributs :
-	    	  $("#home").text(data[0].home);
+	    	  $("#home").text(data.home);
 	    	  
 	    	  // Bouton de langues :
 	    	  $(".other-lang-button").click(function(){
