@@ -1,5 +1,3 @@
-
-
 /* ********* Validation Formulaire ********* */
 (function() {
 	'use strict';
@@ -31,8 +29,29 @@ $(function() {
 	      	console.log('success');
 	      	
 					// Changement des attributs :
-	    	  $("#home").text(data.home);
-	    	  
+	    	  $("#home").text(data[0].home);
+	    	  $("#sign-in").text(data[0].sign-in);
+	    	  $("#password").text(data[0].password);
+	    	  $("#password-text").text(data[0].password-text);
+	    	  $("#forgot").text(data[0].forgot);
+	    	  $("#quantity").text(data[0].quantity);
+	    	  $("#weight").text(data[0].weight);
+	    	  $("#sign-in2").text(data[0].sign-in2);
+	    	  $("#time").text(data[0].time);
+	    	  $("#value").text(data[0].value);
+	    	  $("#hours").text(data[0].hours);
+	    	  $("#longueur").text(data[0].longueur);
+	    	  $("#width").text(data[0].width);
+	    	  $("#height").text(data[0].height);
+	    	  $("#requirements").text(data[0].requirements);
+	    	  $("#loading").text(data[0].loading);
+	    	  $("#dimensions").text(data[0].dimensions);
+	    	  $("#search").text(data[0].search);
+	    	  $("#origin").text(data[0].origin);
+	    	  $("#destination").text(data[0].destination);
+	    	  $("#login-title").text(data[0].login-title);
+	    	  $("#refrigerated").text(data[0].refrigerated);
+
 	    	  // Bouton de langues :
 	    	  $(".other-lang-button").click(function(){
 						var val1 = $(".lang-button").text();
