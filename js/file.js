@@ -20,10 +20,6 @@
 
 
 /* ********* Languages ********* */
-
-
-
-
 $(function() {
     $('.translate').click(function() {
       var lang = $(this).attr('id');
@@ -34,7 +30,10 @@ $(function() {
 	      success:function(data){
 	      	console.log('success');
 	      	
-	      	// Bouton de langues :
+					// Changement des attributs :
+	    	  $("#home").text(data[0].home);
+	    	  
+	    	  // Bouton de langues :
 	    	  $(".other-lang-button").click(function(){
 						var val1 = $(".lang-button").text();
 					 	var id1 = $(".lang-button").attr("id");
@@ -47,11 +46,7 @@ $(function() {
 					  $(".lang-button").val(val2);
 					  $(".lang-button").attr("id",id2);
 					}),
-					    
-					// Changement des attributs :
-	    	  $("#home").text(data[0].home);
-	    	  
-	    	  
+					
 	      },
 	       
 	       error:function(xhr, ajaxOptions, thrownError){
