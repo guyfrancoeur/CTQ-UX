@@ -28,7 +28,7 @@ $(function() {
 	    success:function(data){
 	    	console.log('success');
 	    	
-			// Changement des attributs :
+				// Changement des attributs :
 	  	  $("#home").text(data[0].home);
 	  	  $("#bsubmit").text(data[0].bsubmit);
 	  	  $("#password").text(data[0].password);
@@ -63,7 +63,7 @@ $(function() {
 				  $(".lang-button").text(val2);
 				  $(".lang-button").val(val2);
 				  $(".lang-button").attr("id",id2);
-				}),
+				})
 	    },
 	    error:function(xhr, ajaxOptions, thrownError){
 	  	  console.log('error');
