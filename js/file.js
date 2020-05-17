@@ -1,23 +1,3 @@
-/* ********* Languages ********* */
-$(function() {
-    $('.translate').click(function() {
-      var lang = $(this).attr('id');
-      console.log(lang);
-          $.ajax({
-      url: "./data/" + lang + ".json",
-      dataType: "json",
-      success:function(data){
-      	
-    	  console.log('success');
-    	  $("#home").text(data[0].home);
-       },
-       
-       error:function(xhr, ajaxOptions, thrownError){
-    	   console.log('error');
-         console.log(thrownError);
-       }
-})})});
-
 
 
 /* ********* Validation Formulaire ********* */
@@ -38,6 +18,50 @@ $(function() {
 })();
 
 
+
+/* ********* Languages ********* */
+
+
+
+
+$(function() {
+    $('.translate').click(function() {
+      var lang = $(this).attr('id');
+      console.log(lang);
+      $.ajax({
+	      url: "./data/" + lang + ".json",
+	      dataType: "json",
+	      success:function(data){
+	      	console.log('success');
+	      	
+	      	// Bouton de langues :
+	    	  $(".other-lang-button").click(function(){
+						var val1 = $(".lang-button").text();
+					 	var id1 = $(".lang-button").attr("id");
+					  var val2 = $(".other-lang-button").text();
+					  var id2 = $(".other-lang-button").attr("id");
+					  $(".other-lang-button").text(val1);
+					  $(".other-lang-button").val(val1);
+					  $(".other-lang-button").attr("id",id1);
+					  $(".lang-button").text(val2);
+					  $(".lang-button").val(val2);
+					  $(".lang-button").attr("id",id2);
+					}),
+					    
+					// Changement des attributs :
+	    	  $("#home").text(data[0].home);
+	    	  
+	    	  
+	      },
+	       
+	       error:function(xhr, ajaxOptions, thrownError){
+	    	   console.log('error');
+	         console.log(thrownError);
+	       }
+})})});
+
+
+
 /* ********* Sécurité Login ********* */
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
@@ -46,6 +70,10 @@ $("#nsecure").change(function(){
     $("#bsubmit").prop('disabled', false);
   }
 });
+
+
+
+
 
 
 
