@@ -1,14 +1,3 @@
-/* ********* Sécurité Login ********* */
-$("#nsecure").slider({tooltip: 'always'}); //a la JQuery
-
-$("#nsecure").change(function(){
-  if (parseInt(this.value) == 20) {
-    $("#bsubmit").prop('disabled', false);
-  }
-});
-
-
-
 /* ********* Languages ********* */
 $(function() {
 	$('.translate').click(function() {
@@ -85,6 +74,18 @@ $(function() {
 		});
 	}, false);
 })();
+
+
+
+
+/* ********* Sécurité Login ********* */
+$("#nsecure").slider({tooltip: 'always'}); //a la JQuery
+
+$("#nsecure").change(function(){
+  if (parseInt(this.value) == 20) {
+    $("#bsubmit").prop('disabled', false);
+  }
+});
 
 
 
