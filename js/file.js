@@ -1,4 +1,3 @@
-
 /* ********* Aide ********* */
 $(function () {
   $('[data-toggle="popover"]').popover()
@@ -158,7 +157,7 @@ $(function() {
 	  	  $("width").attr('placeholder', data[0].width);
 	  	  $("height").attr('placeholder', data[0].height);
 	  	  $("duree").attr('placeholder', data[0].duree);
-	  	  $("#montant").attr('placeholder', data[0].#montant);
+	  	  $("#montant").attr('placeholder', data[0].montant);
 	  	  $("duree2").attr('placeholder', data[0].duree2);
 	  	  
     	  // Bouton de langues :
