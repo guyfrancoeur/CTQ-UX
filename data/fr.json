@@ -15,9 +15,18 @@
 	{"requirements" : "Exigences"},
 	{"loading" : "Chargement"},
 	{"dimensions" : "Dimensions du fret (pieds)"},
-	{"search" : "Rechercher"},
+	{"getquote" : "Obtenir un devis"},
 	{"origin" : "DÉPART - Ville ou Code Postal"},
 	{"destination" : "DESTINATION - Ville ou Code Postal"},
 	{"logintitle" : "Se connecter"},
-	{"refrigerated" : "réfrigéré"}
+	{"refrigerated" : "réfrigéré"},
+	{"cmev" : "Mise en vente"},
+	{"cTextA" : "enchère"},
+	{"cTextB" : "prix fixe"},
+	{"cTextC" : "privée"},
+	{"cCout" : "Coût"},
+	{"duree" : "Durée"},
+	{"duree2" : "Durée"},
+	{"montant" : "Montant"},
+	{"cterms": "En cliquant sur 'Obtenir un devis', vous acceptez nos Conditions générales d'utilisation."}
 ]

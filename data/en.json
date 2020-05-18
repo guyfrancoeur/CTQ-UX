@@ -15,9 +15,19 @@
 	{"requirements" : "Requirements"},
 	{"loading" : "Loading"},
 	{"dimensions" : "Freight dimensions (feet)"},
-	{"search" : "Search"},
+	{"getquote" : "Get a quote"},
 	{"origin" : "ORIGIN - City or Postal Code"},
 	{"destination" : "DESTINATION - City or Postal Code"},
 	{"logintitle" : "Login"},
-	{"refrigerated" : "refrigerated"}
+	{"refrigerated" : "refrigerated"},
+	{"cmev" : "Sale offering"},
+	{"cTextA" : "auction"},
+	{"cTextB" : "fixed price"},
+	{"cTextC" : "private"},
+	{"cCout" : "Cost"},
+	{"duree" : "Duration"},
+	{"duree2" : "Duration"},
+	{"montant" : "Amount"},
+	{"cterms" : "By clicking on 'Get a quote', you accept the Terms and Conditions of Use."}
 ]
+
