@@ -18,7 +18,7 @@
 }
 
 .class-footer{
-	height: 70px;
+	height: 60px;
 }
 
 .navbar {
@@ -44,10 +44,6 @@
     /* background-color: rgba(0,0,0,0.9); */
 }
 
-.x{
-	margin:0;
-	padding-top:10%;
-}
 
 ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active{
 	text-decoration:none;
@@ -119,7 +115,65 @@ ul.links-list li a:hover{
 	border: 1px solid;
 }
 
+.bg-style{
+	background-color: rgba(255,255,255,0.8);
+}
 
+ul.listec li{
+	padding:0;
+}
+
+.listec{
+	border: 1px solid rgb(247,247,247);
+}
+
+.input-group-text{
+	height:38.5px;
+}
+
+.size1{
+	width:45px;
+	display: table;
+}
+
+.size2{
+	width:55px;
+	display: table;
+}
+
+.divCourriels{
+	width:370px;
+}
+
+#addcourriel{
+	height:38.5px;
+}
+
+#inputcourriel{
+	width:300px;
+}
+
+.cout-style{
+	border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+	border-top: 2px solid rgba(1,13,40,.2);
+}
+
+#card1 .card-header{
+	background-color:rgba(1,13,40,.9);
+	color:white;border-top-right-radius:15px;
+	border-top-left-radius:15px;
+}
+#card2 .card-header{
+	background-color:rgba(1,13,40,.9);
+	color:white;border-top-right-radius:15px;
+	border-top-left-radius:15px;
+}
+#card3 .card-header{
+	background-color:rgba(1,13,40,.9);
+	color:white;border-top-right-radius:15px;
+	border-top-left-radius:15px;
+}
 
 /* ********* Quelques éléments pour la responsivité ********* */
 @media (max-width: 1199px) {
@@ -127,10 +181,6 @@ ul.links-list li a:hover{
 		margin-top:15px;
 		margin-bottom:70px;
 	}
-	
-	.x{
-		padding-top:0;
-	}	/* Ne fonctionne pas */
 	
 	.bloc-login{
 		margin-bottom:70px;
@@ -143,4 +193,34 @@ ul.links-list li a:hover{
 	.spe2{
 		margin-bottom:25px;
 	}
+	
+	#card1{
+		margin-bottom:25px;
+	}
+	
+	#card2{
+		margin-bottom:25px;
+	}
+
+}
+
+@media (max-width: 630px) {
+	.divCourriels{
+		width:300px;
+	}
+}
+
+
+@media (max-width: 530px) {
+	.divCourriels{
+		width:250px;
+	}
+}
+
+
+@media (max-width: 1700px) {
+	.bloc-formulaire{
+		margin-bottom:70px;
+	}
+	
 }
