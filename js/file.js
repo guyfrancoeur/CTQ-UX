@@ -66,7 +66,8 @@ addcourriel.addEventListener("click", function() {
 /* ********* Mise en vente ********* */
 
 var cout = 0;
-function selection(value){
+function selection(elem){
+	var value = elem.id;
 	if(value == "A"){
 		cout = 1;
 		$('#cout').html(cout);
