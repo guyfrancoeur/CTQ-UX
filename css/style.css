@@ -159,21 +159,102 @@ ul.listec li{
 	border-top: 2px solid rgba(1,13,40,.2);
 }
 
-#card1 .card-header{
-	background-color:rgba(1,13,40,.9);
-	color:white;border-top-right-radius:15px;
-	border-top-left-radius:15px;
+#card1, #card2, #card3{
+	border-radius:5px;
 }
-#card2 .card-header{
-	background-color:rgba(1,13,40,.9);
-	color:white;border-top-right-radius:15px;
-	border-top-left-radius:15px;
+
+
+
+
+/* Toogle-button */
+.button-cover, .knobs, .layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
-#card3 .card-header{
-	background-color:rgba(1,13,40,.9);
-	color:white;border-top-right-radius:15px;
-	border-top-left-radius:15px;
+
+.button-t{
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
 }
+
+.button.r, .button.r .layer{
+    border-radius: 100px;
+}
+
+.checkbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs{
+    z-index: 2;
+}
+
+.layer{
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+
+/* Button 6 */
+#button-6{
+    overflow: visible;
+}
+
+#button-6 .knobs:before{
+    content: 'm';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.5;
+    padding: 9px 4px;
+    background-color: #235599;
+    border-radius: 50%;
+}
+
+#button-6 .layer, #button-6 .knobs, #button-6 .knobs:before{
+    transform: rotateZ(0);
+    transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-6 .checkbox:checked + .knobs{
+    transform: rotateZ(-180deg);
+}
+
+#button-6 .checkbox:checked + .knobs:before{
+    content: 'pi';
+    background-color: #BB2211;
+    transform: rotateZ(180deg);
+}
+
+#button-6 .checkbox:checked ~ .layer{
+    background-color: #fcebeb;
+    transform: rotateZ(180deg);
+}
+
+
+
 
 /* ********* Quelques éléments pour la responsivité ********* */
 @media (max-width: 1199px) {

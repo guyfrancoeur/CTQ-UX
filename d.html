@@ -71,103 +71,113 @@
 				<div id="div5">
 					<div class="shadow bg-white position-relative bloc bloc-formulaire">
 						<div class="tab-content">
-							<form id"principalform" class="needs-validation" action="javascript:void(0);" onsubmit="modify()" novalidate>
-								<div class="form-row col-12 pb-1">
-									<div class="text-center col-12 col-md-6">
-										<label class="sr-only" for="origin">Origin</label>
-										<div class="input-group mb-2">
-										  <div class="input-group-prepend label-absolute">
-										    <span class="input-group-text lighten-3  bg-light"><i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i></span>
-										  </div>
-										 	<input type="text" class="form-control lang rounded-right" id="origin" placeholder="ORIGIN - City or Postal Code" required>
-									   	<div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
-										</div>
-									</div>
-								  <div class="text-center col-12 col-md-6">
-										<label class="sr-only" for="destination">Destination</label>
-										<div class="input-group mb-2">
-											<div class="input-group-prepend">
-											  <span class="input-group-text lighten-3  bg-light"><i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i></span>
+							<form id="principalform" class="needs-validation" action="javascript:void(0);" onsubmit="modify()" novalidate>
+								<div class="row col-12">
+									<div class="col-12 col-xl-5">
+										<div class="form-row col-12 pb-1">
+											<div class="text-center col-12">
+												<label class="sr-only" for="origin">Origin</label>
+												<div class="input-group mb-2">
+												  <div class="input-group-prepend label-absolute">
+												    <span class="input-group-text lighten-3  bg-light"><img src="./images/position.svg" style="height:100%;"></span>
+												  </div>
+												 	<input type="text" class="form-control lang rounded-right" id="origin" placeholder="ORIGIN - City or Postal Code" required>
+											   	<div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
+												</div>
 											</div>
-											<input type="text" class="form-control lang rounded-right" id="destination" placeholder="DESTINATION - City or Postal Code" required>
-											<div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
-										</div>
-									</div>
-								</div>
-					
-					
-								<div class="card-group pb-1">
-									<div class="col-12 col-xl-2 col-sm-6">
-										<div id="card1" class="card" style="border:0px;">
-											<div class="card-header">
-												<h5 class="card-title m-0 d-flex justify-content-between align-items-center">Info chargement
-													<button type="button" class="badge badge-pill badge-light btn btn-light" data-toggle="popover" title="Help" data-content="When I'll have time, I will write some instructions which can help you &#128516">?</button>
-												</h5>
+										  <div class="text-center col-12">
+												<label class="sr-only" for="destination">Destination</label>
+												<div class="input-group mb-2">
+													<div class="input-group-prepend">
+													  <span class="input-group-text lighten-3  bg-light"><img src="./images/position.svg" style="height:100%;"></span>
+													</div>
+													<input type="text" class="form-control lang rounded-right" id="destination" placeholder="DESTINATION - City or Postal Code" required>
+													<div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
+												</div>
 											</div>
-										  <div class="card-body px-0 py-1">
-										  	<div class="text-center pb-3 pt-1">
-													<input id="toogle-mpi" type="checkbox" data-toggle="toggle" data-on="m" data-off="pi" data-onstyle="success" data-offstyle="danger" data-size="mini" checked>
-												</div>
-										    <div class="input-group pb-2">
-													<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01 min="0.01" required>
-													<div class="input-group-append">
-														<span class="input-group-text size1">m</span>
-													</div>
-												</div>
-												<div class="input-group pb-2">
-													<input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01 min="0.01" required>
-													<div class="input-group-append">
-														<span class="input-group-text size1">m</span>
-													</div>
-												</div>
-												<div class="input-group pb-2">
-													<input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01 min="0.01" required>
-													<div class="input-group-append">
-														<span class="input-group-text size1">m</span>
-													</div>
-												</div>
-												<div class="input-group pb-2">
-													<input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight" step=0.01 min="0.01" required>
-													<div class="input-group-append">
-													 <span class="input-group-text size1">kg</span>
-													</div>
-												</div>
-												<div class="input-group">
-													<input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01 min="0.01" required>
-													<div class="input-group-append">
-														<span class="input-group-text size1">$</span>
-													</div>
-												</div>
-										  </div>
 										</div>
-									</div>
-									<div class="col-12 col-xl-3 col-sm-6">
-										<div id="card2" class="card">
-											<div class="card-header">
-												<h5 class="card-title m-0 d-flex justify-content-between align-items-center">Requirements<span id="compteur" class="badge badge-light">0</span></h5>
+										<div class="card-group pb-1 col-12">
+											<div class="col-12 col-md-7 pl-0">
+												<div id="card1" class="card">
+												  <div class="card-body" style="border:0px;">
+												  	<h5 class="card-title pb-2">Info chargement</h5>
+												    <div class="input-group pb-2">
+															<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01 min="0.01" required>
+															<div class="input-group-append">
+																<span class="input-group-text size1">m</span>
+															</div>
+														</div>
+														<div class="input-group pb-2">
+															<input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01 min="0.01" required>
+															<div class="input-group-append">
+																<span class="input-group-text size1">m</span>
+															</div>
+														</div>
+														<div class="input-group pb-2">
+															<input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01 min="0.01" required>
+															<div class="input-group-append">
+																<span class="input-group-text size1">m</span>
+															</div>
+														</div>
+														<div class="input-group pb-2">
+															<input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight" step=0.01 min="0.01" required>
+															<div class="input-group-append">
+															 <span class="input-group-text size1">kg</span>
+															</div>
+														</div>
+														<div class="input-group">
+															<input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01 min="0.01" required>
+															<div class="input-group-append">
+																<span class="input-group-text size1">$</span>
+															</div>
+														</div>
+												  </div>
+												</div>
 											</div>
-										  <div class="card-body p-0">
-												<select id="multiple2" class="form-control" data-role="select-dropdown" style="height:250px;" multiple required>
-													<option value="1" id="refrigerated" class="lang" >refrigerated</option>
-													<option value="2">limited-dock</option>
-													<option value="3">hazardous</option>
-													<option value="4">rush</option>
-												</select>
-												<div class="invalid-feedback">Please select at least one requirement.</div>
-												<div class="overflow-auto bg-light" style="height:70px; border-bottom-left-radius:15px;border-bottom-right-radius:15px;"">
-													<ul class="listec list-group-flush text-muted border-light p-0" id="listrequirements">
-														<li class="list-group-item"></li>
-													</ul>
+											<div class="col-12 col-md-5">
+												<div id="card2" class="card">
+												  <div class="card-body px-0 pb-0">
+												  	<h5 class="card-title m-0 d-flex justify-content-between align-items-center pb-4 px-3">Requirements<span id="compteur" class="badge badge-light">0</span></h5>
+														<select id="multiple2" class="form-control" data-role="select-dropdown" style="height:165px;border:0px;" multiple required>
+															<option value="1" id="refrigerated" class="lang" >refrigerated</option>
+															<option value="2">limited-dock</option>
+															<option value="3">hazardous</option>
+															<option value="4">rush</option>
+														</select>
+														<div class="invalid-feedback">Please select at least one requirement.</div>
+														<div class="overflow-auto bg-light" style="height:70px; border-bottom-left-radius:15px;border-bottom-right-radius:15px;"">
+															<ul class="listec list-group-flush text-muted border-light p-0" id="listrequirements">
+																<li class="list-group-item"></li>
+															</ul>
+														</div>
+												  </div>
 												</div>
-										  </div>
+											</div>
 										</div>
 									</div>
-									<div class="col-12 col-xl-7">
+									
+									<div class="col-12 col-xl-7 pl-0">
 										<div id="card3" class="card">
-											<div class="card-header">
-												<h5 id="cmev" class="card-title m-0">Sale offering</h5>
-											</div>
-										  <div class="card-body p-0">
+										  <div class="card-body px-0 pb-0">
+										  	<div class="card-title px-4 d-flex justify-content-between">
+										  		<div class="p-0">
+										  			<button type="button" class="btn btn-dark badge badge-pill badge-light" data-container="body" data-toggle="popover" data-placement="top" title="Help" data-content="When I'll have time, I will write some instructions which can help you &#128516">?</button>
+													</div>
+										  		<h4 id="cmev" class="col-10">Sale offering</h4>
+										  		<div class="row col-2 text-right">
+														<div class="col-6 p-0">
+															<div class="toggle-button-cover">
+													      <div class="button-cover">
+													        <div class="button button-t r" id="button-6">
+													          <input type="checkbox" class="checkbox">
+													          <div class="knobs"></div>
+													          <div class="layer"></div>
+													        </div>
+													      </div>
+													    </div>
+														</div>
+													</div>
+										  	</div>
 											  <div class="list-group list-group-flush">
 											  	<a id="A" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
 											    	<div class="row px-3 py-1">
@@ -238,8 +248,7 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="text-center">
+								<div class="text-center px-4">
 									<small id="cterms" class="text-muted">By clicking on "Get a quote", you accept the Terms and Conditions of Use.</small>
 						  		<button id="getquote" type="submit" class="lang btn btn-primary btn-lg btn-block bg-gray-300">Get a quote</button>
 								</div>
