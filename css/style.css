@@ -39,6 +39,7 @@
 .flag{
 	height:90%;
 	opacity:75%;
+	cursor: pointer;
 }
 
 .flag:hover{

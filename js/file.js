@@ -42,22 +42,6 @@ $(function() {
 	  	  $("duree").attr('placeholder', data[0].duree);
 	  	  $("#montant").attr('placeholder', data[0].montant);
 	  	  $("duree2").attr('placeholder', data[0].duree2);
-	  	  
-    	  // Bouton de langues :
-    	  /*
-	  	  $(".other-lang-button").click(function(){
-					var val1 = $(".lang-button").text();
-				 	var id1 = $(".lang-button").attr("id");
-				  var val2 = $(".other-lang-button").text();
-				  var id2 = $(".other-lang-button").attr("id");
-				  $(".other-lang-button").text(val1);
-				  $(".other-lang-button").val(val1);
-				  $(".other-lang-button").attr("id",id1);
-				  $(".lang-button").text(val2);
-				  $(".lang-button").val(val2);
-				  $(".lang-button").attr("id",id2);
-				})
-				*/
 	    },
 	    error:function(xhr, ajaxOptions, thrownError){
 	  	  console.log('error');
