@@ -36,6 +36,15 @@
 	
 }
 
+.flag{
+	height:90%;
+	opacity:75%;
+}
+
+.flag:hover{
+	opacity:100%;
+}
+
 .add2{
 	overflow-y:scroll;
 	height:440px;
