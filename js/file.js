@@ -44,6 +44,7 @@ $(function() {
 	  	  $("duree2").attr('placeholder', data[0].duree2);
 	  	  
     	  // Bouton de langues :
+    	  /*
 	  	  $(".other-lang-button").click(function(){
 					var val1 = $(".lang-button").text();
 				 	var id1 = $(".lang-button").attr("id");
@@ -56,6 +57,7 @@ $(function() {
 				  $(".lang-button").val(val2);
 				  $(".lang-button").attr("id",id2);
 				})
+				*/
 	    },
 	    error:function(xhr, ajaxOptions, thrownError){
 	  	  console.log('error');
