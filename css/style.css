@@ -29,8 +29,21 @@
 	padding:2%;
 }
 
+.resizing{
+	padding-top:5%;
+	padding-right:5%;
+	padding-bottom:5%;
+	
+}
+
+.add2{
+	overflow-y:scroll;
+	height:440px;
+	
+}
+
 .second-bloc{
-	height:480px;
+	height:520px;
 	padding:5%;
 }
 

@@ -9,6 +9,7 @@
   	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"> <!-- pour Toogle button -->
   	<script src="./data/en.json"></script>
   	<script src="./data/fr.json"></script>
+  	<script defer src="./js/d.js"></script>
   	<script defer src="./js/file.js"></script>
 		<script src="./lib/font-awesome/js/all.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -68,13 +69,13 @@
 	<!-- ************* FORM ************* -->
 		<div id="div2">
 			<div class="mr-2">
-				<div id="div5">
-					<div class="shadow bg-white position-relative bloc bloc-formulaire">
-						<div class="tab-content">
-							<form id="principalform" class="needs-validation" action="javascript:void(0);" onsubmit="modify()" novalidate>
-								<div class="row col-12">
-									<div class="col-12 col-xl-5">
-										<div class="form-row col-12 pb-1">
+				<div id="div13" class="shadow bg-white position-relative bloc bloc-formulaire">
+					<div class="tab-content">
+						<form id="principalform" class="needs-validation" action="javascript:void(0);" onsubmit="modify()" novalidate>
+							<div id="div14">
+								<div id="div8" class="row col-12">
+									<div id="div6" class="col-12 col-xl-5 pr-0">
+										<div id="div12" class="form-row col-12 pb-1">
 											<div class="text-center col-12">
 												<label class="sr-only" for="origin">Origin</label>
 												<div class="input-group mb-2">
@@ -96,37 +97,37 @@
 												</div>
 											</div>
 										</div>
-										<div class="card-group pb-1 col-12">
-											<div class="col-12 col-md-7 pl-0">
+										<div id="div11" class="card-group pb-1 col-12">
+											<div id="div9" class="col-12 col-md-7 pl-0">
 												<div id="card1" class="card">
 												  <div class="card-body" style="border:0px;">
 												  	<h5 class="card-title pb-2">Info chargement</h5>
 												    <div class="input-group pb-2">
-															<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01 min="0.01" required>
+															<input type="number" class="form-control lang" id="longueur" placeholder="Length" step=0.01 min="0.01">
 															<div class="input-group-append">
 																<span class="input-group-text size1">m</span>
 															</div>
 														</div>
 														<div class="input-group pb-2">
-															<input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01 min="0.01" required>
+															<input type="number" class="form-control lang" id="width" placeholder="Width" step=0.01 min="0.01">
 															<div class="input-group-append">
 																<span class="input-group-text size1">m</span>
 															</div>
 														</div>
 														<div class="input-group pb-2">
-															<input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01 min="0.01" required>
+															<input type="number" class="form-control lang" id="height" placeholder="Height" step=0.01 min="0.01">
 															<div class="input-group-append">
 																<span class="input-group-text size1">m</span>
 															</div>
 														</div>
 														<div class="input-group pb-2">
-															<input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight" step=0.01 min="0.01" required>
+															<input type="number" class="form-control lang" id="weight" placeholder="Weight" aria-label="Weight" step=0.01 min="0.01">
 															<div class="input-group-append">
 															 <span class="input-group-text size1">kg</span>
 															</div>
 														</div>
 														<div class="input-group">
-															<input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01 min="0.01" required>
+															<input id="value" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" step=0.01 min="0.01">
 															<div class="input-group-append">
 																<span class="input-group-text size1">$</span>
 															</div>
@@ -134,17 +135,16 @@
 												  </div>
 												</div>
 											</div>
-											<div class="col-12 col-md-5">
+											<div id="div10" class="col-12 col-md-5">
 												<div id="card2" class="card">
 												  <div class="card-body px-0 pb-0">
 												  	<h5 class="card-title m-0 d-flex justify-content-between align-items-center pb-4 px-3">Requirements<span id="compteur" class="badge badge-light">0</span></h5>
-														<select id="multiple2" class="form-control" data-role="select-dropdown" style="height:165px;border:0px;" multiple required>
+														<select id="multiple2" class="form-control" data-role="select-dropdown" style="height:165px;border:0px;" multiple>
 															<option value="1" id="refrigerated" class="lang" >refrigerated</option>
 															<option value="2">limited-dock</option>
 															<option value="3">hazardous</option>
 															<option value="4">rush</option>
 														</select>
-														<div class="invalid-feedback">Please select at least one requirement.</div>
 														<div class="overflow-auto bg-light" style="height:70px; border-bottom-left-radius:15px;border-bottom-right-radius:15px;"">
 															<ul class="listec list-group-flush text-muted border-light p-0" id="listrequirements">
 																<li class="list-group-item"></li>
@@ -156,9 +156,9 @@
 										</div>
 									</div>
 									
-									<div class="col-12 col-xl-7 pl-0">
+									<div id="div7" class="col-12 col-xl-7 pl-0">
 										<div id="card3" class="card">
-										  <div class="card-body px-0 pb-0">
+										  <div id="div12" class="card-body px-0 pb-0">
 										  	<div class="card-title px-4 d-flex justify-content-between">
 										  		<div class="p-0">
 										  			<button type="button" class="btn btn-dark badge badge-pill badge-light" data-container="body" data-toggle="popover" data-placement="top" title="Help" data-content="When I'll have time, I will write some instructions which can help you &#128516">?</button>
@@ -180,37 +180,37 @@
 										  	</div>
 											  <div class="list-group list-group-flush">
 											  	<a id="A" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
-											    	<div class="row px-3 py-1">
+											    	<div class="resizechamp3 row px-3 py-1">
 												    	<p id="cTextA" class="col-12 col-md-2">A : auction</p>
-													    <div class="input-group col-8 col-md-4">
+													    <div class="resizechamp input-group col-8 col-md-4">
 																<input type="number" class="form-control lang" id="duree" placeholder="Duration" aria-label="Durée" step=1 min="1" required disabled>
 																<div class="input-group-append">
 																 <span class="input-group-text size2">min</span>
 																</div>
 															</div>
-															<div class="col-4 col-md-6 text-right">
+																<div class="resizechamp2 col-4 col-md-6 text-right">
 																<p>1$</p>
 															</div>
 														</div>
 											    </a>
 											    <a id="B" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
-											    	<div class="row px-3 py-1">
+											    	<div class="resizechamp3 row px-3 py-1">
 												    	<p id="cTextB" class="col-12 col-md-2 pr-0">B : fixed price</p>
-												    	<div class="input-group col-8 col-md-4">
+												    	<div class="resizechamp input-group col-8 col-md-4">
 																<input type="number" class="form-control lang" id="montant" placeholder="Amount" aria-label="Montant" step=0.01 min="0.01" required disabled>
 																<div class="input-group-append">
 																 <span class="input-group-text size2">$</span>
 																</div>
 															</div>
-															<div class="col-4 col-md-6 text-right">
+															<div class="resizechamp2 col-4 col-md-6 text-right">
 																<p>special 2$</p>
 															</div>
 													</div>
 											    </a>
 											    <a id="C" href="#"  onclick="selection(this)" class="list-group-item list-group-item-action p-1">
-											    	<div class="row px-3 py-1">
+											    	<div class="resizechamp3 row px-3 py-1">
 												    	<p id="cTextC" class="col-12 col-md-2">C : private</p>
-												    	<div class="col-8 col-md-4">
+												    	<div class="resizechamp col-8 col-md-4">
 													    	<div class="input-group col-12 p-0">
 																	<input type="number" class="form-control lang" id="duree2" placeholder="Duration" aria-label="Durée" step=1 min="1" required disabled>
 																	<div class="input-group-append">
@@ -235,7 +235,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="col-4 col-md-6 text-right">
+															<div class="resizechamp2 col-4 col-md-6 text-right">
 																<p>2$ / courriel</p>
 															</div>
 														</div>
@@ -248,12 +248,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="text-center px-4">
+								<div id="buttonend" class="text-center px-4">
 									<small id="cterms" class="text-muted">By clicking on "Get a quote", you accept the Terms and Conditions of Use.</small>
 						  		<button id="getquote" type="submit" class="lang btn btn-primary btn-lg btn-block bg-gray-300">Get a quote</button>
 								</div>
-							</form>
-						</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -261,7 +261,7 @@
 	<!-- ************* FORM ************* -->
 
 	<!-- ************* RESULTS ************* -->
-		<div id="div7">
+		<div id="div5">
 			<div class="ml-2">
 				<div id="div6" class="bloc-blanc2">
 					<div id="div3" class="shadow bg-white position-relative">
