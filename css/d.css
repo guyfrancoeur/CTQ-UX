@@ -1,0 +1,162 @@
+/* Désactiver les flèches dans les input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+/* Toogle-button */
+.button-cover, .knobs, .layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.button-t{
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+.button.r, .button.r .layer{
+    border-radius: 100px;
+}
+.checkbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+.knobs{
+    z-index: 2;
+}
+.layer{
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+#button-6{
+    overflow: visible;
+}
+#button-6 .knobs:before{
+    content: 'm';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.5;
+    padding: 9px 4px;
+    background-color: #235599;
+    border-radius: 50%;
+}
+#button-6 .layer, #button-6 .knobs, #button-6 .knobs:before{
+    transform: rotateZ(0);
+    transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+#button-6 .checkbox:checked + .knobs{
+    transform: rotateZ(-180deg);
+}
+#button-6 .checkbox:checked + .knobs:before{
+    content: 'pi';
+    background-color: #BB2211;
+    transform: rotateZ(180deg);
+}
+#button-6 .checkbox:checked ~ .layer{
+    background-color: #fcebeb;
+    transform: rotateZ(180deg);
+}
+
+
+
+
+
+/* Prix */
+.slide .text{
+  /*background-color: #CD0909;*/
+  background: radial-gradient(circle at center, #E11E1E, #AD0808);
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-top-left-radius:25px;
+  border-bottom-left-radius:25px;
+  opacity:90%;
+}
+.slide-text {
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+  font-style:italic;
+  font-weight: 700;
+  padding-top:8px;
+  margin-right:-10px;
+}
+
+
+
+.bg-style{
+	background-color: rgba(255,255,255,0.8);
+}
+
+ul.listec li{
+	padding:0;
+}
+
+.listec{
+	border: 1px solid rgb(247,247,247);
+}
+
+.input-group-text{
+	height:38.5px;
+}
+
+.size1{
+	width:45px;
+	display: table;
+}
+
+.size2{
+	width:55px;
+	display: table;
+}
+
+.divCourriels{
+	width:370px;
+}
+
+#addcourriel{
+	height:38.5px;
+}
+
+#inputcourriel{
+	width:300px;
+}
+
+.cout-style{
+	border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+	border-top: 2px solid rgba(1,13,40,.2);
+}
+
+#card1, #card2, #card3{
+	border-radius:5px;
+}

@@ -7,13 +7,10 @@ $(function () {
 
 
 /* ********* Requirements ********* */
-// Compteur Requirements
-var compteur = 0;
-var ul2 = document.getElementById("compteur");
+
 
 var ul2 = document.getElementById("listrequirements");
 $("option").click(function() {
-	compteur++;
 	document.getElementById("compteur").innerHTML = compteur;
 	value = $(this).text();
 	var li2 = document.createElement("li");
@@ -25,7 +22,6 @@ $("option").click(function() {
   li2.textContent = value;
   ul2.appendChild(li2);
   document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-	
 });
 
 $( "option" ).click(function() {
