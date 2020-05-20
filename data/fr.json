@@ -76,15 +76,15 @@
 		"value" : "réfrigéré"
 	},
 	{
-		"obj" : "cmev",
+		"obj" : "#cmev",
 		"value" : "Mise en vente"
 	},
 	{
-		"obj" : "cTextA",
+		"obj" : "#cTextA",
 		"value" : "enchère"
 	},
 	{
-		"obj" : "cTextB",
+		"obj" : "#cTextB",
 		"value" : "prix fixe"
 	},
 	{
@@ -92,23 +92,23 @@
 		"value" : "privée"
 	},
 	{
-		"obj" : "cCout",
+		"obj" : "#cCout",
 		"value" : "Coût"
 	},
 	{
-		"obj" : "duree",
+		"obj" : "#duree",
 		"value" : "Durée"
 	},
 	{
-		"obj" : "duree2",
+		"obj" : "#duree2",
 		"value" : "Durée"
 	},
 	{
-		"obj" : "montant",
+		"obj" : "#montant",
 		"value" : "Montant"
 	},
 	{
-		"obj" : "cterms",
+		"obj" : "#cterms",
 		"value" : "En cliquant sur 'Obtenir un devis', vous acceptez nos Conditions générales d'utilisation."
 	}
 ]
