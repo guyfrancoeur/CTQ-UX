@@ -118,5 +118,41 @@
 	{
 		"obj" : "#cFooterText",
 		"value" : "© 2020 Copyright  •  CTQ  •  Tous droits réservés."
+	},
+	{
+		"obj" : "#lslider",
+		"value" : "Glissez vers la droite →"
+	},
+	{
+		"obj" : "#cemail",
+		"value" : "email@exemple.ca"
+	},
+	{
+		"obj" : "#cBecomeM",
+		"value" : "Devenir un Donneur d'ouvrage"
+	},
+	{
+		"obj" : "#cBecomeT",
+		"value" : "Devenir un Transporteur"
+	},
+	{
+		"obj" : "#cT",
+		"value" : "Transporteur"
+	},
+	{
+		"obj" : "#cM",
+		"value" : "Donneur d'ouvrage"
+	},
+	{
+		"obj" : "#cForgotPassM",
+		"value" : "Mot de passe oublié"
+	},
+	{
+		"obj" : "#cForgotPassT",
+		"value" : "Mot de passe oublié"
+	},
+	{
+		"obj" : "#cLoginTitle",
+		"value" : "Se connecter"
 	}
 ]

@@ -12,7 +12,6 @@ $(function() {
 	    	console.log('success');
 	    	
 				$.each(data, function(index, x) {
-					console.log("objet :" + x.obj + " value : " + x.value);
 					$(x.obj).text(x.value);
 					$(x.obj).attr('placeholder', x.value);
 				});
