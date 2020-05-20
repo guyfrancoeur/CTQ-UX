@@ -14,7 +14,7 @@ $(function() {
 				$.each(json, function(index, x) {
 					console.log("objet :" + x.obj + " value : " + x.value);
 					(x.obj).text(x.value);
-				})
+				});
 
 	    },
 	    error:function(xhr, ajaxOptions, thrownError){
