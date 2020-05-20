@@ -1,4 +1,32 @@
 /* ********* Languages ********* */
+
+$(function() {
+	$('.translate').click(function() {
+    var lang = $(this).attr('id');
+    console.log(lang);
+    $.ajax({
+	    //url: "./data/" + lang + ".json",
+	    url: "./data/fr.json",
+	    dataType: "json",
+	    success:function(data){
+	    	console.log('success');
+	    	
+				$.each(json, function(index, x) {
+					console.log("objet :" + x.obj + " value : " + x.value);
+					(x.obj).text(x.value);
+				})
+
+	    },
+	    error:function(xhr, ajaxOptions, thrownError){
+	  	  console.log('error');
+	      console.log(thrownError);
+	    }
+	  })
+	})
+});
+
+
+/*
 $(function() {
 	$('.translate').click(function() {
     var lang = $(this).attr('id');
@@ -10,6 +38,7 @@ $(function() {
 	    	console.log('success');
 	    	
 				// Changement des attributs :
+				
 	  	  $("#home").text(data[0].home);
 	  	  $("#bsubmit").text(data[0].bsubmit);
 	  	  $("#lpass").text(data[0].lpass);
@@ -50,6 +79,7 @@ $(function() {
 	  })
 	})
 });
+*/
 
 
 

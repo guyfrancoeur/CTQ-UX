@@ -1,32 +1,114 @@
 [
-	{"home" : "Accueil"},
-	{"bsubmit" : "Se connecter"},
-	{"password" : "Mot de passe"},
-	{"lpass" : "Mot de passe"},
-	{"forgot" : "Mot de passe oublié"},
-	{"quantity" : "Quantité"},
-	{"weight" : "Poids"},
-	{"time" : "Temps"},
-	{"value" : "Valeur"},
-	{"hours" : "heures"},
-	{"longueur" : "Longueur"},
-	{"width" : "Largeur"},
-	{"height" : "Hauteur"},
-	{"requirements" : "Exigences"},
-	{"loading" : "Chargement"},
-	{"dimensions" : "Dimensions du fret (pieds)"},
-	{"getquote" : "Obtenir un devis"},
-	{"origin" : "DÉPART - Ville ou Code Postal"},
-	{"destination" : "DESTINATION - Ville ou Code Postal"},
-	{"logintitle" : "Se connecter"},
-	{"refrigerated" : "réfrigéré"},
-	{"cmev" : "Mise en vente"},
-	{"cTextA" : "enchère"},
-	{"cTextB" : "prix fixe"},
-	{"cTextC" : "privée"},
-	{"cCout" : "Coût"},
-	{"duree" : "Durée"},
-	{"duree2" : "Durée"},
-	{"montant" : "Montant"},
-	{"cterms": "En cliquant sur 'Obtenir un devis', vous acceptez nos Conditions générales d'utilisation."}
+	{
+		"obj" : "#home",
+		"value" : "Accueil"
+	},
+	{
+		"obj" : "#bsubmit",
+		"value" : "Se connecter"
+	},
+	{
+		"obj" : "#password",
+		"value" : "Mot de passe"
+	},
+	{
+		"obj" : "#lpass",
+		"value" : "Mot de passe"
+	},
+	{
+		"obj" : "#forgot",
+		"value" : "Mot de passe oublié"
+	},
+	{
+		"obj" : "#quantity",
+		"value" : "Quantité"
+	},
+	{
+		"obj" : "#weight",
+		"value" : "Poids"
+	},
+	{
+		"obj" : "#time",
+		"value" : "Temps"
+	},
+	{
+		"obj" : "#value",
+		"value" : "Valeur"
+	},
+	{
+		"obj" : "#hours",
+		"value" : "heures"
+	},
+	{
+		"obj" : "#longueur",
+		"value" : "Longueur"
+	},
+	{
+		"obj" : "#width",
+		"value" : "Largeur"
+	},
+	{
+		"obj" : "#height",
+		"value" : "Hauteur"
+	},
+	{
+		"obj" : "#requirements",
+		"value" : "Exigences"
+	},
+	{
+		"obj" : "#getquote",
+		"value" : "Obtenir un devis"
+	},
+	{
+		"obj" : "#origin",
+		"value" : "DÉPART - Ville ou Code Postal"
+	},
+	{
+		"obj" : "#destination",
+		"value" : "DESTINATION - Ville ou Code Postal"
+	},
+	{
+		"obj" : "#logintitle",
+		"value" : "Se connecter"
+	},
+	{
+		"obj" : "#refrigerated",
+		"value" : "réfrigéré"
+	},
+	{
+		"obj" : "cmev",
+		"value" : "Mise en vente"
+	},
+	{
+		"obj" : "cTextA",
+		"value" : "enchère"
+	},
+	{
+		"obj" : "cTextB",
+		"value" : "prix fixe"
+	},
+	{
+		"obj" : "cTextC",
+		"value" : "privée"
+	},
+	{
+		"obj" : "cCout",
+		"value" : "Coût"
+	},
+	{
+		"obj" : "duree",
+		"value" : "Durée"
+	},
+	{
+		"obj" : "duree2",
+		"value" : "Durée"
+	},
+	{
+		"obj" : "montant",
+		"value" : "Montant"
+	},
+	{
+		"obj" : "cterms",
+		"value" : "En cliquant sur 'Obtenir un devis', vous acceptez nos Conditions générales d'utilisation."
+	}
 ]
