@@ -145,11 +145,11 @@
 	},
 	{
 		"obj" : "#cForgotPassM",
-		"value" : "Mot de passe oublié"
+		"value" : "⋙ Mot de passe oublié"
 	},
 	{
 		"obj" : "#cForgotPassT",
-		"value" : "Mot de passe oublié"
+		"value" : "⋙ Mot de passe oublié"
 	},
 	{
 		"obj" : "#cLoginTitle",

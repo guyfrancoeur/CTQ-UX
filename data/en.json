@@ -1,33 +1,158 @@
 [
-	{"home" : "Home"},
-	{"bsubmit" : "Sign in"},
-	{"password" : "Password"},
-	{"lpass" : "Password"},
-	{"forgot" : "Forgot password ?"},
-	{"quantity" : "Quantity"},
-	{"weight" : "Weight"},
-	{"time" : "Time"},
-	{"value" : "Value"},
-	{"hours" : "hours"},
-	{"longueur" : "Length"},
-	{"width" : "Width"},
-	{"height" : "Height"},
-	{"requirements" : "Requirements"},
-	{"loading" : "Loading"},
-	{"dimensions" : "Freight dimensions (feet)"},
-	{"getquote" : "Get a quote"},
-	{"origin" : "ORIGIN - City or Postal Code"},
-	{"destination" : "DESTINATION - City or Postal Code"},
-	{"logintitle" : "Login"},
-	{"refrigerated" : "refrigerated"},
-	{"cmev" : "Sale offering"},
-	{"cTextA" : "auction"},
-	{"cTextB" : "fixed price"},
-	{"cTextC" : "private"},
-	{"cCout" : "Cost"},
-	{"duree" : "Duration"},
-	{"duree2" : "Duration"},
-	{"montant" : "Amount"},
-	{"cterms" : "By clicking on 'Get a quote', you accept the Terms and Conditions of Use."}
+	{
+		"obj" : "#home",
+		"value" : "Home"
+	},
+	{
+		"obj" : "#bsubmit",
+		"value" : "Login"
+	},
+	{
+		"obj" : "#password",
+		"value" : "Password"
+	},
+	{
+		"obj" : "#lpass",
+		"value" : "Password"
+	},
+	{
+		"obj" : "#forgot",
+		"value" : "Forgot password"
+	},
+	{
+		"obj" : "#quantity",
+		"value" : "Quantity"
+	},
+	{
+		"obj" : "#weight",
+		"value" : "Weight"
+	},
+	{
+		"obj" : "#time",
+		"value" : "Time"
+	},
+	{
+		"obj" : "#value",
+		"value" : "Value"
+	},
+	{
+		"obj" : "#hours",
+		"value" : "hours"
+	},
+	{
+		"obj" : "#longueur",
+		"value" : "Length"
+	},
+	{
+		"obj" : "#width",
+		"value" : "Width"
+	},
+	{
+		"obj" : "#height",
+		"value" : "Height"
+	},
+	{
+		"obj" : "#requirements",
+		"value" : "Requirements"
+	},
+	{
+		"obj" : "#getquote",
+		"value" : "Get a quote"
+	},
+	{
+		"obj" : "#origin",
+		"value" : "ORIGIN - City or Postal Code"
+	},
+	{
+		"obj" : "#destination",
+		"value" : "DESTINATION - City or Postal Code"
+	},
+	{
+		"obj" : "#logintitle",
+		"value" : "Login"
+	},
+	{
+		"obj" : "#logout",
+		"value" : "Logout"
+	},
+	{
+		"obj" : "#refrigerated",
+		"value" : "refrigerated"
+	},
+	{
+		"obj" : "#cmev",
+		"value" : "Sale offering"
+	},
+	{
+		"obj" : "#cTextA",
+		"value" : "A : auction"
+	},
+	{
+		"obj" : "#cTextB",
+		"value" : "B : fixed price"
+	},
+	{
+		"obj" : "#cTextC",
+		"value" : "C : private"
+	},
+	{
+		"obj" : "#cCout",
+		"value" : "Cost : "
+	},
+	{
+		"obj" : "#duree",
+		"value" : "Duration"
+	},
+	{
+		"obj" : "#duree2",
+		"value" : "Duration"
+	},
+	{
+		"obj" : "#montant",
+		"value" : "Amount"
+	},
+	{
+		"obj" : "#cterms",
+		"value" : "By clicking on "Get a quote", you accept the Terms and Conditions of Use."
+	},
+	{
+		"obj" : "#cFooterText",
+		"value" : "© 2020 Copyright  •  CTQ  •  All rights reserved."
+	},
+	{
+		"obj" : "#lslider",
+		"value" : "Slide to the right →"
+	},
+	{
+		"obj" : "#cemail",
+		"value" : "email@example.ca"
+	},
+	{
+		"obj" : "#cBecomeM",
+		"value" : "Become a Manufacturer or a Broker"
+	},
+	{
+		"obj" : "#cBecomeT",
+		"value" : "Become a Transporter"
+	},
+	{
+		"obj" : "#cT",
+		"value" : "Transporter"
+	},
+	{
+		"obj" : "#cM",
+		"value" : "Manufacturer & broker"
+	},
+	{
+		"obj" : "#cForgotPassM",
+		"value" : "⋙ Forgot password"
+	},
+	{
+		"obj" : "#cForgotPassT",
+		"value" : "⋙ Forgot password"
+	},
+	{
+		"obj" : "#cLoginTitle",
+		"value" : "Login"
+	}
 ]
-

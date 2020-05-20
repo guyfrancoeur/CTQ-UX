@@ -3,13 +3,10 @@
 $(function() {
 	$('.translate').click(function() {
     var lang = $(this).attr('id');
-    console.log(lang);
     $.ajax({
-	    //url: "./data/" + lang + ".json",
-	    url: "./data/fr.json",
+	    url: "./data/" + lang + ".json",
 	    dataType: "json",
 	    success:function(data){
-	    	console.log('success');
 	    	
 				$.each(data, function(index, x) {
 					$(x.obj).text(x.value);
