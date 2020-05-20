@@ -85,19 +85,19 @@
 	},
 	{
 		"obj" : "#cTextA",
-		"value" : "enchère"
+		"value" : "A : enchère"
 	},
 	{
 		"obj" : "#cTextB",
-		"value" : "prix fixe"
+		"value" : "B : prix fixe"
 	},
 	{
 		"obj" : "#cTextC",
-		"value" : "privée"
+		"value" : "C : privée"
 	},
 	{
 		"obj" : "#cCout",
-		"value" : "Coût"
+		"value" : "Coût : "
 	},
 	{
 		"obj" : "#duree",
