@@ -72,6 +72,10 @@
 		"value" : "Se connecter"
 	},
 	{
+		"obj" : "#logout",
+		"value" : "Se déconnecter"
+	},
+	{
 		"obj" : "#refrigerated",
 		"value" : "réfrigéré"
 	},
@@ -88,7 +92,7 @@
 		"value" : "prix fixe"
 	},
 	{
-		"obj" : "cTextC",
+		"obj" : "#cTextC",
 		"value" : "privée"
 	},
 	{
