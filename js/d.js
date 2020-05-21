@@ -1,34 +1,18 @@
 /* ********* Toogle Button ********* */
+unite = 'm';
 $(".toggle-button-cover").click(function() {
-	if($('.cUnite').hasClass("m")){
-		$('.cUnite').removeClass("m");
-		$('.cUnite').addClass("pi");
+	if(unite == "m"){
 		$('.cUnite').html("pi");
+		unite = "pi";
 		console.log("pi");
 	}
 	else{
-		$('.cUnite').removeClass("pi");
-		$('.cUnite').addClass("m");
 		$('.cUnite').html("m");
+		unite = "m";
 	}
 });
 
 
-
-$('#cTextB').addClass('font-weight-bold');
-		$('#montant').removeAttr("disabled");
-		$('#A').removeClass('bg-light');
-var val1 = $(".lang-button").text();
-    	var id1 = $(".lang-button").attr("id");
-    	var val2 = $(".other-lang-button").text();
-    	var id2 = $(".other-lang-button").attr("id");
-    	
-    	$(".other-lang-button").text(val1);
-    	$(".other-lang-button").val(val1);
-    	$(".other-lang-button").attr("id",id1);
-        $(".lang-button").text(val2);
-        $(".lang-button").val(val2);
-        $(".lang-button").attr("id",id2);
 
 /* ********* Aide (popover) ********* */
 $(function () {
