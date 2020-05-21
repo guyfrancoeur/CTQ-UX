@@ -1,3 +1,35 @@
+/* ********* Toogle Button ********* */
+$(".toggle-button-cover").click(function() {
+	if($('.cUnite').hasClass("m")){
+		$('.cUnite').removeClass("m");
+		$('.cUnite').addClass("pi");
+		$('.cUnite').html("pi");
+		console.log("pi");
+	}
+	else{
+		$('.cUnite').removeClass("pi");
+		$('.cUnite').addClass("m");
+		$('.cUnite').html("m");
+	}
+});
+
+
+
+$('#cTextB').addClass('font-weight-bold');
+		$('#montant').removeAttr("disabled");
+		$('#A').removeClass('bg-light');
+var val1 = $(".lang-button").text();
+    	var id1 = $(".lang-button").attr("id");
+    	var val2 = $(".other-lang-button").text();
+    	var id2 = $(".other-lang-button").attr("id");
+    	
+    	$(".other-lang-button").text(val1);
+    	$(".other-lang-button").val(val1);
+    	$(".other-lang-button").attr("id",id1);
+        $(".lang-button").text(val2);
+        $(".lang-button").val(val2);
+        $(".lang-button").attr("id",id2);
+
 /* ********* Aide (popover) ********* */
 $(function () {
   $('[data-toggle="popover"]').popover()
@@ -5,13 +37,9 @@ $(function () {
 
 
 
-
 /* ********* Requirements ********* */
-
-
 var ul2 = document.getElementById("listrequirements");
 $("option").click(function() {
-	document.getElementById("compteur").innerHTML = compteur;
 	value = $(this).text();
 	var li2 = document.createElement("li");
 	li2.id = $(this).val();
@@ -27,7 +55,6 @@ $("option").click(function() {
 $( "option" ).click(function() {
   $(this).slideUp();
 });
-
 
 
 
@@ -56,8 +83,6 @@ addcourriel.addEventListener("click", function() {
 	  li.innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
 	}
 });
-
-
 
 
 
@@ -111,7 +136,6 @@ function selection(elem){
 
 
 
-
 /* ********* Espace résultats ********* */
 function modify(){
 	$('#container').addClass('col-12');
@@ -155,7 +179,6 @@ function modify(){
 	
 	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
 }
-
 
 
 
