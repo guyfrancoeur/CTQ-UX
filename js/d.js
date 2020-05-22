@@ -122,12 +122,13 @@ function selection(elem){
 
 /* ********* Espace résultats ********* */
 function modify(){
-	$('#container').addClass('col-12');
+	$('#container').removeClass('col-md-10 ');
 	$('#div1').addClass('row');
 	$('#div2').addClass('col-12');
 	$('#div2').addClass('col-xl-6');
 	$('#div3').addClass('bloc');
 	$('#div3').addClass('second-bloc');
+	$('#div13').addClass('resizebloc');
 	$('#div4').addClass('interieur');
 	$('#div5').addClass('col-12');
 	$('#div5').addClass('col-xl-6');
@@ -137,10 +138,12 @@ function modify(){
 	$('#div6').addClass('col-12');
 	$('#div7').addClass('pb-5');
 	$('#div7').removeClass('col-xl-7');
-	$('#div7').removeClass('pl-0');
 	$('#div8').removeClass('row');
+	$('#div8').addClass('pr-4');
+	$('#div8').addClass('pl-0');
+	$('#div8').removeClass('mx-0');
 	$('#div9').addClass('pl-0');
-	$('#div10').addClass('pr-0');
+	$('#div10').removeClass('pr-xl-3');
 	$('#div11').addClass('px-0');
 	$('#div12').addClass('px-0');
 	$('#div13').addClass('resizing');
@@ -160,7 +163,10 @@ function modify(){
 	$('.resizechamp2').removeClass('col-4');
 	$('.resizechamp2').addClass('col-md-3');
 	$('#buttonend').addClass('pb-3');
+	$('#divOrigin').removeClass('pr-xl-3');
+	$('#divDestination').removeClass('pr-xl-3');
 	
+	divDestination
 	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
 }
 

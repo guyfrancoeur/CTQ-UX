@@ -91,7 +91,7 @@ input[type=number] {
 
 
 /* Prix */
-.slide .text{
+.slide-special .text{
   /*background-color: #CD0909;*/
   background: radial-gradient(circle at center, #E11E1E, #AD0808);
   color: white;
@@ -100,7 +100,7 @@ input[type=number] {
   padding-bottom: 10px;
   padding-right: 20px;
   border-top-left-radius:25px;
-  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
   opacity:90%;
 }
 .slide-text {
@@ -110,7 +110,17 @@ input[type=number] {
   padding-top:8px;
   margin-right:-10px;
 }
-
+.slide .text{
+  background-color: rgb(1,13,40);
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-top-left-radius:25px;
+  border-bottom-left-radius:25px;
+  opacity:85%;
+}
 
 
 .bg-style{
@@ -139,9 +149,6 @@ ul.listec li{
 	display: table;
 }
 
-.divCourriels{
-	width:370px;
-}
 
 #addcourriel{
 	height:38.5px;

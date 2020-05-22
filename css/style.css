@@ -7,12 +7,13 @@
 	padding-top:30px;
 }
 
+
 .section::before {
 	position: absolute;
 	content: '';
 	z-index: -1;
 	width: 100%;
-	height: 450px;
+	height: 55%;
 	background-position: 100% 65%;
 	background-image: url(./../images/highway-1031149_1920-12.png);
 }
@@ -25,15 +26,10 @@
 	min-height: 50px;
 }
 
-.bloc-formulaire{
-	padding:2%;
-}
-
 .resizing{
 	padding-top:5%;
 	padding-right:5%;
-	padding-bottom:5%;
-	
+	padding-bottom:10%;
 }
 
 .flag{
@@ -49,13 +45,17 @@
 
 .add2{
 	overflow-y:scroll;
-	height:440px;
+	height:470px;
 	
 }
 
 .second-bloc{
 	height:520px;
-	padding:5%;
+	padding:3%;
+}
+
+.resizebloc{
+	height:520px;
 }
 
 .interieur{
@@ -139,6 +139,17 @@ ul.links-list li a:hover{
 	border: 1px solid;
 }
 
+.divCourriels{
+	width:370px;
+}
+
+.normal-height{
+	height: 14rem;
+}
+
+#divInfo, #divRequire{
+		height:295px;
+}
 
 /* ********* Quelques éléments pour la responsivité ********* */
 @media (max-width: 1199px) {
@@ -187,9 +198,27 @@ ul.links-list li a:hover{
 	}
 }
 
+@media (max-width: 460px) {
+	.divCourriels{
+		width:150px;
+	}
+}
+
 @media (max-width: 1700px) {
 	.bloc-formulaire{
 		margin-bottom:70px;
 	}
 	
+}
+
+@media (max-width: 1470px) {
+	#divInfo, #divRequire{
+		height:340px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.normal-height{
+		height: 17rem;
+	}
 }
