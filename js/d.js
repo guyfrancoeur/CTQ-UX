@@ -1,8 +1,9 @@
 // ceci est la meme chose en plus court $(function () {  ... }
-$( document ).ready(function() { 
+$( document ).ready(function() { // ou $(function () { 
   console.log( "ready!" );
   $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix
   $('.selectpicker').selectpicker();
+  $('[data-toggle="popover"]').popover()
 });
 
 /* ********* Toogle Button ********* */
@@ -19,11 +20,13 @@ $(".toggle-button-cover").click(function() {
 });
 
 /* ********* Aide (popover) ********* */
-$(function () {
-  $('[data-toggle="popover"]').popover()
-});
+//voir document.ready()
+//$(function () {
+//  $('[data-toggle="popover"]').popover()
+//});
 
 /* ********* Requirements ********* */
+/* deprecated...
 var ul2 = document.getElementById("listrequirements");
 $("option").click(function() {
 	if($(this).hasClass("choosen")){
@@ -48,7 +51,7 @@ $("option").click(function() {
 	  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
 	}
 });
-
+*/
 /* ********* Ajout courriels ********* */
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -127,6 +130,7 @@ function selection(elem){
 }
 
 /* ********* Espace résultats ********* */
+// ici
 function modify(){
 	$('#container').removeClass('col-md-10 ');
 	$('#div1').addClass('row');
