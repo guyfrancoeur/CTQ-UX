@@ -10,6 +10,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.choosen{
+	color:white;
+}
 
 
 /* Toogle-button */
@@ -85,9 +88,6 @@ input[type=number] {
     background-color: #fcebeb;
     transform: rotateZ(180deg);
 }
-
-
-
 
 
 /* Prix */

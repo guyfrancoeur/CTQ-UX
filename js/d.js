@@ -24,28 +24,34 @@ $(function () {
 /* ********* Requirements ********* */
 var ul2 = document.getElementById("listrequirements");
 $("option").click(function() {
-	value = $(this).text();
-	var li2 = document.createElement("li");
-	li2.id = $(this).val();
-  li2.className = 'list-group-item';
-  li2.className = 'd-flex';
-  li2.className = 'justify-content-between';
-  li2.className = 'align-items-left';
-  li2.textContent = value;
-  ul2.appendChild(li2);
-  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+	if($(this).hasClass("choosen")){
+		$(this).removeClass("bg-primary");
+		$(this).removeClass("choosen");
+		var id = "#" + $(this).val();
+		$(id).remove();
+	}
+	else{
+		$(this).addClass("bg-primary");
+		$(this).addClass("choosen");
+	
+		value = $(this).text();
+		var li2 = document.createElement("li");
+		li2.id = $(this).val();
+	  li2.className = 'list-group-item';
+	  li2.className = 'd-flex';
+	  li2.className = 'justify-content-between';
+	  li2.className = 'align-items-left';
+	  li2.textContent = value;
+	  ul2.appendChild(li2);
+	  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+	}
 });
-
-$( "option" ).click(function() {
-  $(this).slideUp();
-});
-
 
 
 /* ********* Ajout courriels ********* */
 function validateEmail(email) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
 }
 
 var addcourriel = document.getElementById("addcourriel");
@@ -53,19 +59,22 @@ var inputcourriel = document.getElementById("inputcourriel");
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;
 
-addcourriel.addEventListener("click", function() {
-	if (validateEmail(inputcourriel.value)){
-		nbEmails ++;
-	 	var li = document.createElement("li");
-	  li.className = 'list-group-item';
-	  li.className = 'd-flex';
-	  li.className = 'justify-content-between';
-	  li.className = 'align-items-center';
-	  li.textContent = inputcourriel.value +";";
-	  console.log(inputcourriel);
-	  ul.appendChild(li);
-	  li.innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-	}
+$("#addcourriel").click(function() {
+	var tabsplit = ($("#inputcourriel").val()).split(';');
+	tabsplit.forEach(function(element){
+		if (validateEmail(element)){
+			nbEmails ++;
+		 	var li = document.createElement("li");
+		  li.className = 'list-group-item';
+		  li.className = 'd-flex';
+		  li.className = 'justify-content-between';
+		  li.className = 'align-items-center';
+		  li.textContent = element +";";
+		  ul.appendChild(li);
+		  $("#inputcourriel").val("");
+		  li.innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+		}
+	});
 });
 
 
