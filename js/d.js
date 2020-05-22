@@ -19,39 +19,6 @@ $(".toggle-button-cover").click(function() {
 	}
 });
 
-/* ********* Aide (popover) ********* */
-//voir document.ready()
-//$(function () {
-//  $('[data-toggle="popover"]').popover()
-//});
-
-/* ********* Requirements ********* */
-/* deprecated...
-var ul2 = document.getElementById("listrequirements");
-$("option").click(function() {
-	if($(this).hasClass("choosen")){
-		$(this).removeClass("bg-primary");
-		$(this).removeClass("choosen");
-		var id = "#" + $(this).val();
-		$(id).remove();
-	}
-	else{
-		$(this).addClass("bg-primary");
-		$(this).addClass("choosen");
-	
-		value = $(this).text();
-		var li2 = document.createElement("li");
-		li2.id = $(this).val();
-	  li2.className = 'list-group-item';
-	  li2.className = 'd-flex';
-	  li2.className = 'justify-content-between';
-	  li2.className = 'align-items-left';
-	  li2.textContent = value;
-	  ul2.appendChild(li2);
-	  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-	}
-});
-*/
 /* ********* Ajout courriels ********* */
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -196,3 +163,37 @@ function modify(){
 		});
 	}, false);
 })();
+
+/* ********* Aide (popover) ********* */
+//voir $(document).ready()
+//$(function () {
+//  $('[data-toggle="popover"]').popover()
+//});
+
+/* ********* Requirements ********* */
+/* deprecated...
+var ul2 = document.getElementById("listrequirements");
+$("option").click(function() {
+	if($(this).hasClass("choosen")){
+		$(this).removeClass("bg-primary");
+		$(this).removeClass("choosen");
+		var id = "#" + $(this).val();
+		$(id).remove();
+	}
+	else{
+		$(this).addClass("bg-primary");
+		$(this).addClass("choosen");
+	
+		value = $(this).text();
+		var li2 = document.createElement("li");
+		li2.id = $(this).val();
+	  li2.className = 'list-group-item';
+	  li2.className = 'd-flex';
+	  li2.className = 'justify-content-between';
+	  li2.className = 'align-items-left';
+	  li2.textContent = value;
+	  ul2.appendChild(li2);
+	  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+	}
+});
+*/
