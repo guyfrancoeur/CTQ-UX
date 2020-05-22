@@ -1,3 +1,10 @@
+// ceci est la meme chose en plus court $(function () {  ... }
+$( document ).ready(function() { 
+  console.log( "ready!" );
+  $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix
+  $('.selectpicker').selectpicker();
+});
+
 /* ********* Toogle Button ********* */
 unite = 'm';
 $(".toggle-button-cover").click(function() {
@@ -11,14 +18,10 @@ $(".toggle-button-cover").click(function() {
 	}
 });
 
-
-
 /* ********* Aide (popover) ********* */
 $(function () {
   $('[data-toggle="popover"]').popover()
 });
-
-
 
 /* ********* Requirements ********* */
 var ul2 = document.getElementById("listrequirements");
@@ -45,7 +48,6 @@ $("option").click(function() {
 	  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
 	}
 });
-
 
 /* ********* Ajout courriels ********* */
 function validateEmail(email) {
@@ -75,8 +77,6 @@ $("#addcourriel").click(function() {
 		}
 	});
 });
-
-
 
 /* ********* Mise en vente ********* */
 var cout = 0;
@@ -126,9 +126,7 @@ function selection(elem){
 	};
 }
 
-
-
-/* ********* Espace résultats ********* */
+/* ********* Espace rÃ©sultats ********* */
 function modify(){
 	$('#container').removeClass('col-md-10 ');
 	$('#div1').addClass('row');
@@ -177,8 +175,6 @@ function modify(){
 	divDestination
 	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
 }
-
-
 
 /* ********* Validation Formulaire ********* */
 (function() {
