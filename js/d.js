@@ -1,8 +1,11 @@
 // ceci est la meme chose en plus court $(function () {  ... }
 $( document ).ready(function() { // ou $(function () { 
-  console.log( "ready!" );
+  console.log("doc is ready!");
   $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix selectpicker
-  $('.selectpicker').selectpicker();
+  $('.selectpicker').selectpicker({
+    iconBase: 'fa',
+    tickIcon: 'fa-check'
+  });
   $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
 });
