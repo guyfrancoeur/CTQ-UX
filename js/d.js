@@ -2,10 +2,7 @@
 $( document ).ready(function() { // ou $(function () { 
   console.log("doc is ready!");
   $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix selectpicker
-  $('.selectpicker').selectpicker({
-    iconBase: 'fa',
-    tickIcon: 'fa-check'
-  });
+  $('.selectpicker').selectpicker();
   $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
 });
