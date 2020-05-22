@@ -1,3 +1,14 @@
+// A $( document ).ready() block.
+// ceci est la meme chose plus court $(function () {  ... }
+$( document ).ready(function() { 
+  console.log( "ready!" );
+  $('.selectpicker').selectpicker();
+  $('[data-toggle="popover"]').popover();
+});
+
+
+
+
 /* ********* Toogle Button ********* */
 unite = 'm';
 $(".toggle-button-cover").click(function() {
@@ -14,9 +25,9 @@ $(".toggle-button-cover").click(function() {
 
 
 /* ********* Aide (popover) ********* */
-$(function () {
-  $('[data-toggle="popover"]').popover()
-});
+//$(function () {
+//  $('[data-toggle="popover"]').popover()
+//});
 
 
 
@@ -128,7 +139,7 @@ function selection(elem){
 
 
 
-/* ********* Espace résultats ********* */
+/* ********* Espace rÃ©sultats ********* */
 function modify(){
 	$('#container').removeClass('col-md-10 ');
 	$('#div1').addClass('row');
