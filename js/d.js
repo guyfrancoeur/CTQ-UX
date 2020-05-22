@@ -1,6 +1,7 @@
 // ceci est la meme chose en plus court $(function () {  ... }
 $( document ).ready(function() { 
   console.log( "ready!" );
+  $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix
   $('.selectpicker').selectpicker();
 });
 
