@@ -25,7 +25,7 @@
 	{"obj":"#cdureeC","value":"Duration"},
 	{"obj":"#cmontant","value":"Amount"},
 	{"obj":"#cterms","value":"By clicking on 'Get a quote', you accept the Terms and Conditions of Use."},
-	{"obj":"#cFooterText","value":"© 2020 Copyright &nbsp • &nbsp CTQ &nbsp • &nbsp All rights reserved."},
+	{"obj":"#cFooterText","value":"© 2020 Copyright \xa0 • \xa0 CTQ \xa0 • &nbsp All rights reserved."},
 	{"obj":"#lslider","value":"Slide to the right →"},
 	{"obj":"#cemail","value":"email@example.ca"},
 	{"obj":"#cBecomeM","value":"Become a Manufacturer or a Broker"},
