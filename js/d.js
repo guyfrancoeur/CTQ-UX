@@ -4,7 +4,6 @@ $(".toggle-button-cover").click(function() {
 	if(unite == "m"){
 		$('.cUnite').html("pi");
 		unite = "pi";
-		console.log("pi");
 	}
 	else{
 		$('.cUnite').html("m");
