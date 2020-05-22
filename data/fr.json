@@ -1,158 +1,41 @@
 [
-	{
-		"obj" : "#home",
-		"value" : "Accueil"
-	},
-	{
-		"obj" : "#bsubmit",
-		"value" : "Se connecter"
-	},
-	{
-		"obj" : "#password",
-		"value" : "Mot de passe"
-	},
-	{
-		"obj" : "#lpass",
-		"value" : "Mot de passe"
-	},
-	{
-		"obj" : "#forgot",
-		"value" : "Mot de passe oublié"
-	},
-	{
-		"obj" : "#quantity",
-		"value" : "Quantité"
-	},
-	{
-		"obj" : "#weight",
-		"value" : "Poids"
-	},
-	{
-		"obj" : "#time",
-		"value" : "Temps"
-	},
-	{
-		"obj" : "#value",
-		"value" : "Valeur"
-	},
-	{
-		"obj" : "#hours",
-		"value" : "heures"
-	},
-	{
-		"obj" : "#longueur",
-		"value" : "Longueur"
-	},
-	{
-		"obj" : "#width",
-		"value" : "Largeur"
-	},
-	{
-		"obj" : "#height",
-		"value" : "Hauteur"
-	},
-	{
-		"obj" : "#requirements",
-		"value" : "Exigences"
-	},
-	{
-		"obj" : "#getquote",
-		"value" : "Obtenir un devis"
-	},
-	{
-		"obj" : "#origin",
-		"value" : "DÉPART - Ville ou Code Postal"
-	},
-	{
-		"obj" : "#destination",
-		"value" : "DESTINATION - Ville ou Code Postal"
-	},
-	{
-		"obj" : "#logintitle",
-		"value" : "Se connecter"
-	},
-	{
-		"obj" : "#logout",
-		"value" : "Se déconnecter"
-	},
-	{
-		"obj" : "#refrigerated",
-		"value" : "réfrigéré"
-	},
-	{
-		"obj" : "#cmev",
-		"value" : "Mise en vente"
-	},
-	{
-		"obj" : "#cTextA",
-		"value" : "A : enchère"
-	},
-	{
-		"obj" : "#cTextB",
-		"value" : "B : prix fixe"
-	},
-	{
-		"obj" : "#cTextC",
-		"value" : "C : privée"
-	},
-	{
-		"obj" : "#cCout",
-		"value" : "Coût : "
-	},
-	{
-		"obj" : "#duree",
-		"value" : "Durée"
-	},
-	{
-		"obj" : "#duree2",
-		"value" : "Durée"
-	},
-	{
-		"obj" : "#montant",
-		"value" : "Montant"
-	},
-	{
-		"obj" : "#cterms",
-		"value" : "En cliquant sur 'Obtenir un devis', vous acceptez nos Conditions générales d'utilisation."
-	},
-	{
-		"obj" : "#cFooterText",
-		"value" : "© 2020 Copyright  •  CTQ  •  Tous droits réservés."
-	},
-	{
-		"obj" : "#lslider",
-		"value" : "Glissez vers la droite →"
-	},
-	{
-		"obj" : "#cemail",
-		"value" : "email@exemple.ca"
-	},
-	{
-		"obj" : "#cBecomeM",
-		"value" : "Devenir un Donneur d'ouvrage"
-	},
-	{
-		"obj" : "#cBecomeT",
-		"value" : "Devenir un Transporteur"
-	},
-	{
-		"obj" : "#cT",
-		"value" : "Transporteur"
-	},
-	{
-		"obj" : "#cM",
-		"value" : "Donneur d'ouvrage"
-	},
-	{
-		"obj" : "#cForgotPassM",
-		"value" : "⋙ Mot de passe oublié"
-	},
-	{
-		"obj" : "#cForgotPassT",
-		"value" : "⋙ Mot de passe oublié"
-	},
-	{
-		"obj" : "#cLoginTitle",
-		"value" : "Se connecter"
-	}
+	{"obj" : "#home","value" : "Accueil"},
+	{"obj" : "#bsubmit","value" : "Se connecter"},
+	{"obj" : "#password","value" : "Mot de passe"},
+	{"obj" : "#lpass","value" : "Mot de passe"},
+	{"obj" : "#forgot","value" : "Mot de passe oublié"},
+	{"obj" : "#quantity","value" : "Quantité"},
+	{"obj" : "#weight","value" : "Poids"},
+	{"obj" : "#time","value" : "Temps"},
+	{"obj" : "#value","value" : "Valeur"},
+	{"obj" : "#hours","value" : "heures"},
+	{"obj" : "#longueur","value" : "Longueur"},
+	{"obj" : "#width","value" : "Largeur"},
+	{"obj" : "#height","value" : "Hauteur"},
+	{"obj" : "#requirements","value" : "Exigences"},
+	{"obj" : "#getquote","value" : "Obtenir un devis"},
+	{"obj" : "#origin","value" : "DÉPART - Ville ou Code Postal"},
+	{"obj" : "#destination","value" : "DESTINATION - Ville ou Code Postal"},
+	{"obj" : "#logintitle","value" : "Se connecter"},
+	{"obj" : "#logout","value" : "Se déconnecter"},
+	{"obj" : "#refrigerated","value" : "réfrigéré"},
+	{"obj" : "#cmev","value" : "Mise en vente"},
+	{"obj" : "#cTextA","value" : "A : enchère"},
+	{"obj" : "#cTextB","value" : "B : prix fixe"},
+	{"obj" : "#cTextC","value" : "C : privée"},
+	{"obj" : "#cCout","value" : "Coût : "},
+	{"obj" : "#duree","value" : "Durée"},
+	{"obj" : "#duree2","value" : "Durée"},
+	{"obj" : "#montant","value" : "Montant"},
+	{"obj" : "#cterms","value" : "En cliquant sur 'Obtenir un devis', vous acceptez nos Conditions générales d'utilisation."},
+	{"obj" : "#cFooterText","value" : "© 2020 Copyright &nbsp • &nbsp CTQ &nbsp • &nbsp Tous droits réservés."},
+	{"obj" : "#lslider","value" : "Glissez vers la droite →"},
+	{"obj" : "#cemail","value" : "email@exemple.ca"},
+	{"obj" : "#cBecomeM","value" : "Devenir un Donneur d'ouvrage"},
+	{"obj" : "#cBecomeT","value" : "Devenir un Transporteur"},
+	{"obj" : "#cT","value" : "Transporteur"},
+	{"obj" : "#cM","value" : "Donneur d'ouvrage"},
+	{"obj" : "#cForgotPassM","value" : "⋙ Mot de passe oublié"},
+	{"obj" : "#cForgotPassT","value" : "⋙ Mot de passe oublié"},
+	{"obj" : "#cLoginTitle","value" : "Se connecter"}
 ]
