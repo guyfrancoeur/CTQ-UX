@@ -1,9 +1,10 @@
 // ceci est la meme chose en plus court $(function () {  ... }
 $( document ).ready(function() { // ou $(function () { 
   console.log( "ready!" );
-  $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix
+  $.fn.selectpicker.Constructor.BootstrapVersion = '4'; //fix selectpicker
   $('.selectpicker').selectpicker();
-  $('[data-toggle="popover"]').popover()
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 /* ********* Toogle Button ********* */
