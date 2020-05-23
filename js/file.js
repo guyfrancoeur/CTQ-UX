@@ -12,7 +12,8 @@ $(function() {
 					$(x.obj).text(x.value);
 					$(x.obj).attr('placeholder', x.value);
 					console.log($(x.obj).attr('title'));
-					$(x.obj).attr('title', x.value);
+					//$(x.obj).attr('title', x.value);
+					$(x.obj).prop('title', x.value);
 					console.log($(x.obj).attr('title'));
 				});
 	    },
