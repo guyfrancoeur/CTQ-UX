@@ -73,9 +73,9 @@
             <div id="div14">
               <div id="div8" class="row col-12 mx-0">
                 <div id="div6" class="col-12 col-xl-5 px-0">
-                  <div id="div12" class="form-row col-12 pb-1 px-0">
+                  <div id="div12" class="card-group col-12 pb-4 px-0">
                     <h5 class="card-title pb-2">Info chargement <span id="hOrigineDestination" class="fa fa-question" data-toggle="popover" title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span></h5>
-                    <div id="divOrigin" class="text-center col-12 pr-0 pr-xl-3">
+                    <div id="divOrigin" class="text-center col-12 px-0 pr-xl-3">
                       <label class="sr-only" for="origin">Origin</label>
                       <div class="input-group mb-2">
                         <div class="input-group-prepend label-absolute">
@@ -85,7 +85,7 @@
                          <div class="invalid-feedback">Please provide a valid City or Postal Code.</div>
                       </div>
                     </div>
-                    <div id="divDestination" class="text-center col-12 pr-0 pr-xl-3">
+                    <div id="divDestination" class="text-center col-12 px-0 pr-xl-3">
                       <label class="sr-only" for="destination">Destination</label>
                       <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -143,12 +143,9 @@
                   <div id="card3" class="card">
                     <div id="div12" class="card-body px-0 pb-0">
                       <div class="card-title px-4 d-flex justify-content-between">
-                        <div class="p-0">
-                          <button type="button" class="btn btn-dark badge badge-pill badge-light" data-container="body" data-toggle="popover" data-placement="top" title="Help" data-content="When I'll have time, I will write some instructions which can help you &#128516">?</button>
-                        </div>
-                        <h5 id="cmev" class="col-10">Market</h5>
-                        <div class="row col-2 text-right">
-                          <div class="col-6 p-0">
+                        <h4 id="cmev" class="col-10 pl-0">Market</h4>
+                        <div class="col-2">
+                        	<div class="text-right">
                             <!-- Toogle Button -->
                             <div class="toggle-button-cover">
                               <div class="button-cover">
@@ -160,18 +157,18 @@
                               </div>
                             </div>
                             <!-- Toogle Button -->
-                          </div>
+                            </div>
                         </div>
                       </div>
                       <div class="list-group list-group-flush">
                         <a id="A" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
                           <div class="resizechamp3 row px-3 py-1">
-                            <div id="cTextA" class="col-12 col-md-6">Public auction 
+                            <div class="col-6"><span id="cTextA">Public auction</span>
                               <span id="hPublic" class="fa fa-question" data-toggle="popover" title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                             </div>
-                            <div class="resizechamp2 col-12 col-md-6 text-right pr-0 py-md-0 py-2">
+                            <div class="resizechamp2 col-6 text-right pr-0 py-md-0 py-2">
                               <div class="slide">
-                                <div class="slide-text"><span class="text shadow">1$</span></div>
+                                <div class="slide-text pt-0 pb-1"><span class="text shadow">1$</span></div>
                               </div>
                             </div>
                           </div>
@@ -186,16 +183,16 @@
                         </a>
                         <a id="B" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
                           <div class="resizechamp3 row px-3 py-1">
-                            <div id="cTextB" class="col-12 col-md-6 pr-0">
+                            <div class="col-6 pr-0">
                               <i id="tFixed" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="BuyNow type auction"></i>
-                              Fixed price 
+                              <span id="cTextB">Fixed price</span>
                               <span id="hFixed" class="fa fa-question" data-toggle="popover" title="Help" data-content="Fixed offer is for everyone you will receive one (1) offer. The first bidder to match you asked price wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                             </div>
-                            <div class="resizechamp2 col-12 col-md-6 text-right pr-0 py-md-0 py-2">
+                            <div class="resizechamp2 col-6 text-right pr-0 py-md-0 py-2">
                              <div class="styletext">
                              </div>
                              <div class="slide-special">
-                               <div class="slide-text"><span class="text shadow">special 2$</span></div>
+                               <div class="slide-text pt-1 pb-1"><span class="text shadow">special 2$</span></div>
                              </div>
                             </div>
                           </div>
@@ -210,14 +207,14 @@
                         </a>
                         <a id="C" href="#"  onclick="selection(this)" class="list-group-item list-group-item-action p-1">
                           <div class="resizechamp3 row px-3 py-1">
-                            <div id="cTextC" class="col-12 col-md-6">
+                            <div class="col-6">
                               <i id="tPrivate" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Private auction will be sent to a list, only them can bid."></i>
-                              Private auction
+                              <span id="cTextC">Private auction</span>
                               <span id="hPrivate" class="fa fa-question" data-toggle="popover" title="Help" data-content="Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."></span>
                             </div>
-                            <div class="resizechamp2 col-12 col-md-6 text-right pr-0 py-md-0 py-2">
+                            <div class="resizechamp2 col-6 text-right pr-0 py-md-0 py-2">
                               <div class="slide">
-                                <div class="slide-text"><span class="text shadow">2$ / courriel</span></div>
+                                <div class="slide-text pt-1 pb-1"><span class="text shadow">2$ / courriel</span></div>
                               </div>
                             </div>
                           </div>
