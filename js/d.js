@@ -68,13 +68,13 @@ function selection(elem){
 		$('#cout').html(cout);
 		$('#A').addClass('bg-light');
 		$('#cTextA').addClass('font-weight-bold');
-		$('#duree').removeAttr("disabled");
+		$('#cdureeA').removeAttr("disabled");
 		$('#B').removeClass('bg-light');
 		$('#C').removeClass('bg-light');
 		$('#cTextB').removeClass('font-weight-bold');
 		$('#cTextC').removeClass('font-weight-bold');
-		$('#montant').prop("disabled", true);
-		$('#duree2').prop("disabled", true);
+		$('#cmontant').prop("disabled", true);
+		$('#cdureeC').prop("disabled", true);
 		$('#inputcourriel').prop("disabled", true);
 	};
 	if(value == "B"){
@@ -82,13 +82,13 @@ function selection(elem){
 		$('#cout').html(cout);
 		$('#B').addClass('bg-light');
 		$('#cTextB').addClass('font-weight-bold');
-		$('#montant').removeAttr("disabled");
+		$('#cmontant').removeAttr("disabled");
 		$('#A').removeClass('bg-light');
 		$('#C').removeClass('bg-light');
 		$('#cTextA').removeClass('font-weight-bold');
 		$('#cTextC').removeClass('font-weight-bold');
-		$('#duree').prop("disabled", true);
-		$('#duree2').prop("disabled", true);
+		$('#cdureeA').prop("disabled", true);
+		$('#cdureeC').prop("disabled", true);
 		$('#inputcourriel').prop("disabled", true);
 	};
 	if(value == "C"){
@@ -96,14 +96,14 @@ function selection(elem){
 		$('#cout').html(cout);
 		$('#C').addClass('bg-light');
 		$('#cTextC').addClass('font-weight-bold');
-		$('#duree2').removeAttr("disabled");
+		$('#cdureeC').removeAttr("disabled");
 		$('#inputcourriel').removeAttr("disabled");
 		$('#A').removeClass('bg-light');
 		$('#B').removeClass('bg-light');
 		$('#cTextA').removeClass('font-weight-bold');
 		$('#cTextB').removeClass('font-weight-bold');
-		$('#duree').prop("disabled", true);
-		$('#montant').prop("disabled", true);
+		$('#cdureeA').prop("disabled", true);
+		$('#cmontant').prop("disabled", true);
 	};
 }
 
@@ -153,8 +153,6 @@ function modify(){
 	$('#buttonend').addClass('pb-3');
 	$('#divOrigin').removeClass('pr-xl-3');
 	$('#divDestination').removeClass('pr-xl-3');
-	
-	divDestination
 	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
 }
 
