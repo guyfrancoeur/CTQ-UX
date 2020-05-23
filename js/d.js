@@ -50,7 +50,7 @@ $("#addcourriel").click(function() {
 });
 
 $(".close").click(function() {
-	$(this).parent().remove;
+  $(this).closest("li").remove;
 });
 
 
