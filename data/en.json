@@ -9,7 +9,6 @@
 	{"obj":"#clongueur","value":"Length"},
 	{"obj":"#cwidth","value":"Width"},
 	{"obj":"#cheight","value":"Height"},
-	{"obj":"#crequirements","value":"Requirements"},
 	{"obj":"#bgetquote","value":"Get a quote"},
 	{"obj":"#corigin","value":"ORIGIN - City or Postal Code"},
 	{"obj":"#cdestination","value":"DESTINATION - City or Postal Code"},
