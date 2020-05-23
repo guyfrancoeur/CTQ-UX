@@ -96,46 +96,46 @@
                     </div>
                   </div>
                   <div id="div11" class="card-group col-12 pb-1 px-0">
-                          <h5 class="card-title pb-2">Info chargement</h5>
-                          <div class="input-group pb-2 pr-xl-3">
-                            <input type="number" class="form-control lang" id="clongueur" placeholder="Length" min="0">
-                            <div class="input-group-append">
-                              <span class="input-group-text size1 cUnite">m</span>
-                            </div>
-                          </div>
-                          <div class="input-group pb-2 pr-xl-3">
-                            <input type="number" class="form-control lang" id="cwidth" placeholder="Width" min="0">
-                            <div class="input-group-append">
-                              <span class="input-group-text size1 cUnite">m</span>
-                            </div>
-                          </div>
-                          <div class="input-group pb-2 pr-xl-3">
-                            <input type="number" class="form-control lang" id="cheight" placeholder="Height" min="0">
-                            <div class="input-group-append">
-                              <span class="input-group-text size1 cUnite">m</span>
-                            </div>
-                          </div>
-                          <div class="input-group pb-2 pr-xl-3">
-                            <input type="number" class="form-control lang" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
-                            <div class="input-group-append">
-                             <span class="input-group-text size1">kg</span>
-                            </div>
-                          </div>
-                          <div class="input-group pb-2 pr-xl-3">
-                            <input id="cvalue" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" min="0">
-                            <div class="input-group-append">
-                              <span class="input-group-text size1">$</span>
-                            </div>
-                          </div>
-                          <div class="input-group pb-2 pr-xl-3">
-     <select class="selectpicker dropup form-control lang" multiple title="Any requirements?" data-width="auto" width="auto">
-      <option data-icon="fa fa-thermometer-empty" data-subtext="1">Refrigerated</option>
-      <option data-icon="fa fa-clock-o" data-subtext="2">Rush-ASAP</option>
-      <option data-icon="fa fa-fire" data-subtext="4">Hazardous</option>
-      <option data-icon="fa fa-eye" data-subtext="8">Oversized</option>
-     </select>
-                          </div>
-                        </div>
+                    <h5 class="card-title pb-2">Info chargement</h5>
+                    <div class="input-group pb-2 pr-xl-3">
+                      <input type="number" class="form-control lang" id="clongueur" placeholder="Length" min="0">
+                      <div class="input-group-append">
+                        <span class="input-group-text size1 cUnite">m</span>
+                      </div>
+                    </div>
+                    <div class="input-group pb-2 pr-xl-3">
+                      <input type="number" class="form-control lang" id="cwidth" placeholder="Width" min="0">
+                      <div class="input-group-append">
+                        <span class="input-group-text size1 cUnite">m</span>
+                      </div>
+                    </div>
+                    <div class="input-group pb-2 pr-xl-3">
+                      <input type="number" class="form-control lang" id="cheight" placeholder="Height" min="0">
+                      <div class="input-group-append">
+                        <span class="input-group-text size1 cUnite">m</span>
+                      </div>
+                    </div>
+                    <div class="input-group pb-2 pr-xl-3">
+                      <input type="number" class="form-control lang" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
+                      <div class="input-group-append">
+                       <span class="input-group-text size1">kg</span>
+                      </div>
+                    </div>
+                    <div class="input-group pb-2 pr-xl-3">
+                      <input id="cvalue" type="number" class="form-control lang" placeholder="Value" aria-label="Value ($)" min="0">
+                      <div class="input-group-append">
+                        <span class="input-group-text size1">$</span>
+                      </div>
+                    </div>
+                    <div class="input-group pb-2 pr-xl-3">
+                      <select class="selectpicker dropup form-control lang" multiple title="Any requirements?" data-width="auto" width="auto">
+                       <option data-icon="fa fa-thermometer-empty" data-subtext="1" value="1">Refrigerated</option>
+                       <option data-icon="fa fa-fighter-jet" data-subtext="2" value="2">Rush-ASAP</option>
+                       <option data-icon="fa fa-fire" data-subtext="4" value="4">Hazardous</option>
+                       <option data-icon="fa fa-eye" data-subtext="8" value="8">Oversized</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
                 
                 <div id="div7" class="col-12 col-xl-7 pl-0 pr-0">
@@ -145,7 +145,7 @@
                         <div class="p-0">
                           <button type="button" class="btn btn-dark badge badge-pill badge-light" data-container="body" data-toggle="popover" data-placement="top" title="Help" data-content="When I'll have time, I will write some instructions which can help you &#128516">?</button>
                         </div>
-                        <h4 id="cmev" class="col-10">Sale offering</h4>
+                        <h4 id="cmev" class="col-10">Market</h4>
                         <div class="row col-2 text-right">
                           <div class="col-6 p-0">
                             <!-- Toogle Button -->
@@ -165,7 +165,9 @@
                       <div class="list-group list-group-flush">
                         <a id="A" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
                           <div class="resizechamp3 row px-3 py-1">
-                            <p id="cTextA" class="col-12 col-md-2">A : auction</p>
+                            <p id="cTextA" class="col-12 col-md-2">Public auction 
+                              <span id="hPublic" class="fa fa-question" data-toggle="popover" title="Help" data-content="Public auction is for everyone you will receive offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
+                            </p>
                             <div class="resizechamp input-group col-12 col-md-4">
                               <input type="number" class="form-control lang" id="cdureeA" placeholder="Duration" aria-label="Durée" min="0" required disabled>
                               <div class="input-group-append">
@@ -181,7 +183,10 @@
                         </a>
                         <a id="B" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
                           <div class="resizechamp3 row px-3 py-1">
-                            <p id="cTextB" class="col-12 col-md-2 pr-0">B : fixed price</p>
+                            <p id="cTextB" class="col-12 col-md-2 pr-0">Fixed price 
+                              <span id="hFixed" class="fa fa-question" data-toggle="popover" title="Help" data-content="Fixed offer is for everyone you will receive one (1) offer. The first bidder to match you asked price wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
+                              <i id="tFixed" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="BuyNow type auction"></i>
+                            </p>
                             <div class="resizechamp input-group col-12 col-md-4">
                               <input type="number" class="form-control lang" id="cmontant" placeholder="Amount" aria-label="Montant" min="0" required disabled>
                               <div class="input-group-append">
@@ -199,7 +204,10 @@
                         </a>
                         <a id="C" href="#"  onclick="selection(this)" class="list-group-item list-group-item-action p-1">
                           <div class="resizechamp3 row px-3 py-1">
-                              <p id="cTextC" class="col-12 col-md-2">C : private</p>
+                            <p id="cTextC" class="col-12 col-md-2">Private auction
+                              <span id="hPrivate" class="fa fa-question" data-toggle="popover" title="Help" data-content="Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."></span>
+                              <i id="tPrivate" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Private auction will be sent to a list, only them can bid."></i>
+                            </p>
                             <div class="resizechamp col-12 col-md-4">
                               <div class="input-group col-12 p-0">
                                 <input type="number" class="form-control lang" id="cdureeC" placeholder="Duration" aria-label="Durée" min="0" required disabled>
