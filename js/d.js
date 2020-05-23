@@ -107,52 +107,6 @@ function selection(elem){
 	};
 }
 
-// Espace résultats
-// ici
-function modify(){
-	$('#container').removeClass('col-md-10 ');
-	$('#div1').addClass('row');
-	$('#div2').addClass('col-12');
-	$('#div2').addClass('col-xl-6');
-	$('#div3').addClass('bloc');
-	$('#div3').addClass('second-bloc');
-	$('#div13').addClass('resizebloc');
-	$('#div4').addClass('interieur');
-	$('#div5').addClass('col-12');
-	$('#div5').addClass('col-xl-6');
-	$('#div6').addClass('pb-3');
-	$('#div6').removeClass('pr-0');
-	$('#div6').removeClass('col-xl-5');
-	$('#div6').addClass('col-12');
-	$('#div7').addClass('pb-5');
-	$('#div7').removeClass('col-xl-7');
-	$('#div8').removeClass('row');
-	$('#div8').addClass('pr-4');
-	$('#div8').addClass('pl-0');
-	$('#div8').removeClass('mx-0');
-	$('#div9').addClass('pl-0');
-	$('#div10').removeClass('pr-xl-3');
-	$('#div11').addClass('px-0');
-	$('#div12').addClass('px-0');
-	$('#div13').addClass('resizing');
-	$('#div14').addClass('add2');
-	$('.resizechamp').removeClass('col-md-4');
-	$('.resizechamp').removeClass('col-8');
-	$('.resizechamp').addClass('col-md-6');
-	$('.resizechamp3').removeClass('px-3');
-	$('.resizechamp3').addClass('pl-0');
-	$('#cTextA').removeClass('col-md-2');
-	$('#cTextB').removeClass('col-md-2');
-	$('#cTextC').removeClass('col-md-2');
-	$('#cTextA').addClass('col-md-3');
-	$('#cTextB').addClass('col-md-3');
-	$('#cTextC').addClass('col-md-3');
-	$('#buttonend').addClass('pb-3');
-	$('#divOrigin').removeClass('pr-xl-3');
-	$('#divDestination').removeClass('pr-xl-3');
-	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
-}
-
 // Validation formulaire
 (function() {
 	'use strict';
@@ -208,5 +162,99 @@ function champRempli(elem){
 	else{
 		$("#creduction").text("- " + reduction + " cents");
 	}
-	
 }
+
+// Espace résultats
+// ici
+function modify(){
+	$('#container').removeClass('col-md-10 ');
+	$('#div1').addClass('row');
+	$('#div2').addClass('col-12');
+	$('#div2').addClass('col-xl-6');
+	$('#div3').addClass('bloc');
+	$('#div3').addClass('second-bloc');
+	$('#div13').addClass('resizebloc');
+	$('#div4').addClass('interieur');
+	$('#div5').addClass('col-12');
+	$('#div5').addClass('col-xl-6');
+	$('#div6').addClass('pb-3');
+	$('#div6').removeClass('pr-0');
+	$('#div6').removeClass('col-xl-5');
+	$('#div6').addClass('col-12');
+	$('#div7').addClass('pb-5');
+	$('#div7').removeClass('col-xl-7');
+	$('#div8').removeClass('row');
+	$('#div8').addClass('pr-4');
+	$('#div8').addClass('pl-0');
+	$('#div8').removeClass('mx-0');
+	$('#div9').addClass('pl-0');
+	$('#div10').removeClass('pr-xl-3');
+	$('#div11').addClass('px-0');
+	$('#div12').addClass('px-0');
+	$('#div13').addClass('resizing');
+	$('#div14').addClass('add2');
+	$('.resizechamp').removeClass('col-md-4');
+	$('.resizechamp').removeClass('col-8');
+	$('.resizechamp').addClass('col-md-6');
+	$('.resizechamp3').removeClass('px-3');
+	$('.resizechamp3').addClass('pl-0');
+	$('#cTextA').removeClass('col-md-2');
+	$('#cTextB').removeClass('col-md-2');
+	$('#cTextC').removeClass('col-md-2');
+	$('#cTextA').addClass('col-md-3');
+	$('#cTextB').addClass('col-md-3');
+	$('#cTextC').addClass('col-md-3');
+	$('#buttonend').addClass('pb-3');
+	$('#divOrigin').removeClass('pr-xl-3');
+	$('#divDestination').removeClass('pr-xl-3');
+	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
+	
+	$("#bcloseResults").show();
+}
+
+// Suppression Espace Résultats
+$("#bcloseResults").click(function() {
+	$('#container').addClass('col-md-10 ');
+	$('#div1').removeClass('row');
+	$('#div2').removeClass('col-12');
+	$('#div2').removeClass('col-xl-6');
+	$('#div3').removeClass('bloc');
+	$('#div3').removeClass('second-bloc');
+	$('#div13').removeClass('resizebloc');
+	$('#div4').removeClass('interieur');
+	$('#div5').removeClass('col-12');
+	$('#div5').removeClass('col-xl-6');
+	$('#div6').removeClass('pb-3');
+	$('#div6').addClass('pr-0');
+	$('#div6').addClass('col-xl-5');
+	$('#div6').removeClass('col-12');
+	$('#div7').removeClass('pb-5');
+	$('#div7').addClass('col-xl-7');
+	$('#div8').addClass('row');
+	$('#div8').removeClass('pr-4');
+	$('#div8').removeClass('pl-0');
+	$('#div8').addClass('mx-0');
+	$('#div9').removeClass('pl-0');
+	$('#div10').addClass('pr-xl-3');
+	$('#div11').removeClass('px-0');
+	$('#div12').removeClass('px-0');
+	$('#div13').removeClass('resizing');
+	$('#div14').removeClass('add2');
+	$('.resizechamp').addClass('col-md-4');
+	$('.resizechamp').addClass('col-8');
+	$('.resizechamp').removeClass('col-md-6');
+	$('.resizechamp3').addClass('px-3');
+	$('.resizechamp3').removeClass('pl-0');
+	$('#cTextA').addClass('col-md-2');
+	$('#cTextB').addClass('col-md-2');
+	$('#cTextC').addClass('col-md-2');
+	$('#cTextA').removeClass('col-md-3');
+	$('#cTextB').removeClass('col-md-3');
+	$('#cTextC').removeClass('col-md-3');
+	$('#buttonend').removeClass('pb-3');
+	$('#divOrigin').addClass('pr-xl-3');
+	$('#divDestination').addClass('pr-xl-3');
+	document.getElementById("contenu").innerHTML = "";
+	
+	$("#bcloseResults").hide();
+});
