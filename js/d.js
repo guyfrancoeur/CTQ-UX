@@ -49,6 +49,11 @@ $("#addcourriel").click(function() {
 	});
 });
 
+$(".close").click(function() {
+	$(this).parent().remove;
+});
+
+
 /* ********* Mise en vente ********* */
 var cout = 0;
 function selection(elem){
