@@ -147,9 +147,6 @@ function modify(){
 	$('#cTextA').addClass('col-md-3');
 	$('#cTextB').addClass('col-md-3');
 	$('#cTextC').addClass('col-md-3');
-	$('.resizechamp2').removeClass('col-md-6');
-	$('.resizechamp2').removeClass('col-4');
-	$('.resizechamp2').addClass('col-md-3');
 	$('#buttonend').addClass('pb-3');
 	$('#divOrigin').removeClass('pr-xl-3');
 	$('#divDestination').removeClass('pr-xl-3');
