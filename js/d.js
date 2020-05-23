@@ -7,7 +7,7 @@ $( document ).ready(function() { // ou $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-/* ********* Toogle Button ********* */
+// Toogle button
 unite = 'm';
 $(".toggle-button-cover").click(function() {
 	if(unite == "m"){
@@ -20,12 +20,13 @@ $(".toggle-button-cover").click(function() {
 	}
 });
 
-/* ********* Ajout courriels ********* */
+// Validation courriel
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(email);
 }
 
+// Ajout courriel
 var addcourriel = document.getElementById("addcourriel");
 var inputcourriel = document.getElementById("inputcourriel");
 var ul = document.getElementById("listecourriels");
@@ -35,8 +36,8 @@ $("#addcourriel").click(function() {
 	var tabsplit = ($("#inputcourriel").val()).split(';');
 	tabsplit.forEach(function(element){
 		if (validateEmail(element)){
-			nbEmails ++;
 		 	var li = document.createElement("li");
+		 	li.id = "li" + nbEmails;
 		  li.className = 'list-group-item';
 		  li.className = 'd-flex';
 		  li.className = 'justify-content-between';
@@ -44,17 +45,21 @@ $("#addcourriel").click(function() {
 		  li.textContent = element +";";
 		  ul.appendChild(li);
 		  $("#inputcourriel").val("");
-		  li.innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+		  li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
+		  nbEmails ++;
 		}
 	});
 });
 
-$(".close").click(function() {
-  $(this).closest("li").remove;
-});
+// Suppression courriel
+function removeItem(elem){
+  console.log("fonctionne");
+  console.log(elem.id);
+  var val = "li" + elem.id;
+  document.getElementById(val).remove();
+}
 
-
-/* ********* Mise en vente ********* */
+// Mise en vente
 var cout = 0;
 function selection(elem){
 	var value = elem.id;
@@ -102,7 +107,7 @@ function selection(elem){
 	};
 }
 
-/* ********* Espace résultats ********* */
+// Espace résultats
 // ici
 function modify(){
 	$('#container').removeClass('col-md-10 ');
@@ -153,7 +158,7 @@ function modify(){
 	document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
 }
 
-/* ********* Validation Formulaire ********* */
+// Validation formulaire
 (function() {
 	'use strict';
 	window.addEventListener('load', function() {
@@ -169,37 +174,3 @@ function modify(){
 		});
 	}, false);
 })();
-
-/* ********* Aide (popover) ********* */
-//voir $(document).ready()
-//$(function () {
-//  $('[data-toggle="popover"]').popover()
-//});
-
-/* ********* Requirements ********* */
-/* deprecated...
-var ul2 = document.getElementById("listrequirements");
-$("option").click(function() {
-	if($(this).hasClass("choosen")){
-		$(this).removeClass("bg-primary");
-		$(this).removeClass("choosen");
-		var id = "#" + $(this).val();
-		$(id).remove();
-	}
-	else{
-		$(this).addClass("bg-primary");
-		$(this).addClass("choosen");
-	
-		value = $(this).text();
-		var li2 = document.createElement("li");
-		li2.id = $(this).val();
-	  li2.className = 'list-group-item';
-	  li2.className = 'd-flex';
-	  li2.className = 'justify-content-between';
-	  li2.className = 'align-items-left';
-	  li2.textContent = value;
-	  ul2.appendChild(li2);
-	  document.getElementById($(this).val()).innerHTML += "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-	}
-});
-*/

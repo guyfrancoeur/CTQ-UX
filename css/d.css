@@ -166,3 +166,12 @@ ul.listec li{
 #card1, #card2, #card3{
 	border-radius:5px;
 }
+
+.divCourriels:hover{
+	cursor:default;
+	
+}
+
+.cross:hover{
+	cursor:pointer;
+}
