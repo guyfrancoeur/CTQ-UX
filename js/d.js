@@ -169,3 +169,44 @@ function modify(){
 		});
 	}, false);
 })();
+
+// Réduction
+var tabChampsRemplis = [false,false,false,false,false,false]
+// [length,width,height,weight,value,requirements]
+function champRempli(elem){
+	nbChampsRemplis = 0;
+	if(($(elem).val() == "") || ($(elem).val() == [])){
+		if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
+		if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = false;
+		if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = false;
+		if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = false;
+		if($(elem).attr("id") == "cvalue") tabChampsRemplis[4] = false;
+		if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = false;
+	}
+	else{
+		if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = true;
+		if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = true;
+		if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = true;
+		if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = true;
+		if($(elem).attr("id") == "cvalue") tabChampsRemplis[4] = true;
+		if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = true;
+		
+	}
+	for(var i in tabChampsRemplis){
+		if(tabChampsRemplis[i] == true) {
+			nbChampsRemplis ++;
+		}
+	}
+	reduction = nbChampsRemplis * 0.25;
+	if(nbChampsRemplis == 0){
+		$("#creduction").text("");
+		return;
+	}
+	if(reduction >= 1){
+		$("#creduction").text("- " + reduction + " $");
+	}
+	else{
+		$("#creduction").text("- " + reduction + " cents");
+	}
+	
+}

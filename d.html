@@ -99,37 +99,37 @@
                   <div id="div11" class="card-group col-12 pb-1 px-0">
                     <h5 class="card-title pb-2">Info chargement <span id="hCargo" class="fa fa-question" data-toggle="popover" title="Help" data-content="In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."></span></h5>
                     <div class="input-group pb-2 pr-xl-3">
-                      <input type="number" class="form-control" id="clongueur" placeholder="Length" min="0">
+                      <input onchange="champRempli(this)" type="number" class="form-control" id="clongueur" placeholder="Length" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
-                      <input type="number" class="form-control" id="cwidth" placeholder="Width" min="0">
+                      <input onchange="champRempli(this)" type="number" class="form-control" id="cwidth" placeholder="Width" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
-                      <input type="number" class="form-control" id="cheight" placeholder="Height" min="0">
+                      <input onchange="champRempli(this)" type="number" class="form-control" id="cheight" placeholder="Height" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
-                      <input type="number" class="form-control" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
+                      <input onchange="champRempli(this)" type="number" class="form-control" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
                       <div class="input-group-append">
                        <span class="input-group-text size1">kg</span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
-                      <input id="cvalue" type="number" class="form-control" placeholder="Value" aria-label="Value ($)" min="0">
+                      <input onchange="champRempli(this)" id="cvalue" type="number" class="form-control" placeholder="Value" aria-label="Value ($)" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1">$</span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
-                      <select id="crequirements" class="selectpicker dropup form-control" multiple title="Any requirements?" data-width="auto" width="auto">
+                      <select onchange="champRempli(this)" id="crequirements" class="selectpicker dropup form-control" multiple title="Any requirements?" data-width="auto" width="auto">
                        <option id="crefrigerated" data-icon="fa fa-thermometer-empty" data-subtext="1" value="1">Refrigerated</option>
                        <option data-icon="fa fa-fighter-jet" data-subtext="2" value="2">Rush-ASAP</option>
                        <option data-icon="fa fa-fire" data-subtext="4" value="4">Hazardous</option>
@@ -246,7 +246,7 @@
                       </div>
                     </div>
                     <div class="cout-style card-footer text-right font-weight-bold">
-                      <p class="card-text"><span id="cCout">Cost : </span><span id="cout">0</span> $</p>
+                      <p class="card-text"><small id="creduction" class="font-italic" style="color:red;padding-right:50px;"></small><span id="cCout">Cost : </span><span id="cout">0</span> $</p>
                     </div>
                   </div>
                 </div>
