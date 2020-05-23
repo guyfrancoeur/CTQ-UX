@@ -10,14 +10,14 @@ $( document ).ready(function() { // ou $(function () {
 // Toogle button
 unite = 'm';
 $(".toggle-button-cover").click(function() {
-	if(unite == "m"){
-		$('.cUnite').html("pi");
-		unite = "pi";
-	}
-	else{
-		$('.cUnite').html("m");
-		unite = "m";
-	}
+  if(unite == "m"){
+    $('.cUnite').html("pi");
+    unite = "pi";
+  }
+  else{
+    $('.cUnite').html("m");
+    unite = "m";
+  }
 });
 
 // Validation courriel
@@ -33,22 +33,22 @@ var ul = document.getElementById("listecourriels");
 nbEmails = 0;
 
 $("#addcourriel").click(function() {
-	var tabsplit = ($("#inputcourriel").val()).split(';');
-	tabsplit.forEach(function(element){
-		if (validateEmail(element)){
-		 	var li = document.createElement("li");
-		 	li.id = "li" + nbEmails;
-		  li.className = 'list-group-item';
-		  li.className = 'd-flex';
-		  li.className = 'justify-content-between';
-		  li.className = 'align-items-center';
-		  li.textContent = element +";";
-		  ul.appendChild(li);
-		  $("#inputcourriel").val("");
-		  li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
-		  nbEmails ++;
-		}
-	});
+  var tabsplit = ($("#inputcourriel").val()).split(';');
+  tabsplit.forEach(function(element){
+    if (validateEmail(element)){
+      var li = document.createElement("li");
+      li.id = "li" + nbEmails;
+      li.className = 'list-group-item';
+      li.className = 'd-flex';
+      li.className = 'justify-content-between';
+      li.className = 'align-items-center';
+      li.textContent = element +";";
+      ul.appendChild(li);
+      $("#inputcourriel").val("");
+      li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
+      nbEmails ++;
+    }
+  });
 });
 
 // Suppression courriel
@@ -62,106 +62,103 @@ function removeItem(elem){
 // Mise en vente
 var cout = 0;
 function selection(elem){
-	var value = elem.id;
-	if(value == "A"){
-		cout = 1;
-		$('#cout').html(cout);
-		$('#A').addClass('bg-light');
-		$('#cTextA').addClass('font-weight-bold');
-		$('#cdureeA').removeAttr("disabled");
-		$('#B').removeClass('bg-light');
-		$('#C').removeClass('bg-light');
-		$('#cTextB').removeClass('font-weight-bold');
-		$('#cTextC').removeClass('font-weight-bold');
-		$('#cmontant').prop("disabled", true);
-		$('#cdureeC').prop("disabled", true);
-		$('#inputcourriel').prop("disabled", true);
-	};
-	if(value == "B"){
-		cout = 2;
-		$('#cout').html(cout);
-		$('#B').addClass('bg-light');
-		$('#cTextB').addClass('font-weight-bold');
-		$('#cmontant').removeAttr("disabled");
-		$('#A').removeClass('bg-light');
-		$('#C').removeClass('bg-light');
-		$('#cTextA').removeClass('font-weight-bold');
-		$('#cTextC').removeClass('font-weight-bold');
-		$('#cdureeA').prop("disabled", true);
-		$('#cdureeC').prop("disabled", true);
-		$('#inputcourriel').prop("disabled", true);
-	};
-	if(value == "C"){
-		cout = 2 * nbEmails;
-		$('#cout').html(cout);
-		$('#C').addClass('bg-light');
-		$('#cTextC').addClass('font-weight-bold');
-		$('#cdureeC').removeAttr("disabled");
-		$('#inputcourriel').removeAttr("disabled");
-		$('#A').removeClass('bg-light');
-		$('#B').removeClass('bg-light');
-		$('#cTextA').removeClass('font-weight-bold');
-		$('#cTextB').removeClass('font-weight-bold');
-		$('#cdureeA').prop("disabled", true);
-		$('#cmontant').prop("disabled", true);
-	};
+  var value = elem.id;
+  if(value == "A"){
+    cout = 1;
+    $('#cout').html(cout);
+    $('#A').addClass('bg-light');
+    $('#cTextA').addClass('font-weight-bold');
+    $('#cdureeA').removeAttr("disabled");
+    $('#B').removeClass('bg-light');
+    $('#C').removeClass('bg-light');
+    $('#cTextB').removeClass('font-weight-bold');
+    $('#cTextC').removeClass('font-weight-bold');
+    $('#cmontant').prop("disabled", true);
+    $('#cdureeC').prop("disabled", true);
+    $('#inputcourriel').prop("disabled", true);
+  };
+  if(value == "B"){
+    cout = 2;
+    $('#cout').html(cout);
+    $('#B').addClass('bg-light');
+    $('#cTextB').addClass('font-weight-bold');
+    $('#cmontant').removeAttr("disabled");
+    $('#A').removeClass('bg-light');
+    $('#C').removeClass('bg-light');
+    $('#cTextA').removeClass('font-weight-bold');
+    $('#cTextC').removeClass('font-weight-bold');
+    $('#cdureeA').prop("disabled", true);
+    $('#cdureeC').prop("disabled", true);
+    $('#inputcourriel').prop("disabled", true);
+  };
+  if(value == "C"){
+    cout = 2 * nbEmails;
+    $('#cout').html(cout);
+    $('#C').addClass('bg-light');
+    $('#cTextC').addClass('font-weight-bold');
+    $('#cdureeC').removeAttr("disabled");
+    $('#inputcourriel').removeAttr("disabled");
+    $('#A').removeClass('bg-light');
+    $('#B').removeClass('bg-light');
+    $('#cTextA').removeClass('font-weight-bold');
+    $('#cTextB').removeClass('font-weight-bold');
+    $('#cdureeA').prop("disabled", true);
+    $('#cmontant').prop("disabled", true);
+  };
 }
 
 // Validation formulaire
 (function() {
-	'use strict';
-	window.addEventListener('load', function() {
-		var forms = document.getElementsByClassName('needs-validation');
-		var validation = Array.prototype.filter.call(forms, function(form) {
-			form.addEventListener('submit', function(event) {
-				if (form.checkValidity() === false) {
-					event.preventDefault();
-					event.stopPropagation();
-				}
-				form.classList.add('was-validated');
-			}, false);
-		});
-	}, false);
+  'use strict';
+  window.addEventListener('load', function() {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
 })();
 
 // Réduction
 var tabChampsRemplis = [false,false,false,false,false,false]
 // [length,width,height,weight,value,requirements]
 function champRempli(elem){
-	nbChampsRemplis = 0;
-	if(($(elem).val() == "") || ($(elem).val() == [])){
-		if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
-		if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = false;
-		if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = false;
-		if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = false;
-		if($(elem).attr("id") == "cvalue") tabChampsRemplis[4] = false;
-		if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = false;
-	}
-	else{
-		if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = true;
-		if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = true;
-		if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = true;
-		if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = true;
-		if($(elem).attr("id") == "cvalue") tabChampsRemplis[4] = true;
-		if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = true;
-		
-	}
-	for(var i in tabChampsRemplis){
-		if(tabChampsRemplis[i] == true) {
-			nbChampsRemplis ++;
-		}
-	}
-	reduction = nbChampsRemplis * 0.25;
-	if(nbChampsRemplis == 0){
-		$("#creduction").text("");
-		return;
-	}
-	if(reduction >= 1){
-		$("#creduction").text("- " + reduction + " $");
-	}
-	else{
-		$("#creduction").text("- " + reduction + " cents");
-	}
+  nbChampsRemplis = 0;
+  if(($(elem).val() == "") || ($(elem).val() == [])){
+    if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
+    if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = false;
+    if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = false;
+    if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = false;
+    if($(elem).attr("id") == "cvalue") tabChampsRemplis[4] = false;
+    if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = false;
+  }
+  else{
+    if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = true;
+    if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = true;
+    if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = true;
+    if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = true;
+    if($(elem).attr("id") == "cvalue") tabChampsRemplis[4] = true;
+    if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = true;
+  }
+  for(var i in tabChampsRemplis){
+    if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
+  }
+  reduction = nbChampsRemplis * 0.25;
+  if(nbChampsRemplis == 0){
+    $("#creduction").text("");
+    return;
+  }
+  if(reduction >= 1){
+    $("#creduction").text("- " + reduction + " $");
+  }
+  else{
+    $("#creduction").text("- " + reduction + " cents");
+  }
 }
 
 // Espace résultats
