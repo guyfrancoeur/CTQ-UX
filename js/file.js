@@ -11,7 +11,9 @@ $(function() {
 				$.each(data, function(index, x) {
 					$(x.obj).text(x.value);
 					$(x.obj).attr('placeholder', x.value);
+					console.log($(x.obj).attr('title'));
 					$(x.obj).attr('title', x.value);
+					console.log($(x.obj).attr('title'));
 				});
 	    },
 	    error:function(xhr, ajaxOptions, thrownError){
