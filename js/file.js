@@ -7,9 +7,10 @@ $(function() {
       dataType: "json",
       success:function(data){	
         $.each(data, function(index, x) {
-          $(x.obj).text(x.value);
-          $(x.obj).attr('placeholder', x.value);
-          //$(x.obj).attr('title', x.value);
+          if(x.propriete == "text") $(x.obj).text(x.value);
+          else{
+            $(x.obj).attr($(x.propriete), x.value);
+          }
         });
       },
       error:function(xhr, ajaxOptions, thrownError){
