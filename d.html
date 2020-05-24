@@ -147,12 +147,16 @@
                         <div class="col-2">
                         	<div class="text-right">
                             <!-- Toogle Button -->
-                            <div class="toggle-button-cover">
-                              <div class="button-cover">
-                                <div class="button button-t r" id="button-6">
-                                  <input type="checkbox" class="checkbox">
-                                  <div class="knobs"></div>
-                                  <div class="layer"></div>
+                            <div class="toogleinstruction">
+                              <div id="toogleinstruction" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click on this button if you want to convert to feet or meters">
+                                <div class="toggle-button-cover">
+                                  <div class="button-cover">
+                                    <div class="button button-t r" id="button-6">
+                                      <input type="checkbox" class="checkbox">
+                                      <div class="knobs"></div>
+                                      <div class="layer"></div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -246,7 +250,11 @@
                       </div>
                     </div>
                     <div class="cout-style card-footer text-right font-weight-bold">
-                      <p class="card-text"><small id="creduction" class="font-italic" style="color:red;padding-right:50px;"></small><span id="cCout">Cost : </span><span id="cout">0</span> $</p>
+                      <p class="card-text">
+                        <small id="textreduction" class="font-italic"></small>
+                        <small id="creduction" class="font-italic" style="color:red;padding-right:50px;"></small>
+                        <span id="cCout">Cost : </span><span id="cout">0</span> $
+                      </p>
                     </div>
                   </div>
                 </div>

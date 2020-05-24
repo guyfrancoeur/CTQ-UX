@@ -126,6 +126,7 @@ function selection(elem){
 
 // Réduction
 var tabChampsRemplis = [false,false,false,false,false,false]
+var ancienneReduction = 0;
 // [length,width,height,weight,value,requirements]
 function champRempli(elem){
   nbChampsRemplis = 0;
@@ -151,14 +152,31 @@ function champRempli(elem){
   reduction = nbChampsRemplis * 0.25;
   if(nbChampsRemplis == 0){
     $("#creduction").text("");
+    $("#textreduction").text("");
     return;
   }
   if(reduction >= 1){
-    $("#creduction").text("- " + reduction + " $");
+  	$("#textreduction").text("With "+ nbChampsRemplis + " required details you can save : ");
+    $("#creduction").text(reduction + " $");
+    if(reduction > ancienneReduction) animationReduction();
   }
   else{
-    $("#creduction").text("- " + reduction + " cents");
+  	$("#textreduction").text("With "+ nbChampsRemplis + " required details you can save : ");
+    $("#creduction").text(reduction + " cents");
+    if(reduction > ancienneReduction) animationReduction();
   }
+  ancienneReduction = reduction;
+}
+
+// Lance l'animation pour la réduction
+function animationReduction() {
+  $("#creduction").addClass("animationcout");
+  $(".animationcout").css("-webkit-animation-play-state", "running");
+  $('.animationcout').on("animationend", function(){
+    setTimeout(function() { 
+      $("#creduction").removeClass("animationcout");
+    }, 1000);
+  });
 }
 
 // Espace résultats
@@ -254,4 +272,25 @@ $("#bcloseResults").click(function() {
   document.getElementById("contenu").innerHTML = "";
 	
   $("#bcloseResults").hide();
+});
+
+// Tooltip on ToogleButton
+$("#cheight").focus(function() {
+  $("#toogleinstruction").tooltip('show');
+});
+$("#cwidth").focus(function() {
+  $("#toogleinstruction").tooltip('show');
+});
+$("#clongueur").focus(function() {
+  $("#toogleinstruction").tooltip('show');
+});
+
+$("#cheight").focusout(function() {
+  $("#toogleinstruction").tooltip('hide');
+});
+$("#cwidth").focusout(function() {
+  $("#toogleinstruction").tooltip('hide');
+});
+$("#clongueur").focusout(function() {
+  $("#toogleinstruction").tooltip('hide');
 });
