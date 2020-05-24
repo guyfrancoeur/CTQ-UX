@@ -34,6 +34,6 @@
   {"propriete":"placeholder","obj":"#cdureeC","value":"Durée"},
   {"propriete":"placeholder","obj":"#cmontant","value":"Amount"},
   {"propriete":"placeholder","obj":"#cemail","value":"email@exemple.ca"},
-  {"propriete":"title","obj":"#crequirements","value":"Des exigences?"},
-  {"propriete":"title","obj":"#tToogleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"}
+  {"propriete":"original-title","obj":"#crequirements","value":"Des exigences?"},
+  {"propriete":"data-original-title","obj":"#tToogleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"}
 ]
