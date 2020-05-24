@@ -11,7 +11,7 @@ Outils :
 - HTML 5
 - Bootstrap 4
 - JSON (pour les échanges de données)
-- JavaScript
+- JavaScript (a la JQuery)
 - JQuery (ajax)
 
 ### Rôles de l'application
@@ -21,7 +21,6 @@ Faire un logiciel qui puisse offrir aux donneurs de transports une plateforme so
 en temps réel pour les marchandises soient prises en charge par un transporteur.  Les transporteurs 
 rendent leurs camions disponibles.  Des que le manufacturier **post** un chargement, une liste de 
 transporteur potentiel lui est présenté il peut donc choisir immédiatement sans délai celui de son choix. 
-
 
 #### Objectif technique
 - Produire une application simple qui puisse être utilisée par tous;
@@ -50,11 +49,11 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
 
 ### Consulter l'onglet project (github)
 
-- Pour participer consulter l'onglet *Project* de GitHub. 
-- Ajouter les **todo** et prennez des tâches (approuvé).
+- Vous pouvez contribuer et participer au projet. Pour se faire consulter l'onglet *Project* de GitHub. 
+- Il est possible d'Ajouter des **todo**.
+- Par la suite prennez et developpez les tâches (approuvées).
 
-Lorsque vous travaillez sur une tâche, assurez-vous quelles soient bougées dans **En cours**, par la suite vers **En révision**, finalement vers **Done**.
-
+Lorsque vous travaillez sur une tâche, assurez-vous quelles soient bougées dans **En cours**, par la suite vers **En révision**, finalement vers **Complété**.
 
 ---
 Copyright 2020
