@@ -276,21 +276,21 @@ $("#bcloseResults").click(function() {
 
 // Tooltip on ToogleButton
 $("#cheight").focus(function() {
-  $("#toogleinstruction").tooltip('show');
+  $("#tToogleinstruction").tooltip('show');
 });
 $("#cwidth").focus(function() {
-  $("#toogleinstruction").tooltip('show');
+  $("#tToogleinstruction").tooltip('show');
 });
 $("#clongueur").focus(function() {
-  $("#toogleinstruction").tooltip('show');
+  $("#tToogleinstruction").tooltip('show');
 });
 
 $("#cheight").focusout(function() {
-  $("#toogleinstruction").tooltip('hide');
+  $("#tToogleinstruction").tooltip('hide');
 });
 $("#cwidth").focusout(function() {
-  $("#toogleinstruction").tooltip('hide');
+  $("#tToogleinstruction").tooltip('hide');
 });
 $("#clongueur").focusout(function() {
-  $("#toogleinstruction").tooltip('hide');
+  $("tToogleinstruction").tooltip('hide');
 });
