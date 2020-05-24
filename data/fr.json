@@ -34,6 +34,18 @@
   {"propriete":"placeholder","obj":"#cdureeC","value":"Durée"},
   {"propriete":"placeholder","obj":"#cmontant","value":"Amount"},
   {"propriete":"placeholder","obj":"#cemail","value":"email@exemple.ca"},
-  {"propriete":"original-title","obj":"#crequirements","value":"Des exigences?"},
-  {"propriete":"data-original-title","obj":"#tToogleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"}
+  {"propriete":"title","obj":"#crequirements","value":"Des exigences?"},
+  {"propriete":"title","obj":"#hPublic","value":"Aide"},
+  {"propriete":"title","obj":"#hFixed","value":"Aide"},
+  {"propriete":"title","obj":"#hPrivate","value":"Aide"},
+  {"propriete":"title","obj":"hCargo","value":"Aide"},
+  {"propriete":"title","obj":"#hOrigineDestination","value":"Help"},
+  {"propriete":"data-content","obj":"#hPublic","value":"L'enchère publique s'adresse à tout le monde. Vous recevrez beaucoup d'offres. Celle qui sera la moins chère remportera l'enchère. La réservation et le contrat est automatique. Vous n'avez rien d'autre à faire."},
+  {"propriete":"data-content","obj":"#hFixed","value":"L'offre fixe s'adresse à tout le monde. Vous allez recevoir une (1) offre. The first bidder to match you asked price wins the auction. La réservation et le contrat est automatique. Vous n'avez rien d'autre à faire."},
+  {"propriete":"data-content","obj":"#hPrivate","value":"L'enchère privée sera envoyée à une liste de votre choix. Vous recevrez beaucoup d'offres. Vous devrez sélectionner QUI remportera l'enchère. La réservation et le contrat est automatique."},
+  {"propriete":"data-content","obj":"#hCargo","value":"Dans cette section vous indiquerez les informations à propos du chargement (cargaison). Plus vous indiquerez d'informations, plus le prix sera bas."},
+  {"propriete":"data-content","obj":"hOrigineDestination","value":"Le chargement est situé au lieu de départ et va être livré à la destination de votre choix.estination. Ces champs sont obligatoires."},
+  {"propriete":"data-original-title","obj":"#tToogleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"},
+  {"propriete":"data-original-title","obj":"#tFixed","value":"BuyNow type auction"},
+  {"propriete":"data-original-title","obj":"#tPrivate","value":"Une enchère privée sera envoyée à une liste de personnes, uniquement ces personnes là pourront faire une offre."}
 ]
