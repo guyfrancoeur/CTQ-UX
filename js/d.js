@@ -275,5 +275,5 @@ $("#cwidth").focusout(function() {
   $("#tToggleinstruction").tooltip('hide');
 });
 $("#clongueur").focusout(function() {
-  $("tToggleinstruction").tooltip('hide');
+  $("#tToggleinstruction").tooltip('hide');
 });
