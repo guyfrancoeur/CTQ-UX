@@ -42,7 +42,7 @@ $("#addcourriel").click(function() {
       li.className = 'd-flex';
       li.className = 'justify-content-between';
       li.className = 'align-items-center';
-      li.textContent = element +";";
+      li.textContent = element;
       ul.appendChild(li);
       $("#inputcourriel").val("");
       li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
@@ -53,10 +53,9 @@ $("#addcourriel").click(function() {
 
 // Suppression courriel
 function removeItem(elem){
-  console.log("fonctionne");
-  console.log(elem.id);
   var val = "li" + elem.id;
   document.getElementById(val).remove();
+  nbEmails --;
 }
 
 // Mise en vente
