@@ -14,7 +14,7 @@ input[type=number] {
 	color:white;
 }
 
-/* Toogle-button */
+/* Toggle-button */
 .button-cover, .knobs, .layer{
     position: absolute;
     top: 0;

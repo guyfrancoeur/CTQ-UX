@@ -45,7 +45,7 @@
   {"propriete":"data-content","obj":"#hPrivate","value":"Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."},
   {"propriete":"data-content","obj":"#hCargo","value":"In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."},
   {"propriete":"data-content","obj":"#hOrigineDestination","value":"The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."},
-  {"propriete":"data-original-title","obj":"#tToogleinstruction","value":"Click on this button if you want to convert to feet or meters"},
+  {"propriete":"data-original-title","obj":"#tToggleinstruction","value":"Click on this button if you want to convert to feet or meters"},
   {"propriete":"data-original-title","obj":"#tFixed","value":"BuyNow type auction"},
   {"propriete":"data-original-title","obj":"#tPrivate","value":"Private auction will be sent to a list, only them can bid."}
 ]

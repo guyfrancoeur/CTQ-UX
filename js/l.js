@@ -1,4 +1,4 @@
-/* ********* Sécurité Login ********* */
+// Sécurité login (Slider)
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){

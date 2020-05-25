@@ -7,7 +7,7 @@ $( document ).ready(function() { // ou $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-// Toogle button
+// Toggle button
 unite = 'm';
 $(".toggle-button-cover").click(function() {
   if(unite == "m"){
@@ -106,23 +106,6 @@ function selection(elem){
     $('#cmontant').prop("disabled", true);
   };
 }
-
-// Validation formulaire
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    var forms = document.getElementsByClassName('needs-validation');
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
 
 // Réduction
 var tabChampsRemplis = [false,false,false,false,false,false]
@@ -274,23 +257,23 @@ $("#bcloseResults").click(function() {
   $("#bcloseResults").hide();
 });
 
-// Tooltip on ToogleButton
+// Tooltip on ToggleButton
 $("#cheight").focus(function() {
-  $("#tToogleinstruction").tooltip('show');
+  $("#tToggleinstruction").tooltip('show');
 });
 $("#cwidth").focus(function() {
-  $("#tToogleinstruction").tooltip('show');
+  $("#tToggleinstruction").tooltip('show');
 });
 $("#clongueur").focus(function() {
-  $("#tToogleinstruction").tooltip('show');
+  $("#tToggleinstruction").tooltip('show');
 });
 
 $("#cheight").focusout(function() {
-  $("#tToogleinstruction").tooltip('hide');
+  $("#tToggleinstruction").tooltip('hide');
 });
 $("#cwidth").focusout(function() {
-  $("#tToogleinstruction").tooltip('hide');
+  $("#tToggleinstruction").tooltip('hide');
 });
 $("#clongueur").focusout(function() {
-  $("tToogleinstruction").tooltip('hide');
+  $("tToggleinstruction").tooltip('hide');
 });

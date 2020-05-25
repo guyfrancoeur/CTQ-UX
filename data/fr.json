@@ -45,7 +45,7 @@
   {"propriete":"data-content","obj":"#hPrivate","value":"L'enchère privée sera envoyée à une liste de votre choix. Vous recevrez beaucoup d'offres. Vous devrez sélectionner QUI remportera l'enchère. La réservation et le contrat est automatique."},
   {"propriete":"data-content","obj":"#hCargo","value":"Dans cette section vous indiquerez les informations à propos du chargement (cargaison). Plus vous indiquerez d'informations, plus le prix sera bas."},
   {"propriete":"data-content","obj":"#hOrigineDestination","value":"Le chargement est situé au lieu de départ et va être livré à la destination de votre choix.estination. Ces champs sont obligatoires."},
-  {"propriete":"data-original-title","obj":"#tToogleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"},
+  {"propriete":"data-original-title","obj":"#tToggleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"},
   {"propriete":"data-original-title","obj":"#tFixed","value":"BuyNow type auction"},
   {"propriete":"data-original-title","obj":"#tPrivate","value":"Une enchère privée sera envoyée à une liste de personnes, uniquement ces personnes là pourront faire une offre."}
 ]
