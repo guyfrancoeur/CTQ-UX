@@ -20,15 +20,15 @@ function verificationLogin(){
         $.each(data.login, function(index, x) {
         	if((inputEmail == x.cemail) && (inputPassword == x.cpassword)){
             console.log("success2");
-            return true;
+            result = true;
           }
         });
-        console.log("error 1");
+        result = false
       },
       error:function(xhr, ajaxOptions, thrownError){
         console.log('error');
         console.log(thrownError);
       }
     });
-    return false;
+    return result;
 }
