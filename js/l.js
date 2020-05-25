@@ -33,5 +33,11 @@ function verificationLogin(){
       }
     });
     console.log(result);
+    if(result == false){
+    	$("#cinvalidMessage").text("This email or this password is invalid.");
+    }
+    else{
+    	$("#cinvalidMessage").text("");
+    }
     return result;
 }
