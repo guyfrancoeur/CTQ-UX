@@ -32,5 +32,6 @@ function verificationLogin(){
         console.log(thrownError);
       }
     });
+    console.log(result);
     return result;
 }
