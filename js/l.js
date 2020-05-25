@@ -18,7 +18,9 @@ function verificationLogin(){
       dataType: "json",
       success:function(data){
       	console.log("success1");
+      	console.log("inputEmail : " + inputEmail + " inputPassword " + inputPassword);
         $.each(data.login, function(index, x) {
+        	console.log("email data : " + x.cemail + " password data : " + x.cpassword);
         	if((inputEmail == x.cemail) && (inputPassword == x.cpassword)){
             console.log("success2");
             result = true;
