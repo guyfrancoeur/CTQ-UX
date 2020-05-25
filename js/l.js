@@ -10,7 +10,7 @@ $("#nsecure").change(function(){
 // Validation login
 function verificationLogin(){
   var inputEmail = $("#cemail").val();
-  var inputPassword = $("cpassword").val();
+  var inputPassword = $("#cpassword").val();
   console.log("enter");
   var result = false;
   $.ajax({
