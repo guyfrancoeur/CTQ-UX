@@ -11,11 +11,11 @@ $("#nsecure").change(function(){
 function verificationLogin(){
   var inputEmail = $("#cemail").val();
   var inputPassword = $("#cpassword").val();
-  console.log("enter");
   var result = false;
   $.ajax({
       url: "./data/login.json",
       dataType: "json",
+      async: false,
       success:function(data){
       	console.log("success1");
       	console.log("inputEmail : " + inputEmail + " inputPassword " + inputPassword);
