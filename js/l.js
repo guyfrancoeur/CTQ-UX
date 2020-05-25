@@ -12,6 +12,7 @@ function verificationLogin(){
   var inputEmail = $("#cemail").val();
   var inputPassword = $("cpassword").val();
   console.log("enter");
+  var result = false;
   $.ajax({
       url: "./data/login.json",
       dataType: "json",
@@ -23,7 +24,6 @@ function verificationLogin(){
             result = true;
           }
         });
-        result = false
       },
       error:function(xhr, ajaxOptions, thrownError){
         console.log('error');
