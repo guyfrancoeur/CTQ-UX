@@ -182,18 +182,18 @@ ul.listec li{
 
 .animationcout{
   animation-name: animCout;
-  animation-duration: 999ms;
+  animation-duration: 500ms;
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
 }
 @keyframes animCout {
   0% {
-    font-weight:normal;
+    font-weight:400;
   }
   50% {
-    font-weight:bold;
+    font-weight:900;
   }
   100% {
-    font-weight:normal;
+    font-weight:400;
   }
 }
