@@ -8,26 +8,27 @@ $("#nsecure").change(function(){
 });
 
 // Validation login
-$("#bsubmit").click(function() {
-	var inputEmail = $("#cemail").val();
-	var inputPassword = $("cpassword").val(); 
-	$.ajax({
+function verificationLogin(){
+  var inputEmail = $("#cemail").val();
+  var inputPassword = $("cpassword").val();
+  console.log("enter");
+  $.ajax({
       url: "./data/login.json",
       dataType: "json",
-      success:function(data){	
+      success:function(data){
+      	console.log("success1");
         $.each(data.login, function(index, x) {
         	if((inputEmail == x.cemail) && (inputPassword == x.cpassword)){
-        		url = "http://salutem.co/CTQ-UX/d.html";
-            $("#bsubmit").attr("href", url);
+            console.log("success2");
             return true;
           }
         });
-        alert("email ou mot de passe invalide")
-        return false;
+        console.log("error 1");
       },
       error:function(xhr, ajaxOptions, thrownError){
         console.log('error');
         console.log(thrownError);
       }
-    })
-});
+    });
+    return false;
+}
