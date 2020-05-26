@@ -138,15 +138,20 @@ function champRempli(elem){
     return;
   }
   if(reduction >= 1){
-  	$("#textreduction").text("With "+ nbChampsRemplis + " required details you can save : ");
+  	$("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
     $("#creduction").text(reduction + " $");
-    if(reduction > ancienneReduction) animationReduction();
   }
   else{
-  	$("#textreduction").text("With "+ nbChampsRemplis + " required details you can save : ");
+  	if(nbChampsRemplis == 1){
+  	  $("#textreduction").text("With "+ nbChampsRemplis + " info about the cargo you can save : ");
+      $("#creduction").text(reduction + " cents");
+    }
+    else{
+  	$("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
     $("#creduction").text(reduction + " cents");
-    if(reduction > ancienneReduction) animationReduction();
+    }
   }
+  if(reduction > ancienneReduction) animationReduction();
   ancienneReduction = reduction;
 }
 
