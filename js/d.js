@@ -131,7 +131,7 @@ function champRempli(elem){
   for(var i in tabChampsRemplis){
     if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
   }
-  reduction = nbChampsRemplis * 0.25;
+  reduction = nbChampsRemplis * 0.10;
   if(nbChampsRemplis == 0){
     $("#creduction").text("");
     $("#textreduction").text("");
