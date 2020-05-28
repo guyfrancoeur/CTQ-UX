@@ -197,3 +197,7 @@ ul.listec li{
     font-weight:400;
   }
 }
+
+#hCargo:focus, #hOrigineDestination:focus, #hPublic:focus, #hFixed:focus, #hPrivate:focus{
+	outline:none;
+}

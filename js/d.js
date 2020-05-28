@@ -63,7 +63,7 @@ var cout = 0;
 function selection(elem){
   var value = elem.id;
   if(value == "A"){
-    cout = 1;
+    cout = (1 - reduction);
     $('#cout').html(cout);
     $('#A').addClass('bg-light');
     $('#cTextA').addClass('font-weight-bold');
@@ -77,7 +77,7 @@ function selection(elem){
     $('#inputcourriel').prop("disabled", true);
   };
   if(value == "B"){
-    cout = 2;
+    cout = (2 - reduction);
     $('#cout').html(cout);
     $('#B').addClass('bg-light');
     $('#cTextB').addClass('font-weight-bold');
@@ -91,7 +91,8 @@ function selection(elem){
     $('#inputcourriel').prop("disabled", true);
   };
   if(value == "C"){
-    cout = 2 * nbEmails;
+  	if(nbEmails != 0) cout = (2 * nbEmails) - reduction;
+  	else{cout = 0;}
     $('#cout').html(cout);
     $('#C').addClass('bg-light');
     $('#cTextC').addClass('font-weight-bold');
@@ -108,6 +109,7 @@ function selection(elem){
 
 // Réduction
 var tabChampsRemplis = [false,false,false,false,false,false]
+var reduction = 0;
 var ancienneReduction = 0;
 // [length,width,height,weight,value,requirements]
 function champRempli(elem){
@@ -131,7 +133,7 @@ function champRempli(elem){
   for(var i in tabChampsRemplis){
     if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
   }
-  reduction = nbChampsRemplis * 0.25;
+  reduction = (nbChampsRemplis * 0.1).toFixed(1);
   if(nbChampsRemplis == 0){
     $("#creduction").text("");
     $("#textreduction").text("");
@@ -152,7 +154,15 @@ function champRempli(elem){
     }
   }
   if(reduction > ancienneReduction) animationReduction();
+  ifCoutIsSet();
   ancienneReduction = reduction;
+}
+
+function ifCoutIsSet(){
+  if (cout != 0){
+  	cout = cout - reduction;
+    $('#cout').html(cout);
+  }
 }
 
 // Lance l'animation pour la réduction
