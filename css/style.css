@@ -152,6 +152,11 @@ ul.links-list li a:hover{
 		height:295px;
 }
 
+#forgot, #forgot:active, #forgot:visited{
+	color : rgb(1,13,40);
+	font-size:15px;
+}
+
 /* ********* Quelques éléments pour la responsivité ********* */
 @media (max-width: 1199px) {
 	.bloc-blanc2{

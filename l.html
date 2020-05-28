@@ -58,40 +58,51 @@
   <!-- ************* CONTENT ************* -->
   <div class="container" id="container">
     <div class="bloc-login">
-    <div class="shadow bg-white position-relative bloc col-xl-7 col-sm-9 col-12 m-auto p-3">
+    <div class="shadow bg-white position-relative bloc col-xl-7 col-md-9 col-12 m-auto p-3">
       <div class="tab-content">
       
         <h1 id="clogintitle" class="text-center text-dark">Login</h1>
         <hr>
         <p id="cinvalidMessage" class="text-center" style="color:red;"></p>
-        <div class="container col-12">
+        <div class="container col-11">
           <form class="align-items-center" action="d.html" onsubmit="return verificationLogin();">
-              <div class="form-group">
-                <label for="cemail" class="col-sm-3 col-form-label pl-0">Email</label>
+            <div class="form-group">
+            	<label id="lemail" for="cemail" class="col-sm-3 col-form-label pl-0">Email</label>
+            	<div class="input-group mb-2 rounded">
+                <div class="input-group-prepend label-absolute">
+                  <span class="input-group-text lighten-3 bg-light"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
                 <input type="email" class="form-control" id="cemail" placeholder="email@example.ca">
               </div>
+            </div>
               
-              <div class="form-group">
-                <label id="lpass" for="cpassword" class="lang col-sm-3 col-form-label pl-0">Password</label>
+            <div class="form-group">
+            	<label id="lpass" for="cpassword" class="lang col-sm-3 col-form-label pl-0">Password</label>
+            	<div class="input-group mb-2 rounded">
+                <div class="input-group-prepend label-absolute">
+                  <span class="input-group-text lighten-3 bg-light"><i class="fas fa-lock"></i></i></span>
+                </div>
                 <input type="password" class="form-control lang" id="cpassword" placeholder="Password">
               </div>
-            
+            </div>
+              
+            <br/>
             <div class="form-group">
               <label id="lslider" for="nsecure" class="col-sm-6 col-form-label pl-0">Slide to the right => </label>
               <input type="text" id="nsecure" class="col-sm-6" data-provider="slider" data-slider-min="1" data-slider-max="20" data-slider-step="2" data-slider-value="6"/>
             </div>
               
+            <br/>
             <div class="text-center col-12">
-              <button id="bsubmit" type="submit" class="lang btn btn-primary btn-lg btn-block bg-gray-300" disabled="disabled">Sign in</button>
+              <button id="bsubmit" type="submit" class="btn btn-primary btn-lg btn-block" disabled="disabled">Sign in <i class="fas fa-sign-in-alt"></i></button>
             </div>
           </form>
 
-          <div class="dropdown-divider"></div>
-            <div class="text-center"> 
-              <a id="forgot" class="lang" href="#">Forgot password?</a>
-            </div>
-            <br/>
+          <div class="text-center"> 
+            <a id="forgot" class="lang" href="#">Forgot password ?</a>
           </div>
+          <br/>
+        </div>
       </div>
     </div>
     </div>
