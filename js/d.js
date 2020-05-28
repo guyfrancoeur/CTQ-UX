@@ -255,7 +255,7 @@ function modify(){
   $('#buttonend').addClass('pb-3');
 	$('#divOrigin').removeClass('pr-xl-3');
   $('#divDestination').removeClass('pr-xl-3');
-  document.getElementById("contenu").innerHTML = "<h3>Results</h3>";
+  $("#contenu").html("<h3>Results</h3>");
 	
   $("#bcloseResults").show();
 }

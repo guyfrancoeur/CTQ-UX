@@ -198,6 +198,12 @@ ul.listec li{
 	outline:none;
 }
 
+
+#hCargo, #hOrigineDestination, #hPublic, #hFixed, #hPrivate, #tFixed, #tPrivate{
+	color:rgba(1,13,40,.8);
+}
+
+
 #A, #B, #C{
 	cursor:pointer;
 }
@@ -248,4 +254,10 @@ ul.listec li{
 	visibility: visible;
   height: 100%;
   background: rgba(1,13,40,.8);
+}
+
+h4, h5{
+	letter-spacing: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
 }
