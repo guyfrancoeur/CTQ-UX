@@ -152,33 +152,51 @@ function champRempli(elem){
     if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
   }
   reduction = (nbChampsRemplis * 0.1).toFixed(2);
+  console.log(tabChampsRemplis);
   if(nbChampsRemplis == 0){
     $("#creduction").text("");
     $("#textreduction").text("");
-    return;
-  }
-  if(reduction >= 1){
-  	$("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
-    $("#creduction").text(reduction + " $");
+    if (cout != 0){
+  	  cout = (parseFloat(cout) + 0.1);
+      $('#cout').html(cout.toFixed(2));
+    }
   }
   else{
-  	if(nbChampsRemplis == 1){
-  	  $("#textreduction").text("With "+ nbChampsRemplis + " info about the cargo you can save : ");
-      $("#creduction").text(reduction + " cents");
+    if(reduction >= 1){
+  	  $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
+      $("#creduction").text(reduction + " $");
     }
     else{
-  	$("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
-    $("#creduction").text(reduction + " cents");
+  	  if(nbChampsRemplis == 1){
+    	  $("#textreduction").text("With "+ nbChampsRemplis + " info about the cargo you can save : ");
+        $("#creduction").text(reduction + " cents");
+      }
+      else{
+  	    $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
+        $("#creduction").text(reduction + " cents");
+      }
+    }
+    if(reduction > ancienneReduction){
+      animationReduction();
+      ifCoutIsSet();
+    }
+    if(reduction < ancienneReduction){
+    	ifCoutIsSet2();
     }
   }
-  if(reduction > ancienneReduction) animationReduction();
-  ifCoutIsSet();
   ancienneReduction = reduction;
 }
 
 function ifCoutIsSet(){
   if (cout != 0){
-  	cout = (cout - reduction).toFixed(2);
+  	cout = (parseFloat(cout) - 0.10).toFixed(2);
+    $('#cout').html(cout);
+  }
+}
+
+function ifCoutIsSet2(){
+  if (cout != 0){
+  	cout = (parseFloat(cout) + 0.10).toFixed(2);
     $('#cout').html(cout);
   }
 }
