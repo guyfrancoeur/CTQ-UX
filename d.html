@@ -34,7 +34,7 @@
         </li>
         <li class="nav-item mx-xl-3">
           <div class="btn-toolbar">
-            <a id="blogout" href="http://www.salutem.co/CTQ-UX/" class="button btn btn-outline-light mr-3 text-light">Logout</a>
+            <a id="blogout" href="http://www.salutem.co/CTQ-UX/" class="button btn btn-outline-light mr-3">Logout</a>
           </div>
         </li>
         <div>
@@ -74,7 +74,7 @@
               <div id="div8" class="row col-12 mx-0">
                 <div id="div6" class="col-12 col-xl-5 px-0">
                   <div id="div12" class="card-group col-12 pb-4 px-0">
-                    <h5 class="card-title pb-2">Info chargement <span id="hOrigineDestination" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span></h5>
+                    <h5 id="itinerary" class="card-title pb-2">Itinerary <span id="hOrigineDestination" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span></h5>
                     <div id="divOrigin" class="text-center col-12 px-0 pr-xl-3">
                       <label class="sr-only" for="origin">Origin</label>
                       <div class="input-group mb-2">
@@ -163,7 +163,7 @@
                         </div>
                       </div>
                       <div class="list-group list-group-flush">
-                        <a id="A" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
+                        <a id="A" onclick="selection(this)" class="list-group-item list-group-item-action p-1 sliding">
                           <div class="resizechamp3 row px-3 py-1">
                             <div class="col-6"><span id="cTextA">Public auction</span>
                               <span id="hPublic" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
@@ -183,7 +183,7 @@
                             </div>
                           </div>
                         </a>
-                        <a id="B" href="#" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
+                        <a id="B" onclick="selection(this)" class="list-group-item list-group-item-action p-1 sliding">
                           <div class="resizechamp3 row px-3 py-1">
                             <div class="col-6 pr-0">
                               <i id="tFixed" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="BuyNow type auction"></i>
@@ -207,7 +207,7 @@
                             </div>
                         </div>
                         </a>
-                        <a id="C" onclick="selection(this)" class="list-group-item list-group-item-action p-1">
+                        <a id="C" onclick="selection(this)" class="list-group-item list-group-item-action p-1 sliding">
                           <div class="resizechamp3 row px-3 py-1">
                             <div class="col-6">
                               <i id="tPrivate" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="Private auction will be sent to a list, only them can bid."></i>

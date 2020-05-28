@@ -63,13 +63,19 @@ var cout = 0;
 function selection(elem){
   var value = elem.id;
   if(value == "A"){
-    cout = (1 - reduction);
+    cout = (1 - reduction).toFixed(2);
     $('#cout').html(cout);
-    $('#A').addClass('bg-light');
+    $('#A').addClass('chosen');
+    $('#A').addClass('clicked');
+    $('#A').removeClass('notchosen');
     $('#cTextA').addClass('font-weight-bold');
     $('#cdureeA').removeAttr("disabled");
-    $('#B').removeClass('bg-light');
-    $('#C').removeClass('bg-light');
+    $('#B').removeClass('chosen');
+    $('#C').removeClass('chosen');
+    $('#B').addClass('notchosen');
+    $('#C').addClass('notchosen');
+    $('#B').removeClass('clicked');
+    $('#C').removeClass('clicked');
     $('#cTextB').removeClass('font-weight-bold');
     $('#cTextC').removeClass('font-weight-bold');
     $('#cmontant').prop("disabled", true);
@@ -77,13 +83,19 @@ function selection(elem){
     $('#inputcourriel').prop("disabled", true);
   };
   if(value == "B"){
-    cout = (2 - reduction);
+    cout = (2 - reduction).toFixed(2);
     $('#cout').html(cout);
-    $('#B').addClass('bg-light');
+    $('#B').addClass('chosen');
+    $('#B').addClass('clicked');
+    $('#B').removeClass('notchosen');
     $('#cTextB').addClass('font-weight-bold');
     $('#cmontant').removeAttr("disabled");
-    $('#A').removeClass('bg-light');
-    $('#C').removeClass('bg-light');
+    $('#A').removeClass('chosen');
+    $('#C').removeClass('chosen');
+    $('#A').addClass('notchosen');
+    $('#C').addClass('notchosen');
+    $('#A').removeClass('clicked');
+    $('#C').removeClass('clicked');
     $('#cTextA').removeClass('font-weight-bold');
     $('#cTextC').removeClass('font-weight-bold');
     $('#cdureeA').prop("disabled", true);
@@ -91,15 +103,21 @@ function selection(elem){
     $('#inputcourriel').prop("disabled", true);
   };
   if(value == "C"){
-  	if(nbEmails != 0) cout = (2 * nbEmails) - reduction;
+  	if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
   	else{cout = 0;}
     $('#cout').html(cout);
-    $('#C').addClass('bg-light');
+    $('#C').addClass('chosen');
+    $('#C').removeClass('notchosen');
+    $('#C').addClass('clicked');
     $('#cTextC').addClass('font-weight-bold');
     $('#cdureeC').removeAttr("disabled");
     $('#inputcourriel').removeAttr("disabled");
-    $('#A').removeClass('bg-light');
-    $('#B').removeClass('bg-light');
+    $('#A').removeClass('chosen');
+    $('#B').removeClass('chosen');
+    $('#A').removeClass('clicked');
+    $('#B').removeClass('clicked');
+    $('#A').addClass('notchosen');
+    $('#B').addClass('notchosen');
     $('#cTextA').removeClass('font-weight-bold');
     $('#cTextB').removeClass('font-weight-bold');
     $('#cdureeA').prop("disabled", true);
@@ -133,7 +151,7 @@ function champRempli(elem){
   for(var i in tabChampsRemplis){
     if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
   }
-  reduction = (nbChampsRemplis * 0.1).toFixed(1);
+  reduction = (nbChampsRemplis * 0.1).toFixed(2);
   if(nbChampsRemplis == 0){
     $("#creduction").text("");
     $("#textreduction").text("");
@@ -160,7 +178,7 @@ function champRempli(elem){
 
 function ifCoutIsSet(){
   if (cout != 0){
-  	cout = cout - reduction;
+  	cout = (cout - reduction).toFixed(2);
     $('#cout').html(cout);
   }
 }
