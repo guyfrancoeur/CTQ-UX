@@ -145,10 +145,6 @@ ul.links-list li a:hover{
 	border: 1px solid;
 }
 
-.divCourriels{
-	width:370px;
-}
-
 .normal-height{
 	height: 14rem;
 }
@@ -194,27 +190,6 @@ ul.links-list li a:hover{
 	
 	.slide-text {
   	margin-right:-20px;
-	}
-	
-
-}
-
-@media (max-width: 630px) {
-	.divCourriels{
-		width:300px;
-	}
-}
-
-
-@media (max-width: 530px) {
-	.divCourriels{
-		width:250px;
-	}
-}
-
-@media (max-width: 460px) {
-	.divCourriels{
-		width:150px;
 	}
 }
 
