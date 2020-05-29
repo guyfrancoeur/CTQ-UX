@@ -162,6 +162,9 @@ ul.links-list li a:hover{
 	font-size:15px;
 }
 
+.icon-file{
+	color:rgb(189,98,6);
+}
 /* ********* Quelques éléments pour la responsivité ********* */
 @media (max-width: 1199px) {
 	.bloc-blanc2{
