@@ -131,7 +131,7 @@ ul.listec li{
 }
 
 .input-group-text{
-	height:38.5px;
+	height:31px;
 }
 
 .size1{
@@ -140,13 +140,13 @@ ul.listec li{
 }
 
 .size2{
-	width:55px;
+	width:45px;
 	display: table;
 }
 
 
 #addcourriel{
-	height:38.5px;
+	height:31px;
 }
 
 #inputcourriel{

@@ -77,7 +77,7 @@
                     <h5 id="itinerary" class="card-title pb-2 mb-1 pt-3">Itinerary <span id="hOrigineDestination" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span></h5>
                     <div id="divOrigin" class="text-center col-12 px-0 pr-xl-3">
                       <label class="sr-only" for="origin">Origin</label>
-                      <div class="input-group mb-2">
+                      <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend label-absolute">
                           <span class="input-group-text lighten-3 bg-light"><i class="fas fa-lg fa-map-marker-alt"></i></span>
                         </div>
@@ -86,7 +86,7 @@
                     </div>
                     <div id="divDestination" class="text-center col-12 px-0 pr-xl-3">
                       <label class="sr-only" for="destination">Destination</label>
-                      <div class="input-group mb-2">
+                      <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
                           <span class="input-group-text lighten-3 bg-light"><i class="fas fa-lg fa-map-marker-alt"></i></span>
                         </div>
@@ -96,38 +96,38 @@
                   </div>
                   <div id="div11" class="card-group col-12 pb-1 px-0">
                     <h5 class="card-title pb-2 mb-1">Info chargement <span id="hCargo" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."></span></h5>
-                    <div class="input-group pb-2 pr-xl-3">
+                    <div class="input-group input-group-sm pb-2 pr-xl-3">
                       <input onchange="champRempli(this)" type="number" class="form-control" id="clongueur" placeholder="Length" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
-                    <div class="input-group pb-2 pr-xl-3">
+                    <div class="input-group input-group-sm pb-2 pr-xl-3">
                       <input onchange="champRempli(this)" type="number" class="form-control" id="cwidth" placeholder="Width" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
-                    <div class="input-group pb-2 pr-xl-3">
+                    <div class="input-group input-group-sm pb-2 pr-xl-3">
                       <input onchange="champRempli(this)" type="number" class="form-control" id="cheight" placeholder="Height" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
-                    <div class="input-group pb-2 pr-xl-3">
+                    <div class="input-group input-group-sm pb-2 pr-xl-3">
                       <input onchange="champRempli(this)" type="number" class="form-control" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
                       <div class="input-group-append">
                        <span class="input-group-text size1">kg</span>
                       </div>
                     </div>
-                    <div class="input-group pb-2 pr-xl-3">
+                    <div class="input-group input-group-sm pb-2 pr-xl-3">
                       <input onchange="champRempli(this)" id="cvalue" type="number" class="form-control" placeholder="Value" aria-label="Value ($)" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1"><i class="fas fa-dollar-sign"></i></span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
-                      <select onchange="champRempli(this)" id="crequirements" class="selectpicker dropup form-control" multiple title="Any requirements?" data-width="auto" width="auto">
+                      <select onchange="champRempli(this)" id="crequirements" class="selectpicker dropup form-control form-control-sm" multiple title="Any requirements?" data-width="auto" width="auto">
                        <option id="crefrigerated" data-icon="fa fa-thermometer-empty" data-subtext="1" value="1">Refrigerated</option>
                        <option data-icon="fa fa-fighter-jet" data-subtext="2" value="2">Rush-ASAP</option>
                        <option data-icon="fa fa-fire" data-subtext="4" value="4">Hazardous</option>
@@ -164,7 +164,7 @@
                       </div>
                       <div class="list-group list-group-flush">
                         <a id="A" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
-                          <div class="resizechamp3 row px-3 py-1">
+                          <div class="resizechamp3 row px-3">
                             <div class="col-6"><span id="cTextA">Public auction</span>
                               <span id="hPublic" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                             </div>
@@ -174,8 +174,8 @@
                               </div>
                             </div>
                           </div>
-                          <div class="resizechamp3 row px-3 py-1">
-                            <div class="resizechamp input-group col-12 col-md-12">
+                          <div class="resizechamp3 row px-3 py-2">
+                            <div class="resizechamp input-group input-group-sm col-12 col-md-12">
                               <input type="number" class="form-control" id="cdureeA" placeholder="Duration" aria-label="Durée" min="0" required disabled>
                               <div class="input-group-append">
                                <span class="input-group-text size2">min</span>
@@ -184,7 +184,7 @@
                           </div>
                         </a>
                         <a id="B" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
-                          <div class="resizechamp3 row px-3 py-1">
+                          <div class="resizechamp3 row px-3 py-2">
                             <div class="col-6 pr-0">
                               <i id="tFixed" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="BuyNow type auction"></i>
                               <span id="cTextB">Fixed price</span>
@@ -199,7 +199,7 @@
                             </div>
                           </div>
                           <div class="resizechamp3 row px-3 py-1">
-                            <div class="resizechamp input-group col-12 col-md-12">
+                            <div class="resizechamp input-group input-group-sm col-12 col-md-12">
                               <input type="number" class="form-control" id="cmontant" placeholder="Amount" aria-label="Montant" min="0" required disabled>
                               <div class="input-group-append">
                                <span class="input-group-text size2"><i class="fas fa-dollar-sign"></i></span>
@@ -208,7 +208,7 @@
                         </div>
                         </a>
                         <a id="C" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
-                          <div class="resizechamp3 row px-3 py-1">
+                          <div class="resizechamp3 row px-3 py-2">
                             <div class="col-6">
                               <i id="tPrivate" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="Private auction will be sent to a list, only them can bid."></i>
                               <span id="cTextC">Private auction</span>
@@ -222,7 +222,7 @@
                           </div>
                           <div class="resizechamp3 row px-3 py-1">
                             <div class="resizechamp col-12 col-md-12">
-                              <div class="input-group col-12 p-0">
+                              <div class="input-group input-group-sm col-12 p-0">
                                 <input type="number" class="form-control" id="cdureeC" placeholder="Duration" aria-label="Durée" min="0" required disabled>
                                 <div class="input-group-append">
                                  <span class="input-group-text size2">min</span>
@@ -231,7 +231,7 @@
                               <div class="col-12 text-center pt-2 px-0">
                                 <div class="divCourriels">
                                   <div class="input-group">
-                                    <input type="email" class="form-control" id="inputcourriel" placeholder="Courriels" aria-label="Courriels" required multiple disabled>
+                                    <input type="email" class="form-control form-control-sm" id="inputcourriel" placeholder="Courriels" aria-label="Courriels" required multiple disabled>
                                     <div class="input-group-append">
                                       <button class="btn btn-outline-secondary" id="addcourriel" type="button">+</button>
                                     </div>
