@@ -1,3 +1,7 @@
+body {
+	scrollbar : hidden;
+}
+
 .bloc{
 	border-radius:15px;
 	background-color:white;

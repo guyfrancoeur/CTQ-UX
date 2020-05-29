@@ -31,7 +31,7 @@ var addcourriel = document.getElementById("addcourriel");
 var inputcourriel = document.getElementById("inputcourriel");
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;
-
+/*
 $("#addcourriel").click(function() {
   var tabsplit = ($("#inputcourriel").val()).split(';');
   tabsplit.forEach(function(element){
@@ -50,7 +50,7 @@ $("#addcourriel").click(function() {
     }
   });
 });
-
+*/
 // Suppression courriel
 function removeItem(elem){
   var val = "li" + elem.id;
@@ -331,3 +331,6 @@ $("#cwidth").focusout(function() {
 $("#clongueur").focusout(function() {
   $("#tToggleinstruction").tooltip('hide');
 });
+
+// Lancement modale
+$('#m_courriels').load('./m_courriels.html');
