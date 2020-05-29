@@ -23,6 +23,7 @@
   {"propriete":"text","obj":"#cForgotPassM","value":"⋙ Mot de passe oublié"},
   {"propriete":"text","obj":"#cForgotPassT","value":"⋙ Mot de passe oublié"},
   {"propriete":"text","obj":"#cLoginTitle","value":"Se connecter"},
+  {"propriete":"text","obj":"#cPrixPrivate","value":"2$ / courriel"},
   {"propriete":"placeholder","obj":"#cpassword","value":"Mot de passe"},
   {"propriete":"placeholder","propriete":"text","obj":"#corigin","value":"DÉPART - Ville ou Code Postal"},
   {"propriete":"placeholder","obj":"#cdestination","value":"DESTINATION - Ville ou Code Postal"},

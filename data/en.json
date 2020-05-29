@@ -23,6 +23,7 @@
   {"propriete":"text","obj":"#cForgotPassM","value":"⋙ Forgot password"},
   {"propriete":"text","obj":"#cForgotPassT","value":"⋙ Forgot password"},
   {"propriete":"text","obj":"#cLoginTitle","value":"Login"},
+  {"propriete":"text","obj":"#cPrixPrivate","value":"2$ / email"},
   {"propriete":"placeholder","obj":"#cpassword","value":"Password"},
   {"propriete":"placeholder","propriete":"text","obj":"#corigin","value":"ORIGIN - City or Postal Code"},
   {"propriete":"placeholder","obj":"#cdestination","value":"DESTINATION - City or Postal Code"},
