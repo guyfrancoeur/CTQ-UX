@@ -70,9 +70,14 @@
 }
 
 
-ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active{
+ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active, .nav-admin a, .nav-admin a:visited, .nav-admin a:active{
 	text-decoration:none;
 	color: rgb(52,58,54);
+	font-size:15px;
+}
+
+.nav-admin a.active{
+	font-weight:bold;
 }
 
 ul.links-list li a:hover{
