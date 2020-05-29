@@ -46,6 +46,7 @@ body {
 
 .flag:hover{
 	opacity:100%;
+	transition-duration: 300ms;
 }
 
 .add2{
@@ -73,7 +74,6 @@ body {
     /* background-color: rgba(0,0,0,0.9); */
 }
 
-
 ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active, .nav-admin a, .nav-admin a:visited, .nav-admin a:active{
 	text-decoration:none;
 	color: rgb(52,58,54);
@@ -81,7 +81,7 @@ ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active, .nav-
 }
 
 .nav-admin a.active{
-	font-weight:bold;
+  font-weight:bold;
 }
 
 ul.links-list li a:hover{
@@ -97,10 +97,13 @@ ul.links-list li a:hover{
 .petite-div:hover{
 	background-color: rgba(1,13,40,.9);
 	color: white;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	transition-duration: 300ms;
 }
 
 .petite-div:hover a{
 	color: white;
+	transition-duration: 300ms;
 }
 
 .card{
@@ -114,6 +117,8 @@ ul.links-list li a:hover{
 .arrow-card:hover{
 	background-color: rgba(1,13,40,.9);
 	color: white;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	transition-duration: 400ms;
 }
 
 .spe:hover .spe-header{
@@ -121,20 +126,25 @@ ul.links-list li a:hover{
 	color: white;
 	border-top-right-radius:15px;
 	border-top-left-radius:15px;
+	transition-duration: 300ms;
 }
 
 .spe:hover .card-body{
 	background-color: rgb(247,247,247);
 	border-radius:15px;
+	transition-duration: 300ms;
 }
 
 .spe:hover{
 	border-radius:15px;
 	border-color: rgba(1,13,40,.9);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	transition-duration: 300ms;
 }
 
 .arrow-card:hover a, .arrow-card:hover a:visited, .arrow-card:hover a:active{
 	color: white;
+	transition-duration: 300ms;
 }
 
 .arrow-card a{
@@ -154,7 +164,7 @@ ul.links-list li a:hover{
 }
 
 #divInfo, #divRequire{
-		height:295px;
+  height:295px;
 }
 
 #forgot, #forgot:active, #forgot:visited{
