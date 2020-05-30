@@ -36,3 +36,8 @@ function verificationLogin(){
     }
     return result;
 }
+
+$( document ).ready(function() {
+  console.log("doc is ready!");
+  $('[data-toggle="tooltip"]').tooltip();
+});
