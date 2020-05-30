@@ -211,7 +211,6 @@ ul.listec li{
 .chosen:hover{
   background-color: #FAFCFF;
   box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2); 
-  z-index:200;
 }
 
 .notchosen{
