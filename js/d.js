@@ -334,9 +334,14 @@ $("#clongueur").focusout(function() {
 
 // Lancement modale
 $('#addcourriel').click(function(event) {
+	$.get("./m_courriels2.html", function(html) {
+    $(html).modal("show");
+  });
+	/*
   event.preventDefault();
   //this.blur(); // Manually remove focus from clicked link.
   $.get("./m_courriels.html", function(html) {
     $(html).appendTo('body').modal();
   });
+  */
 });
