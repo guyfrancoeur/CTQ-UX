@@ -333,10 +333,20 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
+
 $('#addcourriel').click(function(event) {
-	$.get("./m_courriels2.html", function(html) {
+	console.log('success');
+  $('#m_courriels').load('m_courriels.html', function () { $('#m_courriels').modal('show');console.log("1");});
+  $.get('m_courriels.html', function(x) { $(x).modal('show');console.log("2");});
+});
+
+/*
+$('#addcourriel').click(function(event) {
+	$.load("./m_courriels2.html", function(html) {
     $(html).modal("show");
   });
+});
+*/
 	/*
   event.preventDefault();
   //this.blur(); // Manually remove focus from clicked link.
@@ -344,4 +354,7 @@ $('#addcourriel').click(function(event) {
     $(html).appendTo('body').modal();
   });
   */
-});
+//});
+
+
+  
