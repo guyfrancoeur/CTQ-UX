@@ -333,36 +333,10 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
-/*
-$('#m_courriels').on('show.bs.modal', function (e) {
-    var loadurl = $(e.relatedTarget).data('load-url');
-    $(this).find('.modal-body').load(loadurl);
-});
-*/
-/*
-$('.test').on('click', function(e){
-  e.preventDefault();
-  $('#m_courriels').modal('show').find('.modal-body').load($(this).attr('href'));
-});
-*/
-
-
-$('#manual-ajax').click(function(event) {
+$('#addcourriel').click(function(event) {
   event.preventDefault();
   this.blur(); // Manually remove focus from clicked link.
   $.get(this.href, function(html) {
     $(html).appendTo('body').modal();
   });
 });
-
-/*
-$('#addcourriel').on('click', function () {
-	console.log('success');
-	$('#m_courriels').load('./m_courriels.html', function () {
-		console.log('here');
-		$('#m_courriels').modal('show');
-		$( "#m_courriels" ).dialog();
-		//$('#m_courriels').modal();
-	});
-});
-*/
