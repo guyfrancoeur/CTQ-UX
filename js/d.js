@@ -33,7 +33,8 @@ var inputcourriel2 = $.trim($("cinputcourriel").val());
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;
 
-$("#bSaveEmails").click(function() {
+//$("#bSaveEmails").click(function() {
+function saveMails(elem){
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   console.log("en entrée : " + $("#cinputcourriel").val());
   console.log("inputcourriel2 : " + inputcourriel2);
@@ -53,7 +54,8 @@ $("#bSaveEmails").click(function() {
       nbEmails ++;
     }
   });
-});
+//});
+}
 
 // Suppression courriel
 function removeItem(elem){
