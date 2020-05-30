@@ -336,7 +336,7 @@ $("#clongueur").focusout(function() {
 $('#addcourriel').click(function(event) {
   event.preventDefault();
   this.blur(); // Manually remove focus from clicked link.
-  $.get(this.href, function(html) {
+  $.get("./m_courriels.html", function(html) {
     $(html).appendTo('body').modal();
   });
 });
