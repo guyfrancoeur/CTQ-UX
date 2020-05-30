@@ -333,22 +333,18 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
-
+$('#m_courriels').on('show.bs.modal', function (e) {
+    var loadurl = $(e.relatedTarget).data('load-url');
+    $(this).find('.modal-body').load(loadurl);
+});
+/*
 $('#addcourriel').on('click', function () {
 	console.log('success');
-	
 	$('#m_courriels').load('./m_courriels.html', function () {
 		console.log('here');
 		$('#m_courriels').modal('show');
+		$( "#m_courriels" ).dialog();
 		//$('#m_courriels').modal();
 	});
-  //$('#m_courriels').load('./m_courriels.html').dialog({modal:true});
-  //var div = $('#myid');  // container for the content
-
-//$.get('./m_courriels.html',function(resp) {      // on success
-   /*$(div)
-      .html(resp)               // populate the div
-      .dialog({ modal: true }); // and turn it into a dialog
- });*/
- //$(resp).modal('show');
 });
+*/
