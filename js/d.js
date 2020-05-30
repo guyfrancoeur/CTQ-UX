@@ -29,11 +29,15 @@ function validateEmail(email) {
 // Ajout courriel
 var addcourriel = document.getElementById("addcourriel");
 var inputcourriel = document.getElementById("cinputcourriel");
+var inputcourriel2 = $.trim($("cinputcourriel").val());
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;
 
 $("#bSaveEmails").click(function() {
   var tabsplit = ($("#cinputcourriel").val()).split(';');
+  console.log("en entrée : " + $("#cinputcourriel").val());
+  console.log("inputcourriel2 : " + inputcourriel2);
+  console.log("après split : " + tabsplit);
   tabsplit.forEach(function(element){
     if (validateEmail(element)){
       var li = document.createElement("li");
