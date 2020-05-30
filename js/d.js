@@ -29,17 +29,29 @@ function validateEmail(email) {
 // Ajout courriel
 var addcourriel = document.getElementById("addcourriel");
 var inputcourriel = document.getElementById("cinputcourriel");
-var inputcourriel2 = $.trim($("cinputcourriel").val());
 var ul = document.getElementById("listecourriels");
-nbEmails = 0;
+nbEmails = 0;;
+var tabEmails = [];
 
-//$("#bSaveEmails").click(function() {
-function saveMails(elem){
+$("#bSaveEmails").click(function() {
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   console.log("en entrée : " + $("#cinputcourriel").val());
-  console.log("inputcourriel2 : " + inputcourriel2);
   console.log("après split : " + tabsplit);
   tabsplit.forEach(function(element){
+    if (validateEmail(element)){
+    	tabEmails.push(element);
+    }
+  });
+  console.log(tabEmails);
+  writeEmails();
+});
+
+$( document ).ready(function() {
+	writeEmails();
+});
+
+function writeEmails(){
+	tabEmails.forEach(function(element){
     if (validateEmail(element)){
       var li = document.createElement("li");
       li.id = "li" + nbEmails;
@@ -54,8 +66,35 @@ function saveMails(elem){
       nbEmails ++;
     }
   });
-//});
+  console.log(tabEmails);
 }
+
+/*
+$("#bSaveEmails").click(function() {
+//function saveMails(elem){
+  var tabsplit = ($("#cinputcourriel").val()).split(';');
+  console.log("en entrée : " + $("#cinputcourriel").val());
+  console.log("après split : " + tabsplit);
+  tabsplit.forEach(function(element){
+    if (validateEmail(element)){
+    	tabEmails.push(element);
+      var li = document.createElement("li");
+      li.id = "li" + nbEmails;
+      li.className = 'list-group-item';
+      li.className = 'd-flex';
+      li.className = 'justify-content-between';
+      li.className = 'align-items-center';
+      li.textContent = element;
+      ul.appendChild(li);
+      $("#cinputcourriel").val("");
+      li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
+      nbEmails ++;
+    }
+  });
+  console.log(tabEmails);
+});
+*/
+//}
 
 // Suppression courriel
 function removeItem(elem){
