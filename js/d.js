@@ -346,8 +346,9 @@ $('#addcourriel').on('click', function () {
   var div = $('#myid');  // container for the content
 
 $.get('./m_courriels.html',function(resp) {      // on success
-   $(div)
+   /*$(div)
       .html(resp)               // populate the div
       .dialog({ modal: true }); // and turn it into a dialog
- });
+ });*/
+ $(resp).modal('show');
 });
