@@ -336,19 +336,19 @@ $("#clongueur").focusout(function() {
 
 $('#addcourriel').on('click', function () {
 	console.log('success');
-	/*
+	
 	$('#m_courriels').load('./m_courriels.html', function () {
 		console.log('here');
-		//$('#m_courriels').modal('show');
-		$('#m_courriels').modal();
-	});*/
+		$('#m_courriels').modal('show');
+		//$('#m_courriels').modal();
+	});
   //$('#m_courriels').load('./m_courriels.html').dialog({modal:true});
-  var div = $('#myid');  // container for the content
+  //var div = $('#myid');  // container for the content
 
-$.get('./m_courriels.html',function(resp) {      // on success
+//$.get('./m_courriels.html',function(resp) {      // on success
    /*$(div)
       .html(resp)               // populate the div
       .dialog({ modal: true }); // and turn it into a dialog
  });*/
- $(resp).modal('show');
+ //$(resp).modal('show');
 });
