@@ -333,7 +333,7 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
-$('#testmodale').click(function(event) {
+$('#addcourriel').click(function(event) {
   console.log('success');
   $('#m_courriels').load('./m_courriels.html', function(response, status, xhr) {
   	if ( status == "error" ) {
