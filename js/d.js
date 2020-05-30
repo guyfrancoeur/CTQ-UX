@@ -333,28 +333,23 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
-
-$('#addcourriel').click(function(event) {
-	console.log('success');
-  $(x).load('m_courriels.html', function () { $(x).modal('show');console.log("1");});
-  //$.get('m_courriels.html', function(x) { $(x).modal('show');console.log("2");});
-});
-
-/*
-$('#addcourriel').click(function(event) {
-	$.load("./m_courriels2.html", function(html) {
-    $(html).modal("show");
+$('#testmodale').click(function(event) {
+  console.log('success');
+  $('#m_courriels').load('./m_courriels.html', function(response, status, xhr) {
+  	if ( status == "error" ) {
+	    var msg = "Sorry but there was an error: ";
+	    $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+	  }
+  	$('#m_courriels').modal('show');
+  	console.log("1");
   });
-});
-*/
-	/*
-  event.preventDefault();
-  //this.blur(); // Manually remove focus from clicked link.
-  $.get("./m_courriels.html", function(html) {
-    $(html).appendTo('body').modal();
+  /*
+  $.get("./m_courriels.html", function(x) {
+    $(x).appendTo('body').modal();
+    console.log("2");
   });
   */
-//});
+});
 
 
   
