@@ -1,7 +1,6 @@
 [
   {"propriete":"text","obj":"#bhome","value":"Accueil"},
   {"propriete":"text","obj":"#bsubmit","value":"Se connecter"},
-  {"propriete":"text","obj":"#lpass","value":"Mot de passe"},
   {"propriete":"text","obj":"#forgot","value":"Mot de passe oublié"},
   {"propriete":"text","obj":"#bgetquote","value":"Obtenir un devis"},
   {"propriete":"text","obj":"#clogintitle","value":"Se connecter"},
