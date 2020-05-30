@@ -336,8 +336,8 @@ $("#clongueur").focusout(function() {
 
 $('#addcourriel').click(function(event) {
 	console.log('success');
-  $('#m_courriels').load('m_courriels.html', function () { $('#m_courriels').modal('show');console.log("1");});
-  $.get('m_courriels.html', function(x) { $(x).modal('show');console.log("2");});
+  $(x).load('m_courriels.html', function () { $(x).modal('show');console.log("1");});
+  //$.get('m_courriels.html', function(x) { $(x).modal('show');console.log("2");});
 });
 
 /*
