@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/d.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -16,7 +17,6 @@
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body class="bg-light">
@@ -234,8 +234,6 @@
                                 <div class="text-center pt-2">
                                   <!--<button class="btn btn-outline-secondary" style="height:40px;" id="addcourriel" type="button">+ <i class="fas fa-envelope"></i></button>-->
                                   <button class="btn btn-outline-secondary" style="height:40px;" id="addcourriel" type="button" data-toggle="modal" data-target="#m_courriels">+ <i class="fas fa-envelope"></i></button>
-                                	
-                                	<a href="#" data-toggle="modal" data-load-url="m_courriels.html" data-target="#m_courriels">Click me</a>
                                 </div>
                               </div>
                               <div class="col-12 col-md-6 text-center pt-3 pt-md-0">
@@ -250,6 +248,8 @@
                         </a>
                       </div>
                     </div>
+                    <a href="m_courriels.html" id="manual-ajax">second example</a>
+                    
                     <div class="cout-style card-footer text-right font-weight-bold py-2">
                       <p class="card-text">
                         <small id="textreduction" class="font-italic"></small>
