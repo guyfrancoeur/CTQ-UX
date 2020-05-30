@@ -31,8 +31,8 @@ var addcourriel = document.getElementById("addcourriel");
 var inputcourriel = document.getElementById("inputcourriel");
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;
-/*
-$("#addcourriel").click(function() {
+
+$("#bSaveEmails").click(function() {
   var tabsplit = ($("#inputcourriel").val()).split(';');
   tabsplit.forEach(function(element){
     if (validateEmail(element)){
@@ -50,7 +50,7 @@ $("#addcourriel").click(function() {
     }
   });
 });
-*/
+
 // Suppression courriel
 function removeItem(elem){
   var val = "li" + elem.id;
@@ -80,7 +80,7 @@ function selection(elem){
     $('#cTextC').removeClass('font-weight-bold');
     $('#cmontant').prop("disabled", true);
     $('#cdureeC').prop("disabled", true);
-    $('#inputcourriel').prop("disabled", true);
+    $('#addcourriel').prop("disabled", true);
   };
   if(value == "B"){
     cout = (2 - reduction).toFixed(2);
@@ -100,7 +100,7 @@ function selection(elem){
     $('#cTextC').removeClass('font-weight-bold');
     $('#cdureeA').prop("disabled", true);
     $('#cdureeC').prop("disabled", true);
-    $('#inputcourriel').prop("disabled", true);
+    $('#addcourriel').prop("disabled", true);
   };
   if(value == "C"){
   	if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
@@ -111,7 +111,7 @@ function selection(elem){
     $('#C').addClass('clicked');
     $('#cTextC').addClass('font-weight-bold');
     $('#cdureeC').removeAttr("disabled");
-    $('#inputcourriel').removeAttr("disabled");
+    $('#addcourriel').removeAttr("disabled");
     $('#A').removeClass('chosen');
     $('#B').removeClass('chosen');
     $('#A').removeClass('clicked');
