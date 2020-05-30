@@ -343,12 +343,6 @@ $('#testmodale').click(function(event) {
   	$('#m_courriels').modal('show');
   	console.log("1");
   });
-  /*
-  $.get("./m_courriels.html", function(x) {
-    $(x).appendTo('body').modal();
-    console.log("2");
-  });
-  */
 });
 
 
