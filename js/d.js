@@ -28,12 +28,12 @@ function validateEmail(email) {
 
 // Ajout courriel
 var addcourriel = document.getElementById("addcourriel");
-var inputcourriel = document.getElementById("inputcourriel");
+var inputcourriel = document.getElementById("cinputcourriel");
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;
 
 $("#bSaveEmails").click(function() {
-  var tabsplit = ($("#inputcourriel").val()).split(';');
+  var tabsplit = ($("#cinputcourriel").val()).split(';');
   tabsplit.forEach(function(element){
     if (validateEmail(element)){
       var li = document.createElement("li");
@@ -44,7 +44,7 @@ $("#bSaveEmails").click(function() {
       li.className = 'align-items-center';
       li.textContent = element;
       ul.appendChild(li);
-      $("#inputcourriel").val("");
+      $("#cinputcourriel").val("");
       li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
       nbEmails ++;
     }
