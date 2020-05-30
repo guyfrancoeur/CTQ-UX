@@ -58,7 +58,7 @@
   <!-- ************* CONTENT ************* -->
   <div class="container" id="container">
     <div class="bloc-login">
-    <div class="shadow bg-white position-relative bloc col-xl-7 col-md-9 col-12 m-auto p-3">
+    <div class="shadow bg-white position-relative bloc col-xl-6 col-md-9 col-12 m-auto p-3">
       <div class="tab-content">
       
         <h1 id="clogintitle" class="text-center text-dark">Login</h1>
@@ -67,23 +67,23 @@
         <div class="container col-11">
           <form class="align-items-center" action="d.html" onsubmit="return verificationLogin();">
             <div class="form-group">
-            	<label id="lemail" for="cemail" class="col-sm-3 col-form-label pl-0">Email</label>
+            	<label id="lemail" for="cemail"></label>
             	<div class="input-group mb-2 rounded">
                 <div class="input-group-prepend label-absolute">
-                  <span class="input-group-text lighten-3 bg-light">
-                    <i id="temail" class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="left" data-original-title="Please enter your email here"></i>
+                  <span id="temail" class="input-group-text" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Please enter your email here">
+                    <i class="fa fa-user"></i>
                   </span>         
                 </div>
-                <input type="email" class="form-control" id="cemail" placeholder="email@example.ca">
+                <input type="email" class="form-control" id="cemail" placeholder="email@example.ca" autofocus>
               </div>
             </div>
               
             <div class="form-group">
-            	<label id="lpass" for="cpassword" class="lang col-sm-3 col-form-label pl-0">Password</label>
+            	<label id="lpass" for="cpassword"></label>
             	<div class="input-group mb-2 rounded">
                 <div class="input-group-prepend label-absolute">
-                  <span class="input-group-text lighten-3 bg-light">
-                  	<i id="tpassword" class="fas fa-lock" aria-hidden="true" data-toggle="tooltip" data-placement="left" data-original-title="Please enter your password here"></i>
+                  <span id="tpassword" class="input-group-text" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Please enter your password here">
+                  	<i class="fas fa-lock"></i>
                   </span>
                 </div>
                 <input type="password" class="form-control lang" id="cpassword" placeholder="Password">

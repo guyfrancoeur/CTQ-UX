@@ -168,11 +168,6 @@ ul.listec li{
 	cursor:pointer;
 }
 
-.tooltip-inner{
-  background-color:rgb(1,13,40);
-  color:white;
-}
-
 .animationcout{
   animation-name: animCout;
   animation-duration: 500ms;

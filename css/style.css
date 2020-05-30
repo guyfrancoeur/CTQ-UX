@@ -225,3 +225,8 @@ ul.links-list li a:hover{
 		height: 17rem;
 	}
 }
+
+.tooltip-inner{
+  background-color:rgb(1,13,40);
+  color:white;
+}
