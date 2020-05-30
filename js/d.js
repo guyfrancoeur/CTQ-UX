@@ -333,4 +333,21 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
-$('#m_courriels').load('./m_courriels.html');
+
+$('#addcourriel').on('click', function () {
+	console.log('success');
+	/*
+	$('#m_courriels').load('./m_courriels.html', function () {
+		console.log('here');
+		//$('#m_courriels').modal('show');
+		$('#m_courriels').modal();
+	});*/
+  //$('#m_courriels').load('./m_courriels.html').dialog({modal:true});
+  var div = $('#myid');  // container for the content
+
+$.get('./m_courriels.html',function(resp) {      // on success
+   $(div)
+      .html(resp)               // populate the div
+      .dialog({ modal: true }); // and turn it into a dialog
+ });
+});
