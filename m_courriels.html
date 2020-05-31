@@ -7,13 +7,13 @@
       </button>
     </div>
     <div class="modal-body">
-      <form onsubmit="saveMails()">
+      <form>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Type the e-mail addresses, separating each address by a semi-colon : </label>
           <textarea id="cinputcourriel" class="form-control" rows="6"></textarea>
         </div>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" id="bSaveEmails" class="btn btn-primary">Save changes</button>
+        <button id="bSaveEmails" class="btn btn-primary" onclick="saveMails()">Save changes</button>
       </form>
     </div>
   </div>
