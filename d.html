@@ -164,7 +164,7 @@
                       </div>
                       <div class="list-group list-group-flush">
                         <a id="A" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
-                          <div class="resizechamp3 row px-3 py-2">
+                          <div class="resizechamp3 row px-3 pt-2">
                             <div class="col-6"><span id="cTextA">Public auction</span>
                               <span id="hPublic" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                             </div>
@@ -184,7 +184,7 @@
                           </div>
                         </a>
                         <a id="B" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
-                          <div class="resizechamp3 row px-3 py-2">
+                          <div class="resizechamp3 row px-3 pt-2">
                             <div class="col-6 pr-0">
                               <i id="tFixed" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="BuyNow type auction"></i>
                               <span id="cTextB">Fixed price</span>
@@ -222,19 +222,22 @@
                           </div>
                           <div class="resizechamp3 px-3 pb-2">
                             <div class="resizechamp row">
-                              <div class="col-10 col-xl-6 pr-xl-0">
-                              	<div class="input-group input-group-sm">
+                              <div class="col-12 col-xl-6 pr-xl-0 pb-2">
+                              	<div class="row">
+                              	<div class="input-group input-group-sm col-10 col-xl-12">
                                   <input type="number" class="form-control" id="cdureeC" placeholder="Duration" aria-label="Durée" min="0" required disabled>
                                   <div class="input-group-append">
                                     <span class="input-group-text size2">min</span>
                                   </div>
                                 </div>
-                                <div class="text-center pt-2">
-                                  <!--<button class="btn btn-outline-secondary" style="height:40px;" id="addcourriel" type="button">+ <i class="fas fa-envelope"></i></button>-->
-                                  <button id="addcourriel" class="btn btn-outline-secondary" type="button" style="height:40px;" data-toggle="modal" data-target="#m_courriels" disabled>+ <i class="fas fa-envelope"></i></button>
+                                <div class="text-center pt-0 pt-xl-2 col-2 col-xl-12">
+                                  <button id="addcourriel" class="btn btn-outline-secondary btn-sm" style="width:50px;height:40px;" type="button" data-toggle="modal" data-target="#m_courriels" disabled>
+                                  	<i class="fas fa-plus"></i> <i class="fas fa-envelope"></i>
+                                  </button>
+                                </div>
                                 </div>
                               </div>
-                              <div class="col-12 col-md-6 text-center pt-3 pt-md-0">
+                              <div class=" col-12 col-xl-6 text-center">
                                 <div class="divCourriels">
                                   <div class="overflow-auto border bg-white rounded-bottom m-0" style="height:80px;">
                                     <ul class="listec list-group-flush text-muted border-light p-0" id="listecourriels"></ul>
