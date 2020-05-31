@@ -33,7 +33,8 @@ var ul = document.getElementById("listecourriels");
 nbEmails = 0;;
 var tabEmails = [];
 
-$("#bSaveEmails").click(function() {
+$("#bSaveEmails").on("click", function(e){
+	e.preventDefault();
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   console.log("en entrée : " + $("#cinputcourriel").val());
   console.log("après split : " + tabsplit);
@@ -44,6 +45,7 @@ $("#bSaveEmails").click(function() {
   });
   console.log(tabEmails);
   writeEmails();
+  $(this).prev().click();
 });
 
 $( document ).ready(function() {
