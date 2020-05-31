@@ -48,6 +48,7 @@ $(".petite-div" ).click(function() {
   $(this).fadeIn(100);
 });
 
+// Taille card index.html
 $( document ).ready(function() {
 	var heightDivLogin = $('#divLogin').height();
 	$('#arrow-card1').height(heightDivLogin);

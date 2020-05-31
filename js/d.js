@@ -10,6 +10,9 @@ $( document ).ready(function() { // ou $(function () {
   $('#m_courriels').load('./m_courriels.html', function() {
 	  $('#m_courriels').modal('show');
   });
+  
+  // Cacher le bouton close de la partie résultats
+  $("#bcloseResults").hide();
 });
 
 // Toggle button
@@ -352,11 +355,6 @@ $("#bcloseResults").click(function() {
   $('#divOrigin').addClass('pr-xl-3');
   $('#divDestination').addClass('pr-xl-3');
   document.getElementById("contenu").innerHTML = "";
-  $("#bcloseResults").hide();
-});
-
-// Cacher le bouton close de la partie résultats
-$( document ).ready(function() { 
   $("#bcloseResults").hide();
 });
 
