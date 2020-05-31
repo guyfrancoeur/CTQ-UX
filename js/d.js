@@ -45,7 +45,7 @@ $("#bSaveEmails").on("click", function(e){
   });
   console.log(tabEmails);
   writeEmails();
-  $(this).prev().click();
+  //$(this).prev().click();
 });
 
 $( document ).ready(function() {
