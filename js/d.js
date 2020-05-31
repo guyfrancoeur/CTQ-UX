@@ -98,6 +98,7 @@ function saveMails(){
     }
   });
   console.log(tabEmails);
+  $(this).prev().click();
 //});
 }
 
