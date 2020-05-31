@@ -375,6 +375,9 @@ $("#clongueur").focusout(function() {
 });
 
 // Lancement modale
-  $('#m_courriels').load('./m_courriels.html', function() {
-	  $('#m_courriels').modal();
-  });
+/*
+$('#m_courriels').load('./m_courriels.html', function() {
+ $('#m_courriels').modal();
+});
+*/
+$('#m_courriels').load('./m_courriels.html');
