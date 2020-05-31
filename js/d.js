@@ -5,6 +5,11 @@ $( document ).ready(function() { // ou $(function () {
   $('.selectpicker').selectpicker();
   $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
+  
+  // Lancement modale
+  $('#m_courriels').load('./m_courriels.html', function() {
+	  $('#m_courriels').modal('show');
+  });
 });
 
 // Toggle button
@@ -376,10 +381,7 @@ $("#clongueur").focusout(function() {
   $("#tToggleinstruction").tooltip('hide');
 });
 
-// Lancement modale
-$('#m_courriels').load('./m_courriels.html', function() {
-	$('#m_courriels').modal('show');
-});
+
 
 
   
