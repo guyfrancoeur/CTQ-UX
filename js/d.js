@@ -378,14 +378,12 @@ $("#clongueur").focusout(function() {
 
 // Lancement modale
 $('#addcourriel').click(function(event) {
-  console.log('success');
   $('#m_courriels').load('./m_courriels.html', function(response, status, xhr) {
   	if ( status == "error" ) {
 	    var msg = "Sorry but there was an error: ";
 	    $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
 	  }
   	$('#m_courriels').modal('show');
-  	console.log("1");
   });
 });
 
