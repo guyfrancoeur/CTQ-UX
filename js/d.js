@@ -8,6 +8,9 @@ $( document ).ready(function() { // ou $(function () {
   
   // Cacher le bouton close de la partie résultats
   $("#bcloseResults").hide();
+  
+  // Chargement contenu modale
+  $('#m_courriels').load('./m_courriels.html');
 });
 
 // Toggle button
@@ -373,11 +376,3 @@ $("#cwidth").focusout(function() {
 $("#clongueur").focusout(function() {
   $("#tToggleinstruction").tooltip('hide');
 });
-
-// Lancement modale
-/*
-$('#m_courriels').load('./m_courriels.html', function() {
- $('#m_courriels').modal();
-});
-*/
-$('#m_courriels').load('./m_courriels.html');
