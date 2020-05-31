@@ -32,7 +32,7 @@ var inputcourriel = document.getElementById("cinputcourriel");
 var ul = document.getElementById("listecourriels");
 nbEmails = 0;;
 var tabEmails = [];
-
+/*
 $("#bSaveEmails").click(function() {
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   console.log("en entrée : " + $("#cinputcourriel").val());
@@ -68,10 +68,10 @@ function writeEmails(){
   });
   console.log(tabEmails);
 }
+*/
 
-/*
-$("#bSaveEmails").click(function() {
-//function saveMails(elem){
+//$("#bSaveEmails").click(function() {
+function saveMails(){
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   console.log("en entrée : " + $("#cinputcourriel").val());
   console.log("après split : " + tabsplit);
@@ -92,9 +92,8 @@ $("#bSaveEmails").click(function() {
     }
   });
   console.log(tabEmails);
-});
-*/
-//}
+//});
+}
 
 // Suppression courriel
 function removeItem(elem){
