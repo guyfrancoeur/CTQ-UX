@@ -5,6 +5,7 @@
   <title>CTQ</title>
  	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/CSS/bootstrap.min.css">
  	<link rel="stylesheet" href="./css/style.css">
+ 	<link rel="stylesheet" href="./css/index.css">
  	<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
  	<script src="./data/en.json"></script>
  	<script src="./data/fr.json"></script>
@@ -46,7 +47,7 @@
     <div class="container text-center"> 
       <div class="row">
         <div class="text-light">
-          <h1 id="gros-titre" class="display-4 font-weight-bold text-shadow lang"><br/><br/></h1>
+          <h1 id="gros-titre" class="display-4 font-weight-bold text-shadow"><br/><br/></h1>
         </div>
       </div>
     </div>
@@ -55,14 +56,14 @@
 
 <!-- ************* CONTENT ************* -->
 <div class="container" id="container">
-  <div class="bloc-index bloc shadow bg-white position-relative col-12 p-3">
+  <div class="bloc-index bloc shadow bg-white position-relative col-12 col-xl-11 m-auto p-3">
     <div class="row">
-      <div class="col-md-6 col-12 spe2">
-        <div class="card spe">
+      <div class="col-md-6 col-12  pb-3 pb-md-0">
+        <div id="divLogin" class="card spe">
           <div class="card-header spe-header text-center"><h4 id="cLoginTitle" class="card-title">Login</h4></div>
           <div class="card-body">
             <div class="row text-center">
-              <div class="col-md-6 col-12 spe2">
+              <div class="col-md-6 col-12 pb-3 pb-md-0">
                 <div class="card petite-div">
                   <div class="card-header font-weight-bold" style="height: 4rem;"><a id="cM" href="l.html">Manufacturer & broker</a></div>
                   <div class="card-footer text-muted"><a id="cForgotPassM" href="#" >&#8921 Forgot password</a></div>
@@ -80,12 +81,14 @@
         </div>
       </div>
       <div class="col-md-6 col-12">
-        <div class="card arrow-card normal-height">
-          <a href="#">
-            <div class="card-body text-center">
+        <div id="arrow-card1" class="card arrow-card">
+          <a href="#" class="vertical">
+            <div class="card-body text-center ">
               <br/><br/>
+              <div class="">
               <h4 id="cBecomeM" lass="card-title">Become a Manufacturer or a Broker</h4>
-              <i class="fas fa-angle-double-right fa-3x"></i>
+              <i id="arrow1" class="fas fa-angle-double-right fa-3x arrow"></i>
+              </div>
             </div>
           </a>
         </div>
@@ -94,7 +97,7 @@
     <br/>
     <div class="row">
       <div class="col-md-6 col-12 order-md-1 order-2">
-        <div class="card spe normal-height">
+        <div id="divAdmin" class="card spe">
           <div class="card-header spe-header text-center"><h4 class="card-title">Admin</h4></div>
           <div class="card-body p-1">
             <nav>
@@ -145,13 +148,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-12 order-md-2 order-1 spe2">
-        <div class="card arrow-card normal-height">
+      <div class="col-md-6 col-12 order-md-2 order-1 pb-3 pb-md-0">
+        <div id="arrow-card2" class="card arrow-card">
           <a href="#">
-            <div class="card-body text-center align-middle">
+            <div class="card-body text-center vertical">
               <br/><br/>
               <h4 id="cBecomeT" class="card-title">Become a Transporter</h4>
-              <i class="fas fa-angle-double-right fa-3x"></i>
+              <i id="arrow2" class="fas fa-angle-double-right fa-3x arrow"></i>
             </div>
           </a>
         </div>

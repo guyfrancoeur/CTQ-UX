@@ -37,3 +37,23 @@ $(function() {
     });
   }, false);
 })();
+
+// Animation index.html
+$(".arrow-card" ).click(function() {
+	$(this).fadeOut(100);
+  $(this).fadeIn(100);
+});
+$(".petite-div" ).click(function() {
+	$(this).fadeOut(100);
+  $(this).fadeIn(100);
+});
+
+$( document ).ready(function() {
+	var heightDivLogin = $('#divLogin').height();
+	$('#arrow-card1').height(heightDivLogin);
+	$('#arrow-card2').height(heightDivLogin);
+	$('#divAdmin').height(heightDivLogin);
+});
+
+
+

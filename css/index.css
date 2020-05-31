@@ -1,0 +1,107 @@
+ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active, .nav-admin a, .nav-admin a:visited, .nav-admin a:active{
+	text-decoration:none;
+	color: rgb(52,58,54);
+	font-size:15px;
+}
+
+.nav-admin a.active{
+  font-weight:bold;
+}
+
+ul.links-list li a:hover{
+	text-decoration:underline;
+}
+
+.petite-div a, .petite-div a:visited, .petite-div a:active{
+	text-decoration:none;
+	color: rgb(52,58,54);
+}
+
+.petite-div:hover{
+	background-color: rgba(1,13,40,.9);
+	color: white;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	transition-duration: 300ms;
+}
+
+.petite-div:hover a{
+	color: white;
+	transition-duration: 300ms;
+}
+
+.petite-div .card-header a:hover{
+	font-size:18px;
+	transition-duration: 200ms;
+}
+
+.petite-div:hover .card-header{
+	border-bottom-color:gray;
+}
+
+.petite-div .card-footer a:hover{
+	text-decoration:underline;
+	transition-duration: 400ms;
+}
+
+.petite-div .card-footer{
+	font-size:15px;
+}
+
+.card{
+	border-radius:15px;
+}
+
+.card-footer{
+	border-top: 0px;
+}
+
+.arrow-card:hover{
+	background-color: rgba(1,13,40,.9);
+	color: white;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	transition-duration: 400ms;
+}
+
+.spe:hover .spe-header{
+	background-color: rgba(1,13,40,.9);
+	color: white;
+	border-top-right-radius:15px;
+	border-top-left-radius:15px;
+	transition-duration: 300ms;
+}
+
+.spe:hover .card-body{
+	background-color: rgb(247,247,247);
+	border-radius:15px;
+	transition-duration: 300ms;
+}
+
+.spe:hover{
+	border-radius:15px;
+	border-color: rgba(1,13,40,.9);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	transition-duration: 300ms;
+}
+
+.arrow-card:hover a, .arrow-card:hover a:visited, .arrow-card:hover a:active{
+	color: white;
+	transition-duration: 300ms;
+}
+
+.arrow-card a{
+	color: rgb(52,58,54);
+}
+
+.arrow-card a:hover{
+	text-decoration:none;
+}
+
+.icon-file{
+	color:rgb(189,98,6);
+}
+
+.vertical{
+	margin-top:auto;
+	margin-bottom:auto;
+	padding-bottom:5%;
+}
