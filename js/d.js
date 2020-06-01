@@ -10,7 +10,7 @@ $( document ).ready(function() { // ou $(function () {
   $("#bcloseResults").hide();
   
   // Chargement contenu modale
-  $('#m_courriels').load('./m_courriels.html');
+  $('#m_courriels').load('./m_courrieLs.html');
 });
 
 // Toggle button

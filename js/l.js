@@ -29,7 +29,8 @@ function verificationLogin(){
       }
     });
     if(result == false){
-    	$("#cinvalidMessage").text("This email or this password is invalid.");
+    	$("#cinvalidMessage").addClass("alert-danger");
+    	$("#cinvalidMessage").html("<i class='fas fa-exclamation-circle'></i> This email or this password is invalid.");
     }
     else{
     	$("#cinvalidMessage").text("");
