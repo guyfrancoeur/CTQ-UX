@@ -261,7 +261,7 @@
               </div>
               <div id="buttonend" class="text-center px-3 pt-1">
                 <small id="cterms" class="text-muted">By clicking on "Get a quote", you accept the Terms and Conditions of Use.</small>
-                <button id="bgetquote" type="submit" class="btn btn-primary btn-lg btn-block">Get a quote</button>
+                <button id="bgetquote" type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#m_results">Get a quote</button>
               </div>
             </div>
           </form>
@@ -309,8 +309,11 @@
 </footer>
 <!-- ************* FOOTER ************* -->
 
-	<!-- Modale pour l'ajout des mails (Private auction) -->
+	<!-- Modale ajout des courriels (Private auction) -->
   <div id="m_courriels" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
+  
+  <!-- Modale ajout espace résultats -->
+  <div id="m_results" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   
   <script src="./data/en.json"></script>
   <script src="./data/fr.json"></script>

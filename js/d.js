@@ -10,7 +10,8 @@ $( document ).ready(function() { // ou $(function () {
   $("#bcloseResults").hide();
   
   // Chargement contenu modale
-  $('#m_courriels').load('./m_courrieLs.html');
+  $('#m_courriels').load('./m.courriels.html');
+  $('#m_results').load('./m.results.html');
   
   // Toasts Bootstrap (nombre camions disponibles)
   $(".div-item").hide();
