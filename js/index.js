@@ -6,6 +6,8 @@ $( document ).ready(function() {
   $('#m_trucker').load('./m.trucker.html');
 });
 
+traduire();
+
 //exemple court
 $(function() {
   console.log( "ready!" );
