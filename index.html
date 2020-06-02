@@ -10,9 +10,9 @@
  	<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
  	<script src="./data/en.json"></script>
  	<script src="./data/fr.json"></script>
- 	<script defer src="./js/file.js"></script>
-	<script src="./lib/font-awesome/js/all.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/file.js"></script>
+  <script src="./lib/font-awesome/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="./lib/bootstrap/JS/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.0/umd/popper.min.js"></script>
 </head>
@@ -120,9 +120,18 @@
               <div class="tab-pane fade" id="nav-modales" role="tabpanel" aria-labelledby="nav-modales-tab">
               	<div class="row">
                   <ul class="links-list list-unstyled col-6">
-                    <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="#">m.template.html</a></li>
-                    <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="#">m.broker.html</a></li>
-                    <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="#">m.trucker.html</a></li>
+                    <li>
+                      <span class="icon-file"><i class="fas fa-file-alt"></i></span>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_template">clic</button>
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_broker">
+                      <span class="icon-file"><i class="fas fa-file-alt"></i></span></button>
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_trucker">
+                      <span class="icon-file"><i class="fas fa-file-alt"></i></span></button>
+                    </li>
                   </ul>
                   <ul class="links-list list-unstyled col-6">
                     <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="./m.results.html">m.results.html</a></li>
@@ -179,6 +188,12 @@
 <br/>
 <!-- ************* CONTENT ************* -->
 
+<!-- *** modal *** -->
+<div class="modal fade" id="m_template" tabindex="-1" role="dialog" aria-labelledby="m_templateTitle" aria-hidden="true"></div>
+<div class="modal fade" id="m_trucker" tabindex="-1" role="dialog" aria-labelledby="m_truckerTitle" aria-hidden="true"></div>
+<div class="modal fade" id="m_broker" tabindex="-1" role="dialog" aria-labelledby="m_brokerTitle" aria-hidden="true"></div>
+<!-- *** modal -->  
+  
 <!-- ************* FOOTER ************* -->
 <footer class="footer-page font-small bg-dark fixed-bottom">
  <div id="cFooterText" class="class-footer text-center text-white text-sm font-weight-light">© 2020 Copyright • CTQ • All rights reserved.</div>  
