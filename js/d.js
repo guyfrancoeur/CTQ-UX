@@ -11,6 +11,9 @@ $( document ).ready(function() { // ou $(function () {
   
   // Chargement contenu modale
   $('#m_courriels').load('./m_courrieLs.html');
+  
+  // Toasts Bootstrap (nombre camions disponibles)
+  $(".div-item").hide();
 });
 
 // Toggle button
@@ -140,6 +143,9 @@ var reduction = 0;
 var ancienneReduction = 0;
 // [length,width,height,weight,value,requirements]
 function champRempli(elem){
+	// Affichage des camions disponibles : toast Bootstrap
+	$('#toast1').toast('show');
+	
   nbChampsRemplis = 0;
   if(($(elem).val() == "") || ($(elem).val() == [])){
     if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
