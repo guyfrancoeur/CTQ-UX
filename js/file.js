@@ -17,8 +17,8 @@
         console.log('error');
         console.log(thrownError);
       }
-    })
-  })
+    });
+  });
 //});
 
 //Je ne comprend pas pourquoi deux facon de faire.
