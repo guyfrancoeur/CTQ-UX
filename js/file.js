@@ -48,6 +48,12 @@ $(".petite-div" ).click(function() {
   $(this).fadeIn(100);
 });
 
+//exemple complet 
+//$('#m_profil').load('../modal/m.profil.html', function () { m_profil_ready('#m_profil'); });
+$('#m_template').load('./m.template.html');
+$('#m_broker').load('./m.broker.html');
+$('#m_trucker').load('./m.trucker.html');
+
 // Taille card index.html
 $( document ).ready(function() {
 	var heightDivLogin = $('#divLogin').height();
