@@ -282,4 +282,5 @@ h4, h5{
 
 .groupcheckbox{
 	opacity:0;
+	position:absolute;
 }
