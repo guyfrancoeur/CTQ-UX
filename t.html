@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/t.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -60,26 +61,26 @@
   <div class="container col-md-10 col-12" id="container">
     <div class="shadow bg-white position-relative bloc-formulaire bloc">
       <div class="tab-content pb-3">
-        <h1 id="clogintitle" class="text-center text-dark py-2">Trucker</h1>
+        <h1 class="text-center text-dark py-4"><span id="ctrucker">Trucker</span></h1>
         <div class="container col-12 px-4">
           <div class="row px-4">
-            <div class="pr-xl-2 col-12 col-xl-4 pb-3 pb-xl-0">
+            <div class="pr-xl-2 col-12 col-xl-5 pb-3 pb-xl-0">
             <div class="card" style="height:400px;">
-              <div class="card-header text-center"><h4 id="cLoginTitle" class="card-title"><i class="fas fa-user fa-sm"></i> Profil</h4></div>
+              <div class="card-header text-center"><h4 id="cLoginTitle" class="card-title"><i class="fas fa-user fa-sm color-icon-hover"></i> Profil</h4></div>
               <div class="card-body">
                 <br/>
               </div>
             </div>
             </div>
-            <div class="pl-xl-2 col-12 col-xl-8">
+            <div class="pl-xl-2 col-12 col-xl-7">
             <div class="card" style="height:400px;">
               <div class="card-header text-center">
-                <h4 class="card-title"><i class="fas fa-truck-moving fa-lg float-left"></i>Liste de camions <button class="btn float-right" type="button"><i class="fas fa-plus"></i></button></h4>
+                <h4 class="card-title"><i class="fas fa-truck-moving fa-lg float-left color-icon-hover"></i>Liste de camions <button class="btn float-right" type="button"><i class="fas fa-plus color-icon-hover"></i></button></h4>
 
               </div>
               <div class="card-body p-0" style="overflow-y:scroll;">
-                <table class="table table-hover">
-                  <thead>
+                <table class="table">
+                  <thead style="background-color:rgb(247,247,249);">
                     <tr>
                       <th scope="col">Tracteur</th>
                       <th scope="col">Équipement</th>
@@ -91,19 +92,55 @@
                     <tr>
                       <td>P1</td>
                       <td>P2</td>
-                      <td>H3N <i class="fas fa-map-marker-alt"></i></td>
+                      <td><span class="cpostalcode">H3N</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                      	<button type="button" class="btn p-0"><i class="fas fa-edit"></i></button>
-                      	<button type="button" class="close" aria-label="Close"><span class="cross" aria-hidden="true" onclick="removeItem(this)">&times;</span></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-pencil-alt color-icon"></i></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
                     <tr>
                       <td>T1</td>
                       <td>E2</td>
-                      <td>H4B <i class="fas fa-map-marker-alt"></i></td>
+                      <td><span class="cpostalcode">H4B</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                      	<button type="button" class="btn p-0"><i class="fas fa-edit"></i></button>
-                      	<button type="button" class="close" aria-label="Close"><span class="cross" aria-hidden="true" onclick="removeItem(this)">&times;</span></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-pencil-alt color-icon"></i></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-trash color-icon"></i></button>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>P3</td>
+                      <td>P4</td>
+                      <td><span class="cpostalcode">H5F</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
+                      <th scope="row" class="text-right">
+                      	<button type="button" class="btn p-0"><i class="fas fa-pencil-alt color-icon"></i></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-trash color-icon"></i></button>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>T2</td>
+                      <td>E3</td>
+                      <td><span class="cpostalcode">H2C</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
+                      <th scope="row" class="text-right">
+                      	<button type="button" class="btn p-0"><i class="fas fa-pencil-alt color-icon"></i></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-trash color-icon"></i></button>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>P1</td>
+                      <td>P2</td>
+                      <td><span class="cpostalcode">H3N</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
+                      <th scope="row" class="text-right">
+                      	<button type="button" class="btn p-0"><i class="fas fa-pencil-alt color-icon"></i></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-trash color-icon"></i></button>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>T1</td>
+                      <td>E2</td>
+                      <td><span class="cpostalcode">H4B</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
+                      <th scope="row" class="text-right">
+                      	<button type="button" class="btn p-0"><i class="fas fa-pencil-alt color-icon"></i></button>
+                      	<button type="button" class="btn p-0"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
                   </tbody>

@@ -1,0 +1,53 @@
+th, tr{
+	text-align:center;
+}
+
+tbody tr:hover{
+	background-color: #FAFCFF;
+  box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2); 
+  transition-duration: 300ms;
+}
+
+.color-icon-dark{
+	 color:rgb(52,58,64);
+}
+
+.card:hover .color-icon-hover{
+  color:rgb(247,247,249);
+  transition-duration: 300ms;
+}
+
+h4, h5, h1{
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  color:rgba(1,13,40,.8);
+}
+
+.card:hover .card-header{
+  background-color: rgba(1,13,40,.8);
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  transition-duration: 300ms;
+}
+
+.card:hover{
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  transition-duration: 300ms;
+}
+
+.card:hover h4{
+	color:white;
+}
+
+#ctrucker{
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+	letter-spacing: 2px;
+	border: 2px solid rgba(1,13,40,.1);
+	border-top-left-radius:100px;
+	border-bottom-right-radius:100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 70px;
+	padding-left: 70px;
+}
