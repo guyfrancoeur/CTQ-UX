@@ -19,22 +19,3 @@
   }, false);
 */
 //})();
-
-// Animation index.html
-$(".arrow-card" ).click(function() {
-	$(this).fadeOut(100);
-  $(this).fadeIn(100);
-});
-$(".petite-div" ).click(function() {
-	$(this).fadeOut(100);
-  $(this).fadeIn(100);
-});
-
-// Taille card index.html
-// est utile ??
-//$( document ).ready(function() {
-//	var heightDivLogin = $('#divLogin').height();
-//	$('#arrow-card1').height(heightDivLogin);
-//	$('#arrow-card2').height(heightDivLogin);
-//	$('#divAdmin').height(heightDivLogin);
-//});
