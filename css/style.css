@@ -1,45 +1,45 @@
 body {
-	overflow: auto;
+  overflow: auto;
 }
 
 .bloc{
-	border-radius:15px;
-	background-color:white;
+  border-radius:15px;
+  background-color:white;
 }
 
 #container{
-	padding-top:0px;
+  padding-top:0px;
 }
 
 .section::before {
-	position: absolute;
-	content: '';
-	z-index: -1;
-	width: 100%;
-	height: 55%;
-	background-position: 100% 65%;
-	background-image: url(./../images/background.jpg);
+  position: absolute;
+  content: '';
+  z-index: -1;
+  width: 100%;
+  height: 55%;
+  background-position: 100% 65%;
+  background-image: url(./../images/background.jpg);
 }
 
 .class-footer{
-	font-size:15px;
-	padding:1px;
+  font-size:15px;
+  padding:1px;
 }
 
 .navbar {
-	min-height: 50px;
+  min-height: 50px;
 }
 
 .flag{
-	height:75%;
-	opacity:65%;
-	cursor: pointer;
-	margin-top:3px;
+  height:75%;
+  opacity:65%;
+  cursor: pointer;
+  margin-top:3px;
 }
 
 .flag:hover{
-	opacity:100%;
-	transition-duration: 300ms;
+  opacity:100%;
+  transition-duration: 300ms;
 }
 
 .menu-bar{
@@ -48,34 +48,34 @@ body {
 }
 
 @media (max-width: 1199px) {
-	.bloc-blanc2{
-		margin-top:15px;
-		margin-bottom:70px;
-	}
-	
-	.bloc-login{
-		margin-bottom:70px;
-	}
+  .bloc-blanc2{
+    margin-top:15px;
+    margin-bottom:70px;
+  }
+  
+  .bloc-login{
+    margin-bottom:70px;
+  }
 
-	.bloc-index{
-		margin-bottom:70px;
-	}
-	
-	.slide-text {
-  	margin-right:-20px;
-	}
+  .bloc-index{
+    margin-bottom:70px;
+  }
+  
+  .slide-text {
+    margin-right:-20px;
+  }
 }
 
 @media (max-width: 1700px) {
-	.bloc-formulaire{
-		margin-bottom:70px;
-	}
+  .bloc-formulaire{
+    margin-bottom:70px;
+  }
 }
 
 @media (max-width: 1470px) {
-	#divInfo, #divRequire{
-		height:340px;
-	}
+  #divInfo, #divRequire{
+    height:340px;
+  }
 }
 
 .tooltip-inner{
@@ -86,6 +86,6 @@ body {
 
 /* Login */
 #forgot, #forgot:active, #forgot:visited{
-	color : rgb(1,13,40);
-	font-size:15px;
+  color : rgb(1,13,40);
+  font-size:15px;
 }

@@ -1,26 +1,26 @@
 .resizing{
-	padding-top:5%;
-	padding-right:5%;
-	padding-bottom:10%;
+  padding-top:5%;
+  padding-right:5%;
+  padding-bottom:10%;
 }
 
 .resizebloc{
-	height:520px;
+  height:520px;
 }
 
 .interieur{
-	height:100%;
-	overflow-y:scroll;
+  height:100%;
+  overflow-y:scroll;
 }
 
 .second-bloc{
-	height:520px;
-	padding:3%;
+  height:520px;
+  padding:3%;
 }
 
 .add2{
-	overflow-y:scroll;
-	height:470px;
+  overflow-y:scroll;
+  height:470px;
 }
 
 #divInfo, #divRequire{
@@ -149,51 +149,51 @@ input[type=number] {
 
 
 .bg-style{
-	background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.8);
 }
 
 ul.listec li{
-	padding:0;
+  padding:0;
 }
 
 .listec{
-	border: 1px solid rgb(247,247,247);
+  border: 1px solid rgb(247,247,247);
 }
 
 .input-group-text{
-	height:31px;
+  height:31px;
 }
 
 .size1{
-	width:45px;
-	display: table;
+  width:45px;
+  display: table;
 }
 
 .size2{
-	width:45px;
-	display: table;
+  width:45px;
+  display: table;
 }
 
 #addcourriel{
-	height:31px;
+  height:31px;
 }
 
 .cout-style{
-	border-bottom-left-radius:15px;
-	border-bottom-right-radius:15px;
-	border-top: 2px solid rgba(1,13,40,.2);
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+  border-top: 2px solid rgba(1,13,40,.2);
 }
 
 #card1, #card2, #card3{
-	border-radius:5px;
+  border-radius:5px;
 }
 
 .divCourriels:hover{
-	cursor:default;
+  cursor:default;
 }
 
 .cross:hover{
-	cursor:pointer;
+  cursor:pointer;
 }
 
 .animationcout{
@@ -215,23 +215,23 @@ ul.listec li{
 }
 
 #hCargo:focus, #hOrigineDestination:focus, #hPublic:focus, #hFixed:focus, #hPrivate:focus{
-	outline:none;
+  outline:none;
 }
 
 #hCargo, #hOrigineDestination, #hPublic, #hFixed, #hPrivate, #tFixed, #tPrivate{
-	color:rgba(1,13,40,.8);
+  color:rgba(1,13,40,.8);
 }
 
 #A, #B, #C{
-	cursor:pointer;
+  cursor:pointer;
 }
 
 #addcourriel:hover{
-	background-color:rgb(1,13,40);
+  background-color:rgb(1,13,40);
 }
 
 .chosen{
-	background-color: #FAFCFF;
+  background-color: #FAFCFF;
   box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2); 
 }
 .chosen:hover{
@@ -268,19 +268,19 @@ ul.listec li{
 }
 
 .sliding.clicked:after {
-	visibility: visible;
+  visibility: visible;
   height: 100%;
   background: rgba(1,13,40,.8);
 }
 
 h4, h5{
-	letter-spacing: 1px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	color:rgba(1,13,40,.8);
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  color:rgba(1,13,40,.8);
 }
 
 .groupcheckbox{
-	opacity:0;
-	position:absolute;
+  opacity:0;
+  position:absolute;
 }

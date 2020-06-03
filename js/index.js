@@ -22,10 +22,10 @@ $(function() {
 
 // Animation index.html
 $(".arrow-card" ).click(function() {
-	$(this).fadeOut(100);
+  $(this).fadeOut(100);
   $(this).fadeIn(100);
 });
 $(".petite-div" ).click(function() {
-	$(this).fadeOut(100);
+  $(this).fadeOut(100);
   $(this).fadeIn(100);
 });

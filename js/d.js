@@ -34,8 +34,8 @@ $(".toggle-button-cover").click(function() {
 
 // Validation courriel
 function validateEmail(email) {
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
 
 // Ajout courriel
@@ -49,7 +49,7 @@ function saveMails(){
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   tabsplit.forEach(function(element){
     if (validateEmail(element)){
-    	tabEmails.push(element);
+      tabEmails.push(element);
       var li = document.createElement("li");
       li.id = "li" + nbEmails;
       li.className = 'list-group-item';
@@ -124,9 +124,9 @@ function selection(elem){
     $('#addcourriel').prop("disabled", true);
   };
   if(value == "C"){
-  	if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
-  	else{cout = 0;}
-  	$(checkboxC).prop('checked',true);
+    if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
+    else{cout = 0;}
+    $(checkboxC).prop('checked',true);
     $(checkboxA).prop('checked',false);
     $(checkboxB).prop('checked',false);
     $('#cout').html(cout);
@@ -155,9 +155,9 @@ var reduction = 0;
 var ancienneReduction = 0;
 // [length,width,height,weight,value,requirements]
 function champRempli(elem){
-	// Affichage des camions disponibles : toast Bootstrap
-	$('#toast1').toast('show');
-	
+  // Affichage des camions disponibles : toast Bootstrap
+  $('#toast1').toast('show');
+  
   nbChampsRemplis = 0;
   if(($(elem).val() == "") || ($(elem).val() == [])){
     if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
@@ -184,22 +184,22 @@ function champRempli(elem){
     $("#creduction").text("");
     $("#textreduction").text("");
     if (cout != 0){
-  	  cout = (parseFloat(cout) + 0.1);
+      cout = (parseFloat(cout) + 0.1);
       $('#cout').html(cout.toFixed(2));
     }
   }
   else{
     if(reduction >= 1){
-  	  $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
+      $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
       $("#creduction").text(reduction + " $");
     }
     else{
-  	  if(nbChampsRemplis == 1){
-    	  $("#textreduction").text("With "+ nbChampsRemplis + " info about the cargo you can save : ");
+      if(nbChampsRemplis == 1){
+        $("#textreduction").text("With "+ nbChampsRemplis + " info about the cargo you can save : ");
         $("#creduction").text(reduction + " cents");
       }
       else{
-  	    $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
+        $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
         $("#creduction").text(reduction + " cents");
       }
     }
@@ -208,7 +208,7 @@ function champRempli(elem){
       ifCoutIsSet();
     }
     if(reduction < ancienneReduction){
-    	ifCoutIsSet2();
+      ifCoutIsSet2();
     }
   }
   ancienneReduction = reduction;
@@ -216,14 +216,14 @@ function champRempli(elem){
 
 function ifCoutIsSet(){
   if (cout != 0){
-  	cout = (parseFloat(cout) - 0.10).toFixed(2);
+    cout = (parseFloat(cout) - 0.10).toFixed(2);
     $('#cout').html(cout);
   }
 }
 
 function ifCoutIsSet2(){
   if (cout != 0){
-  	cout = (parseFloat(cout) + 0.10).toFixed(2);
+    cout = (parseFloat(cout) + 0.10).toFixed(2);
     $('#cout').html(cout);
   }
 }
@@ -280,10 +280,10 @@ function modify(){
   $('#cTextB').addClass('col-md-3');
   $('#cTextC').addClass('col-md-3');
   $('#buttonend').addClass('pb-3');
-	$('#divOrigin').removeClass('pr-xl-3');
+  $('#divOrigin').removeClass('pr-xl-3');
   $('#divDestination').removeClass('pr-xl-3');
   $("#contenu").html("<h3>Results</h3>");
-	
+  
   $("#bcloseResults").show();
 }
   

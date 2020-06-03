@@ -18,7 +18,7 @@ function verificationLogin(){
       async: false,
       success:function(data){
         $.each(data.login, function(index, x) {
-        	if((inputEmail == x.cemail) && (inputPassword == x.cpassword)){
+          if((inputEmail == x.cemail) && (inputPassword == x.cpassword)){
             result = true;
           }
         });
@@ -29,11 +29,11 @@ function verificationLogin(){
       }
     });
     if(result == false){
-    	$("#cinvalidMessage").addClass("alert-danger");
-    	$("#cinvalidMessage").html("<i class='fas fa-exclamation-circle'></i> This email or this password is invalid.");
+      $("#cinvalidMessage").addClass("alert-danger");
+      $("#cinvalidMessage").html("<i class='fas fa-exclamation-circle'></i> This email or this password is invalid.");
     }
     else{
-    	$("#cinvalidMessage").text("");
+      $("#cinvalidMessage").text("");
     }
     return result;
 }
