@@ -1,15 +1,15 @@
 th, tr{
-	text-align:center;
+  text-align:center;
 }
 
 tbody tr:hover{
-	background-color: #FAFCFF;
-  box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2); 
+  background-color: #FAFCFF;
+  box-shadow: -3px 3px 6px 3px rgba(1,13,40,.2); 
   transition-duration: 300ms;
 }
 
 .color-icon-dark{
-	 color:rgb(52,58,64);
+   color:rgb(52,58,64);
 }
 
 .card:hover .color-icon-hover{
@@ -37,17 +37,18 @@ h4, h5, h1{
 }
 
 .card:hover h4{
-	color:white;
+  color:white;
 }
 
 #ctrucker{
-	box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-	letter-spacing: 2px;
-	border: 2px solid rgba(1,13,40,.1);
-	border-top-left-radius:100px;
-	border-bottom-right-radius:100px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 70px;
-	padding-left: 70px;
+  font-weight:500;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  border: 2px solid rgba(1,13,40,.1);
+  border-top-left-radius:100px;
+  border-bottom-right-radius:100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 70px;
+  padding-left: 70px;
 }
