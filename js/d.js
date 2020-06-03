@@ -77,6 +77,9 @@ function selection(elem){
   var value = elem.id;
   if(value == "A"){
     cout = (1 - reduction).toFixed(2);
+    $(checkboxA).prop('checked',true);
+    $(checkboxB).prop('checked',false);
+    $(checkboxC).prop('checked',false);
     $('#cout').html(cout);
     $('#A').addClass('chosen');
     $('#A').addClass('clicked');
@@ -97,6 +100,9 @@ function selection(elem){
   };
   if(value == "B"){
     cout = (2 - reduction).toFixed(2);
+    $(checkboxB).prop('checked',true);
+    $(checkboxA).prop('checked',false);
+    $(checkboxC).prop('checked',false);
     $('#cout').html(cout);
     $('#B').addClass('chosen');
     $('#B').addClass('clicked');
@@ -118,6 +124,9 @@ function selection(elem){
   if(value == "C"){
   	if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
   	else{cout = 0;}
+  	$(checkboxC).prop('checked',true);
+    $(checkboxA).prop('checked',false);
+    $(checkboxB).prop('checked',false);
     $('#cout').html(cout);
     $('#C').addClass('chosen');
     $('#C').removeClass('notchosen');
@@ -342,3 +351,22 @@ $("#cwidth").focusout(function() {
 $("#clongueur").focusout(function() {
   $("#tToggleinstruction").tooltip('hide');
 });
+
+// Validation formulaire
+$("#principalform").submit(function(event){
+  if (countChecked() >= 1){
+    console.log("submitted !");
+    $("#cinvalidMarket").removeClass("alert-danger");
+    $("#cinvalidMarket").text("");
+  }else{
+    // empêche le questionnaire de s'envoyer
+    event.preventDefault();
+    $("#cinvalidMarket").addClass("alert-danger");
+    $("#cinvalidMarket").html("<i class='fas fa-exclamation-circle'></i> Please choose one type of market.");
+    console.log("formulaire invalide");
+  }
+});  
+function countChecked(){
+  var checked = $(".groupcheckbox:checked");
+  return checked.length;
+}

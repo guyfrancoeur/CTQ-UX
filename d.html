@@ -141,8 +141,9 @@
                   <div id="card3" class="card">
                     <div id="div12" class="card-body px-0 pb-0 pt-2">
                       <div class="card-title px-4 d-flex justify-content-between m-1">
-                        <h4 id="cmev" class="col-10 pl-0">Market</h4>
-                        <div class="col-2">
+                        <h4 id="cmev" class="col-4 pl-0">Market</h4>
+                        <div id="cinvalidMarket" class="col-6 alert text-center m-0 py-1" role="alert" style="color:rgb(197,0,0);"></div>
+                        <div class="col-3">
                         	<div class="text-right">
                             <!-- Toggle Button -->
                             <div>
@@ -164,6 +165,7 @@
                       </div>
                       <div class="list-group list-group-flush">
                         <a id="A" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
+                        	<input type="checkbox" id="checkboxA" class="groupcheckbox">
                           <div class="resizechamp3 row px-3 pt-2">
                             <div class="col-6"><span id="cTextA">Public auction</span>
                               <span id="hPublic" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
@@ -184,6 +186,7 @@
                           </div>
                         </a>
                         <a id="B" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
+                        	<input type="checkbox" id="checkboxB" class="groupcheckbox">
                           <div class="resizechamp3 row px-3 pt-2">
                             <div class="col-6 pr-0">
                               <i id="tFixed" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="BuyNow type auction"></i>
@@ -208,6 +211,7 @@
                         </div>
                         </a>
                         <a id="C" onclick="selection(this)" class="list-group-item list-group-item-action px-1 py-0 sliding">
+                        	<input type="checkbox" id="checkboxC" class="groupcheckbox">
                           <div class="resizechamp3 row px-3 py-2">
                             <div class="col-6">
                               <i id="tPrivate" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right" data-original-title="Private auction will be sent to a list, only them can bid."></i>

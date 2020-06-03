@@ -279,3 +279,7 @@ h4, h5{
 	font-weight:bold;
 	color:rgba(1,13,40,.8);
 }
+
+.groupcheckbox{
+	opacity:0;
+}
