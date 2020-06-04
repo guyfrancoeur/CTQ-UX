@@ -1,7 +1,7 @@
-<div class="modal-dialog" role="document">
+<div class="modal-dialog modal-sm modal-dialog-centered">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title">Camion</h5>
+      <h5 class="modal-title">Truck</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -10,24 +10,33 @@
       <form>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-comment-alt"></i></span>
+            <span class="input-group-text" style="width:37px;"><i class="fas fa-comment-alt m-auto"></i></span>
           </div>
           <input id="cdescription" type="text" class="form-control" id="cDescription" placeholder="Description" autofocus>
         </div>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-truck"></i></span>
+            <span class="input-group-text" style="width:37px;"><i class="fas fa-truck m-auto"></i></span>
           </div>
-          <input id="ctracteur" type="text" class="form-control" id="cDescription" placeholder="Tractor">
+          <select id="selectTracteur" class="selectpicker form-control form-control-sm" title="Tractor" data-live-search="true" data-size="5">
+            <option value="T1">T1</option>
+            <option value="T2">T2</option>
+            <option value="T3">T3</option>
+            <option value="T4">T4</option>
+          </select>
         </div>
-        <div class="input-group input-group-sm">
+        <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-truck-loading"></i></span>
+            <span class="input-group-text" style="width:37px;"><i class="fas fa-truck-loading m-auto"></i></span>
           </div>
-          <input id="cequipement" type="text" class="form-control" id="cDescription" placeholder="Equipment">
+          <select id="selectEquipement" class="selectpicker form-control form-control-sm" title="Equipment" data-live-search="true"data-size="5">
+            <option value"E1">E1</option>
+            <option value="E2">E2</option>
+            <option value="E3">E3</option>
+            <option value="E4">E4</option>
+          </select>
         </div>
       </form>
-    </br>
     </div>
     <div class="modal-footer">
       <button id="bsavecamion" type="button" class="btn btn-primary">Save changes</button>

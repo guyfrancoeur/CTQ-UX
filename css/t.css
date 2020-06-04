@@ -21,6 +21,7 @@ h4{
   letter-spacing: 1px;
   font-family: Arial, Helvetica, sans-serif;
   color:rgb(247,247,249);
+  font-size:22px;
 }
 
 .card:hover .card-header{
@@ -36,14 +37,15 @@ h4{
   transition-duration: 300ms;
 }
 
-#ctrucker{
+#ttrucker{
+	font-size:32px;
   font-weight:500;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   letter-spacing: 2px;
   border: 1px solid rgba(1,13,40,.1);
   border-top-left-radius:100px;
   border-bottom-right-radius:100px;
-  padding-top: 5px;
+  padding-top: 4px;
   padding-bottom: 5px;
   padding-right: 150px;
   padding-left: 150px;
@@ -54,6 +56,11 @@ h4{
   padding-bottom:8px;
 }
 
+.table thead th{
+	padding-top:9px;
+  padding-bottom:9px;
+}
+
 tbody{
   font-size:.875rem;
 }
@@ -62,4 +69,10 @@ tbody{
   height:55px;
   /*background-color:rgb(50,50,50);*/
   background:linear-gradient(to top right,rgb(50,50,50), rgb(70,70,70));
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
