@@ -1,7 +1,7 @@
 <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">    
     <div class="modal-header">
-      <h4 class="modal-title">List of emails for Private auction</h4>
+      <h4 id="tmcourriels" class="modal-title">List of emails for Private auction</h4>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -9,11 +9,11 @@
     <div class="modal-body">
       <form>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Type the e-mail addresses, separating each address by a semi-colon : </label>
+          <label id="llistecourriels" for="cinputcourriel">Type the e-mail addresses, separating each address by a semi-colon : </label>
           <textarea id="cinputcourriel" class="form-control" rows="6" autofocus></textarea>
         </div>
       </form>
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button id="bclosecourriels" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       <button id="bSaveEmails" class="btn btn-primary" onclick="saveMails()">Save changes</button>
     </div>
   </div>
