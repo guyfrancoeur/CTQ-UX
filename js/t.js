@@ -59,3 +59,10 @@ function camionEvent(){
 	}
 	$('#m_camion').modal('hide');
 }
+
+$('#bsetprofil').click(function() {
+	console.log("focntionne");
+	$("#cnomEntreprise").prop('contenteditable',true);
+	$("#nadresse1").prop('contenteditable',true);
+	$("#nadresse2").prop('contenteditable',true);
+});
