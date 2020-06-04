@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-  $('#m_ajoutcamion').load('./m.ajoutcamion.html');
+  $('#m_camion').load('./m.c.html');
+  $('#m_tracteur').load('./m.t.html');
+  $('#m_equipement').load('./m.e.html');
   $('[data-toggle="tooltip"]').tooltip();
 });
 
