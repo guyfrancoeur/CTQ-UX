@@ -31,9 +31,13 @@
         </div>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-dollar-sign m-auto"></i></span>
+            <span class="input-group-text" style="width:37px;"><i class="fas fa-gas-pump m-auto" title="Type of fuel"></i></span>
           </div>
-          <input id="cprixcarburant" type="number" class="form-control" placeholder="Fuel price" autofocus>
+          <select class="selectpicker form-control form-control-sm">
+            <option id="actif">Diesel</option>
+            <option id="inaactif">Unleaded gasoline</option>
+            <option id="inaactif">Gasoline</option>
+          </select>
         </div>
       </form>
     </div>
