@@ -2,3 +2,4 @@ test.txt
 test #2
 Test final. http://salutem.co/?gitpull.c x2 (pour mettre les deux serveurs a jour)
 test de git pull automatique
+test git2 lib C
