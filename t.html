@@ -84,6 +84,8 @@
                 </h4>
               </div>
               <div class="card-body">
+                <p>Name of the company</p>
+                <p></p>
                 <br/>
               </div>
             </div>
@@ -97,7 +99,7 @@
                 </h4>
               </div>
               <div class="card-body p-0" style="overflow-y:scroll;">
-                <table class="table">
+                <table id="tableCamions" class="table">
                   <thead style="background-color:rgb(247,247,249);">
                     <tr>
                       <th scope="col"><i class="fas fa-truck color-icon"></i> <span id="ttracteur">Tractor</span></th>
@@ -112,7 +114,7 @@
                       <td>E1</td>
                       <td><span class="cpostalcode">H3N</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -121,7 +123,7 @@
                       <td>E2</td>
                       <td><span class="cpostalcode">H4B</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -130,7 +132,7 @@
                       <td>E3</td>
                       <td><span class="cpostalcode">H5F</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -139,7 +141,7 @@
                       <td>E4</td>
                       <td><span class="cpostalcode">H2C</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -148,7 +150,7 @@
                       <td>E1</td>
                       <td><span class="cpostalcode">H3N</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -157,7 +159,7 @@
                       <td>E2</td>
                       <td><span class="cpostalcode">H4B</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -166,7 +168,7 @@
                       <td>E3</td>
                       <td><span class="cpostalcode">H4B</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -175,7 +177,7 @@
                       <td>E4</td>
                       <td><span class="cpostalcode">H5F</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -184,7 +186,7 @@
                       <td>E1</td>
                       <td><span class="cpostalcode">H4B</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
@@ -193,7 +195,7 @@
                       <td>E2</td>
                       <td><span class="cpostalcode">H5F</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>
                       <th scope="row" class="text-right">
-                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_ajoutcamion"><i class="fas fa-pencil-alt color-icon"></i></button>
+                        <button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>
                         <button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>
                       </th>
                     </tr>
