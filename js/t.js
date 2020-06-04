@@ -25,15 +25,15 @@ $('.btrash').click(function() {
 
 // Récupérer les valeurs de la ligne quand on clique sur le crayon
 $('.bset').click(function() {
-	var current_col = $(this).closest( "tr" );
-	var tracteur = $(current_col).find("td").eq(0).html();
-	var equipement = $(current_col).find("td").eq(1).html();
-	$('#selectTracteur').val(tracteur).change();
-	$('#selectEquipement').val(equipement).change();
+  var current_col = $(this).closest( "tr" );
+  var tracteur = $(current_col).find("td").eq(0).html();
+  var equipement = $(current_col).find("td").eq(1).html();
+  $('#selectTracteur').val(tracteur).change();
+  $('#selectEquipement').val(equipement).change();
 });
 
 // Bouton ajout camion, réinitialiser la sélection (dropdown)
 $('#bajoutcamion').click(function() {
-	$("#selectTracteur").val("").change();
-	$("#selectEquipement").val("").change();
+  $("#selectTracteur").val("").change();
+  $("#selectEquipement").val("").change();
 });

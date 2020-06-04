@@ -38,7 +38,7 @@ h4{
 }
 
 #ttrucker{
-	font-size:32px;
+  font-size:32px;
   font-weight:500;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   letter-spacing: 2px;
@@ -57,7 +57,7 @@ h4{
 }
 
 .table thead th{
-	padding-top:9px;
+  padding-top:9px;
   padding-bottom:9px;
 }
 
@@ -71,8 +71,7 @@ tbody{
   background:linear-gradient(to top right,rgb(50,50,50), rgb(70,70,70));
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
