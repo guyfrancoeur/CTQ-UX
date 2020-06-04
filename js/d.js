@@ -64,6 +64,7 @@ function saveMails(){
     }
   });
   console.log(tabEmails);
+  $('#m_courriels').modal('hide');
 }
 
 // Suppression courriel
