@@ -7,6 +7,10 @@ $( document ).ready(function() {
   // Cacher bouton validation (modification profile)
   $("#bvalidprofil").hide();
   $("#bcancelprofil").hide();
+  
+  //Cacher boutons validations (modale ajout équipement)
+  $(".bV").hide();
+  $(".bX").hide();
 });
 
 // Edit location
@@ -90,11 +94,28 @@ function validerprofil(){
   $("#nadresse2").prop('contenteditable',false);
 }
 
-// Couleur tableau ajout équipement (vert)
+// Fonctions qui concernent la modale ajout équipement
 $('#m_equipement').on('shown.bs.modal', function() {
+  // Couleur tableau ajout équipement (vert)
   $('.hclass').click(function() {
-	  $(this).addClass("headcolor");
-	  $(".hclass").not(this).removeClass("headcolor");
-	});
+    $(this).addClass("headcolor");
+    $(".hclass").not(this).removeClass("headcolor");
+  });
+  
+  // Boutons modification équipement (crayon)
+  $('.bS').click(function() {
+    $(this).closest( "div" ).next("div").find(".valuequipement").prop('contenteditable',true);
+    $(this).closest("div").next("div").find(".valuequipement").addClass("setprofile");
+    $(".bV").show();
+    $(".bX").show();
+  });
+  
+  // Bouton validation modification équipement (V)
+  $('.bV').click(function() {
+    $(this).closest( "div" ).prev("div").find(".valuequipement").prop('contenteditable',false);
+    $(this).closest("div").prev("div").find(".valuequipement").removeClass("setprofile");
+    $(".bV").show();
+    $(".bX").show();
+  });
 });
 

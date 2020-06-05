@@ -152,9 +152,16 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 }
 
 .valuequipement{
-  padding-left:10px;
+ margin-left:20px;
+  width:70px;
+  float:left;
 }
 
 .headcolor{
   background-color:#9CB29A !important;
+}
+
+.spanclass{
+  width:5px;
+  float:left;
 }
