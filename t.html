@@ -80,21 +80,28 @@
           <div class="row px-4">
             <div class="pr-xl-2 col-12 col-xl-5 pb-3 pb-xl-0">
             <div class="card" style="height:400px;">
-              <div class="card-header text-center">
+              <div class="card-header text-center cardstyle">
                 <h4 id="cLoginTitle" class="card-title">
                   <i class="fas fa-user fa-sm color-icon-hover"></i>
                   <span id="tprofil">Profile</span>
                 </h4>
               </div>
               <div class="card-body">
-                <div class="row">
-                  <button id="bsetprofil" type="button" class="btn p-0"><i class="fas fa-pen color-icon"></i></button>
-                  <div class="pl-3">
+                <div id="divadresse" class="row pl-0">
+                  <div class="justify-content-center d-flex align-items-center">
+                    <button id="bsetprofil" type="button" class="btn px-1"><i class="fas fa-pen color-icon"></i></button>
+                  </div>
+                  <div class="pl-2">
+                    <br/>
                     <p id="cnomEntreprise" contenteditable=false>Kaiser Transport</p>
-                    <span style="line-height:.7;">
-                      <p id="nadresse1" contenteditable=false>67047 LeMoyne, Saint-Lambert</p>
+                    <span>
+                      <p id="nadresse1" class="mb-1" contenteditable=false>67047 LeMoyne, Saint-Lambert</p>
                       <p id="nadresse2" contenteditable=false>Quebec J4R 2T8, Canada</p>
                     </span>
+                  </div>
+                  <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
+                    <button id="bvalidprofil" type="button" class="btn px-1" onclick="validerprofil()"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
+                    <button id="bcancelprofil" type="button" class="btn px-1" onclick="validerprofil()"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
                   </div>
                 </div>
                 <br/>
@@ -103,7 +110,7 @@
             </div>
             <div class="pl-xl-2 col-12 col-xl-7">
             <div class="card" style="height:400px;">
-              <div class="card-header text-center">
+              <div class="card-header text-center cardstyle">
                 <h4 class="card-title">
                   <span id="tlistecamions">Trucks list</span>
                   <button id="bajoutcamion" class="btn float-right" type="button" data-toggle="modal" data-target="#m_camion"><i class="fas fa-plus color-icon-hover"></i></button>

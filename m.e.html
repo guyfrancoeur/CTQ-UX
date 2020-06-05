@@ -1,45 +1,157 @@
 <div class="modal-dialog modal-sm modal-dialog-centered">
   <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title">Equipment</h5>
+    <div class="modal-header d-flex justify-content-between">
+      <div></div>
+      <h3 class="modal-title">Equipment</h3>
+      <div>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
-      </button>
+      </button></div>
     </div>
     <div class="modal-body">
-      <form>
-        <div class="input-group input-group-sm pb-2">
-          <input id="cnomequipement" type="text" class="form-control" placeholder="Name" autofocus>
-        </div>
-        
-        <div class="input-group input-group-sm pb-2">
-          <input id="ccapaciteequi" type="number" class="form-control" placeholder="Capacity" autofocus>
-          <div class="input-group-append">
-            <span class="input-group-text m-auto" style="width:35px;">kg</span>
+      <div class="row">
+        <div class="col-7">
+          <h5 class="titlemodale">Your equipments</h5>
+          <div style="height:250px;overflow-y:scroll;">
+            <div id="accordion" class="p-2">
+              <div class="card">
+                <div class="card-header" id="headingE1">
+                  <h5 class="mb-0" data-toggle="collapse" data-target="#collapseE1" aria-expanded="true" aria-controls="collapseE1">E1</h5>
+                </div>
+                <div id="collapseE1" class="collapse" aria-labelledby="headingE1" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="justify-content-center d-flex align-items-center">
+                        <button type="button" class="btn px-1"><i class="fas fa-pen color-icon"></i></button>
+                      </div>
+                      <div class="pl-2">
+                        <p><span class="labelcontent">Name</span>: <span class="valuequipement">E1</span></p>
+                        <p><span class="labelcontent">Capacity</span>: <span class="valuequipement">100 kg</span></p>
+                        <p><span class="labelcontent">Length</span>: <span class="valuequipement">2 m</span></p>
+                        <p><span class="labelcontent">Width</span>: <span class="valuequipement">5.7 m</span></p>
+                        <p><span class="labelcontent">Height</span>: <span class="valuequipement">3.2 m</span></p>
+                      </div>
+                      <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
+                        <button type="button" class="btn px-1"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
+                        <button type="button" class="btn px-1"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingE2">
+                  <h5 class="mb-0" data-toggle="collapse" data-target="#collapseE2" aria-expanded="true" aria-controls="collapseE2">E2</h5>
+                </div>
+                <div id="collapseE2" class="collapse" aria-labelledby="headingE2" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="justify-content-center d-flex align-items-center">
+                        <button type="button" class="btn px-1"><i class="fas fa-pen color-icon"></i></button>
+                      </div>
+                      <div class="pl-2">
+                        <p><span class="labelcontent">Name</span>: <span class="valuequipement">E2</span></p>
+                        <p><span class="labelcontent">Capacity</span>: <span class="valuequipement">100 kg</span></p>
+                        <p><span class="labelcontent">Length</span>: <span class="valuequipement">2 m</span></p>
+                        <p><span class="labelcontent">Width</span>: <span class="valuequipement">5.7 m</span></p>
+                        <p><span class="labelcontent">Height</span>: <span class="valuequipement">3.2 m</span></p>
+                      </div>
+                      <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
+                        <button type="button" class="btn px-1"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
+                        <button type="button" class="btn px-1"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingE3">
+                  <h5 class="mb-0" data-toggle="collapse" data-target="#collapseE3" aria-expanded="true" aria-controls="collapseE3">E3</h5>
+                </div>
+                <div id="collapseE3" class="collapse" aria-labelledby="headingE3" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="justify-content-center d-flex align-items-center">
+                        <button type="button" class="btn px-1"><i class="fas fa-pen color-icon"></i></button>
+                      </div>
+                      <div class="pl-2">
+                        <p><span class="labelcontent">Name</span>: <span class="valuequipement">E3</span></p>
+                        <p><span class="labelcontent">Capacity</span>: <span class="valuequipement">100 kg</span></p>
+                        <p><span class="labelcontent">Length</span>: <span class="valuequipement">2 m</span></p>
+                        <p><span class="labelcontent">Width</span>: <span class="valuequipement">5.7 m</span></p>
+                        <p><span class="labelcontent">Height</span>: <span class="valuequipement">3.2 m</span></p>
+                      </div>
+                      <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
+                        <button type="button" class="btn px-1"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
+                        <button type="button" class="btn px-1"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingE4">
+                  <h5 class="mb-0" data-toggle="collapse" data-target="#collapseE4" aria-expanded="true" aria-controls="collapseE4">E4</h5>
+                </div>
+                <div id="collapseE4" class="collapse" aria-labelledby="headingE4" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="justify-content-center d-flex align-items-center">
+                        <button type="button" class="btn px-1"><i class="fas fa-pen color-icon"></i></button>
+                      </div>
+                      <div class="pl-2">
+                        <p><span class="labelcontent">Name</span>: <span class="valuequipement">E4</span></p>
+                        <p><span class="labelcontent">Capacity</span>: <span class="valuequipement">100 kg</span></p>
+                        <p><span class="labelcontent">Length</span>: <span class="valuequipement">2 m</span></p>
+                        <p><span class="labelcontent">Width</span>: <span class="valuequipement">5.7 m</span></p>
+                        <p><span class="labelcontent">Height</span>: <span class="valuequipement">3.2 m</span></p>
+                      </div>
+                      <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
+                        <button type="button" class="btn px-1"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
+                        <button type="button" class="btn px-1"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="input-group input-group-sm pb-2">
-          <input id="clongueurequi" type="number" class="form-control" placeholder="Length" autofocus>
-          <div class="input-group-append">
-            <span class="input-group-text" style="width:35px;">m</span>
-          </div>
+        <div class="col-5" style="border-left: 1px solid rgb(230,230,230);">
+          <h5 class="titlemodale">Add a new equipment</h5>
+          <form>
+            <div class="input-group input-group-sm pb-2">
+              <input id="cnomequipement" type="text" class="form-control" placeholder="Name" autofocus>
+            </div>
+            
+            <div class="input-group input-group-sm pb-2">
+              <input id="ccapaciteequi" type="number" class="form-control" placeholder="Capacity" autofocus>
+              <div class="input-group-append">
+                <span class="input-group-text m-auto" style="width:35px;">kg</span>
+              </div>
+            </div>
+            <div class="input-group input-group-sm pb-2">
+              <input id="clongueurequi" type="number" class="form-control" placeholder="Length" autofocus>
+              <div class="input-group-append">
+                <span class="input-group-text" style="width:35px;">m</span>
+              </div>
+            </div>
+            <div class="input-group input-group-sm pb-2">
+              <input id="clargeurequi" type="number" class="form-control" placeholder="Width" autofocus>
+              <div class="input-group-append">
+                <span class="input-group-text" style="width:35px;">m</span>
+              </div>
+            </div>
+            <div class="input-group input-group-sm pb-2">
+              <input id="chauteurequi" type="number" class="form-control" placeholder="Height" autofocus>
+              <div class="input-group-append">
+                <span class="input-group-text" style="width:35px;">m</span>
+              </div>
+            </div>
+            <div class="text-center"><button class="btn btn-success" type="button"><i class="fas fa-plus"></i> Add</button></div>
+          </form>
         </div>
-        <div class="input-group input-group-sm pb-2">
-          <input id="clargeurequi" type="number" class="form-control" placeholder="Width" autofocus>
-          <div class="input-group-append">
-            <span class="input-group-text" style="width:35px;">m</span>
-          </div>
-        </div>
-        <div class="input-group input-group-sm pb-2">
-          <input id="chauteurequi" type="number" class="form-control" placeholder="Height" autofocus>
-          <div class="input-group-append">
-            <span class="input-group-text" style="width:35px;">m</span>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button id="bsavecamion" type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
