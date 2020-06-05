@@ -91,10 +91,10 @@ function validerprofil(){
 }
 
 // Couleur tableau ajout équipement (vert)
-$('.card-header').click(function() {
+$('.hclass').click(function() {
   console.log("1");
   $(this).addClass("headcolor");
-  $(".card-header").not(this).removeClass("headcolor");
+  $(".hclass").not(this).removeClass("headcolor");
 });
 
 
