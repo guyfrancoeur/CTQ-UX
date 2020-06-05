@@ -114,8 +114,8 @@ $('#m_equipement').on('shown.bs.modal', function() {
   $('.bV').click(function() {
     $(this).closest( "div" ).prev("div").find(".valuequipement").prop('contenteditable',false);
     $(this).closest("div").prev("div").find(".valuequipement").removeClass("setprofile");
-    $(".bV").show();
-    $(".bX").show();
+    $(".bV").hide();
+    $(".bX").hide();
   });
 });
 
