@@ -11,9 +11,9 @@
     <div class="modal-body">
       <div class="row">
         <div class="col-7">
-          <h5 class="titlemodale">Your equipments</h5>
+          <h5 class="titlemodale"><i class="fas fa-angle-right"></i> Your equipments</h5>
           <div style="height:250px;overflow-y:scroll;">
-            <div id="accordion" class="p-2">
+            <div id="accordion" class="py-2 pr-2">
               <div class="card">
                 <div class="card-header hclass" id="headingE1" data-toggle="collapse" data-target="#collapseE1" aria-expanded="true" aria-controls="collapseE1">
                   <h5 class="mb-0">E1</h5>
@@ -21,8 +21,9 @@
                 <div id="collapseE1" class="collapse" aria-labelledby="headingE1" data-parent="#accordion">
                   <div class="card-body py-1">
                     <div class="row">
-                      <div class="justify-content-center d-flex align-items-center">
+                      <div class="justify-content-center d-flex flex-column align-items-center mr-2 flex-shrink-1">
                         <button type="button" class="btn px-1 bS"><i class="fas fa-pen color-icon"></i></button>
+                        <button type="button" class="btn px-1 bP"><i class="fas fa-trash color-icon"></i></button>
                       </div>
                       <div class="pl-2">
                         <p><span class="labelcontent">Name</span><span class="spanclass">: </span><span class="valuequipement">E1</span></p>
@@ -46,8 +47,9 @@
                 <div id="collapseE2" class="collapse" aria-labelledby="headingE2" data-parent="#accordion">
                   <div class="card-body py-1">
                     <div class="row">
-                      <div class="justify-content-center d-flex align-items-center">
+                      <div class="justify-content-center d-flex flex-column align-items-center mr-2 flex-shrink-1">
                         <button type="button" class="btn px-1 bS"><i class="fas fa-pen color-icon"></i></button>
+                        <button type="button" class="btn px-1 bP"><i class="fas fa-trash color-icon"></i></button>
                       </div>
                       <div class="pl-2">
                         <p><span class="labelcontent">Name</span><span class="spanclass">: </span><span class="valuequipement">E2</span></p>
@@ -71,8 +73,9 @@
                 <div id="collapseE3" class="collapse" aria-labelledby="headingE3" data-parent="#accordion">
                   <div class="card-body py-1">
                     <div class="row">
-                      <div class="justify-content-center d-flex align-items-center">
+                      <div class="justify-content-center d-flex flex-column align-items-center mr-2 flex-shrink-1">
                         <button type="button" class="btn px-1 bS"><i class="fas fa-pen color-icon"></i></button>
+                        <button type="button" class="btn px-1 bP"><i class="fas fa-trash color-icon"></i></button>
                       </div>
                       <div class="pl-2">
                         <p><span class="labelcontent">Name</span><span class="spanclass">: </span><span class="valuequipement">E3</span></p>
@@ -96,8 +99,9 @@
                 <div id="collapseE4" class="collapse" aria-labelledby="headingE4" data-parent="#accordion">
                   <div class="card-body py-1">
                     <div class="row">
-                      <div class="justify-content-center d-flex align-items-center">
+                      <div class="justify-content-center d-flex flex-column align-items-center mr-2 flex-shrink-1">
                         <button type="button" class="btn px-1 bS"><i class="fas fa-pen color-icon"></i></button>
+                        <button type="button" class="btn px-1 bP"><i class="fas fa-trash color-icon"></i></button>
                       </div>
                       <div class="pl-2">
                         <p><span class="labelcontent">Name</span><span class="spanclass">: </span><span class="valuequipement">E4</span></p>
@@ -118,37 +122,37 @@
           </div>
         </div>
         <div class="col-5" style="border-left: 1px solid rgb(230,230,230);">
-          <h5 class="titlemodale">Add a new equipment</h5>
+          <h5 class="titlemodale pb-2"><i class="fas fa-angle-right"></i> Add a new equipment</h5>
           <form>
             <div class="input-group input-group-sm pb-2">
-              <input id="cnomequipement" type="text" class="form-control" placeholder="Name" autofocus>
+              <input id="cnomE" type="text" class="form-control" placeholder="Name" autofocus>
             </div>
             
             <div class="input-group input-group-sm pb-2">
-              <input id="ccapaciteequi" type="number" class="form-control" placeholder="Capacity" autofocus>
+              <input id="ccapaciteE" type="number" class="form-control" placeholder="Capacity" autofocus>
               <div class="input-group-append">
                 <span class="input-group-text m-auto" style="width:35px;">kg</span>
               </div>
             </div>
             <div class="input-group input-group-sm pb-2">
-              <input id="clongueurequi" type="number" class="form-control" placeholder="Length" autofocus>
+              <input id="clongueurE" type="number" class="form-control" placeholder="Length" autofocus>
               <div class="input-group-append">
                 <span class="input-group-text" style="width:35px;">m</span>
               </div>
             </div>
             <div class="input-group input-group-sm pb-2">
-              <input id="clargeurequi" type="number" class="form-control" placeholder="Width" autofocus>
+              <input id="clargeurE" type="number" class="form-control" placeholder="Width" autofocus>
               <div class="input-group-append">
                 <span class="input-group-text" style="width:35px;">m</span>
               </div>
             </div>
             <div class="input-group input-group-sm pb-2">
-              <input id="chauteurequi" type="number" class="form-control" placeholder="Height" autofocus>
+              <input id="chauteurE" type="number" class="form-control" placeholder="Height" autofocus>
               <div class="input-group-append">
                 <span class="input-group-text" style="width:35px;">m</span>
               </div>
             </div>
-            <div class="text-center"><button class="btn btn-success" type="button"><i class="fas fa-plus"></i> Add</button></div>
+            <div class="text-center"><button id="baddEquipement" class="btn btn-sm btn-success" type="button"><i class="fas fa-plus"></i> Add</button></div>
           </form>
         </div>
       </div>

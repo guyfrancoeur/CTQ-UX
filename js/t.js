@@ -117,5 +117,48 @@ $('#m_equipement').on('shown.bs.modal', function() {
     $(".bV").hide();
     $(".bX").hide();
   });
+  
+  // Bouton suppression équipement (trash)
+  $('.bP').click(function() {
+    $(this).closest(".card").remove();
+  });
+  
+  // Ajouter un équipement
+  $("#baddEquipement").click(function() {
+    var nomE = $("#cnomE").val();
+    var capactiteE = $("#ccapaciteE").val();
+    var longueurE = $("#clongueurE").val();
+    var largeurE = $("#clargeurE").val();
+    var hauteurE = $("#chauteurE").val();
+    
+    var html = '<div class="card">' +
+      '<div class="card-header hclass" id="heading' + nomE + '" data-toggle="collapse" data-target="#collapse' + nomE + '" aria-expanded="true" aria-controls="collapse' + nomE + '"> '+
+        '<h5 class="mb-0">' + nomE + '</h5> ' + 
+      '</div>' +
+      '<div id="collapse' + nomE + '" class="collapse" aria-labelledby="heading' + nomE + '" data-parent="#accordion">' +
+        '<div class="card-body py-1">' +
+          '<div class="row">' +
+            '<div class="justify-content-center d-flex flex-column align-items-center mr-2 flex-shrink-1">' +
+              '<button type="button" class="btn px-1 bS"><i class="fas fa-pen color-icon"></i></button>' +
+              '<button type="button" class="btn px-1 bP"><i class="fas fa-trash color-icon"></i></button>' +
+            '</div>' +
+            '<div class="pl-2">' +
+              '<p><span class="labelcontent">Name</span><span class="spanclass">: </span><span class="valuequipement">' + nomE + '</span></p>' +
+              '<p><span class="labelcontent">Capacity</span><span class="spanclass">: </span><span class="valuequipement">' + capactiteE + ' kg</span></p>' +
+              '<p><span class="labelcontent">Length</span><span class="spanclass">: </span><span class="valuequipement">' + longueurE + ' m</span></p>' +
+              '<p><span class="labelcontent">Width</span><span class="spanclass">: </span><span class="valuequipement">' + largeurE + ' m</span></p>' +
+              '<p><span class="labelcontent">Height</span><span class="spanclass">: </span><span class="valuequipement">' + hauteurE + ' m</span></p>' +
+            '</div>' +
+            '<div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">' +
+              '<button type="button" class="btn px-1 bV"><i class="fas fa-check fa-lg" style="color:#7FB23B;"></i></button>' +
+              '<button type="button" class="btn px-1 bX"><i class="fas fa-times-circle fa-lg" style="color:#AF2020;"></i></button>' +
+            '</div>'
+          '</div'> +
+        '</div'> +
+      '</div'> +
+      '</div>';
+    $('#accordion').append(html);
+    $('#selectEquipement').append('<option value="' + nomE + '">' + nomE + '</option>');
+    
+  });
 });
-
