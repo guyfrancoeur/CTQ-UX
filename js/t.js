@@ -96,6 +96,10 @@ function validerprofil(){
 
 // Fonctions qui concernent la modale ajout équipement
 $('#m_equipement').on('shown.bs.modal', function() {
+  //Cacher boutons validations (modale ajout équipement)
+  $(".bV").hide();
+  $(".bX").hide();
+  
   // Couleur tableau ajout équipement (vert)
   $('.hclass').click(function() {
     $(this).addClass("headcolor");
