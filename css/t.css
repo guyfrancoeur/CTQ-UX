@@ -203,13 +203,12 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 }
 
 #ticket{
-  color:#7C4204;
-  background-color:#7C4204;
-  left:-14px;
-  top:44px;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right:20px solid #7C4204;
+  left:-20px;
+  top:50px;
   position:absolute;
-  width:20px;
-  transform: rotate(30deg);
-  z-index:1;
-  opacity:95%;
 }
