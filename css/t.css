@@ -159,8 +159,8 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 }
 
 .valuequipement{
-   margin-left:20px;
-  width:70px;
+  margin-left:20px;
+  margin-right:5px;
   float:left;
 }
 

@@ -71,10 +71,11 @@ function camionEvent(){
 // Modification profil
 $('#bsetprofil').click(function() {
   $("#cnomEntreprise").prop('contenteditable',true);
+  var value = $("#cnomEntreprise").val();
+  $("#cnomEntreprise").focus().val("").val(value);
   $("#nadresse1").prop('contenteditable',true);
   $("#nadresse2").prop('contenteditable',true);
   $("#divadresse").addClass("editeffect");
-  
   $("#cnomEntreprise").addClass("setprofile");
   $("#nadresse1").addClass("setprofile");
   $("#nadresse2").addClass("setprofile");
@@ -165,4 +166,11 @@ $('#m_equipement').on('shown.bs.modal', function() {
     $('#selectEquipement').append('<option value="' + nomE + '">' + nomE + '</option>');
     
   });
+});
+
+$('#m_tracteur').on('shown.bs.modal', function() {
+  $('.selectpicker').selectpicker(); // Dropdown
+});
+$('#m_camion').on('shown.bs.modal', function() {
+  $('.selectpicker').selectpicker(); // Dropdown
 });
