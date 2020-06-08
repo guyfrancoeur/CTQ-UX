@@ -111,8 +111,8 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 }
 
 #baddequipement, #baddtracteur{
-  color:#D46B1E;
-  border-color:#D46B1E;
+  color:rgb(189,98,6);
+  border-color:rgb(189,98,6);
   width:60px;height:40px;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
 }
