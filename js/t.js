@@ -3,6 +3,7 @@ $( document ).ready(function() {
   $('#m_tracteur').load('./m.t.html');
   $('#m_equipement').load('./m.e.html');
   $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover();
   
   // Cacher bouton validation (modification profile)
   $("#bvalidprofil").hide();

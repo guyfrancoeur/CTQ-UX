@@ -86,6 +86,27 @@ body {
 
 /* Login */
 #forgot, #forgot:active, #forgot:visited{
-  color : rgb(1,13,40);
-  font-size:15px;
+  color : rgb(100,100,100);
+  font-size:13px;
+}
+
+#lslider{
+  color : rgb(100,100,100);
+}
+
+
+.nav-item a, .nav-item a:active, .nav-item a:visited, #bhome, #bhome:active, #bhome:visited, .navbar-brand, .navbar-brand:active, .navbar-brand:visited{
+  color:rgb(220,220,220);
+}
+
+.nav-item a{
+  border-color:rgb(220,220,220);
+}
+
+#bhome:hover{
+  color:white;
+}
+
+.nav-item a:hover{
+  color:rgb(50,50,50);
 }
