@@ -17,8 +17,6 @@ $( document ).ready(function() { // ou $(function () {
   $(".div-item").hide();
 });
 
-traduire();
-
 // Toggle button
 unite = 'm';
 $(".toggle-button-cover").click(function() {

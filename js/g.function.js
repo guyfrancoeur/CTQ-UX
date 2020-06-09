@@ -6,6 +6,7 @@ $('.translate').click(function() {
     dataType: "json",
     success:function(data){ 
       $.each(data, function(index, x) {
+        console.log("yes");
         if(x.propriete == "text") $(x.obj).text(x.value);
         else{
           $(x.obj).attr(x.propriete, x.value);
