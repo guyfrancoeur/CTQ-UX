@@ -29,7 +29,7 @@
   {"propriete":"text","obj":"#llistecourriels","value":"Inscrivez les courriels séparés par un point virugle : "},
   {"propriete":"text","obj":"#bsavecamion","value":"Sauvegarder"},
   {"propriete":"text","obj":"#cinfochargement","value":"Info chargement"},
-  {"propriete":"text","obj":"#ttrucker","value":"Camionneur"},
+  {"propriete":"text","obj":"#h1Trucker","value":"Camionneur"},
   {"propriete":"text","obj":"#tlistecamions","value":"Liste de camions"},
   {"propriete":"text","obj":"#tprofil","value":"Profil"},
   {"propriete":"text","obj":"#ttracteur","value":"Tracteur"},

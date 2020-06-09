@@ -30,7 +30,7 @@
   {"propriete":"text","obj":"#llistecourriels","value":"Type the e-mail addresses, separating each address by a semi-colon : "},
   {"propriete":"text","obj":"#bsavecamion","value":"Save changes"},
   {"propriete":"text","obj":"#cinfochargement","value":"Cargo info"},
-  {"propriete":"text","obj":"#ttrucker","value":"Trucker"},
+  {"propriete":"text","obj":"#h1Trucker","value":"Trucker"},
   {"propriete":"text","obj":"#tlistecamions","value":"Trucks list"},
   {"propriete":"text","obj":"#tprofil","value":"Profile"},
   {"propriete":"text","obj":"#ttracteur","value":"Tractor"},
