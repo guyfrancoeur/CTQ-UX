@@ -36,7 +36,6 @@
   {"propriete":"text","obj":"#ttracteur","value":"Tractor"},
   {"propriete":"text","obj":"#tequipement","value":"Equipment"},
   {"propriete":"text","obj":"#tposition","value":"Location"},
-  {"propriete":"placeholder","obj":"#cpassword","value":"Password"},
   {"propriete":"placeholder","propriete":"text","obj":"#corigin","value":"ORIGIN - City or Postal Code"},
   {"propriete":"placeholder","obj":"#cdestination","value":"DESTINATION - City or Postal Code"},
   {"propriete":"placeholder","obj":"#cweight","value":"Weight"},
