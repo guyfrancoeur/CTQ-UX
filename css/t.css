@@ -76,7 +76,7 @@ tbody tr:hover{
   padding-bottom:9px;
 }
 
-.table thead th:nth-child(2), .table thead th:nth-child(3){
+.table thead th:nth-child(3), .table thead th:nth-child(4){
   border-left: 1px solid rgb(220,220,220);
 }
 
@@ -242,6 +242,11 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   width:60px;
 }
 
+#colEdit2, .table tbody td:nth-child(1){
+  padding-right:0px;
+  width:30px;
+}
+
 .dropdown-menu{
   font-size:14px;
 }
@@ -256,4 +261,8 @@ table thead, tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
+}
+
+.bset > .color-icon, .btrash > .color-icon, .bS > .color-icon, .bP > .color-icon{
+  color:rgb(150,150,150);
 }

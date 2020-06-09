@@ -63,12 +63,25 @@ function camionEvent(){
     
     case "add":
       console.log("add");
+      var choix_description = $('#cdescription').val();
       var choix_tracteur = $('#selectTracteur').val();
       var choix_equipement = $('#selectEquipement').val();
-      $('#tableCamions > tbody:last-child').append('<tr><td>'+ choix_tracteur +'</td><td>'+ choix_equipement +'</td><td><span class="cpostalcode" contenteditable="false">XXX</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td><th scope="row" class="text-right"><button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button><button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button></th></tr>');
+      var html = '<tr>' +
+      '<td scope="row" class="text-right">' +
+        '<button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="'+ choix_description +'" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>' +
+      '</td>' +
+      '<td>'+ choix_tracteur +'</td>'+
+      '<td>'+ choix_equipement +'</td>' +
+      '<td><span class="cpostalcode" contenteditable="false">XXX</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>'+
+      '<th scope="row" class="text-right">'+
+        '<button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>'+
+        '<button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>' +
+      '</th></tr>';
+      $('#tableCamions > tbody:last-child').append(html);
       break;
   }
   $('#m_camion').modal('hide');
+  $('[data-toggle="tooltip"]').tooltip(); // Rendre le tooltip qui vient d'être ajouté fonctionnel
 }
 
 // Modification profil
@@ -170,11 +183,4 @@ $('#m_equipement').on('shown.bs.modal', function() {
     $('#selectEquipement').append('<option value="' + nomE + '">' + nomE + '</option>');
     
   });
-});
-
-$('#m_tracteur').on('shown.bs.modal', function() {
-  $('.selectpicker').selectpicker(); // Dropdown
-});
-$('#m_camion').on('shown.bs.modal', function() {
-  $('.selectpicker').selectpicker(); // Dropdown
 });
