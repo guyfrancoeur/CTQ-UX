@@ -18,6 +18,7 @@ $( document ).ready(function() {
 function editable(x) {
   var text1 = x.prev();
   $(text1).prop('contenteditable',true);
+  $(text1).addClass("setprofile");
 }
 $('.bset-location').click(function() {
   editable($(this));
@@ -25,6 +26,7 @@ $('.bset-location').click(function() {
 });
 $(".cpostalcode").focusout(function() {
   $(this).prop('contenteditable',false);
+  $(this).removeClass("setprofile");
 });
 
 // Bouton trash (suppression ligne)

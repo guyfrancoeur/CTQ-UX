@@ -66,34 +66,36 @@
   <div class="container col-md-9 col-12" id="container">
     <div class="shadow bg-white position-relative bloc-formulaire bloc">
       <div class="tab-content pb-3">
-        <div class="py-3 px-0 col-11 m-auto">
-          <div class="d-flex justify-content-between">
-          <div></div>
-          <h1 id="ttrucker" class="text-dark ml-4 text-center">Trucker</h1>
-          <div>
-          <button id="baddtracteur" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_tracteur">
-            <i class="fas fa-plus"></i> <i class="fas fa-truck"></i>
-          </button>
-          <button id="baddequipement" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_equipement">
-            <i class="fas fa-plus"></i> <i class="fas fa-truck-loading"></i>
-          </button>
-          </div>
+        <div class="pt-lg-3 pt-0 px-4 col-12 m-auto">
+          <div class="row text-center" style="height:50px;">
+            <div class="col"></div>
+            <div id="ttrucker" class="text-dark col-lg-7 col-12">
+              <h1 id="h1Trucker">Trucker</h1>
+            </div>
+            <div id="boutonsTrucker" class="col text-right pr-3 ">
+              <button id="baddtracteur" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_tracteur">
+                <i class="fas fa-plus"></i> <i class="fas fa-truck"></i>
+              </button>
+              <button id="baddequipement" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_equipement">
+                <i class="fas fa-plus"></i> <i class="fas fa-truck-loading"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="container col-12 px-4">
+        <div id="divContainer" class="container col-12 px-0">
           <div class="row px-4">
             <div class="pr-xl-2 col-12 col-xl-5 pb-3 pb-xl-0">
             <div class="card" style="height:400px;">
               <div class="card-header text-center cardstyle">
                 <div class="card-title d-flex justify-content-between">
-                  <div class="my-auto">
+                  <div class="col text-left pl-0">
                     <span class="fa fa-question-circle" data-trigger="focus" tabindex="0" style="cursor:pointer;color:rgb(220,220,220);" data-toggle="popover" data-original-title="Help" data-content="..."></span>
                   </div>
-                  <h4 id="cLoginTitle">
+                  <h4 id="cLoginTitle" class="col-11">
                     <i class="fas fa-user fa-sm color-icon-hover"></i>
                     <span id="tprofil">Profile</span>
                   </h4>
-                  <div></div>
+                  <div class="col"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -122,13 +124,15 @@
             <div class="card" style="height:400px;">
               <div class="card-header text-center cardstyle">
                 <div class="card-title d-flex justify-content-between">
-                  <div class="my-auto">
+                  <div class="col text-left pl-0">
                     <span class="fa fa-question-circle" data-trigger="focus" tabindex="0" style="cursor:pointer;color:rgb(220,220,220);" data-toggle="popover" data-original-title="Help" data-content="..."></span>
                   </div>
-                  <h4 id="htruck">
+                  <h4 id="htruck" class="col-9">
                     <span id="tlistecamions">Trucks list</span>
                   </h4>
-                <button id="bajoutcamion" class="btn" type="button" data-toggle="modal" data-target="#m_camion"><i class="fas fa-plus color-icon-hover py-auto"></i></button>
+                  <div class="col text-right pr-0">
+                    <button id="bajoutcamion" class="btn" type="button" data-toggle="modal" data-target="#m_camion"><i class="fas fa-plus color-icon-hover py-auto"></i></button>
+                  </div>
                 </div>
               </div>
               <div class="card-body p-0" style="overflow-y:scroll;">
