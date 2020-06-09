@@ -63,7 +63,7 @@
   <!-- ************* HEADER ************* -->
 
   <!-- ************* CONTENT ************* -->
-  <div class="container col-md-9 col-12" id="container">
+  <div class="container col-xl-9 col-md-10 col-12" id="container">
     <div class="shadow bg-white position-relative bloc-formulaire bloc">
       <div class="tab-content pb-3">
         <div class="pt-lg-3 pt-0 px-4 col-12 m-auto">
@@ -105,7 +105,7 @@
                   </div>
                   <div class="pl-2">
                     <br/>
-                    <p id="cnomEntreprise" contenteditable=false>Kaiser Transport</p>
+                    <p id="cnomEntreprise" class="mb-1" contenteditable=false>Kaiser Transport</p>
                     <span>
                       <p id="nadresse1" class="mb-1" contenteditable=false>67047 LeMoyne, Saint-Lambert</p>
                       <p id="nadresse2" contenteditable=false>Quebec J4R 2T8, Canada</p>
@@ -114,6 +114,15 @@
                   <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
                     <button id="bvalidprofil" type="button" class="btn px-1" onclick="validerprofil()"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
                     <button id="bcancelprofil" type="button" class="btn px-1" onclick="validerprofil()"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
+                  </div>
+                </div>
+                <div id="divadresse" class="row pl-0">
+                  <div class="justify-content-center d-flex align-items-center">
+                    
+                  </div>
+                  <div class="pl-4">
+                    <br/>
+                    <p><i class="fas fa-tag color-icon"></i> Profit :</p>
                   </div>
                 </div>
                 <br/>
@@ -131,18 +140,18 @@
                     <span id="tlistecamions">Trucks list</span>
                   </h4>
                   <div class="col text-right pr-0">
-                    <button id="bajoutcamion" class="btn" type="button" data-toggle="modal" data-target="#m_camion"><i class="fas fa-plus color-icon-hover py-auto"></i></button>
+                    <button id="bajoutcamion" class="btn py-0 px-2" type="button" data-toggle="modal" data-target="#m_camion"><i class="fas fa-plus color-icon-hover py-auto"></i></button>
                   </div>
                 </div>
               </div>
-              <div class="card-body p-0" style="overflow-y:scroll;">
+              <div class="card-body p-0" >
                 <table id="tableCamions" class="table">
                   <thead style="background-color:rgb(247,247,249);">
                     <tr>
                       <th scope="col"><i class="fas fa-truck color-icon"></i> <span id="ttracteur">Tractor</span></th>
                       <th scope="col"><i class="fas fa-truck-loading color-icon"></i> <span id="tequipement">Equipment</span></th>
                       <th scope="col"><i class="fas fa-map-signs fa-sm color-icon"></i> <span id="tposition">Location</span></th>
-                      <th scope="col" style="width:70px;"></th>
+                      <th id="colEdit" scope="col"></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -258,13 +267,9 @@
   </footer>
   <!-- ************* FOOTER ************* -->
   
-  <!-- Modale ajout camion -->
+  <!-- Modales -->
   <div id="m_camion" class="modal modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
-  
-  <!-- Modale ajout tracteur -->
   <div id="m_tracteur" class="modal modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
-  
-  <!-- Modale ajout équipement -->
   <div id="m_equipement" class="modal modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   
   <script defer src="./js/t.js"></script>

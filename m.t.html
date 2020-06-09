@@ -1,20 +1,25 @@
-<div class="modal-dialog modal-sm modal-dialog-centered">
+<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
   <div class="modal-content">
-    <div class="modal-header d-flex justify-content-between">
+    <div class="modal-header px-0">
       <div class="divIconeModale"><i class="fas fa-truck fa-lg iconModale"></i></div>
       <div id="ticket"></div>
-      <div></div>
-      <h4 class="modal-title">Tractor</h4>
-      <div>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button></div>
+      <div class="col"></div>
+      <div class="col text-center text-dark"><h4 class="modal-title">Tractor</h4></div>
+      <div class="col text-right">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     </div>
     <div class="modal-body">
       <form>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-comment-alt m-auto"></i></span>
+            <span class="input-group-text" style="width:37px;">
+              <svg class="bi bi-text-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+            </span>
           </div>
           <input id="cnomtracteur" type="text" class="form-control" id="cDescription" placeholder="Name" autofocus>
         </div>
@@ -22,16 +27,10 @@
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;"><i class="fas fa-toggle-on m-auto"></i></span>
           </div>
-          <select class="selectpicker form-control form-control-sm">
+          <select class="selectpicker form-control form-control-sm" title="Status">
             <option id="actif">Active</option>
             <option id="inaactif">Inactive</option>
           </select>
-        </div>
-        <div class="input-group input-group-sm pb-2">
-          <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-oil-can m-auto"></i></span>
-          </div>
-          <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption">
         </div>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
@@ -42,6 +41,12 @@
             <option id="inaactif">Unleaded gasoline</option>
             <option id="inaactif">Gasoline</option>
           </select>
+        </div>
+        <div class="input-group input-group-sm pb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" style="width:37px;"><i class="fas fa-oil-can m-auto"></i></span>
+          </div>
+          <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption">
         </div>
       </form>
     </div>

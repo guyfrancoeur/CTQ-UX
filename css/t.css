@@ -85,7 +85,7 @@ tbody{
 }
 
 .cardstyle{
-  height:55px;
+  height:50px;
   /*background-color:rgb(50,50,50);*/
   background:linear-gradient(to top right,rgb(50,50,50), rgb(70,70,70));
 }
@@ -190,14 +190,15 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 }
 
 .headcolor{
-  background-color:#F7F2E6 !important;
+  background-color:#FAFCFF !important;
   font-weight:bold;
 }
 
 #m_equipement .card-body{
   font-size:15px;
   background-color:white;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+  /*box-shadow: 5px 5px 5px rgba(0,0,0,0.2);*/
+  box-shadow: 2px 2px 2px 2px rgb(247,247,247) inset; 
 }
 
 .spanclass{
@@ -213,13 +214,14 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 
 .divIconeModale{
   position:absolute;
+  top:10px;
   left:-20px;
   /*background-color:#9C5305;*/
   background: radial-gradient(circle at center, rgba(236,102,0,.9), rgb(203,92,11));
   border-top-left-radius:3px;
   padding-right:20px;
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:12px;
+  padding-bottom:12px;
   padding-left:20px;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
   z-index:2;
@@ -233,6 +235,27 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   border-bottom: 10px solid transparent;
   border-right:20px solid #7C4204;
   left:-20px;
-  top:50px;
+  top:48px;
   position:absolute;
+}
+
+#colEdit, .table tbody th{
+	padding-left:0px;
+	width:60px;
+}
+
+.dropdown-menu{
+	font-size:14px;
+}
+
+table tbody {
+  display: block;
+  max-height: 305px;
+  overflow-y: scroll;
+}
+
+table thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
