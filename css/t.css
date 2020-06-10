@@ -155,21 +155,21 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   color:rgb(60,60,60);
 }
 
-#m_equipement .card{
+#m_e .card{
   margin-bottom:5px;
 }
 
-#m_equipement .card-header{
+#m_e .card-header{
   height:40px;
   cursor:pointer;
   background-color:white;
 }
 
-#m_equipement .card h5{
+#m_e .card h5{
   font-size:14px;
 }
 
-#m_equipement h3{
+#m_e h3{
   font-size:25px;
   letter-spacing: 1px;
   font-family: Arial, Helvetica, sans-serif;
@@ -177,12 +177,12 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   font-weight:bold;
 }
 
-
-#m_equipement .card-body p{
+#m_e .card-body p{
   margin-bottom:0;
+  font-size:15px;
 }
 
-#m_equipement .card-header:hover{
+#m_e .card-header:hover{
   background-color: #FAFCFF;
   transition-duration: 50ms;
 }
@@ -198,7 +198,7 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   font-weight:bold;
 }
 
-#m_equipement .card-body{
+#m_e .card-body{
   font-size:15px;
   background-color:white;
   box-shadow: 2px 2px 2px 2px rgb(247,247,247) inset; 
