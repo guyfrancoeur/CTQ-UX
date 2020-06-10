@@ -191,9 +191,7 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 }
 
 .valuequipement{
-  margin-left:20px;
-  margin-right:5px;
-  float:left;
+  margin-left:10px;
 }
 
 .headcolor{
@@ -205,11 +203,6 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   font-size:15px;
   background-color:white;
   box-shadow: 2px 2px 2px 2px rgb(247,247,247) inset; 
-}
-
-.spanclass{
-  width:5px;
-  float:left;
 }
 
 .iconModale{
@@ -242,9 +235,14 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
   position:absolute;
 }
 
-#colEdit, .table tbody th{
+.table tbody th{
   padding-left:0px;
   width:60px;
+}
+
+#colEdit{
+  padding-left:0px;
+  width:77px;
 }
 
 #colEdit2, .table tbody td:nth-child(1){
@@ -303,4 +301,9 @@ table thead, tbody tr {
   font-weight:500;
   letter-spacing: 2px;
   text-shadow: 2px 2px 2px rgb(235,235,235);
+}
+
+.cpostalcode{
+  width:50px;
+  height:25px;
 }
