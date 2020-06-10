@@ -1,7 +1,7 @@
 $( document ).ready(function() {
-  $('#m_camion').load('./m.c.html');
-  $('#m_tracteur').load('./m.t.html');
-  $('#m_equipement').load('./m.e.html');
+  $('#m_c').load('./m.c.html');
+  $('#m_t').load('./m.t.html');
+  $('#m_e').load('./m.e.html');
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover();
   
@@ -74,13 +74,13 @@ function camionEvent(){
       '<td>'+ choix_equipement +'</td>' +
       '<td><span class="cpostalcode" contenteditable="false">XXX</span> <button type="button" class="bset-location btn p-0"><i class="fas fa-map-marker-alt color-icon"></i></button></td>'+
       '<th scope="row" class="text-right">'+
-        '<button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_camion"><i class="fas fa-pencil-alt color-icon"></i></button>'+
+        '<button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_c"><i class="fas fa-pencil-alt color-icon"></i></button>'+
         '<button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>' +
       '</th></tr>';
       $('#tableCamions > tbody:last-child').append(html);
       break;
   }
-  $('#m_camion').modal('hide');
+  $('#m_c').modal('hide');
   $('[data-toggle="tooltip"]').tooltip(); // Rendre le tooltip qui vient d'être ajouté fonctionnel
 }
 
@@ -112,7 +112,7 @@ function validerprofil(){
 }
 
 // Fonctions qui concernent la modale ajout équipement
-$('#m_equipement').on('shown.bs.modal', function() {
+$('#m_e').on('shown.bs.modal', function() {
   //Cacher boutons validations (modale ajout équipement)
   $(".bV").hide();
   $(".bX").hide();

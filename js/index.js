@@ -4,6 +4,10 @@ $( document ).ready(function() {
   $('#m_template').load('./m.template.html');
   $('#m_broker').load('./m.broker.html');
   $('#m_trucker').load('./m.trucker.html');
+  $('#m_c').load('./m.c.html');
+  $('#m_t').load('./m.t.html');
+  $('#m_e').load('./m.e.html');
+  $('#m_d3').load('./m.d3.html');
 
   // Taille card index.html
   // est utile ??
@@ -12,8 +16,6 @@ $( document ).ready(function() {
   $('#arrow-card2').height(heightDivLogin);
   $('#divAdmin').height(heightDivLogin);
 });
-
-traduire();
 
 //exemple court
 $(function() {

@@ -10,7 +10,7 @@ $( document ).ready(function() { // ou $(function () {
   $("#bcloseResults").hide();
   
   // Chargement contenu modale
-  $('#m_courriels').load('./m.courriels.html');
+  $('#m_d3').load('./m.d3.html');
   $('#m_results').load('./m.results.html');
   
   // Toasts Bootstrap (nombre camions disponibles)
@@ -62,7 +62,7 @@ function saveMails(){
     }
   });
   console.log(tabEmails);
-  $('#m_courriels').modal('hide');
+  $('#m_d3').modal('hide');
 }
 
 // Suppression courriel

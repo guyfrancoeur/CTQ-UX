@@ -272,7 +272,7 @@ ul.listec li{
   background: rgba(1,13,40,.8);
 }
 
-h4, h5{
+#cmev, #hOrigineDestination, #itinerary{
   letter-spacing: 1px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight:bold;
