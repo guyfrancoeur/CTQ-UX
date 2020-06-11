@@ -10,7 +10,10 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <p id="cMessageAddEquipement" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;"><i class="far fa-check-circle"></i> Equipment added !</p>
+      <p id="cMessageEditEquipement" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;"><i class="far fa-check-circle"></i> Equipment modified !</p>
     </div>
+    <br/>
     <div class="modal-body">
       <div class="row">
         <div class="col-7">
@@ -108,25 +111,25 @@
             </div>
             
             <div class="input-group input-group-sm pb-2">
-              <input id="ccapaciteE" type="number" class="form-control" placeholder="Capacity" required>
+              <input id="ccapaciteE" type="number" class="form-control" placeholder="Capacity" step="0.1" required>
               <div class="input-group-append">
                 <span class="input-group-text m-auto" style="width:35px;">kg</span>
               </div>
             </div>
             <div class="input-group input-group-sm pb-2">
-              <input id="clongueurE" type="number" class="form-control" placeholder="Length" required>
+              <input id="clongueurE" type="number" class="form-control" placeholder="Length" step="0.1" required>
               <div class="input-group-append">
                 <span class="input-group-text" style="width:35px;">m</span>
               </div>
             </div>
             <div class="input-group input-group-sm pb-2">
-              <input id="clargeurE" type="number" class="form-control" placeholder="Width" required>
+              <input id="clargeurE" type="number" class="form-control" placeholder="Width" step="0.1" required>
               <div class="input-group-append">
                 <span class="input-group-text" style="width:35px;">m</span>
               </div>
             </div>
             <div class="input-group input-group-sm pb-2">
-              <input id="chauteurE" type="number" class="form-control" placeholder="Height" required>
+              <input id="chauteurE" type="number" class="form-control" placeholder="Height" step="0.1" required>
               <div class="input-group-append">
                 <span class="input-group-text" style="width:35px;">m</span>
               </div>

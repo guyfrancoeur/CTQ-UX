@@ -2,6 +2,7 @@ $( document ).ready(function() {
   $('#m_c').load('./m.c.html');
   $('#m_t').load('./m.t.html');
   $('#m_e').load('./m.e.html');
+  $('#m_v').load('./m.v.html');
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover();
   
@@ -9,18 +10,19 @@ $( document ).ready(function() {
   $("#bvalidprofil").hide();
   $("#bcancelprofil").hide();
   
-  //Cacher boutons validations (modale ajout équipement)
+  //Cacher boutons validations (modale ajout Ã©quipement)
   $(".bV").hide();
   $(".bX").hide();
 });
 
 // Bouton trash (suppression ligne)
 $('.btrash').click(function() {
-  $(this).closest( "tr" ).remove();
+  $('#m_v').modal('show');
+  validationSuppression($(this).closest( "tr" ));
 });
 
 var mode_save_button_camion;
-// Récupérer les valeurs de la ligne quand on clique sur le crayon
+// RÃ©cupÃ©rer les valeurs de la ligne quand on clique sur le crayon
 var current_col;
 $('.bset').click(function() {
   mode_save_button_camion = "set";
@@ -31,7 +33,7 @@ $('.bset').click(function() {
   $('#selectEquipement').val(equipement).change();
 });
 
-// Bouton ajout camion, réinitialiser la sélection (dropdown)
+// Bouton ajout camion, rÃ©initialiser la sÃ©lection (dropdown)
 $('#bajoutcamion').click(function() {
   mode_save_button_camion = "add";
   $("#selectTracteur").val("").change();
@@ -64,7 +66,7 @@ function camionEvent(){
       break;
   }
   $('#m_c').modal('hide');
-  $('[data-toggle="tooltip"]').tooltip(); // Rendre le tooltip qui vient d'être ajouté fonctionnel
+  $('[data-toggle="tooltip"]').tooltip(); // Rendre fonctionnel le tooltip qui vient d'Ãªtre ajoutÃ©
 }
 
 // Modification profil
@@ -94,25 +96,27 @@ function validerprofil(){
   $("#nadresse2").prop('contenteditable',false);
 }
 
-// Fonctions qui concernent la modale ajout équipement
+// Fonctions qui concernent la modale ajout Ã©quipement
 $('#m_e').on('shown.bs.modal', function() {  
-  // Couleur tableau liste équipement (header)
+  // Couleur tableau liste Ã©quipement (header)
   $('.hclass').click(function() {
     $(this).addClass("headcolor");
     $(".hclass").not(this).removeClass("headcolor");
   });
   
-  // Bouton suppression équipement (trash)
+  // Bouton suppression Ã©quipement (trash)
   $('.bP').click(function() {
-    $(this).closest(".card").remove();
+    $('#m_v').modal('show');
+    validationSuppression($(this).closest(".card"));
   });
   
   var mode_save_button_equipement = "add";
   var nE, cE, loE, laE, hE;
-  // Boutons modification équipement (crayon)
+  // Boutons modification Ã©quipement (crayon)
   $('.bS').click(function() {
     mode_save_button_equipement = "set";
-    // Récupérer les valeurs de l'équipement en question
+    changerTitres();
+    // RÃ©cupÃ©rer les valeurs de l'Ã©quipement en question
     nE = $(this).closest( "span" ).closest( "h5" ).closest( "div" ).next("div").find("div").find("p").eq(0).find(".valuequipement");
     cE = $(this).closest( "span" ).closest( "h5" ).closest( "div" ).next("div").find("div").find("p").eq(1).find(".valuequipement");
     loE = $(this).closest( "span" ).closest( "h5" ).closest( "div" ).next("div").find("div").find("p").eq(2).find(".valuequipement");
@@ -127,25 +131,19 @@ $('#m_e').on('shown.bs.modal', function() {
   });
   
   function editEqui(){
-    // Sauvegarder la modification (changement des valeurs dans la liste des équipements)
+    // Sauvegarder la modification (changement des valeurs dans la liste des Ã©quipements)
     nE.html($('#cnomE').val());
     cE.html($('#ccapaciteE').val());
     loE.html($('#clongueurE').val());
     laE.html($('#clargeurE').val());
     hE.html($('#chauteurE').val());
     nE.closest("p").closest("div").closest(".collapse").prev().find("h5").find("span").eq(0).html($('#cnomE').val());
-    $('#cnomE').val(""); // Remettre le formulaire à zéro
-    $('#ccapaciteE').val("");
-    $('#clongueurE').val("");
-    $('#clargeurE').val("");
-    $('#clargeurE').val("");
-    $('#chauteurE').val("");
+    reinitialiserFormuEqui();
     mode_save_button_equipement = "add";
   }
   
-  // Ajouter un équipement
+  // Ajouter un Ã©quipement
   function addEqui(){
-    console.log("2");
       var nomE = $("#cnomE").val();
       var capactiteE = $("#ccapaciteE").val();
       var longueurE = $("#clongueurE").val();
@@ -173,8 +171,20 @@ $('#m_e').on('shown.bs.modal', function() {
       '</div>';
       $('#accordion').append(html);
       $('#selectEquipement').append('<option value="' + nomE + '">' + nomE + '</option>');
+      reinitialiserFormuEqui();
   }
   
+  // Remettre le formulaire Ã  zÃ©ro
+  function reinitialiserFormuEqui(){
+    $('#cnomE').val("");
+    $('#ccapaciteE').val("");
+    $('#clongueurE').val("");
+    $('#clargeurE').val("");
+    $('#clargeurE').val("");
+    $('#chauteurE').val("");
+  }
+  
+  // Validation formulaire
   $("#baddEquipement").click(function() {
     if (!$("#formEquipement")[0].checkValidity()) {
       $("#formEquipement").find("#submit-hidden").click();
@@ -182,15 +192,42 @@ $('#m_e').on('shown.bs.modal', function() {
     else{
       if (mode_save_button_equipement == "add"){
         addEqui();
-        console.log("1");
+        $("#cMessageAddEquipement").show();
+        $("#cMessageEditEquipement").hide();
       }
       else{
         editEqui();
+        remettreTitres();
+        $("#cMessageEditEquipement").show();
+        $("#cMessageAddEquipement").hide();
       }
     }
   });
+  
+  // Adapter le texte du titre et du bouton pour la modification d'un Ã©quipement
+  function changerTitres(){
+    if ($('#haddEqui').html() == "Add a new equipment"){ // Si en anglais
+      $('#haddEqui').html("Modify this equipment");
+      $('#baddE').html("Replace");
+    }
+    else{ // Si en franÃ§ais
+      $('#haddEqui').html("Modifier cet Ã©quipement");
+      $('#baddE').html("Remplacer");
+    }
+  }
+  function remettreTitres(){
+    if ($('#haddEqui').html() == "Modify this equipment"){ // Si en anglais
+      $('#haddEqui').html("Add a new equipment");
+      $('#baddE').html("Add");
+    }
+    else{ // Si en franÃ§ais
+      $('#haddEqui').html("Ajouter un nouvel Ã©quipement");
+      $('#baddE').html("Ajouter");
+    }
+  }
 });
 
+// Validation formulaire modale camion
 $('#m_c').on('shown.bs.modal', function() {
   $("#bsavecamion").click(function() {
     if (!$("#formCamion")[0].checkValidity()) {
@@ -199,6 +236,7 @@ $('#m_c').on('shown.bs.modal', function() {
   });
 });
 
+// Validation formulaire modale tracteur
 $('#m_t').on('shown.bs.modal', function() {
   $("#bsavetracteur").click(function() {
     if (!$("#formTracteur")[0].checkValidity()) {
@@ -206,3 +244,13 @@ $('#m_t').on('shown.bs.modal', function() {
     }
   });
 });
+
+function validationSuppression(x){
+  $(".bYes").click(function() {
+    x.remove();
+    $('#m_v').modal('hide');
+  });
+  $(".bNo").click(function() {
+    $('#m_v').modal('hide');
+  });
+}

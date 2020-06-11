@@ -307,3 +307,11 @@ table thead, tbody tr {
   width:50px;
   height:25px;
 }
+
+/* Pour la modale vérification suppression par dessus autre modale */
+.modal:nth-of-type(even) {
+    z-index: 1052 !important;
+}
+.modal-backdrop.show:nth-of-type(even) {
+    z-index: 1051 !important;
+}
