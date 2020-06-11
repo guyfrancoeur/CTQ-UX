@@ -271,7 +271,7 @@ table thead, tbody tr {
 }
 
 .modal-content{
-  border: 1px solid white;
+  border: 0px;
 }
 
 .bsavechanges{
@@ -314,4 +314,46 @@ table thead, tbody tr {
 }
 .modal-backdrop.show:nth-of-type(even) {
     z-index: 1051 !important;
+}
+
+#rondTrash{
+  /*background: radial-gradient(circle at center, #E11E1E, #AD0808);*/
+  border: 1px solid rgb(249,249,249);
+  background-color:rgb(250,250,250);
+  margin-top:-30px;
+  height:60px;
+  width:60px;
+  border-radius:50px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.bYes{
+  width:50%;
+  height:50px;
+  border-top-left-radius:0px;
+  border-top-right-radius:0px;
+  border-bottom-left-radius:0px;
+  background-color:#E75858;
+  text-transform: uppercase;
+  font-size:13px;
+  letter-spacing: 1.5px;
+  color:white;
+}
+.bYes:hover, .bNo:hover{
+  font-size:14px;
+  font-weight:bold;
+  color:white;
+}
+.bNo{
+  float:left;
+  width:50%;
+  height:50px;
+  border-top-left-radius:0px;
+  border-top-right-radius:0px;
+  border-bottom-right-radius:0px;
+  background-color:rgb(150,150,150);
+  text-transform: uppercase;
+  font-size:13px;
+  letter-spacing: 1.5px;
+  color:white;
 }
