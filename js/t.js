@@ -41,13 +41,11 @@ $('#bajoutcamion').click(function() {
 function camionEvent(){
   switch(mode_save_button_camion){
     case "set":
-      console.log("set");
       $(current_col).find("td").eq(0).html($('#selectTracteur').val());
       $(current_col).find("td").eq(1).html($('#selectEquipement').val());
       break;
     
     case "add":
-      console.log("add");
       var choix_description = $('#cdescription').val();
       var choix_tracteur = $('#selectTracteur').val();
       var choix_equipement = $('#selectEquipement').val();
@@ -57,7 +55,7 @@ function camionEvent(){
       '</td>' +
       '<td>'+ choix_tracteur +'</td>'+
       '<td>'+ choix_equipement +'</td>' +
-      '<td><input type="text" class="form-control form-control-sm m-auto cpostalcode" value="H3N"></td>'+
+      '<td><input type="text" class="form-control form-control-sm m-auto cpostalcode"></td>'+
       '<th scope="row" class="text-right">'+
         '<button type="button" class="btn p-0 bset" data-toggle="modal" data-target="#m_c"><i class="fas fa-pencil-alt color-icon"></i></button>'+
         '<button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>' +
@@ -178,13 +176,33 @@ $('#m_e').on('shown.bs.modal', function() {
   }
   
   $("#baddEquipement").click(function() {
-    if (mode_save_button_equipement == "add"){
-      addEqui();
-      console.log("1");
+    if (!$("#formEquipement")[0].checkValidity()) {
+      $("#formEquipement").find("#submit-hidden").click();
     }
     else{
-      editEqui();
+      if (mode_save_button_equipement == "add"){
+        addEqui();
+        console.log("1");
+      }
+      else{
+        editEqui();
+      }
     }
   });
 });
 
+$('#m_c').on('shown.bs.modal', function() {
+  $("#bsavecamion").click(function() {
+    if (!$("#formCamion")[0].checkValidity()) {
+      $("#formCamion").find("#submit-hiddenC").click();
+    }
+  });
+});
+
+$('#m_t').on('shown.bs.modal', function() {
+  $("#bsavetracteur").click(function() {
+    if (!$("#formTracteur")[0].checkValidity()) {
+      $("#formTracteur").find("#submit-hiddenT").click();
+    }
+  });
+});

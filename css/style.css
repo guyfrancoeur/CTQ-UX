@@ -83,7 +83,6 @@ body {
   color:white;
 }
 
-
 /* Login */
 #forgot, #forgot:active, #forgot:visited{
   color : rgb(100,100,100);
@@ -93,7 +92,6 @@ body {
 #lslider{
   color : rgb(100,100,100);
 }
-
 
 .nav-item a, .nav-item a:active, .nav-item a:visited, #bhome, #bhome:active, #bhome:visited, .navbar-brand, .navbar-brand:active, .navbar-brand:visited{
   color:rgb(220,220,220);
@@ -109,4 +107,9 @@ body {
 
 .nav-item a:hover{
   color:rgb(50,50,50);
+}
+
+/* Ajouter bordure au dropdown */
+.bootstrap-select>.dropdown-toggle.bs-placeholder{
+  border:1px solid rgb(206,212,218);
 }

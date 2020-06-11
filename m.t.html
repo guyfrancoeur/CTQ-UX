@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="modal-body">
-      <form>
+      <form id="formTracteur">
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;">
@@ -21,13 +21,13 @@
               </svg>
             </span>
           </div>
-          <input id="cnomtracteur" type="text" class="form-control" id="cDescription" placeholder="Name" autofocus>
+          <input id="cnomtracteur" type="text" class="form-control" id="cDescription" placeholder="Name" autofocus required>
         </div>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;"><i class="fas fa-toggle-on m-auto"></i></span>
           </div>
-          <select class="selectpicker form-control form-control-sm" title="Status">
+          <select class="selectpicker form-control form-control-sm" title="Status" required>
             <option id="actif">Active</option>
             <option id="inactif">Inactive</option>
           </select>
@@ -36,7 +36,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;"><i class="fas fa-gas-pump m-auto"></i></span>
           </div>
-          <select class="selectpicker form-control form-control-sm" title="Type of fuel">
+          <select class="selectpicker form-control form-control-sm" title="Type of fuel" required>
             <option id="actif">Diesel</option>
             <option id="inaactif">Unleaded gasoline</option>
             <option id="inaactif">Gasoline</option>
@@ -46,12 +46,13 @@
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;"><i class="fas fa-oil-can m-auto"></i></span>
           </div>
-          <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption">
+          <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption" required>
         </div>
+        <input id="submit-hiddenT" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
       </form>
     </div>
     <div class="modal-footer">
-      <button id="bsavecamion" type="button" class="btn btn-primary bsavechanges">Save changes</button>
+      <button id="bsavetracteur" type="button" class="btn btn-primary bsavechanges">Save changes</button>
     </div>
   </div>
 </div>

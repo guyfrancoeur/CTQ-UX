@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="modal-body">
-      <form>
+      <form id="formCamion">
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;">
@@ -21,13 +21,13 @@
               </svg>
             </span>
           </div>
-          <textarea id="cdescription" class="form-control" aria-label="With textarea" placeholder="Description" autofocus></textarea>
+          <textarea id="cdescription" class="form-control" aria-label="With textarea" placeholder="Description" autofocus required></textarea>
         </div>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;"><i class="fas fa-truck m-auto"></i></span>
           </div>
-          <select id="selectTracteur" class="selectpicker form-control form-control-sm" title="Tractor" data-size="5">
+          <select id="selectTracteur" class="selectpicker form-control form-control-sm" title="Tractor" data-size="5" required>
             <option value="T1">T1</option>
             <option value="T2">T2</option>
             <option value="T3">T3</option>
@@ -38,13 +38,14 @@
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:37px;"><i class="fas fa-truck-loading m-auto"></i></span>
           </div>
-          <select id="selectEquipement" class="selectpicker form-control form-control-sm" title="Equipment" data-size="5">
+          <select id="selectEquipement" class="selectpicker form-control form-control-sm" title="Equipment" data-size="5" required>
             <option value="E1">E1</option>
             <option value="E2">E2</option>
             <option value="E3">E3</option>
             <option value="E4">E4</option>
           </select>
         </div>
+        <input id="submit-hiddenC" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
       </form>
     </div>
     <div class="modal-footer">
