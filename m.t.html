@@ -1,58 +1,147 @@
-<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
   <div class="modal-content">
     <div class="modal-header px-0">
-      <div class="divIconeModale"><i class="fas fa-truck fa-lg iconModale"></i></div>
+      <div class="divIconeModale"><i class="fas fa-truck-loading fa-lg iconModale"></i></div>
       <div id="ticket"></div>
       <div class="col"></div>
-      <div class="col text-center"><h4 id="hTracteur" class="modal-title">Tractor</h4></div>
+      <div class="col text-center"><h3 id="hTracteur" class="modal-title">Tractor</h3></div>
       <div class="col text-right">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <p id="cMessageAddTracteur" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;"><i class="far fa-check-circle"></i> Tractor added !</p>
+      <p id="cMessageEditTracteur" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;"><i class="far fa-check-circle"></i> Tractor modified !</p>
     </div>
+    <br/>
     <div class="modal-body">
-      <form id="formTracteur">
-        <div class="input-group input-group-sm pb-2">
-          <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;">
-              <svg class="bi bi-text-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-              </svg>
-            </span>
+      <div class="row">
+        <div class="col-7">
+          <h5 class="titlemodale"><i class="fas fa-angle-right"></i> <span id="hYourTractor">Your tractors</span></h5>
+          <div style="height:250px;overflow-y:scroll;">
+            <div id="accordionT" class="py-2 pr-2">
+              <div class="card">
+                <div class="card-header hclass" id="headingT1" data-toggle="collapse" data-target="#collapseT1" aria-expanded="true" aria-controls="collapseT1">
+                  <h5 class="mb-0">
+                    <span>T1</span>
+                    <span class="float-right" style="margin-top:-5px;">
+                      <button type="button" class="btn p-0 bSt"><i class="fas fa-pen color-icon"></i></button>
+                      <button type="button" class="btn py-0 pl-2 bP"><i class="fas fa-trash color-icon"></i></button>
+                    </span>
+                  </h5>
+                </div>
+                <div id="collapseT1" class="collapse" aria-labelledby="headingT1" data-parent="#accordion">
+                  <div class="card-body py-1">
+                    <p><span class="labelcontentT lcname">Name</span> : <span class="valuetracteur">T1</span></p>
+                    <p><span class="labelcontentT lcstatus">Status</span> : <span class="valuetracteur">Active</span></p>
+                    <p><span class="labelcontentT lcfueltype">Type of fuel</span> : <span class="valuetracteur">Diesel</span></p>
+                    <p><span class="labelcontentT lccomsumption">Consumption</span> : <span class="valuetracteur">5.7</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header hclass" id="headingT2" data-toggle="collapse" data-target="#collapseT2" aria-expanded="true" aria-controls="collapseT2">
+                  <h5 class="mb-0">
+                    <span>T2</span>
+                    <span class="float-right" style="margin-top:-5px;">
+                      <button type="button" class="btn p-0 bSt"><i class="fas fa-pen color-icon"></i></button>
+                      <button type="button" class="btn py-0 pl-2 bP"><i class="fas fa-trash color-icon"></i></button>
+                    </span>
+                  </h5>
+                </div>
+                <div id="collapseT2" class="collapse" aria-labelledby="headingT2" data-parent="#accordion">
+                  <div class="card-body py-1">
+                    <p><span class="labelcontentT lcname">Name</span> : <span class="valuetracteur">T2</span></p>
+                    <p><span class="labelcontentT lcstatus">Status</span> : <span class="valuetracteur">Active</span></p>
+                    <p><span class="labelcontentT lcfueltype">Type of fuel</span> : <span class="valuetracteur">Diesel</span></p>
+                    <p><span class="labelcontentT lccomsumption">Consumption</span> : <span class="valuetracteur">5.7</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header hclass" id="headingT3" data-toggle="collapse" data-target="#collapseT3" aria-expanded="true" aria-controls="collapseT3">
+                  <h5 class="mb-0">
+                    <span>T3</span>
+                    <span class="float-right" style="margin-top:-5px;">
+                      <button type="button" class="btn p-0 bSt"><i class="fas fa-pen color-icon"></i></button>
+                      <button type="button" class="btn py-0 pl-2 bP"><i class="fas fa-trash color-icon"></i></button>
+                    </span>
+                  </h5>
+                </div>
+                <div id="collapseT3" class="collapse" aria-labelledby="headingT3" data-parent="#accordion">
+                  <div class="card-body py-1">
+                    <p><span class="labelcontentT lcname">Name</span> : <span class="valuetracteur">T3</span></p>
+                    <p><span class="labelcontentT lcstatus">Status</span> : <span class="valuetracteur">Active</span></p>
+                    <p><span class="labelcontentT lcfueltype">Type of fuel</span> : <span class="valuetracteur">Diesel</span></p>
+                    <p><span class="labelcontentT lccomsumption">Consumption</span> : <span class="valuetracteur">5.7</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header hclass" id="headingT4" data-toggle="collapse" data-target="#collapseT4" aria-expanded="true" aria-controls="collapseT4">
+                  <h5 class="mb-0">
+                    <span>T4</span>
+                    <span class="float-right" style="margin-top:-5px;">
+                      <button type="button" class="btn p-0 bSt"><i class="fas fa-pen color-icon"></i></button>
+                      <button type="button" class="btn py-0 pl-2 bP"><i class="fas fa-trash color-icon"></i></button>
+                    </span>
+                  </h5>
+                </div>
+                <div id="collapseT4" class="collapse" aria-labelledby="headingT4" data-parent="#accordion">
+                  <div class="card-body py-1">
+                    <p><span class="labelcontentT lcname">Name</span> : <span class="valuetracteur">T4</span></p>
+                    <p><span class="labelcontentT lcstatus">Status</span> : <span class="valuetracteur">Active</span></p>
+                    <p><span class="labelcontentT lcfueltype">Type of fuel</span> : <span class="valuetracteur">Diesel</span></p>
+                    <p><span class="labelcontentT lccomsumption">Consumption</span> : <span class="valuetracteur">5.7</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <input id="cnomtracteur" type="text" class="form-control" id="cDescription" placeholder="Name" autofocus required>
         </div>
-        <div class="input-group input-group-sm pb-2">
-          <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-toggle-on m-auto"></i></span>
-          </div>
-          <select class="selectpicker form-control form-control-sm" title="Status" required>
-            <option id="actif">Active</option>
-            <option id="inactif">Inactive</option>
-          </select>
+        <div class="col-5" style="border-left: 1px solid rgb(230,230,230);">
+          <h5 class="titlemodale pb-2"><i class="fas fa-angle-right"></i> <span id="haddTracteur">Add a new tractor</span></h5>
+          <form id="formTracteur">
+            <div class="input-group input-group-sm pb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="width:37px;">
+                  <svg class="bi bi-text-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+                </span>
+              </div>
+              <input id="cnomtracteur" type="text" class="form-control" id="cDescription" placeholder="Name" autofocus required>
+            </div>
+            <div class="input-group input-group-sm pb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="width:37px;"><i class="fas fa-toggle-on m-auto"></i></span>
+              </div>
+              <select id="cstatut" class="selectpicker form-control form-control-sm" title="Status" required>
+                <option id="actif">Active</option>
+                <option id="inactif">Inactive</option>
+              </select>
+            </div>
+            <div class="input-group input-group-sm pb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="width:37px;"><i class="fas fa-gas-pump m-auto"></i></span>
+              </div>
+              <select id="ctypefuel" class="selectpicker form-control form-control-sm" title="Type of fuel" required>
+                <option id="actif">Diesel</option>
+                <option id="inaactif">Unleaded gasoline</option>
+                <option id="inaactif">Gasoline</option>
+              </select>
+            </div>
+            <div class="input-group input-group-sm pb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" style="width:37px;"><i class="fas fa-oil-can m-auto"></i></span>
+              </div>
+              <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption" step="0.1" required>
+            </div>
+            <input id="submit-hiddenT" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
+            <div class="text-center"><button id="baddTracteur" class="btn btn-sm btn-success" type="button"><i class="fas fa-plus"></i> <span id="baddT">Add</span></button></div>
+          </form>
         </div>
-        <div class="input-group input-group-sm pb-2">
-          <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-gas-pump m-auto"></i></span>
-          </div>
-          <select class="selectpicker form-control form-control-sm" title="Type of fuel" required>
-            <option id="actif">Diesel</option>
-            <option id="inaactif">Unleaded gasoline</option>
-            <option id="inaactif">Gasoline</option>
-          </select>
-        </div>
-        <div class="input-group input-group-sm pb-2">
-          <div class="input-group-prepend">
-            <span class="input-group-text" style="width:37px;"><i class="fas fa-oil-can m-auto"></i></span>
-          </div>
-          <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption" step="0.1" required>
-        </div>
-        <input id="submit-hiddenT" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button id="bsavetracteur" type="button" class="btn btn-primary bsavechanges">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
