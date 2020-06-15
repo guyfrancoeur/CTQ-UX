@@ -266,9 +266,9 @@ function validationSuppression(x) {
 }
 
 
-// Fonctions qui concernent la modale tracteur __________________________________________________________________________________________________________________________________
-$('#m_t').on('shown.bs.modal', function() {
-    // Couleur tableau liste tracteurs (header)
+// Fonctions qui concernent la modale type équipement  __________________________________________________________________________________________________________________________________
+$('#m_te').on('shown.bs.modal', function() {
+    // Couleur tableau liste type équipements (header)
     $('.hclass').click(function() {
         $(this).addClass("headcolor");
         $(".hclass").not(this).removeClass("headcolor");
@@ -281,113 +281,47 @@ $('#m_t').on('shown.bs.modal', function() {
         validationSuppression($(this).closest(".card"));
     });
 
-    var mode_save_button_tracteur = "add";
-    var nE, cE, loE, laE, hE;
+    var nTE, kTE, coutTE;
     // Boutons modification équipement (crayon)
-    $('.bSt').click(function() {
+    $('.bSte').click(function() {
         event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
-        mode_save_button_tracteur = "set";
-        changerTitresT();
-        $('#cnomtracteur').focus();
+        $('#cNameTE').focus();
         // Récupérer les valeurs de l'équipement en question
-        nT = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(0).find(".valuetracteur");
-        sT = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(1).find(".valuetracteur");
-        tcT = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(2).find(".valuetracteur");
-        cT = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(3).find(".valuetracteur");
+        nTE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(0).find(".valuete");
+        kTE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(1).find(".valuete");
+        coutTE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(2).find(".valuete");
         // Mettre ces valeurs dans le formulaire
-        $('#cnomtracteur').val(nT.html()).change();
-        $('#cstatut').val(sT.html()).change();
-        $('#ctypefuel').val(tcT.html()).change();
-        $('#cconsotracteur').val(cT.html()).change();
+        $('#cNameTE').val(nTE.html()).change();
+        $('#cCleTE').val(kTE.html()).change();
+        $('#cconsoTE').val(coutTE.html()).change();
     });
 
-    function editTract() {
+    function editTE() {
         // Sauvegarder la modification (changement des valeurs dans la liste des équipements)
-        nT.html($('#cnomtracteur').val());
-        sT.html($('#cstatut').val());
-        tcT.html($('#ctypefuel').val());
-        cT.html($('#cconsotracteur').val());
-        nT.closest("p").closest("div").closest(".collapse").prev().find("h5").find("span").eq(0).html($('#cnomtracteur').val());
-        reinitialiserFormuTract();
-        mode_save_button_tracteur = "add";
-    }
-
-    // Ajouter un équipement
-    function addTract() {
-        var nomT = $("#cnomtracteur").val();
-        var statutT = $("#cstatut").val();
-        var typeCarburant = $("#ctypefuel").val();
-        var consoT = $("#cconsotracteur").val();
-        var html = '<div class="card">' +
-            '<div class="card-header hclass" id="heading' + nomT + '" data-toggle="collapse" data-target="#collapse' + nomT + '" aria-expanded="true" aria-controls="collapse' + nomT + '">' +
-            '<h5 class="mb-0">' +
-            '<span>' + nomT + '</span>' +
-            '<span class="float-right" style="margin-top:-5px;">' +
-            '<button type="button" class="btn p-0 bS"><i class="fas fa-pen color-icon"></i></button>' +
-            '<button type="button" class="btn py-0 pl-2 bP"><i class="fas fa-trash color-icon"></i></button>' +
-            '</span>' +
-            '</h5>' +
-            '</div>' +
-            '<div id="collapse' + nomT + '" class="collapse" aria-labelledby="heading' + nomT + '" data-parent="#accordion">' +
-            '<div class="card-body py-1">' +
-            '<p><span class="labelcontentT lcname">Name</span> : <span class="valuetracteur">' + nomT + '</span></p>' +
-            '<p><span class="labelcontentT lcstatus">Status</span> : <span class="valuetracteur">' + statutT + '</span></p>' +
-            '<p><span class="labelcontentT lcfueltype">Type of fuel</span> : <span class="valuetracteur">' + typeCarburant + '</span></p>' +
-            '<p><span class="labelcontentT lccomsumption">Consumption</span> : <span class="valuetracteur">' + consoT + '</span></p>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
-        $('#accordionT').append(html);
-        $('#selectTracteur').append('<option value="' + nomT + '">' + nomT + '</option>').selectpicker('refresh'); // Ajouter le nouveau tracteur au dropdown
-        reinitialiserFormuTract();
+        nTE.html($('#cNameTE').val());
+        kTE.html($('#cCleTE').val());
+        coutTE.html($('#cconsoTE').val());
+        nTE.closest("p").closest("div").closest(".collapse").prev().find("h5").find("span").eq(0).html($('#cNameTE').val());
+        reinitialiserFormuTE();
     }
 
     // Remettre le formulaire à zéro
-    function reinitialiserFormuTract() {
-        $('#cnomtracteur').val("");
-        $('#cstatut').val('default').selectpicker("refresh");
-        $('#ctypefuel').val('default').selectpicker("refresh");
-        $('#cconsotracteur').val("");
+    function reinitialiserFormuTE() {
+        $('#cNameTE').val("");
+        $('#cCleTE').val("");
+        $('#cconsoTE').val("");
     }
 
     // Validation formulaire
-    $("#baddTracteur").click(function() {
-        if (!$("#formTracteur")[0].checkValidity()) {
-            $("#formTracteur").find("#submit-hiddenT").click();
+    $("#breplaceTE").click(function() {
+        if (!$("#formTE")[0].checkValidity()) {
+            $("#formTE").find("#submit-hiddenTE").click();
         } else {
-            if (mode_save_button_tracteur == "add") {
-                addTract();
-                $("#cMessageAddTracteur").show();
-                $("#cMessageEditTracteur").hide();
-            } else {
-                editTract();
-                remettreTitresTract();
-                $("#cMessageEditTracteur").show();
-                $("#cMessageAddTracteur").hide();
-            }
+          editTE();
+          $("#cMessageEditTE").show();
         }
     });
 
-    // Adapter le texte du titre et du bouton pour la modification d'un équipement
-    function changerTitresT() {
-        if ($('#haddTracteur').html() == "Add a new tractor") { // Si en anglais
-            $('#haddTracteur').html("Modify this tractor");
-            $('#baddT').html("Replace");
-        } else { // Si en français
-            $('#haddTracteur').html("Modifier ce tracteur");
-            $('#baddT').html("Remplacer");
-        }
-    }
-
-    function remettreTitresTract() {
-        if ($('#haddTracteur').html() == "Modify this tractor") { // Si en anglais
-            $('#haddTracteur').html("Add a new tractor");
-            $('#baddT').html("Add");
-        } else { // Si en français
-            $('#haddTracteur').html("Ajouter un nouveau tracteur");
-            $('#baddT').html("Ajouter");
-        }
-    }
 });
 
 // Placer le curseur à la fin dans la partie éditable (profil)

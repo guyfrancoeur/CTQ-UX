@@ -135,7 +135,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     color: rgb(50, 50, 50);
 }
 
-.labelcontent {
+.labelcontent, .labelcontentTE {
     font-weight: 700;
     width: 70px;
     float: left;
@@ -263,7 +263,7 @@ table thead, tbody tr {
     table-layout: fixed;
 }
 
-.bset>.color-icon, .btrash>.color-icon, .bS>.color-icon, .bSt>.color-icon, .bP>.color-icon {
+.bset>.color-icon, .btrash>.color-icon, .bS>.color-icon, .bSt>.color-icon, .bSte>.color-icon, .bP>.color-icon {
     color: rgb(150, 150, 150);
 }
 
