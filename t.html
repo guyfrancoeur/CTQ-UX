@@ -66,18 +66,21 @@
   <div class="container col-xl-9 col-lg-9 col-md-10 col-12" id="container">
     <div class="shadow bg-white position-relative bloc-formulaire bloc">
       <div class="tab-content pb-3">
-        <div class="pt-lg-3 pt-0 px-4 col-12 m-auto">
-          <div class="row text-center" style="height:50px;">
+        <div class="pt-3 px-4 col-12 m-auto pb-2 pb-lg-3">
+          <div class="row text-center">
             <div class="col"></div>
-            <div id="ttrucker" class=" col-lg-7 col-12">
-              <h1 id="h1Trucker">Trucker</h1>
+            <div class=" col-lg-7 col-12 pb-2 pb-lg-0">
+              <div id="ttrucker"><h1 id="h1Trucker">Trucker</h1></div>
             </div>
-            <div id="boutonsTrucker" class="col text-right pr-3 ">
+            <div id="boutonsTrucker" class="col text-right pr-3">
               <button id="baddtracteur" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_t">
                 <i class="fas fa-plus"></i> <i class="fas fa-truck"></i>
               </button>
               <button id="baddequipement" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_e">
                 <i class="fas fa-plus"></i> <i class="fas fa-truck-loading"></i>
+              </button>
+              <button id="baddequipement" class="btn btn-outline-secondary btn-sm" type="button" data-toggle="modal" data-target="#m_te" style="line-height: 15px;">
+                <span style="display:block;font-size:12px;text-transform: uppercase;margin-top:-5px;">Type</span><i class="fas fa-truck-loading" style="font-size:13px;"></i>
               </button>
             </div>
           </div>
@@ -103,26 +106,19 @@
                   <div class="justify-content-center d-flex align-items-center">
                     <button id="bsetprofil" type="button" class="btn px-1"><i class="fas fa-pen" style="color:rgb(150,150,150);"></i></button>
                   </div>
-                  <div class="pl-2">
+                  <div class="pl-4">
                     <br/>
                     <p id="cnomEntreprise" class="mb-1" contenteditable=false>Kaiser Transport</p>
                     <span>
                       <p id="nadresse1" class="mb-1" contenteditable=false>67047 LeMoyne, Saint-Lambert</p>
                       <p id="nadresse2" contenteditable=false>Quebec J4R 2T8, Canada</p>
                     </span>
+                    <br/>
+                    <p><i class="fas fa-tag color-icon"></i> Profit : <span id="valeurProfit">X</span></p>
                   </div>
                   <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2">
-                    <button id="bvalidprofil" type="button" class="btn px-1" onclick="validerprofil()"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
+                    <button id="bvalidprofil" type="button" class="btn px-1 mb-1" onclick="validerprofil()"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
                     <button id="bcancelprofil" type="button" class="btn px-1" onclick="validerprofil()"><i class="fas fa-times-circle fa-lg" style="color:#AF2020"></i></button>
-                  </div>
-                </div>
-                <div id="divadresse" class="row pl-0">
-                  <div class="justify-content-center d-flex align-items-center">
-                    
-                  </div>
-                  <div class="pl-4">
-                    <br/>
-                    <p><i class="fas fa-tag color-icon"></i> Profit :</p>
                   </div>
                 </div>
                 <br/>
@@ -302,6 +298,7 @@
   <div id="m_c" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   <div id="m_t" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   <div id="m_e" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
+  <div id="m_te" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   <div id="m_v" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   
   <script defer src="./js/t.js"></script>

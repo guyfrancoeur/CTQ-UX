@@ -27,7 +27,7 @@
   height:295px;
 }
 
-/* Désactiver les flèches dans les input number */
+/* Dï¿½sactiver les flï¿½ches dans les input number */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -223,7 +223,8 @@ ul.listec li{
 
 #A, #B, #C{
   cursor:pointer;
-}
+}
+
 
 #addcourriel:hover{
   background-color:rgb(1,13,40);
@@ -283,3 +284,20 @@ ul.listec li{
   opacity:0;
   position:absolute;
 }
+
+#toast1{
+  position: absolute;
+  top: 5rem;
+  left:1rem;
+  min-width:250px;
+  height:100px;
+}
+
+.toast-body{
+  background-color:white;
+}
+
+.toast-header{
+  border:none;
+}
+

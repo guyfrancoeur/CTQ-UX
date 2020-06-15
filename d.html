@@ -146,9 +146,9 @@
                     <div class="input-group pb-2 pr-xl-3">
                       <select onchange="champRempli(this)" id="crequirements" class="selectpicker dropup form-control form-control-sm" multiple title="Any requirements?" data-width="auto" width="auto">
                        <option id="crefrigerated" data-icon="fa fa-thermometer-empty" data-subtext="1" value="1">Refrigerated</option>
-                       <option data-icon="fa fa-fighter-jet" data-subtext="2" value="2">Rush-ASAP</option>
-                       <option data-icon="fa fa-fire" data-subtext="4" value="4">Hazardous</option>
-                       <option data-icon="fa fa-eye" data-subtext="8" value="8">Oversized</option>
+                       <option id="crush" data-icon="fa fa-fighter-jet" data-subtext="2" value="2">Rush-ASAP</option>
+                       <option id="chazardous" data-icon="fa fa-fire" data-subtext="4" value="4">Hazardous</option>
+                       <option id="coversized" data-icon="fa fa-eye" data-subtext="8" value="8">Oversized</option>
                       </select>
                     </div>
                   </div>
@@ -280,10 +280,21 @@
 
 <!-- Toast Bootstrap -->
 <div class="toast bg-light" id="toast1" data-autohide="false" style="position: absolute; top: 5rem; left:1rem; min-width:250px; height:100px;" aria-live="polite" aria-atomic="true">
+  <!--
   <div class="toast-header">
-    <strong class="mr-auto"></strong>
+    <div class="mr-auto"></div>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
   </div>
+  -->
+  <div class="toast-header p-0 m-0">
+      <div class="col"></div>
+      <div class="col text-center">
+        <i class="fa fa-info-circle fa-2x" style="margin-top:11px;color:rgb(240,240,240);"></i>
+      </div>
+      <div class="col text-right">
+        <button type="button" class="close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    </div>
   <div class="toast-body text-center">
     <strong class="mr-auto">Available trucks :  <span class="badge badge-warning">4</span></strong>
   </div>

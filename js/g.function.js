@@ -6,8 +6,12 @@ $('.translate').click(function() {
     dataType: "json",
     success:function(data){ 
       $.each(data, function(index, x) {
-        console.log("yes");
         if(x.propriete == "text") $(x.obj).text(x.value);
+        if(x.propriete == "title") $(x.obj).selectpicker({title: x.value}).selectpicker('render');
+        if(x.propriete == "textdrop"){
+          $(x.obj).text(x.value);
+          $(x.obj).closest("select").selectpicker('refresh');
+        }
         else{
           $(x.obj).attr(x.propriete, x.value);
         }
