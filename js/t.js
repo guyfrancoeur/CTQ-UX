@@ -127,9 +127,7 @@ $('#m_e').on('shown.bs.modal', function() {
     $('.bP').click(function() {
         event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
         $('#m_v').modal('show');
-        validationSuppression($(this).closest(".card"));
-        $("#cMessageEquipement").html("<i class='far fa-check-circle'></i> Equipment deleted !")
-        $("#cMessageEquipement").show();
+        validationSuppression($(this).closest(".card"),"equipement");
     });
 
     var mode_save_button_equipement = "add";
@@ -215,20 +213,22 @@ $('#m_e').on('shown.bs.modal', function() {
         } else {
             if (mode_save_button_equipement == "add") {
                 addEqui();
-                $("#cMessageEquipement").html("<i class='far fa-check-circle'></i> Equipment added !")
-                $("#cMessageEquipement").show();
+                $("#cMessageEditEquipement").hide();
+                $("#cMessageDeleteEquipement").hide();
+                $("#cMessageAddEquipement").show(0).delay(10000).hide(0);
             } else {
                 editEqui();
                 remettreTitresEqui();
-                $("#cMessageEquipement").html("<i class='far fa-check-circle'></i> Equipment modified !")
-                $("#cMessageEquipement").show();
+                $("#cMessageAddEquipement").hide();
+                $("#cMessageDeleteEquipement").hide();
+                $("#cMessageEditEquipement").show(0).delay(10000).hide(0);
             }
         }
     });
 
     // Adapter le texte du titre et du bouton pour la modification d'un équipement
     function changerTitres() {
-        if ($('#haddEqui').html() == "Add a new equipment") { // Si en anglais
+        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
             $('#haddEqui').html("Modify this equipment");
             $('#baddE').html("Replace");
         } else { // Si en français
@@ -238,7 +238,7 @@ $('#m_e').on('shown.bs.modal', function() {
     }
 
     function remettreTitresEqui() {
-        if ($('#haddEqui').html() == "Modify this equipment") { // Si en anglais
+        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
             $('#haddEqui').html("Add a new equipment");
             $('#baddE').html("Add");
         } else { // Si en français
@@ -247,25 +247,6 @@ $('#m_e').on('shown.bs.modal', function() {
         }
     }
 });
-
-// Validation formulaire modale camion
-$('#m_c').on('shown.bs.modal', function() {
-    $("#bsavecamion").click(function() {
-        if (!$("#formCamion")[0].checkValidity()) {
-            $("#formCamion").find("#submit-hiddenC").click();
-        }
-    });
-});
-
-function validationSuppression(x) {
-    $(".bYes").click(function() {
-        x.remove();
-        $('#m_v').modal('hide');
-    });
-    $(".bNo").click(function() {
-        $('#m_v').modal('hide');
-    });
-}
 
 // Fonctions qui concernent la modale tracteur __________________________________________________________________________________________________________________________________
 $('#m_t').on('shown.bs.modal', function() {
@@ -279,9 +260,7 @@ $('#m_t').on('shown.bs.modal', function() {
   $('.bP').click(function() {
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     $('#m_v').modal('show');
-    validationSuppression($(this).closest(".card"));
-    $("#cMessageTracteur").html("<i class='far fa-check-circle'></i> Tractor deleted !")
-    $("#cMessageTracteur").show();
+    validationSuppression($(this).closest(".card"),"tracteur");
   });
 
   var mode_save_button_tracteur = "add";
@@ -361,21 +340,23 @@ $('#m_t').on('shown.bs.modal', function() {
     else{
       if (mode_save_button_tracteur == "add"){
         addTract();
-        $("#cMessageTracteur").html("<i class='far fa-check-circle'></i> Tractor added !")
-        $("#cMessageTracteur").show();
+        $("#cMessageEditTracteur").hide();
+        $("#cMessageDeleteTracteur").hide();
+        $("#cMessageAddTracteur").show(0).delay(10000).hide(0); 
       }
       else{
         editTract();
         remettreTitresTract();
-        $("#cMessageTracteur").html("<i class='far fa-check-circle'></i> Tractor modified !")
-        $("#cMessageTracteur").show();
+        $("#cMessageDeleteTracteur").hide();
+        $("#cMessageAddTracteur").hide();
+        $("#cMessageEditTracteur").show(0).delay(10000).hide(0);
       }
     }
   });
 
   // Adapter le texte du titre et du bouton pour la modification d'un tracteur
   function changerTitresT(){
-    if ($('#haddTracteur').html() == "Add a new tractor"){ // Si en anglais
+    if ($('#en').hasClass("currentlanguage")){ // Si en anglais
       $('#haddTracteur').html("Modify this tractor");
       $('#baddT').html("Replace");
     }
@@ -385,7 +366,7 @@ $('#m_t').on('shown.bs.modal', function() {
     }
   }
   function remettreTitresTract(){
-    if ($('#haddTracteur').html() == "Modify this tractor"){ // Si en anglais
+    if ($('#en').hasClass("currentlanguage")){ // Si en anglais
       $('#haddTracteur').html("Add a new tractor");
       $('#baddT').html("Add");
     }
@@ -409,9 +390,7 @@ $('#m_te').on('shown.bs.modal', function() {
     $('.bP').click(function() {
         event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
         $('#m_v').modal('show');
-        validationSuppression($(this).closest(".card"));
-        $("#cMessageTE").html("<i class='far fa-check-circle'></i> Equipment type deleted !")
-        $("#cMessageTE").show();
+        validationSuppression($(this).closest(".card"),"TE");
     });
 
     var nTE, kTE, coutTE;
@@ -451,13 +430,14 @@ $('#m_te').on('shown.bs.modal', function() {
             $("#formTE").find("#submit-hiddenTE").click();
         } else {
           editTE();
-          $("#cMessageTE").html("<i class='far fa-check-circle'></i> Equipment type modified !")
-          $("#cMessageTE").show();
+          $("#cMessageDeleteTE").hide();
+          $("#cMessageAddTE").hide();
+          $("#cMessageEditTE").show(0).delay(10000).hide(0); 
         }
     });
 
 });
-
+// _________________________________________________________________________________________________________________________
 // Placer le curseur à la fin dans la partie éditable (profil)
 function placeCaretAtEnd(el) {
     el.focus();
@@ -479,3 +459,48 @@ $(document).on('show.bs.modal', '.modal', function() {
         $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
     }, 0);
 });
+
+// Validation formulaire modale camion
+$('#m_c').on('shown.bs.modal', function() {
+  $("#bsavecamion").click(function() {
+      if (!$("#formCamion")[0].checkValidity()) {
+          $("#formCamion").find("#submit-hiddenC").click();
+      }
+  });
+});
+
+// Validation suppression (modale)
+function messageSupprEquipement() {
+  $("#cMessageEditEquipement").hide();
+  $("#cMessageAddEquipement").hide();
+  $("#cMessageDeleteEquipement").show(0).delay(10000).hide(0); 
+}
+function messageSupprTracteur() {
+  $("#cMessageEditTracteur").hide();
+  $("#cMessageAddTracteur").hide();
+  $("#cMessageDeleteTracteur").show(0).delay(10000).hide(0);
+}
+function messageSupprTE() {
+  $("#cMessageEditTE").hide();
+  $("#cMessageAddTE").hide();
+  $("#cMessageDeleteTE").show(0).delay(10000).hide(0);
+}
+
+function validationSuppression(x,obj) {
+  $(".bYes").click(function() {
+      x.remove();
+      $('#m_v').modal('hide');
+      if (obj == "tracteur"){
+        messageSupprTracteur();
+      }
+      if (obj == "equipement"){
+        messageSupprEquipement();
+      }
+      if (obj == "TE"){
+        messageSupprTE();
+      }
+  });
+  $(".bNo").click(function() {
+      $('#m_v').modal('hide');
+  });
+}

@@ -1,6 +1,13 @@
 /* ********* Languages ********* */
 $('.translate').click(function() {
   var lang = $(this).attr('id');
+  if (lang == "fr"){
+    $("#fr").addClass("currentlanguage");
+    $("#en").removeClass("currentlanguage");
+  }else{
+    $("#en").addClass("currentlanguage");
+    $("#fr").removeClass("currentlanguage");
+  }
   $.ajax({
     url: "./data/" + lang + ".json",
     dataType: "json",
