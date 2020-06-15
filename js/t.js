@@ -128,6 +128,8 @@ $('#m_e').on('shown.bs.modal', function() {
         event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
         $('#m_v').modal('show');
         validationSuppression($(this).closest(".card"));
+        $("#cMessageEquipement").html("<i class='far fa-check-circle'></i> Equipment deleted !")
+        $("#cMessageEquipement").show();
     });
 
     var mode_save_button_equipement = "add";
@@ -213,13 +215,13 @@ $('#m_e').on('shown.bs.modal', function() {
         } else {
             if (mode_save_button_equipement == "add") {
                 addEqui();
-                $("#cMessageAddEquipement").show();
-                $("#cMessageEditEquipement").hide();
+                $("#cMessageEquipement").html("<i class='far fa-check-circle'></i> Equipment added !")
+                $("#cMessageEquipement").show();
             } else {
                 editEqui();
                 remettreTitresEqui();
-                $("#cMessageEditEquipement").show();
-                $("#cMessageAddEquipement").hide();
+                $("#cMessageEquipement").html("<i class='far fa-check-circle'></i> Equipment modified !")
+                $("#cMessageEquipement").show();
             }
         }
     });
@@ -275,14 +277,18 @@ $('#m_t').on('shown.bs.modal', function() {
 
   // Bouton suppression tracteur (trash)
   $('.bP').click(function() {
+    event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     $('#m_v').modal('show');
     validationSuppression($(this).closest(".card"));
+    $("#cMessageTracteur").html("<i class='far fa-check-circle'></i> Tractor deleted !")
+    $("#cMessageTracteur").show();
   });
 
   var mode_save_button_tracteur = "add";
   var nT, sT, tcT, cT;
   // Boutons modification tracteur (crayon)
   $('.bSt').click(function() {
+    event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     mode_save_button_tracteur = "set";
     changerTitresT();
     $('#cnomtracteur').focus();
@@ -355,14 +361,14 @@ $('#m_t').on('shown.bs.modal', function() {
     else{
       if (mode_save_button_tracteur == "add"){
         addTract();
-        $("#cMessageAddTracteur").show();
-        $("#cMessageEditTracteur").hide();
+        $("#cMessageTracteur").html("<i class='far fa-check-circle'></i> Tractor added !")
+        $("#cMessageTracteur").show();
       }
       else{
         editTract();
         remettreTitresTract();
-        $("#cMessageEditTracteur").show();
-        $("#cMessageAddTracteur").hide();
+        $("#cMessageTracteur").html("<i class='far fa-check-circle'></i> Tractor modified !")
+        $("#cMessageTracteur").show();
       }
     }
   });
@@ -404,6 +410,8 @@ $('#m_te').on('shown.bs.modal', function() {
         event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
         $('#m_v').modal('show');
         validationSuppression($(this).closest(".card"));
+        $("#cMessageTE").html("<i class='far fa-check-circle'></i> Equipment type deleted !")
+        $("#cMessageTE").show();
     });
 
     var nTE, kTE, coutTE;
@@ -443,7 +451,8 @@ $('#m_te').on('shown.bs.modal', function() {
             $("#formTE").find("#submit-hiddenTE").click();
         } else {
           editTE();
-          $("#cMessageEditTE").show();
+          $("#cMessageTE").html("<i class='far fa-check-circle'></i> Equipment type modified !")
+          $("#cMessageTE").show();
         }
     });
 
