@@ -28,6 +28,7 @@ var mode_save_button_camion;
 var current_col;
 $('.bset').click(function() {
     mode_save_button_camion = "set";
+    $('#cdescription').focus();
     current_col = $(this).closest("tr");
     var desctiption = $(current_col).find("td").eq(0).find("button").attr('data-original-title');
     var tracteur = $(current_col).find("td").eq(1).html();
@@ -40,6 +41,7 @@ $('.bset').click(function() {
 // Bouton ajout camion, réinitialiser la sélection (dropdown)
 $('#bajoutcamion').click(function() {
     mode_save_button_camion = "add";
+    $('#cdescription').focus();
     $("#selectTracteur").val("").change();
     $("#selectEquipement").val("").change();
 });
