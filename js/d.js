@@ -10,8 +10,8 @@ $( document ).ready(function() { // ou $(function () {
   $("#bcloseResults").hide();
   
   // Chargement contenu modale
-  $('#m_d3').load('./m.d3.html');
-  $('#m_results').load('./m.results.html');
+  $('#m_courriels').load('./m.courriels.html');
+  $('#m_d_map').load('./m.d.map.html');
   
   // Toasts Bootstrap (nombre camions disponibles)
   $(".div-item").hide();
@@ -19,7 +19,8 @@ $( document ).ready(function() { // ou $(function () {
 
 // Toggle button
 unite = 'm';
-$(".toggle-button-cover").click(function() {
+$("#button-6").click(function() {
+  console.log("here");
   if(unite == "m"){
     $('.cUnite').html("pi");
     unite = "pi";

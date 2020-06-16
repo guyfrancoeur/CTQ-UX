@@ -285,15 +285,7 @@ ul.listec li{
   position:absolute;
 }
 
-#toast1{
-  position: absolute;
-  top: 5rem;
-  left:1rem;
-  min-width:250px;
-  height:100px;
-}
-
-.toast-body{
+.toast-body, .toast, .toast-header{
   background-color:white;
 }
 
@@ -301,3 +293,6 @@ ul.listec li{
   border:none;
 }
 
+#bmapD{
+  font-size:13px;
+}

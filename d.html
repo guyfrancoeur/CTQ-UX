@@ -234,7 +234,7 @@
                                   </div>
                                 </div>
                                 <div class="text-center pt-0 pt-xl-2 col-2 col-xl-12">
-                                  <button id="addcourriel" class="btn btn-outline-secondary btn-sm" style="width:50px;height:35px;" type="button" data-toggle="modal" data-target="#m_d3" disabled>
+                                  <button id="addcourriel" class="btn btn-outline-secondary btn-sm" style="width:50px;height:35px;" type="button" data-toggle="modal" data-target="#m_courriels" disabled>
                                     <i class="fas fa-plus"></i> <i class="fas fa-envelope"></i>
                                   </button>
                                 </div>
@@ -279,24 +279,21 @@
 <br/>
 
 <!-- Toast Bootstrap -->
-<div class="toast bg-light" id="toast1" data-autohide="false" style="position: absolute; top: 5rem; left:1rem; min-width:250px; height:100px;" aria-live="polite" aria-atomic="true">
-  <!--
-  <div class="toast-header">
-    <div class="mr-auto"></div>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
-  </div>
-  -->
+<div class="toast bg-light m-0" id="toast1" data-autohide="false" data-animation="true" style="position: absolute; top: 5rem; left:1rem; width:280px;" aria-live="polite" aria-atomic="true">
   <div class="toast-header p-0 m-0">
       <div class="col"></div>
       <div class="col text-center">
-        <i class="fa fa-info-circle fa-2x" style="margin-top:11px;color:rgb(240,240,240);"></i>
+        <i class="fa fa-info-circle fa-2x" style="margin-top:11px;color:rgb(230,230,230);"></i>
       </div>
       <div class="col text-right">
         <button type="button" class="close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
     </div>
   <div class="toast-body text-center">
-    <strong class="mr-auto">Available trucks :  <span class="badge badge-warning">4</span></strong>
+    <p><strong class="mr-auto">Available trucks :  <span class="badge badge-warning">4</span></strong></p>
+    <button id="bmapD" class="btn py-0 px-2 btn-outline-dark" type="button" data-toggle="modal" data-target="#m_d_map">
+      See the list of available trucks <i class="fas fa-search-plus"></i></button>
+    
   </div>
 </div>
 
@@ -307,7 +304,8 @@
 <!-- ************* FOOTER ************* -->
 
   <!-- Modales -->
-  <div id="m_d3" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
+  <div id="m_courriels" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
+  <div id="m_d_map" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;"></div>
   
   <script src="./js/g.function.js"></script>  
   <script src="./js/d.js"></script>

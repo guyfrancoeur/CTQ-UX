@@ -163,20 +163,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     font-size: 14px;
 }
 
-#m_e h3, #m_t h3, #m_te h3 {
-    font-size: 26px;
-    letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(60, 60, 60);
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px rgb(235, 235, 235);
-    border-radius: 0px;
-    background-color: rgb(254, 254, 254);
-    box-shadow: 3px 3px 3px rgb(247, 247, 247);
-    padding-bottom: 10px;
-}
-
 #m_e .card-body p, #m_t .card-body p, #m_te .card-body p {
     margin-bottom: 0;
     font-size: 15px;
@@ -202,36 +188,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     box-shadow: 2px 2px 2px 2px rgb(247, 247, 247) inset;
 }
 
-.iconModale {
-    color: white;
-}
-
-.divIconeModale {
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-    border-top-left-radius: 3px;
-    padding-right: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    opacity: 98%;
-}
-
-#ticket {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 20px solid #7C4204;
-    left: -20px;
-    top: 48px;
-    position: absolute;
-}
-
 .table tbody th {
     padding-left: 0px;
     width: 60px;
@@ -247,10 +203,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     padding-left: 10px;
     width: 50px;
     margin:0px;
-}
-
-.dropdown-menu {
-    font-size: 14px;
 }
 
 table tbody {
@@ -351,6 +303,15 @@ table thead, tbody tr {
         margin-right: 10px;
     }
 }
+@media (max-width:1372px) and (min-width:1198px) {
+  .flex-column {
+      flex-direction: row !important;
+      margin-right: auto;
+  }
+  #bvalidprofil {
+      margin-right: 10px;
+  }
+}​
 
 #bcancelprofil, #bvalidprofil {
     width: 39px;
