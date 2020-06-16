@@ -4,6 +4,7 @@ $(document).ready(function() {
     $('#m_e').load('./m.e.html');
     $('#m_te').load('./m.te.html');
     $('#m_v').load('./m.v.html');
+    $('#m_t_map').load('./m.t.map.html');
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
     $('.selectpicker').selectpicker();
@@ -487,7 +488,6 @@ function messageSupprTE() {
   $("#cMessageAddTE").hide();
   $("#cMessageDeleteTE").show(0).delay(10000).hide(0);
 }
-
 function validationSuppression(x,obj) {
   $(".bYes").click(function() {
       x.remove();
@@ -506,3 +506,34 @@ function validationSuppression(x,obj) {
       $('#m_v').modal('hide');
   });
 }
+
+
+// Si au moins un camion est sélectionné (checkbox), on rend visible le bouton pour la modale qui contient une map
+$( ".custom-control-input" ).change(function() {
+  if (countCheckedTruck() >= 1){
+    $("#bmaptrucker").prop("disabled",false);
+  }
+  if (countCheckedTruck() == 0){
+    $("#bmaptrucker").prop("disabled",true);
+  }
+});
+function countCheckedTruck(){ // Compte le nombre de checkbox sélectionnés
+  var checkedTruck = $(".custom-control-input:checked");
+  return checkedTruck.length;
+}
+
+// Récupère les infos des camions sélectionnés, et les affiche dans la modale map
+$("#bmaptrucker").click(function() {
+  var checkedTruck = $(".custom-control-input:checked");
+  $.each( checkedTruck, function( i, val ) {
+    var tract = $(val).closest("td").next("td").html();
+    var cam = $(val).closest("td").next("td").next("td").html();
+    var posi = $(val).closest("td").next("td").next("td").next("td").find(".cpostalcode").val();
+    $("#cselectedTrucks").append('<li>' + tract + " " + cam + " " + posi +'</li>');
+  });
+});
+
+// Quand on ferme la modale map (trucker), les anciens camions sélectionnés s'effacent
+$('#m_t_map').on('hidden.bs.modal', function (e) {
+  $("#cselectedTrucks").html("");
+});

@@ -244,7 +244,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 #colEdit2, .table tbody td:nth-child(1) {
     padding-right: 0px;
-    width: 30px;
+    padding-left: 10px;
+    width: 50px;
+    margin:0px;
 }
 
 .dropdown-menu {
