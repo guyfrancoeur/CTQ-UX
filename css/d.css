@@ -129,14 +129,15 @@ input[type=number] {
   opacity:90%;
 }
 .slide-text {
-  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Sunflower', sans-serif;
   font-style:italic;
   font-weight: 700;
   padding-top:8px;
   margin-right:-10px;
 }
 .slide .text{
-  background-color: rgb(1,13,40);
+  background-image: linear-gradient(to right,rgba(1,13,40,0.93), rgb(1,13,40));
   color: white;
   padding-left: 10px;
   padding-top: 10px;
@@ -273,11 +274,12 @@ ul.listec li{
   background: rgba(1,13,40,.8);
 }
 
-#cmev, #hOrigineDestination, #itinerary{
-  letter-spacing: 1px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight:bold;
+#cmev, #cinfochargement, #itinerary{
+  letter-spacing: 1.5px;
   color:rgba(1,13,40,.8);
+  font-family: 'Sunflower', sans-serif;
+  font-size: 22px;
+  font-weight:500;
 }
 
 .groupcheckbox{
@@ -295,4 +297,10 @@ ul.listec li{
 
 #bmapD{
   font-size:13px;
+}
+
+hr.style-two {
+  border: 0;
+  height: 0.1px;
+  background-image: linear-gradient(to right,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }

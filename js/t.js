@@ -511,6 +511,7 @@ function validationSuppression(x,obj) {
 // Si au moins un camion est sélectionné (checkbox), on rend visible le bouton pour la modale qui contient une map
 $( ".custom-control-input" ).change(function() {
   if (countCheckedTruck() >= 1){
+    if (countCheckedTruck() == 1 && ($(this).is(":checked"))) animationMap();
     $("#bmaptrucker").prop("disabled",false);
   }
   if (countCheckedTruck() == 0){
@@ -537,3 +538,14 @@ $("#bmaptrucker").click(function() {
 $('#m_t_map').on('hidden.bs.modal', function (e) {
   $("#cselectedTrucks").html("");
 });
+
+// Lance l'animation pour le bouton map
+function animationMap() {
+  $("#bmaptrucker").addClass("animationmap");
+  $(".animationmap").css("-webkit-animation-play-state", "running");
+  $('.animationmap').on("animationend", function(){
+    setTimeout(function() { 
+      $("#bmaptrucker").removeClass("animationmap");
+    }, 1000);
+  });
+}

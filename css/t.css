@@ -16,18 +16,28 @@ tbody tr:hover {
     color: rgb(247, 247, 249);
 }
 
+.color-help{
+    cursor:pointer;
+    color:rgb(247,247,247);
+}
+
 #tprofil, #htruck {
     letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     color: rgb(247, 247, 249);
     font-size: 22px;
 }
 
 .card:hover .cardstyle {
-    background: linear-gradient(to top right, rgba(1, 13, 40, .8), rgba(1, 13, 40, .7));
+    background: linear-gradient(rgba(1, 13, 40, .7), rgba(1, 13, 40, .8));
     color: white;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     transition-duration: 500ms;
+}
+
+.cardstyle {
+    height: 50px;
+    background: linear-gradient(rgb(80, 80, 80),rgb(50, 50, 50));
 }
 
 .card:hover {
@@ -45,12 +55,13 @@ tbody tr:hover {
     height: 70px;
     padding-top: 13px;
     text-shadow: 3px 3px 3px rgb(220, 220, 220);
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 #h1Trucker {
     font-size: 30px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: rgb(60, 60, 60);
 }
@@ -75,11 +86,6 @@ tbody {
     font-size: .875rem;
 }
 
-.cardstyle {
-    height: 50px;
-    background: linear-gradient(to top right, rgb(50, 50, 50), rgb(70, 70, 70));
-}
-
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -96,7 +102,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .editeffect {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     transition-duration: 300ms;
-    background-color: rgb(250, 250, 250)
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(245,245,245);
 }
 
 .setprofile {
@@ -105,6 +112,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     box-shadow: 1px 1px 1px 0 lightgray inset;
     padding: 0px 3px;
     background-color: white;
+    width:250px;
 }
 
 #divadresse {
@@ -131,8 +139,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .titlemodale {
     font-size: 18px;
     letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(50, 50, 50);
+    color: rgba(1,13,40,.8);
+    font-weight:500;
 }
 
 .labelcontent, .labelcontentTE {
@@ -218,7 +226,7 @@ table thead, tbody tr {
 }
 
 .bset>.color-icon, .btrash>.color-icon, .bS>.color-icon, .bSt>.color-icon, .bSte>.color-icon, .bP>.color-icon {
-    color: rgb(150, 150, 150);
+    color: rgb(190,190,190);
 }
 
 #hTruck {
@@ -294,25 +302,6 @@ table thead, tbody tr {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .flex-column {
-        flex-direction: row !important;
-        margin-right: auto;
-    }
-    #bvalidprofil {
-        margin-right: 10px;
-    }
-}
-@media (max-width:1372px) and (min-width:1198px) {
-  .flex-column {
-      flex-direction: row !important;
-      margin-right: auto;
-  }
-  #bvalidprofil {
-      margin-right: 10px;
-  }
-}​
-
 #bcancelprofil, #bvalidprofil {
     width: 39px;
 }
@@ -324,9 +313,33 @@ table thead, tbody tr {
 
 #bcancelprofil:active {
     border: 1px solid #8D1C1C;
-    border-radius: 60px;
+    border-radius: 80px;
 }
 
 #valeurProfit {
     padding-right: 20px;
 }
+
+.animationmap{
+    animation-name: animMap;
+    animation-duration: 500ms;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+  }
+  @keyframes animMap {
+    0% {
+      font-size:1rem;
+    }
+    50% {
+        font-size:1.3rem;
+    }
+    100% {
+        font-size:1rem;
+    }
+  }
+
+  hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  }

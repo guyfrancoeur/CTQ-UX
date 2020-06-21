@@ -22,8 +22,10 @@ body {
 }
 
 .class-footer{
-  font-size:15px;
+  font-size:14.5px;
   padding:1px;
+  font-weight:400;
+  color:rgb(200,200,200);
 }
 
 .navbar {
@@ -87,6 +89,9 @@ body {
 #forgot, #forgot:active, #forgot:visited{
   color : rgb(100,100,100);
   font-size:13px;
+}
+#clogintitle{
+font-size:36px;
 }
 
 #lslider{
@@ -170,11 +175,11 @@ body {
   position: absolute;
 }
 
-#m_e h3, #m_t h3, #m_te h3, #m_t-map h3, #m_d_map h3 {
+#m_e h3, #m_t h3, #m_te h3, #m_t-map h3, #m_d_map h3, #m_t_map h3, #tmcourriels {
   font-size: 26px;
   letter-spacing: 1px;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(60, 60, 60);
+  color: rgba(1,13,40,.8);
   font-weight: 500;
   letter-spacing: 2px;
   text-shadow: 2px 2px 2px rgb(235, 235, 235);
@@ -182,4 +187,5 @@ body {
   background-color: rgb(254, 254, 254);
   box-shadow: 3px 3px 3px rgb(247, 247, 247);
   padding-bottom: 10px;
+  font-family: 'Julius Sans One', sans-serif;
 }

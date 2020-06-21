@@ -4,7 +4,7 @@
       <div class="divIconeModale"><i class="fas fa-truck-loading fa-lg iconModale"></i></div>
       <div id="ticket"></div>
       <div class="col"></div>
-      <div class="col text-center"><h3 id="hTracteur" class="modal-title">Tractor</h3></div>
+      <div class="col text-center"><h3 id="hTracteur" class="modal-title px-4">Tractor</h3></div>
       <div class="col text-right">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -21,9 +21,9 @@
     <br/>
     <div class="modal-body">
       <div class="row">
-        <div class="col-7">
+        <div class="col-xl-7 col-12 pb-xl-0 pb-4">
           <h5 class="titlemodale"><i class="fas fa-angle-right"></i> <span id="hYourTractor">Your tractors</span></h5>
-          <div style="height:250px;overflow-y:scroll;">
+          <div style="height:250px;overflow-y:scroll;border-bottom:1px solid rgb(240,240,240);">
             <div id="accordionT" class="py-2 pr-2">
               <div class="card">
                 <div class="card-header hclass" id="headingT1" data-toggle="collapse" data-target="#collapseT1" aria-expanded="true" aria-controls="collapseT1">
@@ -104,7 +104,7 @@
             </div>
           </div>
         </div>
-        <div class="col-5" style="border-left: 1px solid rgb(230,230,230);">
+        <div class="col-xl-5 col-12" style="border-left: 1px solid rgb(230,230,230);">
           <h5 class="titlemodale pb-2"><i class="fas fa-angle-right"></i> <span id="haddTracteur">Add a new tractor</span></h5>
           <form id="formTracteur">
             <div class="input-group input-group-sm pb-2">
@@ -142,6 +142,7 @@
               </div>
               <input id="cconsotracteur" type="number" class="form-control" placeholder="Consumption" step="0.1" required>
             </div>
+            <br/>
             <input id="submit-hiddenT" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
             <div class="text-center"><button id="baddTracteur" class="btn btn-sm btn-success" type="button"><i class="fas fa-plus"></i> <span id="baddT">Add</span></button></div>
           </form>
