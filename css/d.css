@@ -304,3 +304,21 @@ hr.style-two {
   height: 0.1px;
   background-image: linear-gradient(to right,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
+
+.animationnbcamions{
+  animation-name: animNbC;
+  animation-duration: 500ms;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+@keyframes animNbC {
+  0% {
+    font-size:75%;
+  }
+  50% {
+      font-size:100%;
+  }
+  100% {
+      font-size:75%;
+  }
+}

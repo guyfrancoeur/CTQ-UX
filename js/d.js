@@ -153,11 +153,16 @@ function selection(elem){
 var tabChampsRemplis = [false,false,false,false,false,false]
 var reduction = 0;
 var ancienneReduction = 0;
+var nbCamionsDispo = 20;
+var ancien = 0;
 // [length,width,height,weight,value,requirements]
+// Déclencher la fonction quand au moins 1 caractère est entré
+$(".champRempli").on("keyup", function() {
+  champRempli($(this));
+});
 function champRempli(elem){
   // Affichage des camions disponibles : toast Bootstrap
   $('#toast1').toast('show');
-  
   nbChampsRemplis = 0;
   if(($(elem).val() == "") || ($(elem).val() == [])){
     if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
@@ -178,8 +183,15 @@ function champRempli(elem){
   for(var i in tabChampsRemplis){
     if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
   }
+  // Changmenet du nb de camions disponibles en fonction du nb de champs remplis
+  var nouveau = Math.round((nbChampsRemplis/6)*nbCamionsDispo);
+  if(nouveau != ancien){
+    $("#nbcamions").html(nouveau);
+    animationNbCamions();
+  }
+  ancien = nouveau;
+
   reduction = (nbChampsRemplis * 0.1).toFixed(2);
-  console.log(tabChampsRemplis);
   if(nbChampsRemplis == 0){
     $("#creduction").text("");
     $("#textreduction").text("");
@@ -214,6 +226,17 @@ function champRempli(elem){
   ancienneReduction = reduction;
 }
 
+// Animation changmenet nb camions dispo
+function animationNbCamions() {
+  $("#nbcamions").addClass("animationnbcamions");
+  $(".animationnbcamions").css("-webkit-animation-play-state", "running");
+  $('.animationnbcamions').on("animationend", function(){
+    setTimeout(function() { 
+      $("#nbcamions").removeClass("animationnbcamions");
+    }, 700);
+  });
+}
+
 function ifCoutIsSet(){
   if (cout != 0){
     cout = (parseFloat(cout) - 0.10).toFixed(2);
@@ -238,6 +261,7 @@ function animationReduction() {
     }, 1000);
   });
 }
+
 
 // Tooltip on ToggleButton
 $("#cheight").focus(function() {

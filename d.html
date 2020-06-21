@@ -120,31 +120,31 @@
                       <!-- Toggle Button -->
                     </h5>
                     <div class="input-group input-group-sm pb-2 pr-xl-3">
-                      <input onchange="champRempli(this)" type="number" class="form-control" id="clongueur" placeholder="Length" min="0">
+                      <input type="number" class="form-control champRempli" id="clongueur" placeholder="Length" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
                     <div class="input-group input-group-sm pb-2 pr-xl-3">
-                      <input onchange="champRempli(this)" type="number" class="form-control" id="cwidth" placeholder="Width" min="0">
+                      <input type="number" class="form-control champRempli" id="cwidth" placeholder="Width" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
                     <div class="input-group input-group-sm pb-2 pr-xl-3">
-                      <input onchange="champRempli(this)" type="number" class="form-control" id="cheight" placeholder="Height" min="0">
+                      <input type="number" class="form-control champRempli" id="cheight" placeholder="Height" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1 cUnite">m</span>
                       </div>
                     </div>
                     <div class="input-group input-group-sm pb-2 pr-xl-3">
-                      <input onchange="champRempli(this)" type="number" class="form-control" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
+                      <input type="number" class="form-control champRempli" id="cweight" placeholder="Weight" aria-label="Weight" min="0">
                       <div class="input-group-append">
                        <span class="input-group-text size1">kg</span>
                       </div>
                     </div>
                     <div class="input-group input-group-sm pb-2 pr-xl-3">
-                      <input onchange="champRempli(this)" id="cvalue" type="number" class="form-control" placeholder="Value" aria-label="Value ($)" min="0">
+                      <input id="cvalue" type="number" class="form-control champRempli" placeholder="Value" aria-label="Value ($)" min="0">
                       <div class="input-group-append">
                         <span class="input-group-text size1"><i class="fas fa-dollar-sign"></i></span>
                       </div>
@@ -297,7 +297,7 @@
       </div>
     </div>
   <div class="toast-body text-center">
-    <p><strong class="mr-auto">Available trucks :  <span class="badge badge-warning">4</span></strong></p>
+    <p><strong class="mr-auto">Available trucks :  <span id="nbcamions" class="badge badge-warning">4</span></strong></p>
     <button id="bmapD" class="btn py-0 px-2 btn-outline-dark" type="button" data-toggle="modal" data-target="#m_d_map">
       See the list of available trucks <i class="fas fa-search-plus"></i></button>
     
