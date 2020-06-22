@@ -524,6 +524,7 @@ function countCheckedTruck(){ // Compte le nombre de checkbox sélectionnés
 }
 
 // Récupère les infos des camions sélectionnés, et les affiche dans la modale map
+/*
 $("#bmaptrucker").click(function() {
   var checkedTruck = $(".custom-control-input:checked");
   $.each( checkedTruck, function( i, val ) {
@@ -533,11 +534,7 @@ $("#bmaptrucker").click(function() {
     $("#cselectedTrucks").append('<li>' + tract + " " + cam + " " + posi +'</li>');
   });
 });
-
-// Quand on ferme la modale map (trucker), les anciens camions sélectionnés s'effacent
-$('#m_t_map').on('hidden.bs.modal', function (e) {
-  $("#cselectedTrucks").html("");
-});
+*/
 
 // Lance l'animation pour le bouton map
 function animationMap() {

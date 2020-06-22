@@ -55,3 +55,8 @@ $('#m_t_map').on('shown.bs.modal', function() {
       map.addLayer(newtruck);
   });
 });
+
+// Quand on ferme la modale modale map (trucker), on supprime la map
+$('#m_t_map').on('hidden.bs.modal', function (e) {
+  $(this).find(".map").html("");
+});

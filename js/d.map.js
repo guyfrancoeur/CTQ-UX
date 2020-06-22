@@ -100,3 +100,8 @@ $('#m_d_map').on('shown.bs.modal', function() {
     map.addLayer(newDestination);
   }
 });
+
+// Quand on ferme la modale modale map (trucker), on supprime la map
+$('#m_d_map').on('hidden.bs.modal', function (e) {
+  $(this).find(".map").html("");
+});
