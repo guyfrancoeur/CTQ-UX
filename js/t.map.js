@@ -31,7 +31,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
     ],
     view: new ol.View({
       center: ol.proj.fromLonLat([-73.5878100, 45.5088400]),
-      zoom: 5
+      zoom: 6
     })
   });
   $.each(coordonnees, function( i, val ) {
@@ -53,5 +53,5 @@ $('#m_t_map').on('shown.bs.modal', function() {
         })
       });
       map.addLayer(newtruck);
-    });
+  });
 });
