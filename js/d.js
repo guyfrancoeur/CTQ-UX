@@ -82,6 +82,10 @@ function selection(elem){
     $(checkboxA).prop('checked',true);
     $(checkboxB).prop('checked',false);
     $(checkboxC).prop('checked',false);
+    $("#cmontant").removeClass("is-invalid");
+    $("#cmontant").removeClass("is-valid"); 
+    $("#cdureeC").removeClass("is-invalid");
+    $("#cdureeC").removeClass("is-valid");
     $('#cout').html(cout);
     $('#A').addClass('chosen');
     $('#A').addClass('clicked');
@@ -105,6 +109,10 @@ function selection(elem){
     $(checkboxB).prop('checked',true);
     $(checkboxA).prop('checked',false);
     $(checkboxC).prop('checked',false);
+    $("#cdureeC").removeClass("is-invalid");
+    $("#cdureeC").removeClass("is-valid");
+    $("#cdureeA").removeClass("is-invalid");
+    $("#cdureeA").removeClass("is-valid"); 
     $('#cout').html(cout);
     $('#B').addClass('chosen');
     $('#B').addClass('clicked');
@@ -129,6 +137,10 @@ function selection(elem){
     $(checkboxC).prop('checked',true);
     $(checkboxA).prop('checked',false);
     $(checkboxB).prop('checked',false);
+    $("#cmontant").removeClass("is-invalid");
+    $("#cmontant").removeClass("is-valid"); 
+    $("#cdureeA").removeClass("is-invalid");
+    $("#cdureeA").removeClass("is-valid"); 
     $('#cout').html(cout);
     $('#C').addClass('chosen');
     $('#C').removeClass('notchosen');
@@ -165,6 +177,7 @@ function champRempli(elem){
   $('#toast1').toast('show');
   nbChampsRemplis = 0;
   if(($(elem).val() == "") || ($(elem).val() == [])){
+    $(elem).removeClass("is-valid");
     if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
     if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = false;
     if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = false;
@@ -173,6 +186,7 @@ function champRempli(elem){
     if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = false;
   }
   else{
+    $(elem).addClass("is-valid");
     if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = true;
     if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = true;
     if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = true;
@@ -236,14 +250,12 @@ function animationNbCamions() {
     }, 700);
   });
 }
-
 function ifCoutIsSet(){
   if (cout != 0){
     cout = (parseFloat(cout) - 0.10).toFixed(2);
     $('#cout').html(cout);
   }
 }
-
 function ifCoutIsSet2(){
   if (cout != 0){
     cout = (parseFloat(cout) + 0.10).toFixed(2);
@@ -287,19 +299,68 @@ $("#clongueur").focusout(function() {
 // Validation formulaire
 $("#principalform").submit(function(event){
   if (countChecked() >= 1){
-    console.log("submitted !");
-    $("#cinvalidMarket").removeClass("alert-danger");
     $("#cinvalidMarket").text("");
+    switch ($(".groupcheckbox:checked").attr("id")){
+      case ("checkboxA"):
+        if ($("#cdureeA").val() == ""){
+          $("#cdureeA").addClass("is-invalid");
+          event.preventDefault();
+        }else{console.log("submitted !");};
+        break;
+      case ("checkboxB"):
+        if ($("#cmontant").val() == ""){
+          $("#cmontant").addClass("is-invalid");
+          event.preventDefault();
+        }else{console.log("submitted !");};
+        break;
+      case ("checkboxC"):
+        if ($("#cdureeC").val() == ""){
+          $("#cdureeC").addClass("is-invalid");  
+          event.preventDefault();
+        }else{console.log("submitted !");};
+        break;
+    }
+    if($("#corigin").val() == "") $("#corigin").addClass("is-invalid");
+    if($("#cdestination").val() == "") $("#cdestination").addClass("is-invalid");
   }else{
     // empêche le questionnaire de s'envoyer
     event.preventDefault();
-    $("#cinvalidMarket").addClass("alert-danger");
     $("#cinvalidMarket").html("<i class='fas fa-exclamation-circle'></i> Please choose one type of market.");
     console.log("formulaire invalide");
-    $('#m_results').modal('hide')
+    if($("#corigin").val() == "") $("#corigin").addClass("is-invalid");
+    if($("#cdestination").val() == "") $("#cdestination").addClass("is-invalid");
   }
 });  
 function countChecked(){
   var checked = $(".groupcheckbox:checked");
   return checked.length;
 }
+
+// Validation Code Postal et Ville pour Origine et Destination
+var cp = ["A1A","A1B","A2A","A2B","H3C"];
+var villes = ["montréal","montreal","laval","longueuil","boucherville","pointe-claire"];
+$("#corigin").keyup(function() {
+  var result = false;
+  var valeurInput = $("#corigin").val();
+  var nbCaracteres = valeurInput.length;
+  $(cp).each(function(i,e) {
+    if(valeurInput.toUpperCase() === e.substr(0, nbCaracteres)){
+      result = true;
+      if (valeurInput.toUpperCase() === e) $("#corigin").addClass("is-valid");
+    }
+  });
+  $(villes).each(function(y,e2) {
+    if(valeurInput.toLowerCase() === e2.substr(0, nbCaracteres)){
+      result = true;
+      if (valeurInput.toLowerCase() === e2) $("#corigin").addClass("is-valid");
+    }
+  });
+  if(!result) {
+    $("#corigin").addClass("is-invalid");
+    $("#corigin").removeClass("is-valid");
+  }
+  else {
+    $("#corigin").removeClass("is-invalid");
+  }
+  return result;
+});

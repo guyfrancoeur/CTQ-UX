@@ -178,7 +178,6 @@ font-size:36px;
 #m_e h3, #m_t h3, #m_te h3, #m_t-map h3, #m_d_map h3, #m_t_map h3, #tmcourriels {
   font-size: 26px;
   letter-spacing: 1px;
-  font-family: Arial, Helvetica, sans-serif;
   color: rgba(1,13,40,.8);
   font-weight: 500;
   letter-spacing: 2px;
@@ -187,5 +186,5 @@ font-size:36px;
   background-color: rgb(254, 254, 254);
   box-shadow: 3px 3px 3px rgb(247, 247, 247);
   padding-bottom: 10px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: sans-serif;
 }
