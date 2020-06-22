@@ -1,6 +1,6 @@
 [
   {"propriete":"text","obj":"#bhome","value":"Home"},
-  {"propriete":"text","obj":"#bsubmit","value":"Login"},
+  {"propriete":"text","obj":"#bConnexion","value":"Sign in"},
   {"propriete":"text","obj":"#forgot","value":"Forgot password ?"},
   {"propriete":"text","obj":"#bsaveform","value":"Save"},
   {"propriete":"text","obj":"#clogintitle","value":"Login"},
@@ -125,6 +125,8 @@
   {"propriete":"data-content","obj":"#hCargo","value":"In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."},
   {"propriete":"data-content","obj":"#hOrigineDestination","value":"The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."},
   {"propriete":"data-original-title","obj":"#tToggleinstruction","value":"Click on this button if you want to convert to feet or meters"},
+  {"propriete":"data-original-title","obj":"#temail","value":"Please enter your email here"},
+  {"propriete":"data-original-title","obj":"#tpassword","value":"Please enter your password here"},
   {"propriete":"data-original-title","obj":"#tFixed","value":"BuyNow type auction"},
   {"propriete":"data-original-title","obj":"#tPrivate","value":"Private auction will be sent to a list, only them can bid."}
 ]

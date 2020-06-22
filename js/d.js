@@ -361,32 +361,3 @@ function countChecked(){
   var checked = $(".groupcheckbox:checked");
   return checked.length;
 }
-
-// Validation Code Postal et Ville pour Origine et Destination
-var cp = ["A1A","A1B","A2A","A2B","H3C"];
-var villes = ["montréal","montreal","laval","longueuil","boucherville","pointe-claire"];
-$("#corigin").keyup(function() {
-  var result = false;
-  var valeurInput = $("#corigin").val();
-  var nbCaracteres = valeurInput.length;
-  $(cp).each(function(i,e) {
-    if(valeurInput.toUpperCase() === e.substr(0, nbCaracteres)){
-      result = true;
-      if (valeurInput.toUpperCase() === e) $("#corigin").addClass("is-valid");
-    }
-  });
-  $(villes).each(function(y,e2) {
-    if(valeurInput.toLowerCase() === e2.substr(0, nbCaracteres)){
-      result = true;
-      if (valeurInput.toLowerCase() === e2) $("#corigin").addClass("is-valid");
-    }
-  });
-  if(!result) {
-    $("#corigin").addClass("is-invalid");
-    $("#corigin").removeClass("is-valid");
-  }
-  else {
-    $("#corigin").removeClass("is-invalid");
-  }
-  return result;
-});
