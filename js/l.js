@@ -1,4 +1,4 @@
-// Sécurité login (Slider)
+// Sï¿½curitï¿½ login (Slider)
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){
@@ -29,11 +29,10 @@ function verificationLogin(){
       }
     });
     if(result == false){
-      $("#cinvalidMessage").addClass("alert-danger");
-      $("#cinvalidMessage").html("<i class='fas fa-exclamation-circle'></i> This email or this password is invalid.");
+      $("#cinvalidMessage").show();
     }
     else{
-      $("#cinvalidMessage").text("");
+      $("#cinvalidMessage").hide();
     }
     return result;
 }

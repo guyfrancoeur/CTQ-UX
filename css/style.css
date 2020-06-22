@@ -175,7 +175,7 @@ font-size:36px;
   position: absolute;
 }
 
-#m_e h3, #m_t h3, #m_te h3, #m_t-map h3, #m_d_map h3, #m_t_map h3, #tmcourriels {
+#m_e h3, #m_t h3, #m_te h3, #m_t-map h3, #m_d_map h3, #m_t_map h3, #tmcourriels, #m_c h4{
   font-size: 26px;
   letter-spacing: 1px;
   color: rgba(1,13,40,.8);

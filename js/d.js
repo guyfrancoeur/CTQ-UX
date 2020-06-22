@@ -207,26 +207,52 @@ function champRempli(elem){
 
   reduction = (nbChampsRemplis * 0.1).toFixed(2);
   if(nbChampsRemplis == 0){
-    $("#creduction").text("");
-    $("#textreduction").text("");
+    $("#cwith").hide();
+    $("#cnbinfo").hide();
+    $("#cwith").hide();
+    $("#cNbreduction").hide();
+    $("#dollar").hide();
+    $("#cents").hide();
+    $("#cents").hide();
+    $("#infos").show();
+    $("#info").hide();
+    $("#crest").hide();
     if (cout != 0){
       cout = (parseFloat(cout) + 0.1);
       $('#cout').html(cout.toFixed(2));
     }
   }
   else{
-    if(reduction >= 1){
-      $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
-      $("#creduction").text(reduction + " $");
+    if(reduction > 1){
+      $("#cwith").show();
+      $("#cnbinfo").html(nbChampsRemplis);
+      $("#infos").show();
+      $("#info").hide();
+      $("#crest").show();
+      $("#cNbreduction").html(reduction);
+      $("#dollar").show();
+      $("#cents").hide();
     }
     else{
       if(nbChampsRemplis == 1){
-        $("#textreduction").text("With "+ nbChampsRemplis + " info about the cargo you can save : ");
-        $("#creduction").text(reduction + " cents");
+        $("#cwith").show();
+        $("#cnbinfo").html(nbChampsRemplis);
+        $("#info").show();
+        $("#infos").hide();
+        $("#crest").show();
+        $("#cNbreduction").html(reduction);
+        $("#dollar").hide();
+        $("#cents").show();
       }
       else{
-        $("#textreduction").text("With "+ nbChampsRemplis + " infos about the cargo you can save : ");
-        $("#creduction").text(reduction + " cents");
+        $("#cwith").show();
+        $("#cnbinfo").html(nbChampsRemplis);
+        $("#infos").show();
+        $("#info").hide();
+        $("#crest").show();
+        $("#cNbreduction").html(reduction);
+        $("#dollar").hide();
+        $("#cents").show();
       }
     }
     if(reduction > ancienneReduction){
@@ -325,7 +351,7 @@ $("#principalform").submit(function(event){
   }else{
     // empêche le questionnaire de s'envoyer
     event.preventDefault();
-    $("#cinvalidMarket").html("<i class='fas fa-exclamation-circle'></i> Please choose one type of market.");
+    $("#cinvalidMarket").show();
     console.log("formulaire invalide");
     if($("#corigin").val() == "") $("#corigin").addClass("is-invalid");
     if($("#cdestination").val() == "") $("#cdestination").addClass("is-invalid");
