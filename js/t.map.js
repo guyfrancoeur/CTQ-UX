@@ -1,16 +1,18 @@
 $('#m_t_map').on('shown.bs.modal', function() {
   var coordonnees = [];
   var checkedTruck = $(".custom-control-input:checked");
-  $.each( checkedTruck, function( i, val ) {
-    var posi = $(val).closest("td").next("td").next("td").next("td").find(".cpostalcode").val();
-    $.ajax({
+  $.each( checkedTruck, function( i, val ) { // Récupère les données des camions sélectionnés dans la page html
+    var tract = $(val).closest("td").next("td").html();
+    var cam = $(val).closest("td").next("td").next("td").html();
+    var codepostal = $(val).closest("td").next("td").next("td").next("td").find(".cpostalcode").val();
+    $.ajax({ // Récupère les coordonnées de chaque camion dans zip.json
       url: "./data/zip.json",
       dataType: "json",
       async: false,
       success:function(data){
         $.each(data.geoplaces, function(index, x) {
-          if(posi.toUpperCase() === (x.zip)){
-            coordonnees.push([x.lng,x.lat]);
+          if(codepostal.toUpperCase() === (x.zip)){
+            coordonnees.push({"tracteur":tract,"camion":cam,"codepostal": codepostal, "coordonnees":[x.lng,x.lat]});
           }
         });
       },
@@ -21,42 +23,98 @@ $('#m_t_map').on('shown.bs.modal', function() {
     });
   });
 
-  // OpenLayers
+  /* ---- OpenLayers ---- */
+  var features = [];
+  $.each(coordonnees, function( i, val ) {  // Crée un objet (marker) pour chaque camion
+    var newtruck = new ol.Feature({
+      geometry: new ol.geom.Point(ol.proj.fromLonLat(val.coordonnees)),
+      name: val.tracteur + " " + val.camion + " " + val.codepostal + " " + val.coordonnees
+    });
+    newtruck.setStyle(
+      new ol.style.Style({
+        image: new ol.style.Icon({
+          anchor: [0.5, 1.0],
+          anchorXUnits: 'fraction',
+          anchorYUnits: 'fraction',
+          src: './images/truck.svg'
+        })
+      })
+    );
+    features.push(newtruck);
+  });
+
+  var vectorSource = new ol.source.Vector({
+    features: features
+  });
+  var vectorLayer = new ol.layer.Vector({
+    source: vectorSource
+  });
+
   var map = new ol.Map({
     target: 'map',
     layers: [
       new ol.layer.Tile({
         source: new ol.source.OSM()
-      })
+      }),
+      vectorLayer
     ],
     view: new ol.View({
       center: ol.proj.fromLonLat([-73.5878100, 45.5088400]),
       zoom: 6
     })
   });
-  $.each(coordonnees, function( i, val ) {
-    console.log(val);
-    const iconTruck = new ol.Feature({
-      geometry: new ol.geom.Point(ol.proj.fromLonLat(val))
-    });
-    var newtruck = new ol.layer.Vector({
-        source: new ol.source.Vector({
-          features: [iconTruck]
-        }),
-        style: new ol.style.Style({
-          image: new ol.style.Icon({
-            anchor: [0.5, 46],
-            anchorXUnits: 'fraction',
-            anchorYUnits: 'pixels',
-            src: './images/truck.svg'
-          })
-        })
-      });
-      map.addLayer(newtruck);
+
+  var container = document.getElementById('popup');
+  var content = document.getElementById('popup-content');
+  var closer = document.getElementById('popup-closer');
+
+  // Évennement en cliquant sur la croix du popup
+  closer.onclick = function() {
+    overlay.setPosition(undefined);
+    closer.blur();
+    return false;
+  };
+
+  // Create an overlay to anchor the popup to the map.
+  var overlay = new ol.Overlay({
+    element: container,
+    autoPan: true,
+    autoPanAnimation: {
+      duration: 250
+    }
   });
+  map.addOverlay(overlay);
+
+  // Add a click handler to the map to render the popup.
+  map.on('singleclick', function(evt) {
+      var name = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+        return feature.get('name');
+      })
+      if (name) {
+        var coordinate = evt.coordinate;
+        overlay.setPosition(coordinate);
+        container.style.display="block";
+        var all = name.split(" ");
+        content.innerHTML = " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Tractor : </span>" + all[0] + "<br/>" +
+        " <i class='fas fa-truck-moving fa-sm iconPopup'></i> <span style='font-weight:600;'>Truck : </span>" + all[1] + "<br/>" +
+        " <i class='fas fa-map-signs fa-sm iconPopup'></i> <span style='font-weight:600;'>Postal code : </span>" + all[2] + "<br/>" +
+        " <i class='fas fa-map-marked-alt fa-sm iconPopup'></i> <span style='font-weight:600;'>Coordinates : </span>" + all[3];
+      } else {
+        container.style.display="none";
+      }
+  });
+  map.on('pointermove', function(evt) {
+    map.getTargetElement().style.cursor = map.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
+  });
+
+  // make the map's view to zoom and pan enough to display all the points
+  map.getView().fit(vectorSource.getExtent(), map.getSize());
+
 });
 
-// Quand on ferme la modale modale map (trucker), on supprime la map
+// Quand on ferme la modale modale map (trucker), on supprime la map (pour pouvoir la recharger la prochaine fois)
 $('#m_t_map').on('hidden.bs.modal', function (e) {
   $(this).find(".map").html("");
+  $(this).find("#popup-closer").html("");
+  $(this).find("#popup-content").html("");
 });
