@@ -214,7 +214,7 @@ function champRempli(elem){
     $("#dollar").hide();
     $("#cents").hide();
     $("#cents").hide();
-    $("#infos").show();
+    $("#infos").hide();
     $("#info").hide();
     $("#crest").hide();
     if (cout != 0){

@@ -1,4 +1,4 @@
-$('#m_t_map').on('shown.bs.modal', function() {
+$('#m_t_map').on('shown.bs.modal', function() { 
   var coordonnees = [];
   var checkedTruck = $(".custom-control-input:checked");
   $.each( checkedTruck, function( i, val ) { // Récupère les données des camions sélectionnés dans la page html
@@ -98,13 +98,13 @@ $('#m_t_map').on('shown.bs.modal', function() {
         container.style.display="block";
         var all = name.split(" ");
         if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-          content.innerHTML = " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Tractor : </span>" + all[0] + "<br/>" +
+          content.innerHTML = " <i class='fas fa-truck fa-sm iconPopup'></i> <span style='font-weight:600;'>Tractor : </span>" + all[0] + "<br/>" +
           " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Equipment : </span>" + all[1] + "<br/>" +
           " <i class='fas fa-map-signs fa-sm iconPopup'></i> <span style='font-weight:600;'>Postal code : </span>" + all[2] + "<br/>" +
           " <i class='fas fa-map-marked-alt fa-sm iconPopup'></i> <span style='font-weight:600;'>Coordinates : </span>" + all[3];
         }
         else{ // Si en français
-          content.innerHTML = " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Tracteur : </span>" + all[0] + "<br/>" +
+          content.innerHTML = " <i class='fas fa-truck fa-sm iconPopup'></i> <span style='font-weight:600;'>Tracteur : </span>" + all[0] + "<br/>" +
           " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Équipement : </span>" + all[1] + "<br/>" +
           " <i class='fas fa-map-signs fa-sm iconPopup'></i> <span style='font-weight:600;'>Code postal : </span>" + all[2] + "<br/>" +
           " <i class='fas fa-map-marked-alt fa-sm iconPopup'></i> <span style='font-weight:600;'>Coordonnées : </span>" + all[3];
@@ -119,12 +119,17 @@ $('#m_t_map').on('shown.bs.modal', function() {
 
   // make the map's view to zoom and pan enough to display all the points
   map.getView().fit(vectorSource.getExtent(), map.getSize());
-
 });
 
 // Quand on ferme la modale modale map (trucker), on supprime la map (pour pouvoir la recharger la prochaine fois)
 $('#m_t_map').on('hidden.bs.modal', function (e) {
   $(this).find(".map").html("");
-  $(this).find("#popup-closer").html("");
-  $(this).find("#popup-content").html("");
+  var popup = '<div id="popup" class="ol-popup" style="height:130px;width:300px;">' +
+    '<button id="popup-closer" type="button" class="close">' +
+      '<span aria-hidden="true">&times;</span>' +
+    '</button>' +
+    '<div id="popup-content"></div>' +
+    '</div>';
+  $("#map").after(popup);
 });
+
