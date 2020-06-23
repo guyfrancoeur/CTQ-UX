@@ -546,3 +546,8 @@ function animationMap() {
     }, 1000);
   });
 }
+
+// Select all checkboxes
+$("#selectall").click(function () {
+  $(".checkbox").prop('checked', $(this).prop('checked'));
+});
