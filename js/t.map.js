@@ -96,7 +96,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
         container.style.display="block";
         var all = name.split(" ");
         content.innerHTML = " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Tractor : </span>" + all[0] + "<br/>" +
-        " <i class='fas fa-truck-moving fa-sm iconPopup'></i> <span style='font-weight:600;'>Truck : </span>" + all[1] + "<br/>" +
+        " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Equipment : </span>" + all[1] + "<br/>" +
         " <i class='fas fa-map-signs fa-sm iconPopup'></i> <span style='font-weight:600;'>Postal code : </span>" + all[2] + "<br/>" +
         " <i class='fas fa-map-marked-alt fa-sm iconPopup'></i> <span style='font-weight:600;'>Coordinates : </span>" + all[3];
       } else {
