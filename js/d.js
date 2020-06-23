@@ -6,15 +6,9 @@ $( document ).ready(function() { // ou $(function () {
   $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
   
-  // Cacher le bouton close de la partie résultats
-  $("#bcloseResults").hide();
-  
   // Chargement contenu modale
   $('#m_courriels').load('./m.courriels.html');
   $('#m_d_map').load('./m.d.map.html');
-  
-  // Toasts Bootstrap (nombre camions disponibles)
-  $(".div-item").hide();
 });
 
 // Toggle button

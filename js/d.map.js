@@ -23,6 +23,7 @@ $(".OHform").keyup(function() {
             $(elt).addClass("is-valid");
             if($(elt).attr("id") == "corigin") origine = [x.lng,x.lat];
             if($(elt).attr("id") == "cdestination") destination = [x.lng,x.lat];
+            $('#toast1').toast('show');
           }
         }
       });

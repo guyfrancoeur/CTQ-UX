@@ -298,21 +298,20 @@
 <br/>
 
 <!-- Toast Bootstrap -->
-<div class="toast bg-light m-0" id="toast1" data-autohide="false" data-animation="true" style="position: absolute; top: 5rem; left:1rem; width:280px;" aria-live="polite" aria-atomic="true">
+<div class="toast m-0" id="toast1" data-autohide="false" data-animation="true" style="position: absolute; top: 5rem; left:1rem; width:280px;" aria-live="polite" aria-atomic="true">
   <div class="toast-header p-0 m-0">
       <div class="col"></div>
       <div class="col text-center">
-        <i class="fa fa-info-circle fa-2x" style="margin-top:11px;color:rgb(230,230,230);"></i>
+        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white"></i>
       </div>
       <div class="col text-right">
-        <button type="button" class="close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button id="closeToast" type="button" class="close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true" style="color:rgb(230,230,230);">&times;</span></button>
       </div>
     </div>
   <div class="toast-body text-center">
     <p><strong class="mr-auto">Available trucks :  <span id="nbcamions" class="badge badge-warning">4</span></strong></p>
-    <button id="bmapD" class="btn py-0 px-2 btn-outline-dark" type="button" data-toggle="modal" data-target="#m_d_map">
+    <button id="bmapD" class="btn py-0 px-2 btn-outline-light" type="button" data-toggle="modal" data-target="#m_d_map">
       See the list of available trucks <i class="fas fa-search-plus"></i></button>
-    
   </div>
 </div>
 
