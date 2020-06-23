@@ -523,19 +523,6 @@ function countCheckedTruck(){ // Compte le nombre de checkbox sélectionnés
   return checkedTruck.length;
 }
 
-// Récupère les infos des camions sélectionnés, et les affiche dans la modale map
-/*
-$("#bmaptrucker").click(function() {
-  var checkedTruck = $(".custom-control-input:checked");
-  $.each( checkedTruck, function( i, val ) {
-    var tract = $(val).closest("td").next("td").html();
-    var cam = $(val).closest("td").next("td").next("td").html();
-    var posi = $(val).closest("td").next("td").next("td").next("td").find(".cpostalcode").val();
-    $("#cselectedTrucks").append('<li>' + tract + " " + cam + " " + posi +'</li>');
-  });
-});
-*/
-
 // Lance l'animation pour le bouton map
 function animationMap() {
   $("#bmaptrucker").addClass("animationmap");
@@ -550,4 +537,5 @@ function animationMap() {
 // Select all checkboxes
 $("#selectall").click(function () {
   $(".checkbox").prop('checked', $(this).prop('checked'));
+  if($("#selectall").is(':checked')) animationMap();
 });

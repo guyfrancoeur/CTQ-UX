@@ -57,6 +57,8 @@ $('#m_d_map').on('shown.bs.modal', function() {
     })
   });
 
+  var features = [];
+
   // Origine
   if (typeof origine != 'undefined'){
     const iconOrigin = new ol.Feature({
@@ -77,9 +79,10 @@ $('#m_d_map').on('shown.bs.modal', function() {
       })
     });
     map.addLayer(newOrigine);
+    features.push(iconOrigin);
   }
   // Destination
-  if (typeof origine != 'undefined'){
+  if (typeof destination != 'undefined'){
     const iconDestination = new ol.Feature({
       geometry: new ol.geom.Point(ol.proj.fromLonLat(destination)),
       name: 'Destination',
@@ -98,7 +101,15 @@ $('#m_d_map').on('shown.bs.modal', function() {
       })
     });
     map.addLayer(newDestination);
+    features.push(iconDestination);
   }
+
+  var vectorSource = new ol.source.Vector({
+    features: features
+  });
+
+  // make the map's view to zoom and pan enough to display all the points
+  map.getView().fit(vectorSource.getExtent(), map.getSize());
 });
 
 // Quand on ferme la modale modale map (trucker), on supprime la map

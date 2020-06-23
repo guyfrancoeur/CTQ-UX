@@ -328,13 +328,13 @@ table thead, tbody tr {
   }
   @keyframes animMap {
     0% {
-      font-size:1rem;
+      font-size:100%;
     }
     50% {
-        font-size:1.3rem;
+        font-size:130%;
     }
     100% {
-        font-size:1rem;
+        font-size:100%;
     }
   }
 

@@ -5,22 +5,24 @@ $('#m_t_map').on('shown.bs.modal', function() {
     var tract = $(val).closest("td").next("td").html();
     var cam = $(val).closest("td").next("td").next("td").html();
     var codepostal = $(val).closest("td").next("td").next("td").next("td").find(".cpostalcode").val();
-    $.ajax({ // Récupère les coordonnées de chaque camion dans zip.json
-      url: "./data/zip.json",
-      dataType: "json",
-      async: false,
-      success:function(data){
-        $.each(data.geoplaces, function(index, x) {
-          if(codepostal.toUpperCase() === (x.zip)){
-            coordonnees.push({"tracteur":tract,"camion":cam,"codepostal": codepostal, "coordonnees":[x.lng,x.lat]});
-          }
-        });
-      },
-      error:function(xhr, ajaxOptions, thrownError){
-        console.log('error');
-        console.log(thrownError);
-      }
-    });
+    if(codepostal != null && tract != null && cam != null){
+      $.ajax({ // Récupère les coordonnées de chaque camion dans zip.json
+        url: "./data/zip.json",
+        dataType: "json",
+        async: false,
+        success:function(data){
+          $.each(data.geoplaces, function(index, x) {
+            if(codepostal.toUpperCase() === (x.zip)){
+              coordonnees.push({"tracteur":tract,"camion":cam,"codepostal": codepostal, "coordonnees":[x.lng,x.lat]});
+            }
+          });
+        },
+        error:function(xhr, ajaxOptions, thrownError){
+          console.log('error');
+          console.log(thrownError);
+        }
+      });
+    }
   });
 
   /* ---- OpenLayers ---- */
