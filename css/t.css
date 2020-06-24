@@ -290,7 +290,7 @@ table thead, tbody tr {
     color: white;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1289px) {
     .table tbody td:nth-child(2),
     .table tbody td:nth-child(3),
     .table tbody td:nth-child(4),
@@ -387,4 +387,14 @@ table thead, tbody tr {
 
 .popover{
   max-width: 400px;
+}
+
+#cardProfil {
+  height:400px;
+}
+
+@media screen and (max-width: 1199px) {
+  #cardProfil {
+      height:300px;
+  }
 }
