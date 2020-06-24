@@ -219,10 +219,12 @@ function champRempli(elem){
   else{
     if(reduction > 1){
       $("#cwith").show();
+      $("#cnbinfo").show();
       $("#cnbinfo").html(nbChampsRemplis);
       $("#infos").show();
       $("#info").hide();
       $("#crest").show();
+      $("#cNbreduction").show();
       $("#cNbreduction").html(reduction);
       $("#dollar").show();
       $("#cents").hide();
@@ -230,20 +232,24 @@ function champRempli(elem){
     else{
       if(nbChampsRemplis == 1){
         $("#cwith").show();
+        $("#cnbinfo").show();
         $("#cnbinfo").html(nbChampsRemplis);
         $("#info").show();
         $("#infos").hide();
         $("#crest").show();
+        $("#cNbreduction").show();
         $("#cNbreduction").html(reduction);
         $("#dollar").hide();
         $("#cents").show();
       }
       else{
         $("#cwith").show();
+        $("#cnbinfo").show();
         $("#cnbinfo").html(nbChampsRemplis);
         $("#infos").show();
         $("#info").hide();
         $("#crest").show();
+        $("#cNbreduction").show();
         $("#cNbreduction").html(reduction);
         $("#dollar").hide();
         $("#cents").show();
@@ -293,7 +299,6 @@ function animationReduction() {
     }, 1000);
   });
 }
-
 
 // Tooltip on ToggleButton
 $("#cheight").focus(function() {

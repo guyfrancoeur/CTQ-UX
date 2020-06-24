@@ -82,7 +82,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
     element: container,
     autoPan: true,
     autoPanAnimation: {
-      duration: 250
+      duration: 300
     }
   });
   map.addOverlay(overlay);
@@ -116,7 +116,6 @@ $('#m_t_map').on('shown.bs.modal', function() {
   map.on('pointermove', function(evt) {
     map.getTargetElement().style.cursor = map.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
   });
-
   // make the map's view to zoom and pan enough to display all the points
   map.getView().fit(vectorSource.getExtent(), map.getSize());
 });
@@ -132,4 +131,3 @@ $('#m_t_map').on('hidden.bs.modal', function (e) {
     '</div>';
   $("#map").after(popup);
 });
-
