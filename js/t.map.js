@@ -123,7 +123,11 @@ $('#m_t_map').on('shown.bs.modal', function() {
     map.getView().setCenter(ol.proj.transform([lon,lat], 'EPSG:4326', 'EPSG:3857'));
   }
   else{ // Recadrer la carte pour afficher tous les points
-    map.getView().fit(vectorSource.getExtent(), map.getSize());
+    var padding = [80, 0, 50, 0];
+    map.getView().fit(vectorSource.getExtent(), {
+      size: map.getSize(),
+      padding: padding,
+    });
   }
 });
 
