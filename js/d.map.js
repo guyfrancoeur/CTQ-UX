@@ -109,7 +109,7 @@ $('#m_d_map').on('shown.bs.modal', function() {
     features: features
   });
 
-  // Recardrer la carte pour afficher l'origine et la destination
+  // Recadrer la carte pour afficher l'origine et la destination
   if (typeof destination != 'undefined' && typeof origine != 'undefined') map.getView().fit(vectorSource.getExtent(), map.getSize());
   else{ // Sinon centrer sur un des deux
     if (typeof destination != 'undefined') map.getView().setCenter(ol.proj.transform(desination, 'EPSG:4326', 'EPSG:3857'));

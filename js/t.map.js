@@ -125,7 +125,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
     var lat = coord[1];
     map.getView().setCenter(ol.proj.transform([lon,lat], 'EPSG:4326', 'EPSG:3857'));
   }
-  else{ // Recardrer la carte pour afficher tous les points
+  else{ // Recadrer la carte pour afficher tous les points
     map.getView().fit(vectorSource.getExtent(), map.getSize());
   }
 });
