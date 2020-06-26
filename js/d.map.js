@@ -109,8 +109,12 @@ $('#m_d_map').on('shown.bs.modal', function() {
     features: features
   });
 
-  // make the map's view to zoom and pan enough to display all the points
-  map.getView().fit(vectorSource.getExtent(), map.getSize());
+  // Recardrer la carte pour afficher l'origine et la destination
+  if (typeof destination != 'undefined' && typeof origine != 'undefined') map.getView().fit(vectorSource.getExtent(), map.getSize());
+  else{ // Sinon centrer sur un des deux
+    if (typeof destination != 'undefined') map.getView().setCenter(ol.proj.transform(desination, 'EPSG:4326', 'EPSG:3857'));
+    if (typeof origine != 'undefined') map.getView().setCenter(ol.proj.transform(origine, 'EPSG:4326', 'EPSG:3857'));
+  }
 });
 
 // Quand on ferme la modale modale map (trucker), on supprime la map

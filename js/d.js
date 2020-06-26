@@ -360,3 +360,13 @@ function countChecked(){
   var checked = $(".groupcheckbox:checked");
   return checked.length;
 }
+
+// Désactiver le bouton dans le toast Bootstrap quand il est caché (nb camions dispo)
+$('#toast1').on('hidden.bs.toast', function () {
+  $('#bmapD').prop("disabled", true);
+  $('#closeToast').prop("disabled", true);
+});
+$('#toast1').on('show.bs.toast', function () {
+  $('#bmapD').prop("disabled", false);
+  $('#closeToast').prop("disabled", false);
+});

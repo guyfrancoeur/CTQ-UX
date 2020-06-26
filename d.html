@@ -251,7 +251,7 @@
                               </div>
                               <div class=" col-12 col-xl-6 text-center">
                                 <div class="divCourriels">
-                                  <div class="overflow-auto border bg-white rounded-bottom m-0" style="height:95px;">
+                                  <div class="border bg-white rounded-bottom m-0" style="height:95px;overflow-y: scroll;">
                                     <ul class="listec list-group-flush text-muted border-light p-0" id="listecourriels"></ul>
                                   </div>
                                 </div>
@@ -305,12 +305,12 @@
         <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white"></i>
       </div>
       <div class="col text-right">
-        <button id="closeToast" type="button" class="close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true" style="color:rgb(230,230,230);">&times;</span></button>
+        <button id="closeToast" type="button" class="close" data-dismiss="toast" aria-label="Close" disabled><span aria-hidden="true" style="color:rgb(230,230,230);">&times;</span></button>
       </div>
     </div>
   <div class="toast-body text-center">
-    <p><strong class="mr-auto"><span id="cavailableT">Available trucks</span> :  <span id="nbcamions" class="badge badge-warning">4</span></strong></p>
-    <button id="bmapD" class="btn py-0 px-2 btn-outline-light" type="button" data-toggle="modal" data-target="#m_d_map">
+    <p style="cursor:default;"><strong class="mr-auto"><span id="cavailableT">Available trucks</span> :  <span id="nbcamions" class="badge badge-warning">4</span></strong></p>
+    <button id="bmapD" class="btn py-0 px-2 btn-outline-light" type="button" data-toggle="modal" data-target="#m_d_map" disabled>
       <span id="bAvailableT">See the list of available trucks</span> <i class="fas fa-search-plus"></i></button>
   </div>
 </div>

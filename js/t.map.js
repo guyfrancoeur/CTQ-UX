@@ -116,8 +116,18 @@ $('#m_t_map').on('shown.bs.modal', function() {
   map.on('pointermove', function(evt) {
     map.getTargetElement().style.cursor = map.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
   });
-  // make the map's view to zoom and pan enough to display all the points
-  map.getView().fit(vectorSource.getExtent(), map.getSize());
+
+  // Si il n'y a qu'un seul camion sélectionné, centrer la carte autour de ce point
+  if (features.length === 1){
+    var coord = features[0].getGeometry().getCoordinates();
+    coord = ol.proj.transform(coord, 'EPSG:3857', 'EPSG:4326');
+    var lon = coord[0];
+    var lat = coord[1];
+    map.getView().setCenter(ol.proj.transform([lon,lat], 'EPSG:4326', 'EPSG:3857'));
+  }
+  else{ // Recardrer la carte pour afficher tous les points
+    map.getView().fit(vectorSource.getExtent(), map.getSize());
+  }
 });
 
 // Quand on ferme la modale modale map (trucker), on supprime la map (pour pouvoir la recharger la prochaine fois)
