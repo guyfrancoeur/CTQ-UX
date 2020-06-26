@@ -80,10 +80,6 @@ $('#m_t_map').on('shown.bs.modal', function() {
   // Create an overlay to anchor the popup to the map.
   var overlay = new ol.Overlay({
     element: container,
-    autoPan: true,
-    autoPanAnimation: {
-      duration: 300
-    }
   });
   map.addOverlay(overlay);
 
@@ -113,6 +109,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
         container.style.display="none";
       }
   });
+  
   map.on('pointermove', function(evt) {
     map.getTargetElement().style.cursor = map.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
   });
