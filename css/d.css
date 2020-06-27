@@ -357,3 +357,7 @@ hr.style-two {
       font-size:75%;
   }
 }
+
+#cmontant, #cdureeC, #addcourriel, #cdureeA{
+  cursor:pointer;
+}

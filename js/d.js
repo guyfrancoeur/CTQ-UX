@@ -14,7 +14,6 @@ $( document ).ready(function() { // ou $(function () {
 // Toggle button
 unite = 'm';
 $("#button-6").click(function() {
-  console.log("here");
   if(unite == "m"){
     $('.cUnite').html("pi");
     unite = "pi";
@@ -35,7 +34,7 @@ function validateEmail(email) {
 var addcourriel = document.getElementById("addcourriel");
 var inputcourriel = document.getElementById("cinputcourriel");
 var ul = document.getElementById("listecourriels");
-nbEmails = 0;;
+nbEmails = 0;
 var tabEmails = [];
 
 function saveMails(){
@@ -56,7 +55,6 @@ function saveMails(){
       nbEmails ++;
     }
   });
-  console.log(tabEmails);
   $('#m_d3').modal('hide');
 }
 
@@ -76,6 +74,7 @@ function selection(elem){
     $(checkboxA).prop('checked',true);
     $(checkboxB).prop('checked',false);
     $(checkboxC).prop('checked',false);
+    $("#cinvalidMarket").hide();
     $("#cmontant").removeClass("is-invalid");
     $("#cmontant").removeClass("is-valid"); 
     $("#cdureeC").removeClass("is-invalid");
@@ -86,6 +85,7 @@ function selection(elem){
     $('#A').removeClass('notchosen');
     $('#cTextA').addClass('font-weight-bold');
     $('#cdureeA').removeAttr("disabled");
+    $('#cmontant').css("cursor", "text");
     $('#B').removeClass('chosen');
     $('#C').removeClass('chosen');
     $('#B').addClass('notchosen');
@@ -97,12 +97,16 @@ function selection(elem){
     $('#cmontant').prop("disabled", true);
     $('#cdureeC').prop("disabled", true);
     $('#addcourriel').prop("disabled", true);
+    $('#cmontant').css("cursor", "pointer");
+    $('#cdureeC').css("cursor", "pointer");
+    $('#addcourriel').css("cursor", "pointer");
   };
   if(value == "B"){
     cout = (2 - reduction).toFixed(2);
     $(checkboxB).prop('checked',true);
     $(checkboxA).prop('checked',false);
     $(checkboxC).prop('checked',false);
+    $("#cinvalidMarket").hide();
     $("#cdureeC").removeClass("is-invalid");
     $("#cdureeC").removeClass("is-valid");
     $("#cdureeA").removeClass("is-invalid");
@@ -113,6 +117,7 @@ function selection(elem){
     $('#B').removeClass('notchosen');
     $('#cTextB').addClass('font-weight-bold');
     $('#cmontant').removeAttr("disabled");
+    $('#cmontant').css("cursor", "text");
     $('#A').removeClass('chosen');
     $('#C').removeClass('chosen');
     $('#A').addClass('notchosen');
@@ -124,6 +129,9 @@ function selection(elem){
     $('#cdureeA').prop("disabled", true);
     $('#cdureeC').prop("disabled", true);
     $('#addcourriel').prop("disabled", true);
+    $('#cdureeA').css("cursor", "pointer");
+    $('#cdureeC').css("cursor", "pointer");
+    $('#addcourriel').css("cursor", "pointer");
   };
   if(value == "C"){
     if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
@@ -131,6 +139,7 @@ function selection(elem){
     $(checkboxC).prop('checked',true);
     $(checkboxA).prop('checked',false);
     $(checkboxB).prop('checked',false);
+    $("#cinvalidMarket").hide();
     $("#cmontant").removeClass("is-invalid");
     $("#cmontant").removeClass("is-valid"); 
     $("#cdureeA").removeClass("is-invalid");
@@ -142,6 +151,8 @@ function selection(elem){
     $('#cTextC').addClass('font-weight-bold');
     $('#cdureeC').removeAttr("disabled");
     $('#addcourriel').removeAttr("disabled");
+    $('#cdureeC').css("cursor", "text");
+    $('#addcourriel').css("cursor", "text");
     $('#A').removeClass('chosen');
     $('#B').removeClass('chosen');
     $('#A').removeClass('clicked');
@@ -152,6 +163,8 @@ function selection(elem){
     $('#cTextB').removeClass('font-weight-bold');
     $('#cdureeA').prop("disabled", true);
     $('#cmontant').prop("disabled", true);
+    $('#cdureeA').css("cursor", "pointer");
+    $('#cmontant').css("cursor", "pointer");
   };
 }
 
@@ -324,7 +337,7 @@ $("#clongueur").focusout(function() {
 // Validation formulaire
 $("#principalform").submit(function(event){
   if (countChecked() >= 1){
-    $("#cinvalidMarket").text("");
+    $("#cinvalidMarket").hide();
     switch ($(".groupcheckbox:checked").attr("id")){
       case ("checkboxA"):
         if ($("#cdureeA").val() == ""){

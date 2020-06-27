@@ -226,3 +226,8 @@ font-size:36px;
 .iconPopup{
   color:rgb(220,220,220);
 }
+
+.map{
+  height:500px;
+  width:100%;
+}

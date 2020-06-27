@@ -23,7 +23,7 @@
   {"propriete":"text","obj":"#cForgotPassT","value":"⋙ Forgot password"},
   {"propriete":"text","obj":"#cLoginTitle","value":"Login"},
   {"propriete":"text","obj":"#cPrixPrivate","value":"2$ / email"},
-  {"propriete":"text","obj":"#tmcourriels","value":"List of emails for Private auction"},
+  {"propriete":"text","obj":"#tmcourriels","value":"List of emails"},
   {"propriete":"text","obj":"#bSaveEmails","value":"Save changes"},
   {"propriete":"text","obj":"#bclosecourriels","value":"Close"},
   {"propriete":"text","obj":"#llistecourriels","value":"Type the e-mail addresses, separating each address by a semi-colon : "},

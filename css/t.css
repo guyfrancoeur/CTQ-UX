@@ -398,3 +398,8 @@ table thead, tbody tr {
       height:300px;
   }
 }
+
+.cpostalcode.form-control.is-valid, .cpostalcode.form-control.is-invalid{
+    background-image: none !important;
+    padding:.25rem .5rem !important;
+}

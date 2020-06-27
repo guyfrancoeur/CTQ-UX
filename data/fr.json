@@ -22,7 +22,7 @@
   {"propriete":"text","obj":"#cForgotPassT","value":"⋙ Mot de passe oublié"},
   {"propriete":"text","obj":"#cLoginTitle","value":"Se connecter"},
   {"propriete":"text","obj":"#cPrixPrivate","value":"2$ / courriel"},
-  {"propriete":"text","obj":"#tmcourriels","value":"Liste des courriels pour une Enchère privée"},
+  {"propriete":"text","obj":"#tmcourriels","value":"Liste des courriels"},
   {"propriete":"text","obj":"#bSaveEmails","value":"Sauvegarder"},
   {"propriete":"text","obj":"#bclosecourriels","value":"Fermer"},
   {"propriete":"text","obj":"#llistecourriels","value":"Inscrivez les courriels séparés par un point virugle : "},
