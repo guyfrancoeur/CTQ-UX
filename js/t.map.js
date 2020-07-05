@@ -71,8 +71,8 @@ $('#m_t_map').on('shown.bs.modal', function() {
   var closer = document.getElementById('popup-closer');
 
   // Évennement en cliquant sur la croix du popup
-  closer.onclick = function() {
-    overlay.setPosition(undefined);
+    closer.onclick = function() {
+     overlay.setPosition(undefined);
     closer.blur();
     return false;
   };

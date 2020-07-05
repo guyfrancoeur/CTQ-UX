@@ -7,12 +7,11 @@ $( document ).ready(function() {
   $('#m_c').load('./m.c.html');
   $('#m_t').load('./m.t.html');
   $('#m_e').load('./m.e.html');
-  $('#m_d3').load('./m.d3.html');
   $('#m_admin').load('./m.admin.html');
 });
 
 function KeyPress(e) {
-  var evtobj = window.event? event : e
+  var evtobj = window.event ? event : e
   if (evtobj.keyCode == 65 && evtobj.shiftKey) $('#m_admin').modal('show');
 }
 document.onkeydown = KeyPress;
@@ -24,10 +23,6 @@ $(function() {
 
 // Animation index.html
 $(".arrow-card" ).click(function() {
-  $(this).fadeOut(100);
-  $(this).fadeIn(100);
-});
-$(".petite-div" ).click(function() {
   $(this).fadeOut(100);
   $(this).fadeIn(100);
 });
