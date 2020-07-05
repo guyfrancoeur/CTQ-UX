@@ -1,0 +1,114 @@
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">    
+    <div class="modal-header px-0">
+      <div class="divIconeModale"><i class="fas fa-cogs fa-lg iconModale"></i></div>
+      <div id="ticket"></div>
+      <div class="col"></div>
+      <div class="col-auto text-center">
+      <div class="text-center"></div>
+      </div>
+      <div class="col ml-auto">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div id="divAdmin" class="card spe">
+        <div class="card-header spe-header text-center"><h4 class="card-title">Admin</h4></div>
+        <div class="card-body p-1" style="height:200px;">
+            <nav>
+              <div class="nav nav-tabs nav-admin" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link nav-admin active" id="nav-html-tab" data-toggle="tab" href="#nav-html" role="tab" aria-controls="nav-html" aria-selected="true">HTML</a>
+                <a class="nav-item nav-link nav-admin" id="nav-modales-tab" data-toggle="tab" href="#nav-modales" role="tab" aria-controls="nav-modales" aria-selected="false">Modales</a>
+                  <a class="nav-item nav-link nav-admin" id="nav-js-tab" data-toggle="tab" href="#nav-js" role="tab" aria-controls="nav-js" aria-selected="false">JS</a>
+                  <a class="nav-item nav-link nav-admin" id="nav-css-tab" data-toggle="tab" href="#nav-css" role="tab" aria-controls="nav-css" aria-selected="false">CSS</a>
+                  <a class="nav-item nav-link nav-admin" id="nav-data-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">data</a>
+                </div>
+              </nav>
+              <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-html" role="tabpanel" aria-labelledby="nav-html-tab">
+                  <ul class="links-list list-unstyled">
+                    <li><span class="icon-file"><i class="fab fa-html5"></i></span> <a href="./d.html">d.html</a></li>
+                    <li><span class="icon-file"><i class="fab fa-html5"></i></span> <a href="./l.html">l.html</a></li>
+                    <li><span class="icon-file"><i class="fab fa-html5"></i></span> <a href="./t.html">t.html</a></li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-modales" role="tabpanel" aria-labelledby="nav-modales-tab">
+                  <div class="row">
+                    <ul class="links-list list-unstyled col-6">
+                      <li>
+                        <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#m_template"></button>
+                        <span class="icon-file"><i class="fa fa-recycle"></i> template (exemple)</span>
+                      </li>
+                      <li>
+                        <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#m_c"></button>
+                        <span class="icon-file"><i class="fas fa-truck-moving"></i> camion (todo)</span>
+                      </li>
+                      <li>
+                        <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#m_e"></button>
+                        <span class="icon-file"><i class="fas fa-truck-loading"></i> équipement (todo)</span>
+                      </li>
+                    </ul>
+                    <ul class="links-list list-unstyled col-6">
+                      <li>
+                        <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#m_te"></button>
+                        <span class="icon-file"><i class="fa fa-flash"></i> type équipement (todo)</span>
+                      </li>
+                      <li>
+                        <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#m_t"></button>
+                        <span class="icon-file"><i class="fas fa-truck"></i> tracteur (todo)</span>
+                      </li>
+                      <li>
+                        <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#m_d3"></button>
+                        <span class="icon-file"><i class="fas fa-file-alt"></i> encan privé (courriel)</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-js" role="tabpanel" aria-labelledby="nav-css-tab">
+                  <div class="row">
+                    <ul class="links-list list-unstyled col-6">
+                      <li><span class="icon-file"><i class="fab fa-js"></i></span> <a href="./js/index.js">index.js</a></li>
+                      <li><span class="icon-file"><i class="fab fa-js"></i></span> <a href="./js/d.js">d.js</a></li>
+                      <li><span class="icon-file"><i class="fab fa-js"></i></span> <a href="./js/t.js">t.js</a></li>
+                      <li><span class="icon-file"><i class="fab fa-js-square"></i></span> <a href="./js/g.function.js">g.function.js (new)</a></li>
+                    </ul>
+                    <ul class="links-list list-unstyled col-6">
+                      <li><span class="icon-file"><i class="fab fa-js-square"></i></span> <a href="./js/t.map.js">t.map.js</a></li>
+                      <li><span class="icon-file"><i class="fab fa-js-square"></i></span> <a href="./js/d.map.js">d.map.js</a></li>
+                      <li><span class="icon-file"><i class="fab fa-js-square"></i></span> <a href="#">à venir</a></li>
+                      <li><span class="icon-file"><i class="fab fa-js"></i></span> <a href="./js/m.d3.js">m.d3.js</a></li>
+                      <li><span class="icon-file"><i class="fa fa-bug fa-spin"></i></span> <a href="./js/file.js">file.js (old)</a></li>
+                    </ul>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="nav-css" role="tabpanel" aria-labelledby="nav-js-tab">
+                  <ul class="links-list list-unstyled">
+                    <li><span class="icon-file"><i class="fab fa-css3-alt"></i></span> <a href="./css/style.css">style.css</a></li>
+                    <li><span class="icon-file"><i class="fab fa-css3-alt"></i></span> <a href="./css/d.css">d.css</a></li>
+                    <li><span class="icon-file"><i class="fab fa-css3-alt"></i></span> <a href="./css/index.css">index.css</a></li>
+                    <li><span class="icon-file"><i class="fab fa-css3-alt"></i></span> <a href="./css/t.css">t.css</a></li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
+                  <div class="row">
+                    <ul class="links-list list-unstyled col-6">
+                      <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="./data/en.json">en.json</a></li>
+                      <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="./data/fr.json">fr.json</a></li>
+                      <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="./data/login.json">login.json</a></li>
+                    </ul>
+                    <ul class="links-list list-unstyled col-6">
+                      <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="./data/req.json">req.json</a></li>
+                      <li><span class="icon-file"><i class="fas fa-file-alt"></i></span> <a href="./data/zip.json">zip.json</a></li>
+                    </ul>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+    </div>
+  </div>
+</div>
