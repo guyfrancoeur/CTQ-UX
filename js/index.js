@@ -8,14 +8,14 @@ $( document ).ready(function() {
   $('#m_t').load('./m.t.html');
   $('#m_e').load('./m.e.html');
   $('#m_d3').load('./m.d3.html');
-
-  // Taille card index.html
-  // est utile ??
-  var heightDivLogin = $('#divLogin').height();
-  $('#arrow-card1').height(heightDivLogin);
-  $('#arrow-card2').height(heightDivLogin);
-  $('#divAdmin').height(heightDivLogin);
+  $('#m_admin').load('./m.admin.html');
 });
+
+function KeyPress(e) {
+  var evtobj = window.event? event : e
+  if (evtobj.keyCode == 65 && evtobj.shiftKey) $('#m_admin').modal('show');
+}
+document.onkeydown = KeyPress;
 
 //exemple court
 $(function() {
