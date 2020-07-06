@@ -206,14 +206,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     width: 77px;
 }
 
+#colEdit2{
+    text-align:left;
+}
+
 #colEdit2, .table tbody td:nth-child(1) {
     padding-right: 0px;
-    padding-left: 10px;
+    padding-left: 20px;
     width: 50px;
     margin:0px;
 }
 
-table tbody {
+.table tbody {
     display: block;
     max-height: 305px;
     overflow-y: scroll;

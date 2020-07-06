@@ -29,7 +29,6 @@ var mode_save_button_camion;
 var current_col;
 $('.bset').click(function() {
   mode_save_button_camion = "set";
-  $('#cdescription').focus();
   current_col = $(this).closest("tr");
   var desctiption = $(current_col).find("td").eq(0).find("button").attr('data-original-title');
   var tracteur = $(current_col).find("td").eq(1).html();
@@ -77,6 +76,20 @@ function camionEvent() {
     $('[data-toggle="tooltip"]').tooltip(); // Rendre fonctionnel le tooltip qui vient d'être ajouté
 }
 
+// Validation formulaire modale camion
+$('#m_c').on('shown.bs.modal', function() {
+  $('#cdescription').focus();
+  $('.selectpicker').selectpicker();
+  $("#bsavecamion").click(function(e) {
+    if (!$("#formCamion")[0].checkValidity()) {
+      $("#formCamion").find("#submit-hiddenC").click();
+    }
+    else{
+      camionEvent();
+    }
+  });
+});
+
 // Modification profil
 $('#bsetprofil').click(function() {
   $("#cnomEntreprise").prop('contenteditable', true);
@@ -121,6 +134,12 @@ function validerprofil() {
 // Fonctions qui concernent la modale ajout équipement _______________________________________________________________________________________________________________
 $('#m_e').on('shown.bs.modal', function() {
   $('.selectpicker').selectpicker();
+
+  // Collapse Bootstrap : fermer les autres quand on en ouvre un
+  $(".collapse").click(function () {
+    $(".collapse").not(this).removeClass("show");
+  });
+
   // Couleur tableau liste équipement (header)
   $('.hclass').click(function() {
     $(this).addClass("headcolor");
@@ -255,6 +274,12 @@ $('#m_e').on('shown.bs.modal', function() {
 // Fonctions qui concernent la modale tracteur __________________________________________________________________________________________________________________________________
 $('#m_t').on('shown.bs.modal', function() {
   $('.selectpicker').selectpicker();
+
+  // Collapse Bootstrap : fermer les autres quand on en ouvre un
+  $(".collapse").click(function () {
+    $(".collapse").not(this).removeClass("show");
+  });
+
   // Couleur tableau liste tracteurs (header)
   $('.hclass').click(function() {
     $(this).addClass("headcolor");
@@ -386,6 +411,12 @@ $('#m_t').on('shown.bs.modal', function() {
 // Fonctions qui concernent la modale type équipement  __________________________________________________________________________________________________________________________________
 $('#m_te').on('shown.bs.modal', function() {
   $('.selectpicker').selectpicker();
+
+  // Collapse Bootstrap : fermer les autres quand on en ouvre un
+  $(".collapse").click(function () {
+    $(".collapse").not(this).removeClass("show");
+  });
+
   // Couleur tableau liste types équipements (header)
   $('.hclass').click(function() {
     $(this).addClass("headcolor");
@@ -466,15 +497,6 @@ $(document).on('show.bs.modal', '.modal', function() {
   }, 0);
 });
 
-// Validation formulaire modale camion
-$('#m_c').on('shown.bs.modal', function() {
-  $('.selectpicker').selectpicker();
-  $("#bsavecamion").click(function() {
-    if (!$("#formCamion")[0].checkValidity()) {
-      $("#formCamion").find("#submit-hiddenC").click();
-    }
-  });
-});
 
 // Validation suppression (modale)
 function messageSupprEquipement() {

@@ -152,7 +152,7 @@ function selection(elem){
     $('#cdureeC').removeAttr("disabled");
     $('#addcourriel').removeAttr("disabled");
     $('#cdureeC').css("cursor", "text");
-    $('#addcourriel').css("cursor", "text");
+    $('#addcourriel').css("cursor", "pointer");
     $('#A').removeClass('chosen');
     $('#B').removeClass('chosen');
     $('#A').removeClass('clicked');
