@@ -1,6 +1,5 @@
 /* ********* Languages ********* */
-$('.translate').click(function() {
-  var lang = $(this).attr('id');
+function translateFunction(lang,name) {
   if (lang == "fr"){
     $("#fr").addClass("currentlanguage");
     $("#en").removeClass("currentlanguage");
@@ -11,17 +10,22 @@ $('.translate').click(function() {
   $.ajax({
     url: "./data/" + lang + ".json",
     dataType: "json",
-    success:function(data){ 
-      $.each(data, function(index, x) {
-        if(x.propriete == "text") $(x.obj).text(x.value);
-        if(x.propriete == "title") $(x.obj).selectpicker({title: x.value}).selectpicker('render');
-        if(x.propriete == "textdrop"){
-          $(x.obj).text(x.value);
-          $(x.obj).closest("select").selectpicker('refresh');
-        }
-        else{
-          $(x.obj).attr(x.propriete, x.value);
-        }
+    success:function(data){
+      $.each(data[name], function(n, tab) {
+        $.each(tab, function(i, x) {
+          if(x.propriete == "text") $(x.obj).text(x.value);
+          if(x.propriete == "titleDropdown") $(x.obj).selectpicker({title: x.value}).selectpicker('render');
+          if(x.propriete == "textDropdown"){
+            $(x.obj).text(x.value);
+            $(x.obj).closest("select").selectpicker('refresh');
+          }
+          else{
+            $(x.obj).attr(x.propriete, x.value);
+          }
+        });
+      });
+      $.each(data.all, function(i, y) {
+        $(y.obj).text(y.value);
       });
     },
     error:function(xhr, ajaxOptions, thrownError){
@@ -29,4 +33,4 @@ $('.translate').click(function() {
       console.log(thrownError);
     }
   });
-});
+}

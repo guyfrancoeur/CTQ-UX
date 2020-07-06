@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover();
   $('.selectpicker').selectpicker();
-
+  
   // Cacher bouton validation (modification profile)
   $("#bvalidprofil").hide();
   $("#bcancelprofil").hide();
@@ -35,30 +35,30 @@ $('.bset').click(function() {
   var tracteur = $(current_col).find("td").eq(1).html();
   var equipement = $(current_col).find("td").eq(2).html();
   $('#cdescription').val(desctiption).change();
-  $('#selectTracteur').val(tracteur).change();
-  $('#selectEquipement').val(equipement).change();
+  $('#cselecttracteur').val(tracteur).change();
+  $('#cselectequipement').val(equipement).change();
 });
 
 // Bouton ajout camion, réinitialiser la sélection (dropdown)
 $('#bajoutcamion').click(function() {
   mode_save_button_camion = "add";
   $('#cdescription').focus();
-  $("#selectTracteur").val("").change();
-  $("#selectEquipement").val("").change();
+  $("#cselecttracteur").val("").change();
+  $("#cselectequipement").val("").change();
 });
 
 function camionEvent() {
   switch (mode_save_button_camion) {
     case "set":
       $(current_col).find("td").eq(0).find("button").attr('data-original-title', $('#cdescription').val());
-      $(current_col).find("td").eq(1).html($('#selectTracteur').val());
-      $(current_col).find("td").eq(2).html($('#selectEquipement').val());
+      $(current_col).find("td").eq(1).html($('#cselecttracteur').val());
+      $(current_col).find("td").eq(2).html($('#cselectequipement').val());
       break;
 
     case "add":
       var choix_description = $('#cdescription').val();
-      var choix_tracteur = $('#selectTracteur').val();
-      var choix_equipement = $('#selectEquipement').val();
+      var choix_tracteur = $('#cselecttracteur').val();
+      var choix_equipement = $('#cselectequipement').val();
       var html = '<tr>' +
         '<td scope="row" class="text-right">' +
           '<button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="' + choix_description + '" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>' +
@@ -187,16 +187,16 @@ $('#m_e').on('shown.bs.modal', function() {
       '</div>' +
       '<div id="collapse' + nomE + '" class="collapse" aria-labelledby="heading' + nomE + '" data-parent="#accordion">' +
         '<div class="card-body py-1">' +
-          '<p><span class="labelcontent lcname">Name</span> : <span class="valuequipement">' + nomE + '</span></p>' +
-          '<p><span class="labelcontent lccapacity">Capacity</span> : <span class="valuequipement">' + capactiteE + ' kg</span></p>' +
-          '<p><span class="labelcontent lclength">Length</span> : <span class="valuequipement">' + longueurE + ' m</span></p>' +
-          '<p><span class="labelcontent lcwidth">Width</span> : <span class="valuequipement">' + largeurE + ' m</span></p>' +
-          '<p><span class="labelcontent lcheight">Height</span> : <span class="valuequipement">' + hauteurE + ' m</span></p>' +
+          '<p><span class="labelcontent cnameE">Name</span> : <span class="valuequipement">' + nomE + '</span></p>' +
+          '<p><span class="labelcontent ccapacityE">Capacity</span> : <span class="valuequipement">' + capactiteE + ' kg</span></p>' +
+          '<p><span class="labelcontent clengthE">Length</span> : <span class="valuequipement">' + longueurE + ' m</span></p>' +
+          '<p><span class="labelcontent cwidthE">Width</span> : <span class="valuequipement">' + largeurE + ' m</span></p>' +
+          '<p><span class="labelcontent cheightE">Height</span> : <span class="valuequipement">' + hauteurE + ' m</span></p>' +
         '</div>' +
       '</div>' +
       '</div>';
       $('#accordion').append(html);
-      $('#selectEquipement').append('<option value="' + nomE + '">' + nomE + '</option>').selectpicker('refresh'); // Ajouter le nouvel équipement au dropdown
+      $('#cselectequipement').append('<option value="' + nomE + '">' + nomE + '</option>').selectpicker('refresh'); // Ajouter le nouvel équipement au dropdown
       reinitialiserFormuEqui();
   }
 
@@ -317,15 +317,15 @@ $('#m_t').on('shown.bs.modal', function() {
       '</div>' +
       '<div id="collapse' + nomT + '" class="collapse" aria-labelledby="heading' + nomT + '" data-parent="#accordion">' +
          '<div class="card-body py-1">' +
-            '<p><span class="labelcontentT lcname">Name</span> : <span class="valuetracteur">' + nomT + '</span></p>' +
-            '<p><span class="labelcontentT lcstatus">Status</span> : <span class="valuetracteur">' + statutT + '</span></p>' +
-            '<p><span class="labelcontentT lcfueltype">Type of fuel</span> : <span class="valuetracteur">' + typeCarburant + '</span></p>' +
-            '<p><span class="labelcontentT lccomsumption">Consumption</span> : <span class="valuetracteur">' + consoT + '</span></p>' +
+            '<p><span class="labelcontentT cnameE">Name</span> : <span class="valuetracteur">' + nomT + '</span></p>' +
+            '<p><span class="labelcontentT cstatusE">Status</span> : <span class="valuetracteur">' + statutT + '</span></p>' +
+            '<p><span class="labelcontentT cfueltypeE">Type of fuel</span> : <span class="valuetracteur">' + typeCarburant + '</span></p>' +
+            '<p><span class="labelcontentT ccomsumptionE">Consumption</span> : <span class="valuetracteur">' + consoT + '</span></p>' +
          '</div>' +
       '</div>' +
     '</div>';
     $('#accordionT').append(html);
-    $('#selectTracteur').append('<option value="' + nomT + '">' + nomT + '</option>').selectpicker('refresh'); // Ajouter le nouveau tracteur au dropdown
+    $('#cselecttracteur').append('<option value="' + nomT + '">' + nomT + '</option>').selectpicker('refresh'); // Ajouter le nouveau tracteur au dropdown
     reinitialiserFormuTract();
   }
 
@@ -403,30 +403,30 @@ $('#m_te').on('shown.bs.modal', function() {
   // Boutons modification équipement (crayon)
   $('.bSte').click(function() {
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
-    $('#cNameTE').focus();
+    $('#cnameTE').focus();
     // Récupérer les valeurs de le type d'équipement en question
     nTE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(0).find(".valuete");
     kTE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(1).find(".valuete");
     coutTE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(2).find(".valuete");
     // Mettre ces valeurs dans le formulaire
-    $('#cNameTE').val(nTE.html()).change();
-    $('#cCleTE').val(kTE.html()).change();
+    $('#cnameTE').val(nTE.html()).change();
+    $('#ccleTE').val(kTE.html()).change();
     $('#cconsoTE').val(coutTE.html()).change();
   });
 
   function editTE() {
     // Sauvegarder la modification (changement des valeurs dans la liste des types d'équipements)
-    nTE.html($('#cNameTE').val());
-    kTE.html($('#cCleTE').val());
+    nTE.html($('#cnameTE').val());
+    kTE.html($('#ccleTE').val());
     coutTE.html($('#cconsoTE').val());
-    nTE.closest("p").closest("div").closest(".collapse").prev().find("h5").find("span").eq(0).html($('#cNameTE').val());
+    nTE.closest("p").closest("div").closest(".collapse").prev().find("h5").find("span").eq(0).html($('#cnameTE').val());
     reinitialiserFormuTE();
   }
 
   // Remettre le formulaire à zéro
   function reinitialiserFormuTE() {
-    $('#cNameTE').val("");
-    $('#cCleTE').val("");
+    $('#cnameTE').val("");
+    $('#ccleTE').val("");
     $('#cconsoTE').val("");
   }
 

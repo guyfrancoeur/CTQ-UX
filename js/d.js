@@ -83,7 +83,7 @@ function selection(elem){
     $('#A').addClass('chosen');
     $('#A').addClass('clicked');
     $('#A').removeClass('notchosen');
-    $('#cTextA').addClass('font-weight-bold');
+    $('#ctextA').addClass('font-weight-bold');
     $('#cdureeA').removeAttr("disabled");
     $('#cmontant').css("cursor", "text");
     $('#B').removeClass('chosen');
@@ -92,8 +92,8 @@ function selection(elem){
     $('#C').addClass('notchosen');
     $('#B').removeClass('clicked');
     $('#C').removeClass('clicked');
-    $('#cTextB').removeClass('font-weight-bold');
-    $('#cTextC').removeClass('font-weight-bold');
+    $('#ctextB').removeClass('font-weight-bold');
+    $('#ctextC').removeClass('font-weight-bold');
     $('#cmontant').prop("disabled", true);
     $('#cdureeC').prop("disabled", true);
     $('#addcourriel').prop("disabled", true);
@@ -115,7 +115,7 @@ function selection(elem){
     $('#B').addClass('chosen');
     $('#B').addClass('clicked');
     $('#B').removeClass('notchosen');
-    $('#cTextB').addClass('font-weight-bold');
+    $('#ctextB').addClass('font-weight-bold');
     $('#cmontant').removeAttr("disabled");
     $('#cmontant').css("cursor", "text");
     $('#A').removeClass('chosen');
@@ -124,8 +124,8 @@ function selection(elem){
     $('#C').addClass('notchosen');
     $('#A').removeClass('clicked');
     $('#C').removeClass('clicked');
-    $('#cTextA').removeClass('font-weight-bold');
-    $('#cTextC').removeClass('font-weight-bold');
+    $('#ctextA').removeClass('font-weight-bold');
+    $('#ctextC').removeClass('font-weight-bold');
     $('#cdureeA').prop("disabled", true);
     $('#cdureeC').prop("disabled", true);
     $('#addcourriel').prop("disabled", true);
@@ -148,7 +148,7 @@ function selection(elem){
     $('#C').addClass('chosen');
     $('#C').removeClass('notchosen');
     $('#C').addClass('clicked');
-    $('#cTextC').addClass('font-weight-bold');
+    $('#ctextC').addClass('font-weight-bold');
     $('#cdureeC').removeAttr("disabled");
     $('#addcourriel').removeAttr("disabled");
     $('#cdureeC').css("cursor", "text");
@@ -159,8 +159,8 @@ function selection(elem){
     $('#B').removeClass('clicked');
     $('#A').addClass('notchosen');
     $('#B').addClass('notchosen');
-    $('#cTextA').removeClass('font-weight-bold');
-    $('#cTextB').removeClass('font-weight-bold');
+    $('#ctextA').removeClass('font-weight-bold');
+    $('#ctextB').removeClass('font-weight-bold');
     $('#cdureeA').prop("disabled", true);
     $('#cmontant').prop("disabled", true);
     $('#cdureeA').css("cursor", "pointer");
@@ -315,23 +315,23 @@ function animationReduction() {
 
 // Tooltip on ToggleButton
 $("#cheight").focus(function() {
-  $("#tToggleinstruction").tooltip('show');
+  $("#htoggleinstruction").tooltip('show');
 });
 $("#cwidth").focus(function() {
-  $("#tToggleinstruction").tooltip('show');
+  $("#htoggleinstruction").tooltip('show');
 });
 $("#clongueur").focus(function() {
-  $("#tToggleinstruction").tooltip('show');
+  $("#htoggleinstruction").tooltip('show');
 });
 
 $("#cheight").focusout(function() {
-  $("#tToggleinstruction").tooltip('hide');
+  $("#htoggleinstruction").tooltip('hide');
 });
 $("#cwidth").focusout(function() {
-  $("#tToggleinstruction").tooltip('hide');
+  $("#htoggleinstruction").tooltip('hide');
 });
 $("#clongueur").focusout(function() {
-  $("#tToggleinstruction").tooltip('hide');
+  $("#htoggleinstruction").tooltip('hide');
 });
 
 // Validation formulaire

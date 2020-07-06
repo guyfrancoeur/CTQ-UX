@@ -70,7 +70,6 @@ ul.links-list li a:hover{
 }
 
 .vertical{
-  margin-top:auto;
-  margin-bottom:auto;
-  padding-bottom:5%;
+  padding-top:auto;
+  padding-bottom:auto;
 }

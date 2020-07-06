@@ -6,7 +6,7 @@
         </div>
       <div id="ticket"></div>
       <div class="col"></div>
-      <div class="col-auto text-center"><h3 id="hTE" class="modal-title px-4">Equipement type</h3></div>
+      <div class="col-auto text-center"><h3 id="ttypeequi" class="modal-title px-4">Equipement type</h3></div>
       <div class="col text-right">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -24,7 +24,7 @@
     <div class="modal-body">
       <div class="row">
         <div class="col-xl-7 col-12 pb-xl-0 pb-4">
-          <h5 class="titlemodale"><i class="fas fa-angle-right"></i> <span id="hYourTE">Your equipment type</span></h5>
+          <h5 class="titlemodale"><i class="fas fa-angle-right"></i> <span id="tyourTE">Your equipment type</span></h5>
           <div style="height:250px;overflow-y:scroll;border-bottom:1px solid rgb(240,240,240);">
             <div id="accordionTE" class="py-2 pr-2">
               <div class="card">
@@ -39,9 +39,9 @@
                 </div>
                 <div id="collapseTE1" class="collapse" aria-labelledby="headingTE1" data-parent="#accordionTE">
                   <div class="card-body py-1">
-                    <p><span class="labelcontentTE lcNameTe">Name</span> : <span class="valuete">FlatBed</span></p>
-                    <p><span class="labelcontentTE lcCle">Key</span> : <span class="valuete">1</span></p>
-                    <p><span class="labelcontentTE lcCoutTe">Cost</span> : <span class="valuete">230</span></p>
+                    <p><span class="labelcontentTE cnameTE">Name</span> : <span class="valuete">FlatBed</span></p>
+                    <p><span class="labelcontentTE ccleTE">Key</span> : <span class="valuete">1</span></p>
+                    <p><span class="labelcontentTE ccoutTE">Cost</span> : <span class="valuete">230</span></p>
                   </div>
                 </div>
               </div>
@@ -57,9 +57,9 @@
                 </div>
                 <div id="collapseTE2" class="collapse" aria-labelledby="headingTE2" data-parent="#accordionTE">
                   <div class="card-body py-1">
-                    <p><span class="labelcontentTE lcNameTe">Name</span> : <span class="valuete">DryBox </span></p>
-                    <p><span class="labelcontentTE lcCle">Key</span> : <span class="valuete">2</span></p>
-                    <p><span class="labelcontentTE lcCoutTe">Cost</span> : <span class="valuete">230</span></p>
+                    <p><span class="labelcontentTE cnameTE">Name</span> : <span class="valuete">DryBox </span></p>
+                    <p><span class="labelcontentTE ccleTE">Key</span> : <span class="valuete">2</span></p>
+                    <p><span class="labelcontentTE ccoutTE">Cost</span> : <span class="valuete">230</span></p>
                   </div>
                 </div>
               </div>
@@ -75,9 +75,9 @@
                 </div>
                 <div id="collapseTE3" class="collapse" aria-labelledby="headingTE3" data-parent="#accordionTE">
                   <div class="card-body py-1">
-                    <p><span class="labelcontentTE lcNameTe">Name</span> : <span class="valuete">Canestoga</span></p>
-                    <p><span class="labelcontentTE lcCle">Key</span> : <span class="valuete">3</span></p>
-                    <p><span class="labelcontentTE lcCoutTe">Cost</span> : <span class="valuete">230</span></p>
+                    <p><span class="labelcontentTE cnameTE">Name</span> : <span class="valuete">Canestoga</span></p>
+                    <p><span class="labelcontentTE ccleTE">Key</span> : <span class="valuete">3</span></p>
+                    <p><span class="labelcontentTE ccoutTE">Cost</span> : <span class="valuete">230</span></p>
                   </div>
                 </div>
               </div>
@@ -93,9 +93,9 @@
                 </div>
                 <div id="collapseTE4" class="collapse" aria-labelledby="headingTE4" data-parent="#accordionTE">
                   <div class="card-body py-1">
-                    <p><span class="labelcontentTE lcNameTe">Name</span> : <span class="valuete">FlatBed</span></p>
-                    <p><span class="labelcontentTE lcCle">Key</span> : <span class="valuete">4</span></p>
-                    <p><span class="labelcontentTE lcCoutTe">Cost</span> : <span class="valuete">230</span></p>
+                    <p><span class="labelcontentTE cnameTE">Name</span> : <span class="valuete">FlatBed</span></p>
+                    <p><span class="labelcontentTE ccleTE">Key</span> : <span class="valuete">4</span></p>
+                    <p><span class="labelcontentTE ccoutTE">Cost</span> : <span class="valuete">230</span></p>
                   </div>
                 </div>
               </div>
@@ -103,14 +103,14 @@
           </div>
         </div>
         <div class="col-xl-5 col-12" style="border-left: 1px solid rgb(230,230,230);">
-          <h5 class="titlemodale pb-2"><i class="fas fa-angle-right"></i> <span id="hmodifyTE">Modify an equipment type</span></h5>
+          <h5 class="titlemodale pb-2"><i class="fas fa-angle-right"></i> <span id="tmodifyTE">Modify an equipment type</span></h5>
           <form id="formTE">
             
             <div class="input-group input-group-sm pb-2">
               <div class="input-group-prepend">
                 <span class="input-group-text" style="width:37px;"><i class="fas fa-key m-auto"></i></span>
               </div>
-              <input id="cCleTE" type="text" class="form-control" placeholder="Key" disabled>
+              <input id="icleTE" type="text" class="form-control" placeholder="Key" disabled>
             </div>
             
             <div class="input-group input-group-sm pb-2">
@@ -121,13 +121,13 @@
                   </svg>
                 </span>
               </div>
-              <input id="cNameTE" type="text" class="form-control"  placeholder="Name" required autofocus>
+              <input id="inameTE" type="text" class="form-control"  placeholder="Name" required autofocus>
             </div>
             <div class="input-group input-group-sm pb-2">
               <div class="input-group-prepend">
                 <span class="input-group-text" style="width:37px;"><i class="fas fa-dollar-sign m-auto"></i></span>
               </div>
-              <input id="cconsoTE" type="number" class="form-control" placeholder="Cost" step="0.1" required>
+              <input id="iconsoTE" type="number" class="form-control" placeholder="Cost" step="0.1" required>
             </div>
             <input id="submit-hiddenTE" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
             <br/>

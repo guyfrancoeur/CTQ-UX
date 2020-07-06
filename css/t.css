@@ -21,7 +21,7 @@ tbody tr:hover {
     color:rgb(247,247,247);
 }
 
-#tprofil, #htruck {
+#tprofil, #ttruck {
     letter-spacing: 1px;
     font-family: 'Julius Sans One', sans-serif;
     color: rgb(247, 247, 249);
@@ -45,7 +45,7 @@ tbody tr:hover {
     transition-duration: 300ms;
 }
 
-#ttrucker {
+#divtrucker {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -58,7 +58,7 @@ tbody tr:hover {
     font-family: 'Encode Sans Condensed', sans-serif;
 }
 
-#h1Trucker {
+#ttrucker {
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 4px;
@@ -233,7 +233,6 @@ table thead, tbody tr {
     font-size: 22px;
     letter-spacing: 1px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(60, 60, 60);
     font-weight: 500;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px rgb(235, 235, 235);

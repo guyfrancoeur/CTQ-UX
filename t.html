@@ -41,10 +41,10 @@
           <a href="http://www.salutem.co/CTQ-UX/" class="button btn btn-outline-light mr-3"><span id="blogout">Logout</span> <i class="fas fa-sign-out-alt fa-sm ml-2"></i></a>
         </li>
         <div>
-          <a class="navbar-brand translate" id="fr">
+          <a class="navbar-brand" id="fr" onclick="translateFunction('fr','t');">
             <img src="./images/fr.svg" width="25" class="d-inline-block align-top flag">
           </a>
-          <a class="navbar-brand translate currentlanguage" id="en">
+          <a class="navbar-brand currentlanguage" id="en" onclick="translateFunction('en','t');">
             <img src="./images/en.svg" width="25" class="d-inline-block align-top flag">
           </a>
         </div>
@@ -74,8 +74,8 @@
           <div class="row text-center">
             <div class="col"></div>
             <div class=" col-xl-6 col-12 pb-2 pb-xl-0">
-              <div id="ttrucker">
-                <h1 id="h1Trucker" class="mb-1">Trucker</h1>
+              <div id="divtrucker">
+                <h1 id="ttrucker" class="mb-1">Trucker</h1>
                 <hr class="my-0 mx-auto p-0 style-two" style="width:150px;"></div>
             </div>
             <div id="boutonsTrucker" class="col text-right pl-0 pr-3">
@@ -98,7 +98,7 @@
               <div class="card-header text-center cardstyle">
                 <div class="card-title d-flex justify-content-between">
                   <div class="col text-left pl-0">
-                    <span id="helpProfile" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" data-original-title="Help"  data-placement="top"
+                    <span id="hprofile" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" data-original-title="Help"  data-placement="top"
                     data-html="true" data-animation="true" data-content='If you want to modify the informations about your profile, click on the pencil &nbsp; <i class="fas fa-pen color2"></i>'></span>
                   </div>
                   <h4 class="col-11">
@@ -137,7 +137,7 @@
               <div class="card-header text-center cardstyle">
                 <div class="card-title d-flex justify-content-between">
                   <div class="col text-left pl-0  test">
-                    <span id="helpTrucks" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" data-original-title="Help" data-placement="top" data-html="true" data-animation="true" 
+                    <span id="htrucks" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" data-original-title="Help" data-placement="top" data-html="true" data-animation="true" 
                     data-content='• If you want to add, modify or delete a tractor, click on the first button <span class="buttonInsideHelp"><i class="fas fa-plus"></i> <i class="fas fa-truck"></i></span><br/>
                     • If you want to add, modify or delete an equipment, click on the second button <span class="buttonInsideHelp"><i class="fas fa-plus"></i> <i class="fas fa-truck-loading"></i></span><br/>
                     • If you want to add, modify or delete an equipment type, click on the third button <div class="buttonInsideHelp3"><div>Type</div><div><i class="fas fa-truck-loading"></i></div></div><br/>
@@ -147,7 +147,7 @@
                     • If you want to delete a truck, you have to click on the trash on the right <i class="fas fa-trash color2"></i><br/>
                     • To change the location of the truck, you can click directly on the postal code which is an editable field.'></span>
                   </div>
-                  <h4 id="htruck" class="col-6">
+                  <h4 id="ttruck" class="col-6">
                     <span id="tlistecamions">Trucks list</span>
                   </h4>
                   <div class="col text-right pr-0">
@@ -370,7 +370,7 @@
   <br/><br/>
   <!-- ************* FOOTER ************* -->
   <footer class="footer-page font-small bg-dark fixed-bottom">
-    <div id="cFooterText" class="class-footer text-center">© 2020 Copyright • CTQ • All rights reserved.</div>
+    <div id="cfooter" class="class-footer text-center">© 2020 Copyright • CTQ • All rights reserved.</div>
   </footer>
   <!-- ************* FOOTER ************* -->
   
