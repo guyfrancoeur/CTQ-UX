@@ -1,391 +1,392 @@
 th, tr {
-    text-align: center;
+  text-align: center;
 }
 
 tbody tr:hover {
-    background-color: #FAFCFF;
-    box-shadow: -3px 3px 6px 3px rgba(1, 13, 40, .2);
-    transition-duration: 50ms;
+  background-color: #FAFCFF;
+  box-shadow: -3px 3px 6px 3px rgba(1, 13, 40, .2);
+  transition-duration: 50ms;
 }
 
 .color-icon {
-    color: rgb(98, 99, 101);
+  color: rgb(98, 99, 101);
 }
 
 .color-icon-hover {
-    color: rgb(247, 247, 249);
+  color: rgb(247, 247, 249);
 }
 
 .color-help{
-    cursor:pointer;
-    color:rgb(247,247,247);
+  cursor:pointer;
+  color:rgb(247,247,247);
 }
 
 #tprofil, #ttruck {
-    letter-spacing: 1px;
-    font-family: 'Julius Sans One', sans-serif;
-    color: rgb(247, 247, 249);
-    font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: rgb(247, 247, 249);
+  font-size: 22px;
 }
 
 .card:hover .cardstyle {
-    background: linear-gradient(rgba(1, 13, 40, .7), rgba(1, 13, 40, .8));
-    color: white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    transition-duration: 500ms;
+  background: linear-gradient(rgba(1, 13, 40, .7), rgba(1, 13, 40, .8));
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition-duration: 500ms;
 }
 
 .cardstyle {
-    height: 50px;
-    background: linear-gradient(rgb(80, 80, 80),rgb(50, 50, 50));
+  height: 50px;
+  background: linear-gradient(rgb(80, 80, 80),rgb(50, 50, 50));
 }
 
 .card:hover {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    transition-duration: 300ms;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition-duration: 300ms;
 }
 
 #divtrucker {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: 1px solid rgb(240, 240, 240);
-    margin-top: -30px;
-    background-color: rgb(255, 255, 255);
-    height: 70px;
-    padding-top: 13px;
-    text-shadow: 3px 3px 3px rgb(220, 220, 220);
-    font-family: 'Encode Sans Condensed', sans-serif;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid rgb(240, 240, 240);
+  margin-top: -30px;
+  background-color: rgb(255, 255, 255);
+  height: 70px;
+  padding-top: 13px;
+  text-shadow: 3px 3px 3px rgb(220, 220, 220);
+  font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 #ttrucker {
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: rgb(60, 60, 60);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgb(60, 60, 60);
 }
 
 .table tbody th, .table tbody td {
-    padding-top: 8px;
-    padding-bottom: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .table thead th {
-    padding-top: 9px;
-    padding-bottom: 9px;
-    font-weight: 500;
-    color: rgb(60, 60, 60);
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-weight: 500;
+  color: rgb(60, 60, 60);
 }
 
 .table thead th:nth-child(3), .table thead th:nth-child(4) {
-    border-left: 1px solid rgb(220, 220, 220);
+  border-left: 1px solid rgb(220, 220, 220);
 }
 
 tbody {
-    font-size: .875rem;
+  font-size: .875rem;
 }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #cnomEntreprise {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: bold;
-    color: #614200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  color: #614200;
 }
 
 .editeffect {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    transition-duration: 300ms;
-    background-color: rgb(250, 250, 250);
-    border: 1px solid rgb(245,245,245);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition-duration: 300ms;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(245,245,245);
 }
 
 .setprofile {
-    border: 1px solid rgb(200, 200, 200);
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px 0 lightgray inset;
-    padding: 0px 3px;
-    background-color: white;
-    width:250px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0 lightgray inset;
+  padding: 0px 3px;
+  background-color: white;
+  width:250px;
 }
 
 #divadresse {
-    margin-right: 10%;
+  margin-right: 10%;
 }
 
 #baddequipement:hover, #baddtracteur:hover, #baddequipementtype:hover {
-    background: radial-gradient(circle at center, rgba(236, 102, 0, .7), rgb(203, 92, 11));
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    opacity: 100%;
+  background: radial-gradient(circle at center, rgba(236, 102, 0, .7), rgb(203, 92, 11));
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  opacity: 100%;
 }
 
 #baddequipement, #baddtracteur, #baddequipementtype {
-    width: 60px;
-    height: 40px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-    background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-    border-radius: 3px;
-    color: white;
-    border-color: rgb(236, 176, 0);
-    opacity: 95%;
+  width: 60px;
+  height: 40px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
+  border-radius: 3px;
+  color: white;
+  border: 0px;
+  opacity: 95%;
 }
 
 .titlemodale {
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: rgba(1,13,40,.8);
-    font-weight:500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: rgba(1,13,40,.8);
+  font-weight:500;
 }
 
 .labelcontent, .labelcontentTE {
-    font-weight: 700;
-    width: 70px;
-    float: left;
-    color: rgb(60, 60, 60);
+  font-weight: 700;
+  width: 70px;
+  float: left;
+  color: rgb(60, 60, 60);
 }
 
 .labelcontentT {
-    width: 140px;
-    font-weight: 700;
-    float: left;
-    color: rgb(60, 60, 60);
+  width: 140px;
+  font-weight: 700;
+  float: left;
+  color: rgb(60, 60, 60);
 }
 
 #m_e .card, #m_t .card, #m_te .card {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 #m_e .card-header, #m_t .card-header, #m_te .card-header {
-    height: 40px;
-    cursor: pointer;
-    background-color: white;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
 }
 
 #m_e .card h5, #m_t .card h5, #m_te .card h5 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #m_e .card-body p, #m_t .card-body p, #m_te .card-body p {
-    margin-bottom: 0;
-    font-size: 15px;
+  margin-bottom: 0;
+  font-size: 15px;
 }
 
 #m_e .card-header:hover, #m_t .card-header:hover, #m_te .card-header:hover {
-    background-color: #FAFCFF;
-    transition-duration: 50ms;
+  background-color: #FAFCFF;
+  transition-duration: 50ms;
 }
 
 .valuequipement, .valuetracteur, .valuete {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .headcolor {
-    background-color: #FAFCFF !important;
-    font-weight: bold;
+  background-color: #FAFCFF !important;
+  font-weight: bold;
 }
 
 #m_e .card-body, #m_t .card-body, #m_te .card-body {
-    font-size: 15px;
-    background-color: white;
-    box-shadow: 2px 2px 2px 2px rgb(247, 247, 247) inset;
+  font-size: 15px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(247, 247, 247) inset;
 }
 
 .table tbody th {
-    padding-left: 0px;
-    width: 60px;
+  padding-left: 0px;
+  width: 60px;
 }
 
 #colEdit {
-    padding-left: 0px;
-    width: 77px;
+  padding-left: 0px;
+  width: 77px;
 }
 
+
 #colEdit2{
-    text-align:left;
+  text-align:left;
 }
 
 #colEdit2, .table tbody td:nth-child(1) {
-    padding-right: 0px;
-    padding-left: 20px;
-    width: 50px;
-    margin:0px;
+  padding-right: 0px;
+  padding-left: 20px;
+  width: 50px;
+  margin:0px;
 }
 
 .table tbody {
-    display: block;
-    max-height: 305px;
-    overflow-y: scroll;
+  display: block;
+  max-height: 305px;
+  overflow-y: scroll;
 }
 
 table thead, tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .bset>.color-icon, .btrash>.color-icon, .bS>.color-icon, .bSt>.color-icon, .bSte>.color-icon, .bP>.color-icon {
-    color: rgb(190,190,190);
+  color: rgb(190,190,190);
 }
 
 #hTruck {
-    font-size: 22px;
-    letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px rgb(235, 235, 235);
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px rgb(235, 235, 235);
 }
 
 .cpostalcode {
-    width: 50px;
-    height: 25px;
+  width: 50px;
+  height: 25px;
 }
 
 #rondTrash {
-    border: 1px solid rgb(249, 249, 249);
-    background-color: rgb(250, 250, 250);
-    margin-top: -30px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(249, 249, 249);
+  background-color: rgb(250, 250, 250);
+  margin-top: -30px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .bYes {
-    width: 50%;
-    height: 50px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 3px;
-    background-color: #E75858;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: white;
+  width: 50%;
+  height: 50px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 3px;
+  background-color: #E75858;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: white;
 }
 
 .bYes:hover,
 .bNo:hover {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
 }
 
 .bNo {
-    float: left;
-    width: 50%;
-    height: 50px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 3px;
-    background-color: rgb(150, 150, 150);
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: white;
+  float: left;
+  width: 50%;
+  height: 50px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  background-color: rgb(150, 150, 150);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: white;
 }
 
 @media screen and (max-width: 1289px) {
-    .table tbody td:nth-child(2),
-    .table tbody td:nth-child(3),
-    .table tbody td:nth-child(4),
-    .table thead th:nth-child(2),
-    .table thead th:nth-child(3),
-    .table thead th:nth-child(4) {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
+  .table tbody td:nth-child(2),
+  .table tbody td:nth-child(3),
+  .table tbody td:nth-child(4),
+  .table thead th:nth-child(2),
+  .table thead th:nth-child(3),
+  .table thead th:nth-child(4) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 #bcancelprofil, #bvalidprofil {
-    width: 39px;
+  width: 39px;
 }
 
 #bvalidprofil:active {
-    border: 1px solid #1D8D0D;
-    border-radius: 60px;
+  border: 1px solid #1D8D0D;
+  border-radius: 60px;
 }
 
 #bcancelprofil:active {
-    border: 1px solid #8D1C1C;
-    border-radius: 80px;
+  border: 1px solid #8D1C1C;
+  border-radius: 80px;
 }
 
 #valeurProfit {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .animationmap{
-    animation-name: animMap;
-    animation-duration: 500ms;
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused;
+  animation-name: animMap;
+  animation-duration: 500ms;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
   }
   @keyframes animMap {
-    0% {
-      font-size:100%;
-    }
-    50% {
-        font-size:130%;
-    }
-    100% {
-        font-size:100%;
-    }
+  0% {
+    font-size:100%;
+  }
+  50% {
+    font-size:130%;
+  }
+  100% {
+    font-size:100%;
+  }
   }
 
   hr.style-two {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   }
 
 .buttonInsideHelp{
-    background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-    border-radius: 3px;
-    color: white;
-    border-color: rgb(236, 176, 0);
-    opacity: 95%;
-    padding:1%;
-    font-size:11px;
+  background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
+  border-radius: 3px;
+  color: white;
+  border-color: rgb(236, 176, 0);
+  opacity: 95%;
+  padding:1%;
+  font-size:11px;
 }
 
 
 .color2{
-    color:rgb(190,190,190);
+  color:rgb(190,190,190);
 }
 
 .buttonInsideHelp2{
-    background: rgb(64,64,64);
-    border-radius: 3px;
-    color: white;
-    opacity: 95%;
-    padding-left:2%;
-    padding-right:2%;
-    padding-top:1%;
-    padding-bottom:1%;
-    font-size:11px;
+  background: rgb(64,64,64);
+  border-radius: 3px;
+  color: white;
+  opacity: 95%;
+  padding-left:2%;
+  padding-right:2%;
+  padding-top:1%;
+  padding-bottom:1%;
+  font-size:11px;
 }
 
 .buttonInsideHelp3{
-    background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-    border-radius: 3px;
-    color: white;
-    border-color: rgb(236, 176, 0);
-    opacity: 95%;
-    padding:1%;
-    font-size:7px;
-    text-align:center;
-    text-transform: uppercase;
-    width:30px;
-    display:inline-block;
+  background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
+  border-radius: 3px;
+  color: white;
+  border-color: rgb(236, 176, 0);
+  opacity: 95%;
+  padding:1%;
+  font-size:7px;
+  text-align:center;
+  text-transform: uppercase;
+  width:30px;
+  display:inline-block;
 }
 
 .popover{
@@ -394,15 +395,44 @@ table thead, tbody tr {
 
 #cardProfil {
   height:400px;
+  margin:0px;
 }
 
 @media screen and (max-width: 1199px) {
   #cardProfil {
-      height:300px;
+    height:300px;
   }
 }
 
 .cpostalcode.form-control.is-valid, .cpostalcode.form-control.is-invalid{
-    background-image: none !important;
-    padding:.25rem .5rem !important;
+  background-image: none !important;
+  padding:.25rem .5rem !important;
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px){
+  .card-header {
+    padding-right:0px;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  #colEdit {
+    width: 60px;
+  }
+  #colEdit2, .table tbody td:nth-child(1) {
+    padding-left: 5px;
+  }
+  .table thead th span{
+    display:block;
+    font-size:15px;
+  }
+  .table tbody {
+    display: block;
+    max-height: 285px;
+    overflow-y: scroll;
+  }
+  .cardstyle {
+    padding-right:5px;
+    padding-left:5px;
+  }
 }

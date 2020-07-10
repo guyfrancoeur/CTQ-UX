@@ -45,38 +45,38 @@ body {
 }
 
 .menu-bar{
-    background-color: rgba(20,32,41,0.8);
-    /* background-color: rgba(0,0,0,0.9); */
+  background-color: rgba(20,32,41,0.8);
+  /* background-color: rgba(0,0,0,0.9); */
 }
 
 @media (max-width: 1199px) {
   .bloc-blanc2{
-    margin-top:15px;
-    margin-bottom:70px;
+  margin-top:15px;
+  margin-bottom:70px;
   }
   
   .bloc-login{
-    margin-bottom:70px;
+  margin-bottom:70px;
   }
 
   .bloc-index{
-    margin-bottom:70px;
+  margin-bottom:70px;
   }
   
   .slide-text {
-    margin-right:-20px;
+  margin-right:-20px;
   }
 }
 
 @media (max-width: 1700px) {
   .bloc-formulaire{
-    margin-bottom:70px;
+  margin-bottom:70px;
   }
 }
 
 @media (max-width: 1470px) {
   #divInfo, #divRequire{
-    height:340px;
+  height:340px;
   }
 }
 
