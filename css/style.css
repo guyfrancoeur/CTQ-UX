@@ -246,3 +246,16 @@ font-size:34px;
   height:500px;
   width:100%;
 }
+
+#bsignout2{
+  border: 1px solid rgba(255,255,255,.2);
+  color:rgb(220,220,220);
+  font-size:15px;
+}
+#bsignout2:hover{
+  border: 1px solid rgba(255,255,255,.4);
+  color:white;
+}
+.navbar-nav{
+  font-size:15px;
+}

@@ -39,7 +39,7 @@
            <a id="bhome" class="nav-link" href="http://www.salutem.co/CTQ-UX/">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item mx-xl-3">
-          <a href="http://www.salutem.co/CTQ-UX/" class="btn btn-outline-light mr-3"><span id="bsignout">Sign-out</span> <i class="fas fa-sign-out-alt fa-sm ml-2"></i></a>
+          <a id="bsignout2" href="http://www.salutem.co/CTQ-UX/" class="btn mr-3"><span id="bsignout">Sign-out</span> <i class="fas fa-sign-out-alt fa-sm ml-2"></i></a>
         </li>
         <div>
           <a class="navbar-brand" id="fr" onclick="translateFunction('fr','t');">
@@ -59,8 +59,7 @@
     <br/>
     <div class="container text-center">
       <div class="text-light">
-        <h1 id="titleTrucker" class=""><br/><br/></h1>
-        
+        <h1 class=""><br/><br/></h1>
       </div>
     </div>
   </div>
@@ -95,16 +94,15 @@
           <div class="row">
             <div class="pr-xl-2 px-sm-3 px-0 col-12 col-xl-auto pb-3 pb-xl-0">
               <div id="cardProfil" class="card">
-                <div class="card-header text-center cardstyle">
+                <div class="card-header cardstyle">
                   <div class="card-title d-flex justify-content-between">
                     <div class="col text-left pl-0">
                       <span id="hprofile" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" data-original-title="Help"  data-placement="right"
                       data-html="true" data-animation="true" data-content='To edit the informations about your profile, click on the pencil &nbsp; <i class="fas fa-pen color2"></i>'></span>
                     </div>
-                    <h4 class="col-11">
-                      <i class="fas fa-user fa-sm color-icon-hover"></i>
+                    <div class="col-11">
                       <span id="tprofil">Profile</span>
-                    </h4>
+                    </div>
                     <div class="col"></div>
                   </div>
                 </div>
@@ -121,7 +119,7 @@
                         <p id="cadresse2" contenteditable=false>Quebec J4R 2T8, Canada</p>
                       </span>
                       <br/>
-                      <p><i class="fas fa-tag color-icon"></i> Profit : <span id="cvaleurProfit">X</span></p>
+                      <p><i class="fas fa-tag" style="color:rgb(120,120,120);"></i> &#160; Profit : <span id="cvaleurProfit">X</span></p>
                     </div>
                     <div class="justify-content-center d-flex flex-column align-items-center ml-auto pr-2 pl-1">
                       <button id="bvalidprofil" type="button" class="btn px-1 mb-1" onclick="validerprofil()"><i class="fas fa-check fa-lg" style="color:#7FB23B"></i></button>
@@ -158,7 +156,7 @@
               </div>
               <div class="card-body p-0" >
                 <table id="tableCamions" class="table">
-                  <thead style="background-color:rgb(247,247,249);">
+                  <thead>
                     <tr>
                       <th id="colEdit2" scope="col">
                         <div class="custom-control custom-checkbox">
@@ -166,9 +164,9 @@
                           <label class="custom-control-label" for="selectall"></label>
                         </div>
                       </th>
-                      <th scope="col"><span><i class="fas fa-truck color-icon"></i> </span><span id="ttracteur">Tractor</span></th>
-                      <th scope="col"><span><i class="fas fa-truck-loading color-icon"></i> </span><span id="tequipement">Equipment</span></th>
-                      <th scope="col"><span><i class="fas fa-map-signs color-icon"></i> </span><span id="tposition">Location</span></th>
+                      <th scope="col"><span></span><span id="ttracteur">Tractor</span></th>
+                      <th scope="col"><span></span><span id="tequipement">Equipment</span></th>
+                      <th scope="col"><span></span><span id="tposition">Location</span></th>
                       <th id="colEdit" scope="col"></th>
                     </tr>
                   </thead>

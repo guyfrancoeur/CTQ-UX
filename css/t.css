@@ -4,60 +4,110 @@ th, tr {
 
 tbody tr:hover {
   background-color: #FAFCFF;
-  box-shadow: -3px 3px 6px 3px rgba(1, 13, 40, .2);
+  box-shadow: -3px 3px 6px 3px rgba(1, 13, 40, .1);
   transition-duration: 50ms;
 }
 
-.color-icon {
-  color: rgb(98, 99, 101);
-}
-
-.color-icon-hover {
-  color: rgb(247, 247, 249);
-}
-
-.color-help{
-  cursor:pointer;
-  color:rgb(247,247,247);
-}
-
-#tprofil, #ttruck {
-  letter-spacing: 1px;
-  font-family: 'Julius Sans One', sans-serif;
-  color: rgb(247, 247, 249);
-  font-size: 22px;
-}
-
-.card:hover .cardstyle {
-  background: linear-gradient(rgba(1, 13, 40, .7), rgba(1, 13, 40, .8));
-  color: white;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  transition-duration: 500ms;
+#titleTrucker{
+  background-color:rgba(255,255,255,.1);
+  color:rgb(230,230,230);
+  text-transform: uppercase;
+  padding-top:15px;
+  padding-bottom:15px;
+  padding-left:30px;
+  padding-right:30px;
+  font-size:40px;
+  border-radius:10px;
 }
 .cardstyle {
   height: 50px;
-  background: linear-gradient(rgb(80, 80, 80),rgb(50, 50, 50));
+  background-color: rgb(248,248,248);
+  border:0px solid rgb(225,225,225);
+  border-bottom:1px solid rgb(230,230,230);
 }
-
-.card:hover {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  transition-duration: 300ms;
+#tprofil, #ttruck {
+  letter-spacing: 1.5px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: rgb(100,100,100);
+  font-size: 20px;
+  font-family: 'Hind Guntur', sans-serif;
+  text-transform: uppercase;
+  font-weight:500;
+  margin-top:5px;
+}
+.color-icon-hover {
+  color: rgb(100,100,100);
+}
+.color-help{
+  cursor:pointer;
+  color: rgb(150,150,150);
+}
+.color-icon{
+  color:rgb(100,100,100);
+}
+thead{
+  background-color: rgba(170, 211, 223, 0.2);
+}
+thead tr{
+  border:1px solid rgba(198, 214, 231,.5);
+  border-top:0px;
+  border-left:0px;
+  border-right:0px;
+}
+.table thead th{
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-weight: 500;
+  border:0px;
+  font-size:13px;
+  text-transform: uppercase;
+  color:rgb(155,155,155);
+}
+#cardProfil .card-header{
+  background-color:rgb(240,240,240);
+  text-align:center;
+}
+#cardtrucks .card-header{
+  background-color: rgba(149, 176, 192, 0.6);
+}
+#cardtrucks .color-help, #cardtrucks .color-icon-hover{
+  color:rgb(95,95,95);
+}
+#cardtrucks .color-help{
+  color:rgb(105,105,105);
+}
+#ttruck{
+  font-weight:700px;
+  color:rgb(95,95,95);
+}
+#cardtrucks .cardstyle {
+border-bottom: 1px solid rgb(193, 208, 224);
+}
+#divadresse2{
+  font-size:15px;
+}
+tr{
+  border-color:rgb(105, 85, 85);
+}
+.table tbody tr:nth-child(1), .table tbody tr:nth-child(1) th, .table tbody tr:nth-child(1) td{
+  border-top:0px !important;
+}
+#divadresse, tbody{
+  color:rgb(80,80,80);
+}
+.card{
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.05);
 }
 
 #divtrucker {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  /*
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;*/
   border: 1px solid rgb(240, 240, 240);
   margin-top: -30px;
   background-color: rgb(255, 255, 255);
   height: 70px;
   padding-top: 13px;
   font-family: 'Encode Sans Condensed', sans-serif;
-
-
-  background-color:rgb(247,247,247);
+  background-color:white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgb(230, 230, 230);
 }
@@ -68,13 +118,10 @@ tbody tr:hover {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: rgb(60, 60, 60);
-
-
-
   padding-top:5px;
   font-weight:500;
   font-family: 'Hind Guntur', sans-serif;
-  color:rgba(0,0,0,.6);
+  color:rgba(0,0,0,.7);
 }
 
 .table tbody th, .table tbody td {
@@ -82,19 +129,12 @@ tbody tr:hover {
   padding-bottom: 8px;
 }
 
-.table thead th {
-  padding-top: 9px;
-  padding-bottom: 9px;
-  font-weight: 500;
-  color: rgb(60, 60, 60);
-}
-
 .table thead th:nth-child(3), .table thead th:nth-child(4) {
-  border-left: 1px solid rgb(220, 220, 220);
+  border-left: 1px solid rgba(125, 151, 179,.2);
 }
 
 tbody {
-  font-size: .875rem;
+  font-size: 14px;
 }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
@@ -107,7 +147,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   text-transform: uppercase;
   font-style: italic;
   font-weight: bold;
-  color: #614200;
 }
 
 .editeffect {
@@ -118,40 +157,43 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .setprofile {
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid rgb(220, 220, 220);
   border-radius: 3px;
-  box-shadow: 1px 1px 1px 0 lightgray inset;
   padding: 0px 3px;
   background-color: white;
   width:250px;
 }
 
-#divadresse {
-  margin-right: 10%;
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+  background-color:#5B9B1A;
+  border-color:#5B9B1A;
+  border-radius:3px;
 }
 
 #baddequipement:hover, #baddtracteur:hover, #baddequipementtype:hover {
-  background: radial-gradient(circle at center, rgba(236, 102, 0, .7), rgb(203, 92, 11));
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  opacity: 100%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #DF7410;
 }
 
 #baddequipement, #baddtracteur, #baddequipementtype {
   width: 60px;
   height: 40px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-  background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-  border-radius: 3px;
-  color: white;
+  background-color: #c26712;
+  border-radius: 0px;
+  color: rgb(245,245,245);
   border: 0px;
-  opacity: 95%;
+  margin-left:-5px;
+  
+}
+#baddequipementtype,#baddequipement{
+  border-left:1px solid #a85a12;
 }
 
 .titlemodale {
   font-size: 17px;
   letter-spacing: 1px;
   color: rgb(80,80,80);
-  font-weight:500;
+  font-weight:400;
 }
 
 .labelcontent, .labelcontentTE {
