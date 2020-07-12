@@ -27,7 +27,7 @@
   "d":{
     "main":[
       {"propriete":"text","obj":"#bsaveform","value":"Save"},
-      {"propriete":"text","obj":"#blogout","value":"Log out"},
+      {"propriete":"text","obj":"#bsignout","value":"Sign-out"},
       {"propriete":"text","propriete":"text","obj":"#itinerary","value":"Itinerary"},
       {"propriete":"text","obj":"#cinfochargement","value":"Cargo info"},
       {"propriete":"text","propriete":"text","obj":"#cmev","value":"Market"},
@@ -84,6 +84,7 @@
   },
   "t":{
     "main":[
+      {"propriete":"text","obj":"#bsignout","value":"Sign-out"},
       {"propriete":"text","obj":"#ttrucker","value":"Trucker"},
       {"propriete":"text","obj":"#tlistecamions","value":"Trucks list"},
       {"propriete":"text","obj":"#tprofil","value":"Profile"},
@@ -93,8 +94,8 @@
       {"propriete":"titleDropdown","obj":"#cstatut","value":"Status"},
       {"propriete":"data-original-title","obj":"#htrucks","value":"Help"},
       {"propriete":"data-original-title","obj":"#hprofile","value":"Help"},
-      {"propriete":"data-content","obj":"#htrucks","value":"• If you want to add, modify or delete a tractor, click on the first button <span class='buttonInsideHelp'><i class='fas fa-plus'></i> <i class='fas fa-truck'></i></span><br/>• If you want to add, modify or delete an equipment, click on the second button <span class='buttonInsideHelp'><i class='fas fa-plus'></i> <i class='fas fa-truck-loading'></i></span><br/>• If you want to add, modify or delete an equipment type, click on the third button <div class='buttonInsideHelp3'><div>Type</div><div><i class='fas fa-truck-loading'></i></div></div><br/>• To add a new truck, you have to click on the button <span class='buttonInsideHelp2'><i class='fas fa-plus'></i></span><br/>• With this button <span class='buttonInsideHelp2'><i class='fas fa-map-marked-alt'></i></span> you can see the trucks you have selected on a map. You have to select at least one.<br/>• If you want to modify a truck, you have to click on the pencil on the right <i class='fas fa-pencil-alt color2'></i><br/>• If you want to delete a truck, you have to click on the trash on the right <i class='fas fa-trash color2'></i><br/>• To change the location of the truck, you can click directly on the postal code which is an editable field."},
-      {"propriete":"data-content","obj":"#hprofile","value":"If you want to modify the informations about your profile, click on the pencil &nbsp; <i class='fas fa-pen color2'></i>"}    
+      {"propriete":"data-content","obj":"#htrucks","value":"• To add, modify or delete a tractor, click on the first button <span class='buttonInsideHelp'><i class='fas fa-plus'></i> <i class='fas fa-truck'></i></span><br/>• To add, modify or delete an equipment, click on the second button <span class='buttonInsideHelp'><i class='fas fa-plus'></i> <i class='fas fa-truck-loading'></i></span><br/>• To add, modify or delete an equipment type, click on the third button <div class='buttonInsideHelp3'><div>Type</div><div><i class='fas fa-truck-loading'></i></div></div><br/>• To add a new truck, you have to click on the button <span class='buttonInsideHelp2'><i class='fas fa-plus'></i></span><br/>• With this button <span class='buttonInsideHelp2'><i class='fas fa-map-marked-alt'></i></span> you can see the trucks you have selected on a map. You have to select at least one.<br/>• To modify a truck, you have to click on the pencil on the right <i class='fas fa-pencil-alt color2'></i><br/>• To delete a truck, you have to click on the trash on the right <i class='fas fa-trash color2'></i><br/>• To change the location of the truck, you can click directly on the postal code which is an editable field."},
+      {"propriete":"data-content","obj":"#hprofile","value":"To modify the informations about your profile, click on the pencil &nbsp; <i class='fas fa-pen color2'></i>"}    
     ],
     "m.c":[
       {"propriete":"text","obj":".bsavechanges","value":"Save"},

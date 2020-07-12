@@ -34,7 +34,6 @@ tbody tr:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   transition-duration: 500ms;
 }
-
 .cardstyle {
   height: 50px;
   background: linear-gradient(rgb(80, 80, 80),rgb(50, 50, 50));
@@ -47,15 +46,20 @@ tbody tr:hover {
 
 #divtrucker {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  /*
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;*/
   border: 1px solid rgb(240, 240, 240);
   margin-top: -30px;
   background-color: rgb(255, 255, 255);
   height: 70px;
   padding-top: 13px;
-  text-shadow: 3px 3px 3px rgb(220, 220, 220);
   font-family: 'Encode Sans Condensed', sans-serif;
+
+
+  background-color:rgb(247,247,247);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(230, 230, 230);
 }
 
 #ttrucker {
@@ -64,6 +68,13 @@ tbody tr:hover {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: rgb(60, 60, 60);
+
+
+
+  padding-top:5px;
+  font-weight:500;
+  font-family: 'Hind Guntur', sans-serif;
+  color:rgba(0,0,0,.6);
 }
 
 .table tbody th, .table tbody td {
@@ -100,9 +111,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .editeffect {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.11), 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   transition-duration: 300ms;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(252, 252, 252);
   border: 1px solid rgb(245,245,245);
 }
 
@@ -137,24 +148,24 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .titlemodale {
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 1px;
-  color: rgba(1,13,40,.8);
+  color: rgb(80,80,80);
   font-weight:500;
 }
 
 .labelcontent, .labelcontentTE {
-  font-weight: 700;
+  font-weight: 500;
   width: 70px;
   float: left;
-  color: rgb(60, 60, 60);
+  color: rgb(50,50,50);
 }
 
 .labelcontentT {
   width: 140px;
-  font-weight: 700;
+  font-weight: 500;
   float: left;
-  color: rgb(60, 60, 60);
+  color: rgb(50,50,50);
 }
 
 #m_e .card, #m_t .card, #m_te .card {
@@ -169,16 +180,22 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 #m_e .card h5, #m_t .card h5, #m_te .card h5 {
   font-size: 14px;
+  color:rgb(90,90,90);
 }
 
 #m_e .card-body p, #m_t .card-body p, #m_te .card-body p {
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 14px;
+  color:rgb(80,80,80);
 }
 
 #m_e .card-header:hover, #m_t .card-header:hover, #m_te .card-header:hover {
   background-color: #FAFCFF;
   transition-duration: 50ms;
+}
+
+.hclass{
+  padding-right:0px;
 }
 
 .valuequipement, .valuetracteur, .valuete {
@@ -252,6 +269,8 @@ table thead, tbody tr {
   border: 1px solid rgb(249, 249, 249);
   background-color: rgb(250, 250, 250);
   margin-top: -30px;
+  margin-left:auto;
+  margin-right:auto;
   height: 60px;
   width: 60px;
   border-radius: 50px;
@@ -264,12 +283,13 @@ table thead, tbody tr {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 5px;
   background-color: #E75858;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 1.5px;
   color: white;
+  border:0px;
 }
 
 .bYes:hover,
@@ -286,38 +306,41 @@ table thead, tbody tr {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 5px;
   background-color: rgb(150, 150, 150);
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 1.5px;
   color: white;
+  border:0px;
+}
+
+#m_v, .modal-footer, .modal-footer > div, .modal-content{
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border:0px;
 }
 
 @media screen and (max-width: 1289px) {
-  .table tbody td:nth-child(2),
-  .table tbody td:nth-child(3),
-  .table tbody td:nth-child(4),
-  .table thead th:nth-child(2),
-  .table thead th:nth-child(3),
-  .table thead th:nth-child(4) {
+  .table tbody td:nth-child(2),.table tbody td:nth-child(3),.table tbody td:nth-child(4),
+  .table thead th:nth-child(2),.table thead th:nth-child(3),.table thead th:nth-child(4) {
     padding-left: 0px;
     padding-right: 0px;
   }
 }
 
 #bcancelprofil, #bvalidprofil {
+  opacity:60%;
   width: 39px;
 }
 
-#bvalidprofil:active {
-  border: 1px solid #1D8D0D;
-  border-radius: 60px;
+#bcancelprofil:hover, #bvalidprofil:hover {
+  opacity:100%;
 }
 
-#bcancelprofil:active {
-  border: 1px solid #8D1C1C;
-  border-radius: 80px;
+#bvalidprofil:active,#bcancelprofil:active {
+  font-size:1.5em;
+  transition-duration: 1000ms;
 }
 
 #valeurProfit {
@@ -329,24 +352,18 @@ table thead, tbody tr {
   animation-duration: 500ms;
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
-  }
-  @keyframes animMap {
-  0% {
-    font-size:100%;
-  }
-  50% {
-    font-size:130%;
-  }
-  100% {
-    font-size:100%;
-  }
-  }
+}
+@keyframes animMap {
+  0% {font-size:100%;}
+  50% {font-size:130%;}
+  100% {font-size:100%;}
+}
 
-  hr.style-two {
+hr.style-two {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  }
+}
 
 .buttonInsideHelp{
   background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
@@ -357,7 +374,6 @@ table thead, tbody tr {
   padding:1%;
   font-size:11px;
 }
-
 
 .color2{
   color:rgb(190,190,190);
@@ -389,7 +405,7 @@ table thead, tbody tr {
   display:inline-block;
 }
 
-.popover{
+.popover #htrucks{
   max-width: 400px;
 }
 
@@ -397,6 +413,20 @@ table thead, tbody tr {
   height:400px;
   margin:0px;
 }
+
+#baddEquipement, #baddTracteur, #breplaceTE{
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing: 1.5px;
+  border-radius: 3px;
+  background-color: #61AA51;
+  border-color:#61AA51;
+}
+#baddEquipement:hover, #baddTracteur:hover, #breplaceTE:hover{
+  background-color: #28a745;
+  border-color:#28a745;
+}
+
 
 @media screen and (max-width: 1199px) {
   #cardProfil {
@@ -407,12 +437,6 @@ table thead, tbody tr {
 .cpostalcode.form-control.is-valid, .cpostalcode.form-control.is-invalid{
   background-image: none !important;
   padding:.25rem .5rem !important;
-}
-
-@media screen and (max-width: 990px) and (min-width: 768px){
-  .card-header {
-    padding-right:0px;
-  }
 }
 
 @media screen and (max-width: 456px) {
@@ -432,7 +456,7 @@ table thead, tbody tr {
     overflow-y: scroll;
   }
   .cardstyle {
-    padding-right:5px;
-    padding-left:5px;
+    padding-right:10px;
+    padding-left:10px;
   }
 }

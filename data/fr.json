@@ -27,7 +27,7 @@
   "d":{
     "main":[
       {"propriete":"text","obj":"#bsaveform","value":"Sauvegarder"},
-      {"propriete":"text","obj":"#blogout","value":"Se déconnecter"},
+      {"propriete":"text","obj":"#bsignout","value":"Se déconnecter"},
       {"propriete":"text","propriete":"text","obj":"#itinerary","value":"Itinéraire"},
       {"propriete":"text","obj":"#cinfochargement","value":"Info chargement"},
       {"propriete":"text","propriete":"text","obj":"#cmev","value":"Mise en vente"},
@@ -84,6 +84,7 @@
   },
   "t":{
     "main":[
+      {"propriete":"text","obj":"#bsignout","value":"Se déconnecter"},
       {"propriete":"text","obj":"#ttrucker","value":"Camionneur"},
       {"propriete":"text","obj":"#tlistecamions","value":"Liste des camions"},
       {"propriete":"text","obj":"#tprofil","value":"Profil"},

@@ -67,12 +67,13 @@ body {
   margin-right:-20px;
   }
 }
-
+/*
 @media (max-width: 1700px) {
   .bloc-formulaire{
   margin-bottom:70px;
   }
 }
+*/
 
 @media (max-width: 1470px) {
   #divInfo, #divRequire{
@@ -141,12 +142,13 @@ font-size:34px;
 }
 
 .modal-header{
-  border:0px;
+  border: 0px;
   padding-bottom:5px;
 }
 
 .iconModale {
   color: white;
+  filter: drop-shadow(5px 5px 1px rgba(0,0,0,.1));
 }
 
 .divIconeModale {
@@ -176,17 +178,30 @@ font-size:34px;
 }
 
 #m_e h3, #m_t h3, #m_te h3, #m_t-map h3, #m_d_map h3, #m_t_map h3, #tmcourriels, #m_c h4{
-  font-size: 26px;
   letter-spacing: 1px;
-  color: rgba(1,13,40,.8);
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 2px rgb(235, 235, 235);
-  border-radius: 0px;
-  background-color: rgb(254, 254, 254);
-  box-shadow: 3px 3px 3px rgb(247, 247, 247);
-  padding-bottom: 10px;
-  font-family: sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding-top:13px;
+  padding-bottom: 7px;
+  padding-left:40px;
+  padding-right:40px;
+  font-family: 'Hind Guntur', sans-serif;
+  font-size:22px;
+  color:rgba(0,0,0,.6);
+  text-transform:uppercase;
+  border-radius:5px;
+  /*border: 1px solid rgba(0,0,0,.07);*/
+}
+
+.modal-header{
+  padding-top:7px;
+  background-color:rgb(247,247,247);
+}
+.modal-body{
+  padding-top:0px;
+}
+#m_v .modal-header{
+  background-color:white;
 }
 
 /* Popup dans OpenLayers */
