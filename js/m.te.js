@@ -1,17 +1,4 @@
 $('#m_te').on('shown.bs.modal', function() {
-  $('.selectpicker').selectpicker();
-
-  // Collapse Bootstrap : fermer les autres quand on en ouvre un
-  $(".collapse").click(function () {
-    console.log("ok");
-    $(".collapse").not(this).removeClass("show");
-  });
-
-  // Couleur tableau liste types équipements (header)
-  $('.hclass').click(function() {
-    $(this).addClass("headcolor");
-    $(".hclass").not(this).removeClass("headcolor");
-  });
 
   // Bouton suppression équipement (trash)
   $('.bP').click(function() {

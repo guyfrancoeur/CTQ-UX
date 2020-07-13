@@ -1,13 +1,11 @@
 th, tr {
   text-align: center;
 }
-
 tbody tr:hover {
   background-color: #FAFCFF;
   box-shadow: -3px 3px 6px 3px rgba(1, 13, 40, .1);
   transition-duration: 50ms;
 }
-
 #titleTrucker{
   background-color:rgba(255,255,255,.1);
   color:rgb(230,230,230);
@@ -98,10 +96,7 @@ tr{
 .card{
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.05);
 }
-
 #divtrucker {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgb(240, 240, 240);
   margin-top: -30px;
   background-color: rgb(255, 255, 255);
   height: 70px;
@@ -111,7 +106,6 @@ tr{
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgb(230, 230, 230);
 }
-
 #ttrucker {
   font-size: 30px;
   font-weight: 500;
@@ -123,39 +117,32 @@ tr{
   font-family: 'Hind Guntur', sans-serif;
   color:rgba(0,0,0,.7);
 }
-
 .table tbody th, .table tbody td {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-
 .table thead th:nth-child(3), .table thead th:nth-child(4) {
   border-left: 1px solid rgba(125, 151, 179,.2);
 }
-
 tbody {
   font-size: 14px;
 }
-
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #cnomEntreprise {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-style: italic;
   font-weight: bold;
 }
-
 .editeffect {
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.11), 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   transition-duration: 300ms;
   background-color: rgb(252, 252, 252);
   border: 1px solid rgb(245,245,245);
 }
-
 .setprofile {
   border: 1px solid rgb(220, 220, 220);
   border-radius: 3px;
@@ -163,18 +150,15 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   background-color: white;
   width:250px;
 }
-
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
   background-color:#5B9B1A;
   border-color:#5B9B1A;
   border-radius:3px;
 }
-
 #baddequipement:hover, #baddtracteur:hover, #baddequipementtype:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   background-color: #DF7410;
 }
-
 #baddequipement, #baddtracteur, #baddequipementtype {
   width: 60px;
   height: 40px;
@@ -183,19 +167,16 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: rgb(245,245,245);
   border: 0px;
   margin-left:-5px;
-  
 }
 #baddequipementtype,#baddequipement{
   border-left:1px solid #a85a12;
 }
-
 .titlemodale {
   font-size: 17px;
   letter-spacing: 1px;
   color: rgb(80,80,80);
   font-weight:400;
 }
-
 .labelcontent, .labelcontentTE {
   font-weight: 500;
   width: 70px;
@@ -213,86 +194,69 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 #m_e .card, #m_t .card, #m_te .card {
   margin-bottom: 5px;
 }
-
 #m_e .card-header, #m_t .card-header, #m_te .card-header {
   height: 40px;
   cursor: pointer;
   background-color: white;
 }
-
 #m_e .card h5, #m_t .card h5, #m_te .card h5 {
   font-size: 14px;
   color:rgb(90,90,90);
 }
-
 #m_e .card-body p, #m_t .card-body p, #m_te .card-body p {
   margin-bottom: 0;
   font-size: 14px;
   color:rgb(80,80,80);
 }
-
 #m_e .card-header:hover, #m_t .card-header:hover, #m_te .card-header:hover {
   background-color: #FAFCFF;
   transition-duration: 50ms;
 }
-
 .hclass{
   padding-right:0px;
 }
-
 .valuequipement, .valuetracteur, .valuete {
   margin-left: 10px;
 }
-
 .headcolor {
-  background-color: #FAFCFF !important;
+  background-color: rgb(240,240,240)!important;
   font-weight: bold;
 }
-
 #m_e .card-body, #m_t .card-body, #m_te .card-body {
   font-size: 15px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(247, 247, 247) inset;
 }
-
 .table tbody th {
   padding-left: 0px;
   width: 60px;
 }
-
 #colEdit {
   padding-left: 0px;
   width: 77px;
 }
-
-
 #colEdit2{
   text-align:left;
 }
-
 #colEdit2, .table tbody td:nth-child(1) {
   padding-right: 0px;
   padding-left: 20px;
   width: 50px;
   margin:0px;
 }
-
 .table tbody {
   display: block;
   max-height: 305px;
   overflow-y: scroll;
 }
-
 table thead, tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-
 .bset>.color-icon, .btrash>.color-icon, .bS>.color-icon, .bSt>.color-icon, .bSte>.color-icon, .bP>.color-icon {
   color: rgb(190,190,190);
 }
-
 #hTruck {
   font-size: 22px;
   letter-spacing: 1px;
@@ -301,12 +265,10 @@ table thead, tbody tr {
   letter-spacing: 2px;
   text-shadow: 2px 2px 2px rgb(235, 235, 235);
 }
-
 .cpostalcode {
   width: 50px;
   height: 25px;
 }
-
 #rondTrash {
   border: 1px solid rgb(249, 249, 249);
   background-color: rgb(250, 250, 250);
@@ -318,7 +280,6 @@ table thead, tbody tr {
   border-radius: 50px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-
 .bYes {
   width: 50%;
   height: 50px;
@@ -333,14 +294,12 @@ table thead, tbody tr {
   color: white;
   border:0px;
 }
-
 .bYes:hover,
 .bNo:hover {
   font-size: 14px;
   font-weight: bold;
   color: white;
 }
-
 .bNo {
   float: left;
   width: 50%;
@@ -356,7 +315,6 @@ table thead, tbody tr {
   color: white;
   border:0px;
 }
-
 #m_v, .modal-footer, .modal-footer > div, .modal-content{
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -375,20 +333,16 @@ table thead, tbody tr {
   opacity:60%;
   width: 39px;
 }
-
 #bcancelprofil:hover, #bvalidprofil:hover {
   opacity:100%;
 }
-
 #bvalidprofil:active,#bcancelprofil:active {
   font-size:1.5em;
   transition-duration: 1000ms;
 }
-
 #valeurProfit {
   padding-right: 20px;
 }
-
 .animationmap{
   animation-name: animMap;
   animation-duration: 500ms;
@@ -400,31 +354,26 @@ table thead, tbody tr {
   50% {font-size:130%;}
   100% {font-size:100%;}
 }
-
 hr.style-two {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
-
 .buttonInsideHelp{
-  background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-  border-radius: 3px;
+  background-color: #c26712;
+  border-radius: 0px;
   color: white;
-  border-color: rgb(236, 176, 0);
   opacity: 95%;
   padding:1%;
-  font-size:11px;
+  font-size:9px;
 }
-
 .color2{
   color:rgb(190,190,190);
 }
-
 .buttonInsideHelp2{
-  background: rgb(64,64,64);
-  border-radius: 3px;
-  color: white;
+  background-color:rgba(149, 176, 192, 0.6);
+  border-radius: 0px;
+  color: rgb(95,95,95);
   opacity: 95%;
   padding-left:2%;
   padding-right:2%;
@@ -432,12 +381,10 @@ hr.style-two {
   padding-bottom:1%;
   font-size:11px;
 }
-
 .buttonInsideHelp3{
-  background: radial-gradient(circle at center, rgba(236, 102, 0, .9), rgb(203, 92, 11));
-  border-radius: 3px;
+  background-color: #c26712;
+  border-radius: 0px;
   color: white;
-  border-color: rgb(236, 176, 0);
   opacity: 95%;
   padding:1%;
   font-size:7px;
@@ -446,17 +393,14 @@ hr.style-two {
   width:30px;
   display:inline-block;
 }
-
 .popover #htrucks{
   max-width: 400px;
 }
-
 #cardProfil {
   height:400px;
   margin:0px;
 }
-
-#baddEquipement, #baddTracteur, #breplaceTE{
+#baddEquipement, #baddTracteur, #breplaceTE, #bsavecamion{
   text-transform:uppercase;
   font-size:13px;
   letter-spacing: 1.5px;
@@ -464,21 +408,19 @@ hr.style-two {
   background-color: #61AA51;
   border-color:#61AA51;
 }
-#baddEquipement:hover, #baddTracteur:hover, #breplaceTE:hover{
+#baddEquipement:hover, #baddTracteur:hover, #breplaceTE:hover, #bsavecamion:hover{
   background-color: #28a745;
   border-color:#28a745;
 }
-
+.cpostalcode.form-control.is-valid, .cpostalcode.form-control.is-invalid{
+  background-image: none !important;
+  padding:.25rem .5rem !important;
+}
 
 @media screen and (max-width: 1199px) {
   #cardProfil {
     height:300px;
   }
-}
-
-.cpostalcode.form-control.is-valid, .cpostalcode.form-control.is-invalid{
-  background-image: none !important;
-  padding:.25rem .5rem !important;
 }
 
 @media screen and (max-width: 456px) {

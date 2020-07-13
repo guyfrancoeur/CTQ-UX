@@ -1,17 +1,4 @@
 $('#m_t').on('shown.bs.modal', function() {
-  $('.selectpicker').selectpicker();
-
-  // Collapse Bootstrap : fermer les autres quand on en ouvre un
-  $(".collapse").click(function () {
-    console.log("ok");
-    $(".collapse").not(this).removeClass("show");
-  });
-
-  // Couleur tableau liste tracteurs (header)
-  $('.hclass').click(function() {
-    $(this).addClass("headcolor");
-    $(".hclass").not(this).removeClass("headcolor");
-  });
 
   // Bouton suppression tracteur (trash)
   $('.bP').click(function() {
@@ -115,21 +102,21 @@ $('#m_t').on('shown.bs.modal', function() {
   // Adapter le texte du titre et du bouton pour la modification d'un tracteur
   function changerTitresT(){
     if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#haddTracteur').html("Modify this tractor");
+      $('#taddtracteur').html("Modify this tractor");
       $('#baddT').html("Replace");
     }
     else{ // Si en français
-      $('#haddTracteur').html("Modifier ce tracteur");
+      $('#taddtracteur').html("Modifier ce tracteur");
       $('#baddT').html("Remplacer");
     }
   }
   function remettreTitresTract(){
     if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#haddTracteur').html("Add a new tractor");
+      $('#taddtracteur').html("Add a new tractor");
       $('#baddT').html("Add");
     }
     else{ // Si en français
-      $('#haddTracteur').html("Ajouter un nouveau tracteur");
+      $('#taddtracteur').html("Ajouter un nouveau tracteur");
       $('#baddT').html("Ajouter");
     }
   }

@@ -1,16 +1,4 @@
 $('#m_e').on('shown.bs.modal', function() {
-  $('.selectpicker').selectpicker();
-
-  // Collapse Bootstrap : fermer les autres quand on en ouvre un
-  $(".collapse").click(function () {
-    $(".collapse").not(this).removeClass("show");
-  });
-
-  // Couleur tableau liste équipement (header)
-  $('.hclass').click(function() {
-    $(this).addClass("headcolor");
-    $(".hclass").not(this).removeClass("headcolor");
-  });
 
   // Bouton suppression équipement (trash)
   $('.bP').click(function() {
@@ -119,20 +107,20 @@ $('#m_e').on('shown.bs.modal', function() {
   // Adapter le texte du titre et du bouton pour la modification d'un équipement
   function changerTitres() {
     if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#haddEqui').html("Modify this equipment");
+      $('#taddequi').html("Modify this equipment");
       $('#baddE').html("Replace");
     } else { // Si en français
-      $('#haddEqui').html("Modifier cet équipement");
+      $('#taddequi').html("Modifier cet équipement");
       $('#baddE').html("Remplacer");
     }
   }
 
   function remettreTitresEqui() {
     if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#haddEqui').html("Add a new equipment");
+      $('#taddequi').html("Add a new equipment");
       $('#baddE').html("Add");
     } else { // Si en français
-      $('#haddEqui').html("Ajouter un nouvel équipement");
+      $('#taddequi').html("Ajouter un nouvel équipement");
       $('#baddE').html("Ajouter");
     }
   }

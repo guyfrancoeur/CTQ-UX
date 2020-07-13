@@ -98,7 +98,8 @@
       {"propriete":"data-content","obj":"#hprofile","value":"To modify the informations about your profile, click on the pencil &nbsp; <i class='fas fa-pen color2'></i>"}    
     ],
     "m.c":[
-      {"propriete":"text","obj":".bsavechanges","value":"Save"},
+      {"propriete":"text","obj":"#hTruck","value":"Truck"},
+      {"propriete":"text","obj":"#bsavecamiontext","value":"Add"},
       {"propriete":"titleDropdown","obj":"#cselecttracteur","value":"Tractor"},
       {"propriete":"titleDropdown","obj":"#cselectequipement","value":"Equipment"}
     ],
