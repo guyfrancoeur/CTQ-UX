@@ -1,4 +1,12 @@
 $('#m_e').on('shown.bs.modal', function() {
+  $("#bretourE").hide();
+
+  // Bouton retour
+  $('#bretourE').click(function() {
+    reinitialiserFormuEqui();
+    changerTitres("add");
+    $("#bretourE").hide();
+  });
 
   // Bouton suppression équipement (trash)
   $('.bP').click(function() {
@@ -12,9 +20,10 @@ $('#m_e').on('shown.bs.modal', function() {
   var nE, cE, loE, laE, hE;
   // Boutons modification équipement (crayon)
   $('.bS').click(function() {
+    $("#bretourE").show();
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     mode_save_button_equipement = "set";
-    changerTitres();
+    changerTitres("set");
     $('#cnomE').focus();
     // Récupérer les valeurs de l'équipement en question
     nE = $(this).closest("span").closest("h5").closest("div").next("div").find("div").find("p").eq(0).find(".valuequipement");
@@ -96,7 +105,7 @@ $('#m_e').on('shown.bs.modal', function() {
       $("#cMessageAddEquipement").show(0).delay(10000).hide(0);
     } else {
       editEqui();
-      remettreTitresEqui();
+      changerTitres("add");
       $("#cMessageAddEquipement").hide();
       $("#cMessageDeleteEquipement").hide();
       $("#cMessageEditEquipement").show(0).delay(10000).hide(0);
@@ -105,23 +114,26 @@ $('#m_e').on('shown.bs.modal', function() {
   });
 
   // Adapter le texte du titre et du bouton pour la modification d'un équipement
-  function changerTitres() {
-    if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#taddequi').html("Modify this equipment");
-      $('#baddE').html("Replace");
-    } else { // Si en français
-      $('#taddequi').html("Modifier cet équipement");
-      $('#baddE').html("Remplacer");
-    }
-  }
-
-  function remettreTitresEqui() {
-    if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#taddequi').html("Add a new equipment");
-      $('#baddE').html("Add");
-    } else { // Si en français
-      $('#taddequi').html("Ajouter un nouvel équipement");
-      $('#baddE').html("Ajouter");
+  function changerTitres(elt){
+    switch(elt){
+      case "add":
+        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+          $('#taddequi').html("Add a new equipment");
+          $('#baddE').html("Add");
+        } else { // Si en français
+          $('#taddequi').html("Ajouter un nouvel équipement");
+          $('#baddE').html("Ajouter");
+        }
+        break;
+      case "set":
+        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+          $('#taddequi').html("Modify this equipment");
+          $('#baddE').html("Replace");
+        } else { // Si en français
+          $('#taddequi').html("Modifier cet équipement");
+          $('#baddE').html("Remplacer");
+        }
+        break;
     }
   }
 });

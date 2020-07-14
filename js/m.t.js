@@ -1,4 +1,12 @@
 $('#m_t').on('shown.bs.modal', function() {
+  $("#bretourT").hide();
+
+  // Bouton retour
+  $('#bretourT').click(function() {
+    reinitialiserFormuTract();
+    changerTitresT("add");
+    $("#bretourT").hide();
+  });
 
   // Bouton suppression tracteur (trash)
   $('.bP').click(function() {
@@ -12,9 +20,10 @@ $('#m_t').on('shown.bs.modal', function() {
   var nT, sT, tcT, cT;
   // Boutons modification tracteur (crayon)
   $('.bSt').click(function() {
+    $("#bretourT").show();
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     mode_save_button_tracteur = "set";
-    changerTitresT();
+    changerTitresT("set");
     $('#cnomtracteur').focus();
     // Récupérer les valeurs du tracteur en question
     nT = $(this).closest( "span" ).closest( "h5" ).closest( "div" ).next("div").find("div").find("p").eq(0).find(".valuetracteur");
@@ -91,7 +100,7 @@ $('#m_t').on('shown.bs.modal', function() {
       }
       else{
         editTract();
-        remettreTitresTract();
+        changerTitresT("set");
         $("#cMessageDeleteTracteur").hide();
         $("#cMessageAddTracteur").hide();
         $("#cMessageEditTracteur").show(0).delay(10000).hide(0);
@@ -100,24 +109,28 @@ $('#m_t').on('shown.bs.modal', function() {
   });
 
   // Adapter le texte du titre et du bouton pour la modification d'un tracteur
-  function changerTitresT(){
-    if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#taddtracteur').html("Modify this tractor");
-      $('#baddT').html("Replace");
-    }
-    else{ // Si en français
-      $('#taddtracteur').html("Modifier ce tracteur");
-      $('#baddT').html("Remplacer");
-    }
-  }
-  function remettreTitresTract(){
-    if ($('#en').hasClass("currentlanguage")){ // Si en anglais
-      $('#taddtracteur').html("Add a new tractor");
-      $('#baddT').html("Add");
-    }
-    else{ // Si en français
-      $('#taddtracteur').html("Ajouter un nouveau tracteur");
-      $('#baddT').html("Ajouter");
+  function changerTitresT(elt){
+    switch(elt){
+      case "add":
+        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+          $('#taddtracteur').html("Add a new tractor");
+          $('#baddT').html("Add");
+        }
+        else{ // Si en français
+          $('#taddtracteur').html("Ajouter un nouveau tracteur");
+          $('#baddT').html("Ajouter");
+        }
+        break;
+      case "set":
+        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+          $('#taddtracteur').html("Modify this tractor");
+          $('#baddT').html("Replace");
+        }
+        else{ // Si en français
+          $('#taddtracteur').html("Modifier ce tracteur");
+          $('#baddT').html("Remplacer");
+        }
+        break;
     }
   }
 }); 
