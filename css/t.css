@@ -171,6 +171,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 #baddequipementtype,#baddequipement{
   border-left:1px solid #a85a12;
 }
+#baddequipementtype, #baddtracteur{
+  z-index:1;
+}
+#baddequipement{
+  z-index:2;
+}
 .titlemodale {
   font-size: 17px;
   letter-spacing: 1px;
