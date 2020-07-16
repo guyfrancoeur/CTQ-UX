@@ -44,7 +44,7 @@
           <a class="navbar-brand" id="fr" onclick="translateFunction('fr','d');">
             <img src="./images/fr.svg" width="25" class="d-inline-block align-top flag">
           </a>
-          <a class="navbar-brand" id="en" onclick="translateFunction('en','d');">
+          <a class="navbar-brand currentlanguage" id="en" onclick="translateFunction('en','d');">
             <img src="./images/en.svg" width="25" class="d-inline-block align-top flag">
           </a>
         </div>
@@ -86,7 +86,7 @@
                         <div class="input-group-prepend label-absolute">
                           <span class="input-group-text lighten-3 bg-light"><i class="fas fa-lg fa-map-marker-alt"></i></span>
                         </div>
-                         <input type="text" class="form-control rounded-right OHform" id="corigin" placeholder="ORIGIN - City or Postal Code" required>
+                         <input type="text" class="form-control rounded-right OHform champRempli" id="corigin" placeholder="ORIGIN - City or Postal Code" required>
                       </div>
                     </div>
                     <div id="divDestination" class="text-center col-12 px-0 pr-xl-3">
@@ -95,7 +95,7 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text lighten-3 bg-light"><i class="fas fa-lg fa-map-marker-alt"></i></span>
                         </div>
-                        <input type="text" class="form-control rounded-right OHform" id="cdestination" placeholder="DESTINATION - City or Postal Code" required>
+                        <input type="text" class="form-control rounded-right OHform champRempli" id="cdestination" placeholder="DESTINATION - City or Postal Code" required>
                       </div>
                     </div>
                   </div>
@@ -295,16 +295,20 @@
   <div class="toast-header p-0 m-0">
       <div class="col"></div>
       <div class="col text-center">
-        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white"></i>
+        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white" trigger="hover click"
+        aria-hidden="true" data-toggle="tooltip" data-html="true" data-placement="top"
+        data-original-title="<i id='iconindice' class='fas fa-hand-point-right fa-sm'></i> 
+        <span id='cindicenbcamions'>Give more informations about the cargo to get maybe more available trucks !</span>"></i>
       </div>
       <div class="col text-right">
         <button id="closeToast" type="button" class="close" data-dismiss="toast" aria-label="Close" disabled><span aria-hidden="true" style="color:rgb(230,230,230);">&times;</span></button>
       </div>
     </div>
   <div class="toast-body text-center">
-    <p style="cursor:default;"><strong class="mr-auto"><span id="cavailabletrucks">Available trucks</span> :  <span id="nbcamions" class="badge badge-warning">4</span></strong></p>
+    <p style="cursor:default;"><strong class="mr-auto"><span id="cavailabletrucks">Available trucks</span> :  <span id="nbcamions" class="badge badge-warning">0</span></strong></p>
     <button id="bmapD" class="btn py-0 px-2 btn-outline-light" type="button" data-toggle="modal" data-target="#m_d_map" disabled>
-      <span id="bAvailableT">See the list of available trucks</span> <i class="fas fa-search-plus"></i></button>
+      <span id="bAvailableT">See the list of available trucks</span> <i class="fas fa-search-plus"></i>
+    </button>
   </div>
 </div>
 

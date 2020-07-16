@@ -183,19 +183,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: rgb(80,80,80);
   font-weight:400;
 }
-.labelcontent, .labelcontentTE {
-  font-weight: 500;
-  width: 70px;
-  float: left;
-  color: rgb(50,50,50);
-}
-
-.labelcontentT {
-  width: 140px;
+.labelcontentTE, .labelcontentT, .labelcontent{
   font-weight: 500;
   float: left;
   color: rgb(50,50,50);
 }
+.labelcontentTE{width: 70px;}
+.labelcontent{width:120px;}
+.labelcontentT {width: 140px;}
 
 #m_e .card, #m_t .card, #m_te .card {
   margin-bottom: 5px;
@@ -433,24 +428,20 @@ hr.style-two {
 .bretour:hover{
   color:rgb(70,70,70) !important;
 }
+.input-group-sm>.input-group-prepend>.input-group-text{
+  color:rgb(110,110,110);
+}
 
 @media screen and (max-width: 1199px) {
-  #cardProfil {
-    height:300px;
-  }
+  #cardProfil {height:300px;}
+}
+@media screen and (max-width: 384px) {
+  thead th span{font-size:13px;}
 }
 
 @media screen and (max-width: 456px) {
-  #colEdit {
-    width: 60px;
-  }
-  #colEdit2, .table tbody td:nth-child(1) {
-    padding-left: 5px;
-  }
-  .table thead th span{
-    display:block;
-    font-size:15px;
-  }
+  #colEdit {width: 60px;}
+  #colEdit2, .table tbody td:nth-child(1){padding-left: 5px;}
   .table tbody {
     display: block;
     max-height: 285px;

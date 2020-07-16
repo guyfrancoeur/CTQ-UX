@@ -11,8 +11,19 @@
         </button>
       </div>
     </div>
-    <br/>
     <div class="modal-body pt-0">
+      <div class="d-flex justify-content-around pb-2 pt-2">
+        <div class="cmaplegend"><img src="./images/origin.svg"> <span id="cmaporigin" >Origin</span></div>
+        <div class="cmaplegend"><img src="./images/destination.svg"> <span>Destination</span></div>
+        <div class="cmaplegend"><img src="./images/truck.svg"> <span id="cmaptrucks">Trucks</span></div>
+      </div>
       <div id="map" class="map"></div>
+      <div id="popup" class="ol-popup">
+        <button id="popup-closer" type="button" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div id="popup-content"></div>
+      </div>
+    </div>
   </div>
 </div>

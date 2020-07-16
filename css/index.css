@@ -22,6 +22,7 @@ ul.links-list li a:hover{
 
 .arrow-card{
   height:210px;
+  cursor:pointer;
 }
 
 .arrow-card:hover{

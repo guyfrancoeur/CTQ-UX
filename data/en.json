@@ -43,7 +43,7 @@
       {"propriete":"text","obj":"#cents","value":"cents"},
       {"propriete":"text","obj":"#cchoosemessage","value":"Please choose one type of market."},
       {"propriete":"text","obj":"#cavailabletrucks","value":"Available trucks"},
-      {"propriete":"text","obj":"#bavailabletrucks","value":"See the list of available trucks"},
+      {"propriete":"text","obj":"#bAvailableT","value":"See the list of available trucks"},
       {"propriete":"titleDropdown","obj":"#crequirements","value":"Any requirements ?"},
       {"propriete":"textDropdown","obj":"#crefrigerated","value":"refrigerated"},
       {"propriete":"textDropdown","obj":"#crush","value":"Rush-ASAP"},
@@ -70,7 +70,8 @@
       {"propriete":"data-content","obj":"#hcargo","value":"In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."},
       {"propriete":"data-content","obj":"#horiginedestination","value":"The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."},
       {"propriete":"data-original-title","obj":"#htoggleinstruction","value":"Click on this button if you want to convert to feet or meters"},
-      {"propriete":"data-original-title","obj":"#hprivate","value":"Private auction will be sent to a list, only them can bid."}
+      {"propriete":"data-original-title","obj":"#hprivate","value":"Private auction will be sent to a list, only them can bid."},
+      {"propriete":"data-original-title","obj":"#infoIcon","value":"<i id='iconindice' class='fas fa-hand-point-right fa-sm'></i> <span id='cindicenbcamions'>Give more informations about the cargo to get maybe more available trucks !</span>"}
     ],
     "m.courriels":[
       {"propriete":"text","obj":"#tmcourriels","value":"List of emails"},
@@ -78,8 +79,10 @@
       {"propriete":"text","obj":"#bSaveEmails","value":"Save"},
       {"propriete":"text","obj":"#bclosecourriels","value":"Close"}
     ],
-    "m.t.map":[
-      {"propriete":"text","obj":"#tavailabletrucks","value":"Available trucks"}
+    "m.d.map":[
+      {"propriete":"text","obj":"#tavailabletrucks","value":"Available trucks"},
+      {"propriete":"text","obj":"#cmaporigin","value":"Origin"},
+      {"propriete":"text","obj":"#cmaptrucks","value":"Trucks"}
     ]
   },
   "t":{
@@ -114,6 +117,7 @@
       {"propriete":"text","obj":".clengthE","value":"Length"},
       {"propriete":"text","obj":".cwidthE","value":"Width"},
       {"propriete":"text","obj":".cheightE","value":"Height"},
+      {"propriete":"text","obj":".cTE","value":"Equipment type"},
       {"propriete":"text","obj":"#cMEE","value":"Equipment modified !"},
       {"propriete":"text","obj":"#cMAE","value":"Equipment added !"},
       {"propriete":"text","obj":"#cMDE","value":"Equipment deleted !"},
@@ -121,7 +125,8 @@
       {"propriete":"placeholder","obj":"#ccapaciteE","value":"Capacity"},
       {"propriete":"placeholder","obj":"#clongueurE","value":"Length"},
       {"propriete":"placeholder","obj":"#clargeurE","value":"Width"},
-      {"propriete":"placeholder","obj":"#chauteurE","value":"Height"}
+      {"propriete":"placeholder","obj":"#chauteurE","value":"Height"},
+      {"propriete":"titleDropdown","obj":"#selectTE","value":"Equipment type"}
     ],
     "m.t":[
       {"propriete":"text","obj":"#ttracteur2","value":"Tractor"},

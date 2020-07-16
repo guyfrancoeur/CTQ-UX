@@ -6,7 +6,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
     var cam = $(val).closest("td").next("td").next("td").html();
     var codepostal = $(val).closest("td").next("td").next("td").next("td").find(".cpostalcode").val();
     if(codepostal != null && tract != null && cam != null){
-      $.ajax({ // Récupère les coordonnées de chaque camion dans zip.json
+      $.ajax({ // Récupère les coordonnées du code postal de chaque camion dans zip.json
         url: "./data/zip.json",
         dataType: "json",
         async: false,

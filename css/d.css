@@ -330,17 +330,14 @@ ul.listec li{
     color:rgb(200,200,200);
   }
 }
-
 #bmapD{
   font-size:13px;
 }
-
 hr.style-two {
   border: 0;
   height: 0.1px;
   background-image: linear-gradient(to right,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
-
 .animationnbcamions{
   animation-name: animNbC;
   animation-duration: 500ms;
@@ -361,4 +358,20 @@ hr.style-two {
 
 #cmontant, #cdureeC,  #cdureeA, #addcourriel{
   cursor:pointer;
+}
+.cmaplegend > img{
+  height:16px;
+  width:16px;
+  opacity:80%;
+}
+.cmaplegend > span{
+  color:rgb(90,90,90);
+  font-size:14px;
+}
+#cindicenbcamions{
+  font-size:12.5px;
+  color:rgb(255,193,7);
+}
+#iconindice{
+  color:rgb(255,193,7);
 }

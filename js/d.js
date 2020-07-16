@@ -172,7 +172,7 @@ function selection(elem){
 var tabChampsRemplis = [false,false,false,false,false,false]
 var reduction = 0;
 var ancienneReduction = 0;
-var nbCamionsDispo = 20;
+var nbCamionsDispo = 10;
 var ancien = 0;
 // [length,width,height,weight,value,requirements]
 // Déclencher la fonction quand au moins 1 caractère est entré
@@ -180,8 +180,7 @@ $(".champRempli").on("keyup", function() {
   champRempli($(this));
 });
 function champRempli(elem){
-  // Affichage des camions disponibles : toast Bootstrap
-  $('#toast1').toast('show');
+  // Affichage modale camions disponibles si origine et destination entrée sont valides (toast Bootstrap)
   nbChampsRemplis = 0;
   if(($(elem).val() == "") || ($(elem).val() == [])){
     $(elem).removeClass("is-valid");
@@ -205,7 +204,8 @@ function champRempli(elem){
     if(tabChampsRemplis[i] == true) nbChampsRemplis ++;
   }
   // Changmenet du nb de camions disponibles en fonction du nb de champs remplis
-  var nouveau = Math.round((nbChampsRemplis/6)*nbCamionsDispo);
+  if (nbChampsRemplis == 0) var nouveau = Math.round(nbCamionsDispo/7); // Si aucun champs n'est rempli, on affiche quand même un minimum de camions disponibles
+  else {var nouveau = Math.round((nbChampsRemplis/6)*nbCamionsDispo)}
   if(nouveau != ancien){
     $("#nbcamions").html(nouveau);
     animationNbCamions();

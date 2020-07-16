@@ -79,6 +79,7 @@ body {
 .tooltip-inner{
   background-color:rgb(1,13,40);
   color:white;
+  min-width: 270px;
 }
 
 /* Login */
