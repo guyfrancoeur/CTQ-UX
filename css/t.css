@@ -431,7 +431,15 @@ hr.style-two {
 .input-group-sm>.input-group-prepend>.input-group-text{
   color:rgb(110,110,110);
 }
-
+.tooltip-inner{
+  background-color:rgb(1,13,40);
+  color:white;
+}
+.divaccordion{
+  height:242px;
+  overflow-y:scroll;
+  border-bottom:1px solid rgb(240,240,240);
+}
 @media screen and (max-width: 1199px) {
   #cardProfil {height:300px;}
 }

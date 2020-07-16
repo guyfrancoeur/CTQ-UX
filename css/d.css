@@ -375,3 +375,8 @@ hr.style-two {
 #iconindice{
   color:rgb(255,193,7);
 }
+.tooltip-inner{
+  background-color:rgb(1,13,40);
+  color:white;
+  min-width: 270px;
+}

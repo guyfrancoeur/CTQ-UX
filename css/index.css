@@ -32,27 +32,6 @@ ul.links-list li a:hover{
   transition-duration: 400ms;
 }
 
-.spe:hover .spe-header{
-  background-color: rgba(1,13,40,.9);
-  color: white;
-  border-top-right-radius:15px;
-  border-top-left-radius:15px;
-  transition-duration: 300ms;
-}
-
-.spe:hover .card-body{
-  background-color: rgb(247,247,247);
-  border-radius:15px;
-  transition-duration: 300ms;
-}
-
-.spe:hover{
-  border-radius:15px;
-  border-color: rgba(1,13,40,.9);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-  transition-duration: 300ms;
-}
-
 .arrow-card:hover a, .arrow-card:hover a:visited, .arrow-card:hover a:active{
   color: white;
   transition-duration: 300ms;
