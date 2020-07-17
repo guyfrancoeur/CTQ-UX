@@ -27,7 +27,7 @@
   height:295px;
 }
 
-/* D�sactiver les fl�ches dans les input number */
+/* Désactiver les flèches dans les input number */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -117,85 +117,141 @@ input[type=number] {
 
 /* Prix */
 .slide-special .text{
-  /*background-color: #CD0909;*/
-  background: radial-gradient(circle at center, #E11E1E, #AD0808);
+  background: radial-gradient(circle at center, rgb(220,49,49), rgb(190,37,37));
   color: white;
   padding-left: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-right: 20px;
   border-top-left-radius:25px;
-  border-bottom-right-radius:25px;
-  opacity:90%;
+  border-top-right-radius:3px;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:2px;
+  position:relative;
 }
 .slide-text {
   font-family: 'Yantramanav', sans-serif;
   font-style:italic;
   font-weight: 700;
   padding-top:0px;
-  margin-right:-10px;
+  margin-right:-15px;
   font-size:17px;
 }
 .slide .text{
-  background-image: linear-gradient(to right,rgba(1,13,40,0.93), rgb(1,13,40));
+  background-image: linear-gradient(to right,rgba(44,54,76,0.93), rgb(44,54,76));
   color: white;
   padding-left: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-right: 20px;
+  padding-right: 15px;
   border-top-left-radius:25px;
+  border-top-right-radius:3px;
   border-bottom-left-radius:25px;
-  opacity:85%;
+  border-bottom-right-radius:2px;
+  position:relative;
+}
+#ticketpriceA{
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right:0px;
+  border-left: 10px solid rgba(44,54,76,0.93);
+  right:-13px;
+  top: 24px;
+  position: absolute;
+  transform: rotate(-120deg);
+}
+#ticketpriceB{
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right:0px;
+  border-left: 10px solid #AD0808;
+  right:-13px;;
+  top: 27px;
+  position: absolute;
+  transform: rotate(-120deg);
+}
+#ticketpriceC{
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right:0px;
+  border-left: 10px solid rgba(44,54,76,0.93);
+  right:-13px;
+  top: 28px;
+  position: absolute;
+  transform: rotate(-120deg);
+}
+@media (max-width: 768px) {
+  #ticketpriceA{
+    right:-14px;;
+    top: 31px;
+  }
+  #ticketpriceB{
+    right:-14px;;
+    top: 35px;
+  }
+  #ticketpriceC{
+    right:-14px;
+    top: 35px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #ticketpriceA{
+    right:-13px;
+    top: 23px;
+  }
+  #ticketpriceB{
+    right:-13px;;
+    top: 27px;
+  }
+  #ticketpriceC{
+    right:-13px;
+    top: 27px;
+  }
 }
 
 .bg-style{
   background-color: rgba(255,255,255,0.8);
 }
-
 ul.listec li{
   padding:0;
 }
-
 .listec{
   border: 1px solid rgb(247,247,247);
 }
-
 .input-group-text{
   height:31px;
 }
-
 .size1{
   width:45px;
   display: table;
 }
-
 .size2{
   width:45px;
   display: table;
 }
-
 #addcourriel{
   height:31px;
 }
-
 .cout-style{
   border-bottom-left-radius:15px;
   border-bottom-right-radius:15px;
   border-top: 2px solid rgba(1,13,40,.2);
 }
-
 #card1, #card2, #card3{
   border-radius:5px;
 }
-
 .divCourriels:hover{
   cursor:default;
 }
-
 .cross:hover{
   cursor:pointer;
 }
-
 .animationcout{
   animation-name: animCout;
   animation-duration: 500ms;
@@ -213,15 +269,12 @@ ul.listec li{
     font-weight:400;
   }
 }
-
 #hCargo:focus, #hOrigineDestination:focus, #hPublic:focus, #hFixed:focus, #hPrivate:focus{
   outline:none;
 }
-
 #hCargo, #hOrigineDestination, #hPublic, #hFixed, #hPrivate, #tFixed, #tPrivate{
   color:rgba(1,13,40,.8);
 }
-
 #A, #B, #C{
   cursor:pointer;
 }
@@ -276,24 +329,29 @@ ul.listec li{
 
 #cmev, #cinfochargement, #itinerary{
   letter-spacing: 1px;
-  color:rgba(1,13,40,.8);
+  color:rgba(1,13,40,.7);
   font-family: 'Hind Guntur', sans-serif;
   font-size: 22px;
   font-weight:500;
 }
-
+#ctextA,#ctextB,#ctextC{
+  color:rgb(90,90,90);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.input-group-sm>.input-group-prepend>.input-group-text{
+  color:rgb(200,200,200);
+}
 .groupcheckbox{
   opacity:0;
   position:absolute;
 }
-
 .toast{
   border: 5px solid rgba(255,255,255,.17);
   border-radius:5px;
 }
 
 .toast, .toast-header,.toast-body{
-  background-color: rgba(255,255,255,.2) !important;
+  background-color: rgba(255,255,255,.17) !important;
 }
 
 .toast-header{
@@ -318,6 +376,7 @@ ul.listec li{
   animation-name: infoIcon;
   animation-duration: 600ms;
   animation-iteration-count: 6;
+  cursor:pointer;
 }
 @keyframes infoIcon {
   0% {
@@ -370,13 +429,37 @@ hr.style-two {
 }
 #cindicenbcamions{
   font-size:12.5px;
-  color:rgb(255,193,7);
-}
-#iconindice{
-  color:rgb(255,193,7);
 }
 .tooltip-inner{
-  background-color:rgb(1,13,40);
+  background-color:#547D48;
   color:white;
-  min-width: 270px;
+  min-width: 310px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  padding-top:10px;
+  padding-bottom:10px;
+  border-radius:0px;
+}
+/* color arrow of the tooltip */
+.bs-tooltip-top .arrow::before{border-top-color:#547D48 !important;}
+.bs-tooltip-bottom .arrow::before{border-bottom-color:#547D48 !important;}
+.bs-tooltip-left .arrow::before{border-left-color:#547D48 !important;}
+.bs-tooltip-right .arrow::before{border-right-color:#547D48 !important;}
+
+.help{
+  color:rgb(100,100,100);
+}
+#bsaveform{
+  background-color:rgb(82,144,205);
+  border: 1px solid rgba(82,144,205,.1);
+  text-transform: uppercase;
+  font-size:15px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+}
+#bsaveform:hover{
+  background-color:rgb(46, 110, 173);
+  border-color: rgb(46, 110, 173);
+}
+#textreduction{
+  color:rgb(90,90,90);
 }

@@ -432,9 +432,18 @@ hr.style-two {
   color:rgb(110,110,110);
 }
 .tooltip-inner{
-  background-color:rgb(1,13,40);
   color:white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  background-color:#547D48;
+  padding:10px;
+  width:120px;
 }
+/* color arrow of the tooltip */
+.bs-tooltip-top .arrow::before{border-top-color:#547D48 !important;}
+.bs-tooltip-bottom .arrow::before{border-bottom-color:#547D48 !important;}
+.bs-tooltip-left .arrow::before{border-left-color:#547D48 !important;}
+.bs-tooltip-right .arrow::before{border-right-color:#547D48 !important;}
+
 .divaccordion{
   height:242px;
   overflow-y:scroll;

@@ -134,6 +134,8 @@ font-size:34px;
 .modal-header{
   border: 0px;
   padding-bottom:5px;
+  padding-top:7px;
+  background-color:rgb(247,247,247);
 }
 
 .iconModale {
@@ -163,7 +165,7 @@ font-size:34px;
   border-bottom: 10px solid transparent;
   border-right: 20px solid #7C4204;
   left: -20px;
-  top: 48px;
+  top: 47.5px;
   position: absolute;
 }
 
@@ -180,13 +182,8 @@ font-size:34px;
   color:rgba(0,0,0,.6);
   text-transform:uppercase;
   border-radius:5px;
-  /*border: 1px solid rgba(0,0,0,.07);*/
 }
 
-.modal-header{
-  padding-top:7px;
-  background-color:rgb(247,247,247);
-}
 .modal-body{
   padding-top:0px;
 }
@@ -231,12 +228,10 @@ font-size:34px;
 .iconPopup{
   color:rgb(220,220,220);
 }
-
 .map{
   height:500px;
   width:100%;
 }
-
 #bsignout2{
   border: 1px solid rgba(255,255,255,.2);
   color:rgb(220,220,220);
@@ -248,4 +243,21 @@ font-size:34px;
 }
 .navbar-nav{
   font-size:15px;
+}
+.popover{
+  box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  border-radius:0px;
+  border-color:rgba(153, 180, 216, 0.3);
+}
+.popover-header{
+  text-align:center;
+  background-color:rgb(247,247,247);
+  letter-spacing: .7px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding-top:13px;
+  padding-bottom: 7px;
+  font-family: 'Hind Guntur', sans-serif;
+  color:rgba(0,0,0,.6);
+  text-transform:uppercase;
 }

@@ -76,7 +76,7 @@
                 <div class="col-12 col-xl-5 px-0">
                   <div class="card-group col-12 pt-1 pb-1 px-0">
                     <h5 class="card-title">
-                      <span id="horiginedestination" class="fa fa-question-circle" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span>
+                      <span id="horiginedestination" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span>
                       <span id="itinerary" class="pb-0 m-0 pt-2"> Itinerary</span>
                       <hr class="m-0 p-0 style-two" style="height:1px; width:150px;margin-left:25px !important;">
                     </h5>
@@ -102,7 +102,7 @@
                   <div class="card-group col-12 pb-1 px-0">
                     <h5 class="card-title d-flex justify-content-between col-12 pl-0 pr-3">
                       <div class="col-8 px-0">
-                      <span id="hcargo" class="fa fa-question-circle" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."></span>
+                      <span id="hcargo" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."></span>
                       <span id="cinfochargement" class="pb-0 m-0 px-0"> Cargo info</span> 
                       <hr class="m-0 p-0 style-two" style="width:150px;margin-left:25px !important;height:1px;">
                       </div>
@@ -143,7 +143,7 @@
                     <div class="input-group input-group-sm pb-2 pr-xl-3">
                       <input id="cvalue" type="number" class="form-control champRempli" placeholder="Value" aria-label="Value ($)" min="0">
                       <div class="input-group-append">
-                        <span class="input-group-text size1"><i class="fas fa-dollar-sign"></i></span>
+                        <span class="input-group-text size1"><i class="fas fa-dollar-sign" style="color:rgb(120,120,120);"></i></span>
                       </div>
                     </div>
                     <div class="input-group pb-2 pr-xl-3">
@@ -173,10 +173,11 @@
                           <input type="checkbox" id="checkboxA" class="groupcheckbox">
                           <div class="resizechamp3 row px-3 pt-2">
                             <div class="col-6">
-                              <span id="hpublic" class="fa fa-question" data-trigger="focus" data-placement="left" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
+                              <span id="hpublic" class="fa fa-question-circle help" data-trigger="focus" data-placement="left" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                               <span id="ctextA">Public auction</span>
                             </div>
                             <div class="resizechamp2 col-6 text-right pr-0 py-md-0 py-2">
+                              <div id="ticketpriceA"></div>
                               <div class="slide">
                                 <div class="slide-text pt-0 pb-1"><span class="text shadow">1$</span></div>
                               </div>
@@ -195,12 +196,13 @@
                           <input type="checkbox" id="checkboxB" class="groupcheckbox">
                           <div class="resizechamp3 row px-3 pt-2">
                             <div class="col-6 pr-0">
-                              <span id="hfixed" class="fa fa-question" data-toggle="popover" data-placement="left" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-original-title="Help" data-content="Fixed offer is for everyone you will receive one (1) offer. The first bidder to match you asked price wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
+                              <span id="hfixed" class="fa fa-question-circle help" data-toggle="popover" data-placement="left" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-original-title="Help" data-content="Fixed offer is for everyone you will receive one (1) offer. The first bidder to match you asked price wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                               <span id="ctextB">Fixed price</span>
                             </div>
                             <div class="resizechamp2 col-6 text-right pr-0 py-md-0 py-2">
                              <div class="styletext">
                              </div>
+                             <div id="ticketpriceB"></div>
                              <div class="slide-special">
                                <div class="slide-text pt-1 pb-1"><span id="cspecial" class="text shadow">special 2$</span></div>
                              </div>
@@ -210,7 +212,7 @@
                             <div class="resizechamp input-group input-group-sm col-md-7 col-12 col-xl-6 pr-xl-0">
                               <input type="number" class="form-control" id="cmontant" placeholder="Amount" aria-label="Montant" min="0" required disabled>
                               <div class="input-group-append">
-                               <span class="input-group-text size2"><i class="fas fa-dollar-sign"></i></span>
+                               <span class="input-group-text size2"><i class="fas fa-dollar-sign" style="color:rgb(120,120,120);"></i></span>
                               </div>
                             </div>
                         </div>
@@ -219,11 +221,12 @@
                           <input type="checkbox" id="checkboxC" class="groupcheckbox">
                           <div class="resizechamp3 row px-3 py-2">
                             <div class="col-6">
-                              <span id="hprivate" class="fa fa-question" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-placement="left" data-toggle="popover" data-original-title="Help" data-content="Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."></span>
+                              <span id="hprivate" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-placement="left" data-toggle="popover" data-original-title="Help" data-content="Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."></span>
                               <span id="ctextC"> Private auction</span>
                             </div>
                             <div class="resizechamp2 col-6 text-right pr-0 py-md-0 py-2">
                               <div class="slide">
+                                <div id="ticketpriceC"></div>
                                 <div class="slide-text pt-1 pb-1"><span id="cprixprivate" class="text shadow">2$ / email</span></div>
                               </div>
                             </div>
@@ -259,19 +262,19 @@
                     </div>
                     <div class="cout-style card-footer text-right font-weight-bold py-2">
                       <p class="card-text">
-                        <small id="textreduction" class="font-italic">
+                        <small id="textreduction">
                           <span id="cwith" style="display:none;">With </span>
                           <span id="cnbinfo"></span> 
                           <span id="infos" style="display:none;">infos</span>
                           <span id="info" style="display:none;">info</span>
                           <span id="crest" style="display:none;"> about the cargo you can save : </span>
                         </small>
-                        <small id="creduction" class="font-italic" style="color:red;padding-right:50px;">
+                        <small id="creduction" style="color:red;padding-right:50px;">
                           <span id="cNbreduction"></span>
                           <span id="cents" style="display:none;">cents</span>
                           <span id="dollar" style="display:none;">$</span>
                         </small>
-                        <span id="ccout" style="color:rgba(1,13,40,.7);">Cost : </span><span id="cout" style="color:rgba(1,13,40,.7);">0</span> <i class="fas fa-dollar-sign"></i>
+                        <span id="ccout" style="color:rgba(1,13,40,.7);">Cost : </span><span id="cout" style="color:rgba(1,13,40,.7);">0</span> <i class="fas fa-dollar-sign" style="color:rgb(90,90,90);"></i>
                       </p>
                     </div>
                   </div>
@@ -295,8 +298,8 @@
   <div class="toast-header p-0 m-0">
       <div class="col"></div>
       <div class="col text-center">
-        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white" trigger="hover click"
-        aria-hidden="true" data-toggle="tooltip" data-html="true" data-placement="top"
+        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white" trigger="hover click focus"
+        aria-hidden="true" data-toggle="tooltip" data-html="true" data-placement="right"
         data-original-title="<i id='iconindice' class='fas fa-hand-point-right fa-sm'></i> 
         <span id='cindicenbcamions'>Give more informations about the cargo to get maybe more available trucks !</span>"></i>
       </div>
