@@ -1,7 +1,7 @@
 $('#m_e').on('shown.bs.modal', function() {
-  $("#bretourE").hide();
 
   // Bouton retour
+  $("#bretourE").hide();
   $('#bretourE').click(function() {
     reinitialiserFormuEqui();
     changerTitres("add");

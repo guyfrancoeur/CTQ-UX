@@ -30,9 +30,11 @@ function verificationLogin(){
     });
     if(result == false){
       $("#cinvalidMessage").show();
+      $("#cpassword, #cemail").addClass("is-invalid");
     }
     else{
       $("#cinvalidMessage").hide();
+      $("#cpassword, #cemail").addClass("is-valid");
     }
     return result;
 }

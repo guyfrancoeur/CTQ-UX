@@ -44,7 +44,7 @@ function camionEvent() {
               '<input type="checkbox" class="custom-control-input checkbox" id="checkbox'+ (dernierCheckbox2+1) +'">' +
               '<label class="custom-control-label" for="checkbox'+ (dernierCheckbox2+1) +'"></label>' +
             '</div>' +
-            '<button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="' + choix_description + '" data-trigger="focus hover click"><i class="fas fa-info-circle color-icon"></i></button>' +
+            '<button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="' + choix_description + '" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>' +
           '</div>' +
         '</td>' +
         '<td>' + choix_tracteur + '</td>' +

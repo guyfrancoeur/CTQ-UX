@@ -429,7 +429,7 @@ hr.style-two {
   color:rgb(70,70,70) !important;
 }
 .input-group-sm>.input-group-prepend>.input-group-text{
-  color:rgb(110,110,110);
+  color:rgb(140,140,140);
 }
 .tooltip-inner{
   color:white;
@@ -448,6 +448,15 @@ hr.style-two {
   height:242px;
   overflow-y:scroll;
   border-bottom:1px solid rgb(240,240,240);
+}
+.dropdown-item.active, .dropdown-item:active{
+  color:white !important;
+  background-color:#6ca05c !important;
+}
+#cnomEntreprise:focus, #cadresse1:focus, #cadresse2:focus{
+  border-color: rgb(218, 190, 123);
+  outline:none !important;
+  box-shadow: 0 0 0 0.2rem rgba(218, 190, 123,.25);
 }
 @media screen and (max-width: 1199px) {
   #cardProfil {height:300px;}

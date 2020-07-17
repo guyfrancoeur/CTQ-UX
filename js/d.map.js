@@ -45,6 +45,13 @@ $(".OHform").keyup(function() {
   }
 });
 
+// Faire disparaitre tooltip #infoIcon quand on clique ailleurs sur la page
+$('body').on('click', function (e) {
+  if (!$("#infoIcon").is(e.target) && $("#infoIcon").has(e.target).length === 0 && $('.tooltip').has(e.target).length === 0) {
+    $("#infoIcon").tooltip('hide');
+  }
+});
+
 // ---- OpenLayers ----
 $('#m_d_map').on('shown.bs.modal', function() {
   var features = [];
@@ -94,7 +101,7 @@ $('#m_d_map').on('shown.bs.modal', function() {
 
   // ---- CAMIONS ----
   var camions = [
-    {tracteur:"T1",camion:"E1",codepostal:"H3N"},
+    {tracteur:"T1",camion:"E1",codepostal:"N2P"},
     {tracteur:"T2",camion:"E2",codepostal:"G7N"},
     {tracteur:"T3",camion:"E3",codepostal:"G0J"},
     {tracteur:"T4",camion:"E4",codepostal:"J2K"},
@@ -103,7 +110,7 @@ $('#m_d_map').on('shown.bs.modal', function() {
     {tracteur:"T7",camion:"7",codepostal:"C1A"},
     {tracteur:"T8",camion:"E8",codepostal:"P0V"},
     {tracteur:"T9",camion:"E9",codepostal:"N6P"},
-    {tracteur:"T10",camion:"E1",codepostal:"N2P"}
+    {tracteur:"T10",camion:"E1",codepostal:"H3N"}
   ];
 
   // Nombre de camions disponibles à afficher (nombre inscrit dans la modale)

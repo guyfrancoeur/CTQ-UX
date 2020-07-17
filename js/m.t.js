@@ -1,7 +1,21 @@
 $('#m_t').on('shown.bs.modal', function() {
-  $("#bretourT").hide();
+
+  // Couleur icon dans dropdown Statut tracteur
+  $("#cstatut").change(function(){
+    switch ($(this).val()){
+      case ("Active" || "Actif"):
+        $("#activeicon").html('<i class="fas fa-toggle-on m-auto" style="color:#547D48;"></i></span>');
+        break;
+      case ("Inactive" || "Inactif"):
+        $("#activeicon").html('<i class="fas fa-toggle-on m-auto" data-fa-transform="rotate-180" style="color:#9B4242;"></i></span>');
+        break;
+      default:
+        $("#activeicon").html('<i class="fas fa-toggle-on m-auto"></i></span>');
+    }
+  });
 
   // Bouton retour
+  $("#bretourT").hide();
   $('#bretourT').click(function() {
     reinitialiserFormuTract();
     changerTitresT("add");

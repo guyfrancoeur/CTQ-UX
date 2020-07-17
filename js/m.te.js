@@ -11,6 +11,8 @@ $('#m_te').on('shown.bs.modal', function() {
   var nTE, kTE, coutTE;
   // Boutons modification équipement (crayon)
   $('.bSte').click(function() {
+    $('#cnameTE').prop("disabled", false);
+    $('#cconsoTE').prop("disabled", false);
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     $('#cnameTE').focus();
     // Récupérer les valeurs de le type d'équipement en question
@@ -47,7 +49,10 @@ $('#m_te').on('shown.bs.modal', function() {
       editTE();
       $("#cMessageDeleteTE").hide();
       $("#cMessageAddTE").hide();
-      $("#cMessageEditTE").show(0).delay(10000).hide(0); 
+      $("#cMessageEditTE").show(0).delay(10000).hide(0);
+      $('#cnameTE').prop("disabled", true);
+      $('#ccleTE').prop("disabled", true);
+      $('#cconsoTE').prop("disabled", true);
     }
   });
 });
