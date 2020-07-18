@@ -8,11 +8,8 @@ $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover();
  
-  // Cacher bouton validation (modification profile)
-  $("#bvalidprofil, #bcancelprofil").hide();
-
-    //Cacher boutons validations (modale ajout équipement)
-  $(".bV, .bX").hide();
+    //Cacher boutons validations (modale ajout équipement & modification profile)
+  $(".bV, .bX, #bvalidprofil, #bcancelprofil").hide();
 });
 
 // Bouton trash (suppression ligne camion)

@@ -16,7 +16,6 @@
         <i class="far fa-check-circle"></i> <span id="cMAE">Equipment added !</span></p>
       <p id="cMessageDeleteEquipement" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;">
         <i class="far fa-check-circle"></i> <span id="cMDE">Equipment deleted !</span></p>
-    
     </div>
     <br/>
     <div class="modal-body">
@@ -42,7 +41,7 @@
                     <p><span class="labelcontent clengthE">Length</span> : <span class="valuequipement">2</span> m</p>
                     <p><span class="labelcontent cwidthE">Width</span> : <span class="valuequipement">5.7</span> m</p>
                     <p><span class="labelcontent cheightE">Height</span> : <span class="valuequipement">3.2</span> m</p>
-                    <p><span class="labelcontent cTE">Equipment type</span> : <span class="valuequipement">Drybox</span></p>
+                    <p><span class="labelcontent cTE">Equipment type</span> : <span class="valuequipement">DryBox</span></p>
                   </div>
                 </div>
               </div>
@@ -84,7 +83,7 @@
                     <p><span class="labelcontent clengthE">Length</span> : <span class="valuequipement">2</span> m</p>
                     <p><span class="labelcontent cwidthE">Width</span> : <span class="valuequipement">5.7</span> m</p>
                     <p><span class="labelcontent cheightE">Height</span> : <span class="valuequipement">3.2</span> m</p>
-                    <p><span class="labelcontent cTE">Equipment type</span> : <span class="valuequipement">Drybox</span></p>
+                    <p><span class="labelcontent cTE">Equipment type</span> : <span class="valuequipement">DryBox</span></p>
                   </div>
                 </div>
               </div>
@@ -126,7 +125,7 @@
                     <p><span class="labelcontent clengthE">Length</span> : <span class="valuequipement">2</span> m</p>
                     <p><span class="labelcontent cwidthE">Width</span> : <span class="valuequipement">5.7</span> m</p>
                     <p><span class="labelcontent cheightE">Height</span> : <span class="valuequipement">3.2</span> m</p>
-                    <p><span class="labelcontent cTE">Equipment type</span> : <span class="valuequipement">Drybox</span></p>
+                    <p><span class="labelcontent cTE">Equipment type</span> : <span class="valuequipement">DryBox</span></p>
                   </div>
                 </div>
               </div>
@@ -276,14 +275,13 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" style="width:37px;"><i class="fas fa-truck-loading m-auto"></i></span>
               </div>
-              <select id="selectTE" class="selectpicker form-control form-control-sm" title="Equipment type" data-size="5" required>
-                <option value="cflatbed">Flatbed</option>
-                <option value="cdryBox">DryBox</option>
-                <option value="cconestoga">Conestoga</option>
-                <option value="crefrigerated">Refrigerated</option>
+              <select id="selectTE" class="selectpicker form-control form-control-sm" title="Equipment type" data-size="4" required>
+                <option id="cflatbed">Flatbed</option>
+                <option id="cdryBox">DryBox</option>
+                <option id="cconestoga">Conestoga</option>
+                <option id="crefrigerated">Refrigerated</option>
               </select>
             </div>
-            <input id="submit-hidden" type="submit" style="display: none" /> <!-- Nécessaire pour lancer la validation du formulaire sans bouton submit (+ jquery) -->
             <div class="text-center"><button id="baddEquipement" class="btn btn-sm btn-success" type="button"><i class="fas fa-plus"></i> <span id="baddE">Add</span></button></div>
           </form>
         </div>

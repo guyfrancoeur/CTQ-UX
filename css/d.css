@@ -27,19 +27,6 @@
   height:295px;
 }
 
-/* Désactiver les flèches dans les input number */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 /* Toggle-button */
 .button-cover, .knobs, .layer{
     position: absolute;
@@ -437,32 +424,28 @@ hr.style-two {
   font-size:12.5px;
 }
 .tooltip-inner{
-  background-color:#547D48;
-  color:white;
   min-width: 310px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
-  padding-top:10px;
-  padding-bottom:10px;
-  border-radius:0px;
 }
-/* color arrow of the tooltip */
-.bs-tooltip-top .arrow::before{border-top-color:#547D48 !important;}
-.bs-tooltip-bottom .arrow::before{border-bottom-color:#547D48 !important;}
-.bs-tooltip-left .arrow::before{border-left-color:#547D48 !important;}
-.bs-tooltip-right .arrow::before{border-right-color:#547D48 !important;}
 
 .help{
   color:rgb(100,100,100);
 }
 .check-mark{
-  color:#6ca05c !important; 
+  color:#a85a12 !important; 
 }
-.dropdown-item:focus, .dropdown-item:focus .check-mark, .dropdown-item:active .check-mark{
+.dropdown-item:focus, .dropdown-item:active, 
+.dropdown-item:focus > svg, .dropdown-item:active > svg,
+.dropdown-item:focus > .text, .dropdown-item:active > .text,
+.dropdown-item:focus > .text > .text-muted, .dropdown-item:active > .text > .text-muted,
+.dropdown-item:focus .check-mark, .dropdown-item:active .check-mark{
   color:white !important;
-  background-color:#6ca05c !important;
+  background-color:#c76c16e1 !important;
 }
-.dropdown-item{
-  color:rgb(90,90,90);
+.dropdown-item > .text, .filter-option-inner-inner{
+  color:rgb(50,50,50) !important;
+}
+.dropdown-item > svg, .filter-option-inner-inner > svg{
+  color:rgb(110,110,110) !important;
 }
 #bsaveform{
   background-color:rgb(82,144,205);
@@ -478,4 +461,47 @@ hr.style-two {
 }
 #textreduction{
   color:rgb(90,90,90);
+}
+
+@media screen and (max-width: 390px) {
+  #tavailabletrucks{
+    padding-right:0px !important;
+    padding-left:0px !important;
+    font-size:15px !important;
+  }
+  .cmaplegend > span{
+    font-size:10px !important;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 526px) {
+  #tavailabletrucks{
+    padding-right:0px !important;
+    padding-left:0px !important;
+    font-size:19px !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #container{
+    padding:5px;
+  }
+  .bloc{
+    padding-left:5px !important;
+    padding-right:5px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #textreduction2{
+    text-align:left !important;
+    padding-right:5px;
+  }
+  .cout-style{
+    padding-left:5px !important;
+    padding-right:5px !important;
+  }
+  #divbloc{
+    padding-right:5px;
+    padding-left:5px;
+  }
 }

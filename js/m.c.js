@@ -62,7 +62,6 @@ function camionEvent() {
 }
 
 function changerTitresC(elt){
-  console.log("vu");
   switch (elt) {
     case "set":
       if ($('#en').hasClass("currentlanguage")) $('#bsavecamiontext').html("Replace"); // Si en anglais
@@ -77,15 +76,18 @@ function changerTitresC(elt){
 
 
 $('#m_c').on('shown.bs.modal', function() {
-  // Validation formulaire modale camion
   $('#cdescription').focus();
   $('.selectpicker').selectpicker();
+  
+  // Validation formulaire modale camion
   $("#bsavecamion").click(function(e) {
     if (!$("#formCamion")[0].checkValidity()) {
-      $("#formCamion").find("#submit-hiddenC").click();
+      e.preventDefault();
+      e.stopPropagation();
     }
     else{
       camionEvent();
     }
+    $("#formCamion")[0].classList.add('was-validated');
   });
 });

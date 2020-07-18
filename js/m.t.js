@@ -1,4 +1,6 @@
 $('#m_t').on('shown.bs.modal', function() {
+  reinitialiserFormuTract();
+  $("#formTracteur").removeClass('was-validated'); //Retirer traces validation formulaire
 
   // Couleur icon dans dropdown Statut tracteur
   $("#cstatut").change(function(){
@@ -23,7 +25,7 @@ $('#m_t').on('shown.bs.modal', function() {
   });
 
   // Bouton suppression tracteur (trash)
-  $('.bP').click(function() {
+  $('.bP').click(function(event) {
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     $('#m_v').modal('show');
     validationSuppression($(this).closest(".card"),"tracteur");
@@ -33,7 +35,7 @@ $('#m_t').on('shown.bs.modal', function() {
   var mode_save_button_tracteur = "add";
   var nT, sT, tcT, cT;
   // Boutons modification tracteur (crayon)
-  $('.bSt').click(function() {
+  $('.bSt').click(function(event) {
     $("#bretourT").show();
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     mode_save_button_tracteur = "set";
@@ -58,7 +60,6 @@ $('#m_t').on('shown.bs.modal', function() {
     tcT.html($('#ctypefuel').val());
     cT.html($('#cconsotracteur').val());
     nT.closest("p").closest("div").closest(".collapse").prev().find("h5").find("span").eq(0).html($('#cnomtracteur').val());
-    reinitialiserFormuTract();
     mode_save_button_tracteur = "add";
   }
 
@@ -66,6 +67,9 @@ $('#m_t').on('shown.bs.modal', function() {
   function addTract(){
     var nomT = $("#cnomtracteur").val();
     var statutT = $("#cstatut").val();
+    var classStatut;
+    if ((statutT == "Actif") || (statutT == "Active")) classStatut = "active";
+    if ((statutT == "Inactif") || (statutT == "Inactive")) classStatut = "inactive";
     var typeCarburant = $("#ctypefuel").val();
     var consoT = $("#cconsotracteur").val();
     var html = '<div class="card">' +
@@ -80,7 +84,7 @@ $('#m_t').on('shown.bs.modal', function() {
       '</div>' +
       '<div id="collapse' + nomT + '" class="collapse" aria-labelledby="heading' + nomT + '" data-parent="#accordion">' +
          '<div class="card-body py-1">' +
-            '<p><span class="labelcontentT cnameE">Name</span> : <span class="valuetracteur">' + nomT + '</span></p>' +
+            '<p><span class="labelcontentT cnameE">Name</span> : <span class="valuetracteur '+ classStatut + '">' + nomT + '</span></p>' +
             '<p><span class="labelcontentT cstatusE">Status</span> : <span class="valuetracteur">' + statutT + '</span></p>' +
             '<p><span class="labelcontentT cfueltypeE">Type of fuel</span> : <span class="valuetracteur">' + typeCarburant + '</span></p>' +
             '<p><span class="labelcontentT ccomsumptionE">Consumption</span> : <span class="valuetracteur">' + consoT + '</span></p>' +
@@ -89,7 +93,6 @@ $('#m_t').on('shown.bs.modal', function() {
     '</div>';
     $('#accordionT').append(html);
     $('#cselecttracteur').append('<option value="' + nomT + '">' + nomT + '</option>').selectpicker('refresh'); // Ajouter le nouveau tracteur au dropdown
-    reinitialiserFormuTract();
   }
 
   // Remettre le formulaire à zéro
@@ -98,14 +101,20 @@ $('#m_t').on('shown.bs.modal', function() {
     $('#cstatut').val('default').selectpicker("refresh");
     $('#ctypefuel').val('default').selectpicker("refresh");
     $('#cconsotracteur').val("");
+    $("#activeicon").html('<i class="fas fa-toggle-on m-auto"></i></span>');
+    $("#bretourT").hide();
+    changerTitresT("add");
   }
 
   // Validation formulaire
-  $("#baddTracteur").click(function() {
+  $("#baddTracteur").click(function(e) {
     if (!$("#formTracteur")[0].checkValidity()) {
-      $("#formTracteur").find("#submit-hiddenT").click();
+      e.preventDefault();
+      e.stopPropagation();
+      $("#formTracteur").addClass('was-validated');
     }
     else{
+      $("#formTracteur").removeClass('was-validated');
       if (mode_save_button_tracteur == "add"){
         addTract();
         $("#cMessageEditTracteur").hide();
@@ -114,11 +123,11 @@ $('#m_t').on('shown.bs.modal', function() {
       }
       else{
         editTract();
-        changerTitresT("set");
         $("#cMessageDeleteTracteur").hide();
         $("#cMessageAddTracteur").hide();
         $("#cMessageEditTracteur").show(0).delay(10000).hide(0);
       }
+      reinitialiserFormuTract();
     }
   });
 

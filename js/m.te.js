@@ -1,4 +1,6 @@
 $('#m_te').on('shown.bs.modal', function() {
+  reinitialiserFormuTE();
+  $("#formTE").removeClass('was-validated'); //Retirer traces validation formulaire
 
   // Bouton suppression équipement (trash)
   $('.bP').click(function() {
@@ -42,17 +44,17 @@ $('#m_te').on('shown.bs.modal', function() {
   }
 
   // Validation formulaire
-  $("#breplaceTE").click(function() {
+  $("#breplaceTE").click(function(e) {
     if (!$("#formTE")[0].checkValidity()) {
-      $("#formTE").find("#submit-hiddenTE").click();
+      e.preventDefault();
+      e.stopPropagation();
+      $("#formTE").addClass('was-validated');
     }else {
+      $("#formTE").removeClass('was-validated');
       editTE();
-      $("#cMessageDeleteTE").hide();
-      $("#cMessageAddTE").hide();
+      $("#cMessageDeleteTE, #cMessageAddTE").hide();
       $("#cMessageEditTE").show(0).delay(10000).hide(0);
-      $('#cnameTE').prop("disabled", true);
-      $('#ccleTE').prop("disabled", true);
-      $('#cconsoTE').prop("disabled", true);
+      $('#cnameTE, #ccleTE, #cconsoTE').prop("disabled", true);
     }
   });
 });
