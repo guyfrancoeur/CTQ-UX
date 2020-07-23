@@ -279,7 +279,7 @@ ul.listec li{
 
 .chosen{
   background-color: #FAFCFF;
-  box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2); 
+  box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2);
 }
 .chosen:hover{
   background-color: #FAFCFF;
@@ -338,27 +338,27 @@ ul.listec li{
   opacity:0;
   position:absolute;
 }
-.toast{
-  border: 5px solid rgba(255,255,255,.17);
+#toast1{
+  border: 5px solid rgba(255, 255, 255, 0.2);
   border-radius:5px;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  position: absolute;
+  top: 4rem;
+  left:1rem;
+  width:280px;
 }
-
-.toast, .toast-header,.toast-body{
-  background-color: rgba(255,255,255,.17) !important;
-}
-
 .toast-header{
+  background-color:transparent;
+}
+#toast1 .toast-header{
+  border:none;
   border-top-left-radius:5px;
   border-top-right-radius:5px;
 }
-.toast-body{
+#toast1 .toast-body{
   color:white;
   border-bottom-left-radius:5px;
   border-bottom-right-radius:5px;
-}
-
-.toast-header{
-  border:none;
 }
 
 #closeToast:hover > span{
@@ -425,21 +425,27 @@ hr.style-two {
 }
 .tooltip-inner{
   min-width: 310px;
+  background-color:#BF7B37;
 }
-
+/* color arrow of the tooltip */
+.bs-tooltip-top .arrow::before{border-top-color:#BF7B37 !important;}
+.bs-tooltip-bottom .arrow::before{border-bottom-color:#BF7B37 !important;}
+.bs-tooltip-left .arrow::before{border-left-color:#BF7B37 !important;}
+.bs-tooltip-right .arrow::before{border-right-color:#BF7B37 !important;}
 .help{
   color:rgb(100,100,100);
 }
 .check-mark{
   color:#a85a12 !important; 
 }
-.dropdown-item:focus, .dropdown-item:active, 
+.dropdown-item:focus, .dropdown-item:active{
+  background-color:#c76c16e1 !important;
+}
 .dropdown-item:focus > svg, .dropdown-item:active > svg,
 .dropdown-item:focus > .text, .dropdown-item:active > .text,
 .dropdown-item:focus > .text > .text-muted, .dropdown-item:active > .text > .text-muted,
 .dropdown-item:focus .check-mark, .dropdown-item:active .check-mark{
   color:white !important;
-  background-color:#c76c16e1 !important;
 }
 .dropdown-item > .text, .filter-option-inner-inner{
   color:rgb(50,50,50) !important;
@@ -463,6 +469,47 @@ hr.style-two {
   color:rgb(90,90,90);
 }
 
+#toast2, #toast3{
+  background-color: rgba(84, 119, 69, 0.9) !important;
+  position: absolute;
+  top: 4rem;
+  z-index: 10;
+}
+#toast3{
+  background-color: rgba(171,77,77, 0.9) !important;
+}
+#toast2 .toast-header, #toast3 .toast-header{
+  border:none;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  margin:15px 0 15px 15px;/* H D B G*/
+}
+#closeToast2, #closeToast3{
+  cursor:pointer;
+  color:rgb(45, 56, 38);
+  text-shadow:0 1px 0 rgb(51, 65, 44) !important;
+  font-size:20px;
+  margin-top:-30px;
+  margin-right:-7px;
+}
+#closeToast3{
+  margin-top:-23px;
+  color:rgb(83, 56, 56);
+  text-shadow:0 1px 0 rgb(100, 66, 66) !important;
+}
+#closeToast2:hover, #closeToast3:hover{
+  color:rgb(0,0,0,.7);
+}
+#cmessagevalidform1, #cmessagevalidform2, #cmessageinvalidform{
+  color:white;
+  margin:0;
+  text-align:center;
+  cursor:default;
+}
+#cmessagevalidform2{
+  color:rgb(142, 161, 131);
+  font-size:11px;
+}
 @media screen and (max-width: 390px) {
   #tavailabletrucks{
     padding-right:0px !important;

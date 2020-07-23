@@ -89,12 +89,7 @@ $('#m_e').on('shown.bs.modal', function() {
 
   // Remettre le formulaire à zéro
   function reinitialiserFormuEqui() {
-    $('#cnomE').val("");
-    $('#ccapaciteE').val("");
-    $('#clongueurE').val("");
-    $('#clargeurE').val("");
-    $('#clargeurE').val("");
-    $('#chauteurE').val("");
+    $('#cnomE, #ccapaciteE, #clongueurE, #clargeurE, #chauteurE').val("");
     $('#selectTE').val('default').selectpicker("refresh");
     $("#bretourE").hide();
     changerTitres("add");
@@ -110,13 +105,11 @@ $('#m_e').on('shown.bs.modal', function() {
       $("#formEquipement").removeClass('was-validated');
       if (mode_save_button_equipement == "add") {
         addEqui();
-        $("#cMessageEditEquipement").hide();
-        $("#cMessageDeleteEquipement").hide();
+        $("#cMessageEditEquipement, #cMessageDeleteEquipement").hide();
         $("#cMessageAddEquipement").show(0).delay(10000).hide(0);
       } else {
         editEqui();
-        $("#cMessageAddEquipement").hide();
-        $("#cMessageDeleteEquipement").hide();
+        $("#cMessageAddEquipement, #cMessageDeleteEquipement").hide();
         $("#cMessageEditEquipement").show(0).delay(10000).hide(0);
       }
       reinitialiserFormuEqui();

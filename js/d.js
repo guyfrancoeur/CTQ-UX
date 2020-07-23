@@ -9,7 +9,19 @@ $( document ).ready(function() { // ou $(function () {
   // Chargement contenu modale
   $('#m_courriels').load('./m.courriels.html');
   $('#m_d_map').load('./m.d.map.html');
+  
+  // Position petite modale soumission formulaire
+  $("#toast2").css("left",(($(window).width()/2) - ($("#toast2").width()/2)));
+  $("#toast3").css("left",(($(window).width()/2) - ($("#toast3").width()/2)));
 });
+
+window.onresize = function() { // Position petite modale soumission formulaire
+  $("#toast2").css("left",(($(window).width()/2) - ($("#toast2").width()/2)));
+  $("#toast3").css("left",(($(window).width()/2) - ($("#toast3").width()/2)));
+};
+// Close petite modale soumission formulaire (croix)
+$("#closeToast2").click(function(){ $("#toast2").removeClass("show");});
+$("#closeToast3").click(function(){ $("#toast3").removeClass("show");});
 
 // Toggle button
 unite = 'm';
@@ -71,8 +83,8 @@ function selection(elem){
   var value = elem.id;
   if(value == "A"){
     cout = (1 - reduction).toFixed(2);
-    $(checkboxA).prop('checked',true);
-    $(checkboxB,checkboxC).prop('checked',false);
+    $("#checkboxA").prop('checked',true);
+    $("#checkboxB, #checkboxC").prop('checked',false);
     $("#cinvalidMarket").hide();
     $("#cmontant, #cdureeC").removeClass("is-invalid");
     $("#cmontant, #cdureeC").removeClass("is-valid");
@@ -93,8 +105,8 @@ function selection(elem){
   };
   if(value == "B"){
     cout = (2 - reduction).toFixed(2);
-    $(checkboxB).prop('checked',true);
-    $(checkboxA,checkboxC).prop('checked',false);
+    $("#checkboxB").prop('checked',true);
+    $("#checkboxA, #checkboxC").prop('checked',false);
     $("#cinvalidMarket").hide();
     $("#cdureeA, #cdureeC").removeClass("is-invalid");
     $("#cdureeA, #cdureeC").removeClass("is-valid"); 
@@ -116,8 +128,8 @@ function selection(elem){
   if(value == "C"){
     if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
     else{cout = 0;}
-    $(checkboxC).prop('checked',true);
-    $(checkboxA,checkboxB).prop('checked',false);
+    $("#checkboxC").prop('checked',true);
+    $("#checkboxA, #checkboxB").prop('checked',false);
     $("#cinvalidMarket").hide();
     $("#cdureeA, #cmontant").removeClass("is-invalid");
     $("#cdureeA, #cmontant").removeClass("is-valid");
@@ -185,16 +197,7 @@ function champRempli(elem){
 
   reduction = (nbChampsRemplis * 0.1).toFixed(2);
   if(nbChampsRemplis == 0){
-    $("#cwith").hide();
-    $("#cnbinfo").hide();
-    $("#cwith").hide();
-    $("#cNbreduction").hide();
-    $("#dollar").hide();
-    $("#cents").hide();
-    $("#cents").hide();
-    $("#infos").hide();
-    $("#info").hide();
-    $("#crest").hide();
+    $("#cwith, #cnbinfo, #cwith, #cNbreduction, #dollar, #cents,#infos, #info, #crest").hide();
     if (cout != 0){
       cout = (parseFloat(cout) + 0.1);
       $('#cout').html(cout.toFixed(2));
@@ -202,50 +205,30 @@ function champRempli(elem){
   }
   else{
     if(reduction > 1){
-      $("#cwith").show();
-      $("#cnbinfo").show();
+      $("#cwith, #cnbinfo, #infos, #crest, #cNbreduction, #dollar").show();
       $("#cnbinfo").html(nbChampsRemplis);
-      $("#infos").show();
-      $("#info").hide();
-      $("#crest").show();
-      $("#cNbreduction").show();
+      $("#info, #cents").hide();
       $("#cNbreduction").html(reduction);
-      $("#dollar").show();
-      $("#cents").hide();
     }
     else{
       if(nbChampsRemplis == 1){
-        $("#cwith").show();
-        $("#cnbinfo").show();
+        $("#cwith, #cnbinfo, #info, #crest, #cNbreduction, #cents").show();
         $("#cnbinfo").html(nbChampsRemplis);
-        $("#info").show();
-        $("#infos").hide();
-        $("#crest").show();
-        $("#cNbreduction").show();
+        $("#infos, #dollar").hide();
         $("#cNbreduction").html(reduction);
-        $("#dollar").hide();
-        $("#cents").show();
       }
       else{
-        $("#cwith").show();
-        $("#cnbinfo").show();
+        $("#cwith, #cnbinfo, #infos, #crest, #cNbreduction, #cents").show();
         $("#cnbinfo").html(nbChampsRemplis);
-        $("#infos").show();
-        $("#info").hide();
-        $("#crest").show();
-        $("#cNbreduction").show();
+        $("#info, #dollar").hide();
         $("#cNbreduction").html(reduction);
-        $("#dollar").hide();
-        $("#cents").show();
       }
     }
     if(reduction > ancienneReduction){
       animationReduction();
       ifCoutIsSet();
     }
-    if(reduction < ancienneReduction){
-      ifCoutIsSet2();
-    }
+    if(reduction < ancienneReduction) ifCoutIsSet2();
   }
   ancienneReduction = reduction;
 }
@@ -285,28 +268,16 @@ function animationReduction() {
 }
 
 // Tooltip on ToggleButton
-$("#cheight").focus(function() {
+$("#cwidth, #clongueur, #cheight").focus(function() {
   $("#htoggleinstruction").tooltip('show');
 });
-$("#cwidth").focus(function() {
-  $("#htoggleinstruction").tooltip('show');
-});
-$("#clongueur").focus(function() {
-  $("#htoggleinstruction").tooltip('show');
-});
-
-$("#cheight").focusout(function() {
-  $("#htoggleinstruction").tooltip('hide');
-});
-$("#cwidth").focusout(function() {
-  $("#htoggleinstruction").tooltip('hide');
-});
-$("#clongueur").focusout(function() {
+$("#cheight, #cwidth, #clongueur").focusout(function() {
   $("#htoggleinstruction").tooltip('hide');
 });
 
 // Validation formulaire
 $("#principalform").submit(function(event){
+  var valid = 0;
   if (countChecked() >= 1){
     $("#cinvalidMarket").hide();
     switch ($(".groupcheckbox:checked").attr("id")){
@@ -314,43 +285,65 @@ $("#principalform").submit(function(event){
         if ($("#cdureeA").val() == ""){
           $("#cdureeA").addClass("is-invalid");
           event.preventDefault();
-        }else{console.log("submitted !");};
+        }else valid = 1;
         break;
       case ("checkboxB"):
         if ($("#cmontant").val() == ""){
           $("#cmontant").addClass("is-invalid");
           event.preventDefault();
-        }else{console.log("submitted !");};
+        }else valid = 1;
         break;
       case ("checkboxC"):
         if ($("#cdureeC").val() == ""){
           $("#cdureeC").addClass("is-invalid");  
           event.preventDefault();
-        }else{console.log("submitted !");};
+        }else valid = 1;
         break;
     }
-    if($("#corigin").val() == "") $("#corigin").addClass("is-invalid");
-    if($("#cdestination").val() == "") $("#cdestination").addClass("is-invalid");
   }else{
     // empêche le questionnaire de s'envoyer
     event.preventDefault();
     $("#cinvalidMarket").show();
-    console.log("formulaire invalide");
-    if($("#corigin").val() == "") $("#corigin").addClass("is-invalid");
-    if($("#cdestination").val() == "") $("#cdestination").addClass("is-invalid");
+    valid = 0;
   }
-});  
+  if($("#corigin").val() == ""){
+    $("#corigin").addClass("is-invalid");
+    valid = 0;
+  }
+  if($("#cdestination").val() == ""){
+    $("#cdestination").addClass("is-invalid");
+    valid = 0;
+  }
+  if(valid == 1){
+    $("#toast2").toast('show'); // Message formulaire valide
+    reinitialiserFormulaire();
+    $("#toast1, #toast3").toast('hide');
+  }
+  if(valid == 0){
+    $("#toast3").toast('show'); // Message formulaire invalide
+    $("#toast2").toast('hide');
+  }
+  window.scrollTo(0,0);
+});
+
 function countChecked(){
   var checked = $(".groupcheckbox:checked");
   return checked.length;
 }
 
+function reinitialiserFormulaire(){
+  $("#cdestination, #corigin, #cdureeA, #cmontant, #cdureeC").removeClass("is-invalid is-valid");
+  $("#A, #B, #C").removeClass("chosen notchosen clicked");
+  $("#cdestination, #corigin, #cdureeA, #cmontant, #cdureeC").val("");
+  $("#cwith, #cnbinfo, #cwith, #cNbreduction, #dollar, #cents,#infos, #info, #crest").hide();
+  $('#cout').html(0);
+  $("#checkboxA, #checkboxB, #checkboxC").prop('checked',false);
+}
+
 // Désactiver le bouton dans le toast Bootstrap quand il est caché (nb camions dispo)
-$('#toast1').on('hidden.bs.toast', function () {
-  $('#bmapD').prop("disabled", true);
-  $('#closeToast').prop("disabled", true);
+$('#toast1, #toast2, #toast3').on('hidden.bs.toast', function () {
+  $('#bmapD, #closeToast, #closeToast2, #closeToast3').prop("disabled", true);
 });
-$('#toast1').on('show.bs.toast', function () {
-  $('#bmapD').prop("disabled", false);
-  $('#closeToast').prop("disabled", false);
+$('#toast1, #toast2, #toast3').on('show.bs.toast', function () {
+  $('#bmapD, #closeToast, #closeToast2, #closeToast3').prop("disabled", false);
 });

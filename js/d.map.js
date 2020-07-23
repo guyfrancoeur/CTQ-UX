@@ -1,8 +1,8 @@
-var origine;
-var destination;
+var origine, destination;
 
 // Validation Code Postal (Origine et Destination)
 $(".OHform").keyup(function() {
+  var validationelt = 0;
   var elt = $(this);
   var valeurInput = $(elt).val();
   var nbCaracteres = valeurInput.length;
@@ -17,17 +17,10 @@ $(".OHform").keyup(function() {
       async: false,
       success:function(data){
         $.each(data.geoplaces, function(index, x) {
-          if(valeurInput.toUpperCase() === (x.zip).substr(0, nbCaracteres)){
-            if (valeurInput.toUpperCase() === (x.zip)){
-              $(elt).addClass("is-valid");
-              $(elt).removeClass("is-invalid");
-              if($(elt).attr("id") == "corigin") origine = [x.lng,x.lat];
-              if($(elt).attr("id") == "cdestination") destination = [x.lng,x.lat];
-            }
-            else{
-              $(elt).addClass("is-invalid");
-              $(elt).removeClass("is-valid");
-            }
+          if (valeurInput.toUpperCase() === (x.zip)){
+            if($(elt).attr("id") == "corigin") origine = [x.lng,x.lat];
+            if($(elt).attr("id") == "cdestination") destination = [x.lng,x.lat];
+            validationelt = 1;
           }
         });
       },
@@ -36,6 +29,14 @@ $(".OHform").keyup(function() {
         console.log(thrownError);
       }
     });
+    if (validationelt == 0){
+      $(elt).addClass("is-invalid");
+      $(elt).removeClass("is-valid");
+    }
+    else{
+      $(elt).addClass("is-valid");
+      $(elt).removeClass("is-invalid");
+    }
     if (($("#corigin").hasClass("is-valid")) && ($("#cdestination").hasClass("is-valid"))){
       $('#toast1').toast('show');
       $("#infoIcon").tooltip('show');

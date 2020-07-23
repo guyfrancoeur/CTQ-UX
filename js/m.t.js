@@ -97,10 +97,8 @@ $('#m_t').on('shown.bs.modal', function() {
 
   // Remettre le formulaire à zéro
   function reinitialiserFormuTract(){
-    $('#cnomtracteur').val("");
-    $('#cstatut').val('default').selectpicker("refresh");
-    $('#ctypefuel').val('default').selectpicker("refresh");
-    $('#cconsotracteur').val("");
+    $('#cnomtracteur, #cconsotracteur').val("");
+    $('#cstatut, #ctypefuel').val('default').selectpicker("refresh");
     $("#activeicon").html('<i class="fas fa-toggle-on m-auto"></i></span>');
     $("#bretourT").hide();
     changerTitresT("add");
@@ -117,14 +115,12 @@ $('#m_t').on('shown.bs.modal', function() {
       $("#formTracteur").removeClass('was-validated');
       if (mode_save_button_tracteur == "add"){
         addTract();
-        $("#cMessageEditTracteur").hide();
-        $("#cMessageDeleteTracteur").hide();
+        $("#cMessageEditTracteur, #cMessageDeleteTracteur").hide();
         $("#cMessageAddTracteur").show(0).delay(10000).hide(0); 
       }
       else{
         editTract();
-        $("#cMessageDeleteTracteur").hide();
-        $("#cMessageAddTracteur").hide();
+        $("#cMessageDeleteTracteur, #cMessageAddTracteur").hide();
         $("#cMessageEditTracteur").show(0).delay(10000).hide(0);
       }
       reinitialiserFormuTract();

@@ -19,8 +19,7 @@ $('#bajoutcamion').click(function() {
   mode_save_button_camion = "add";
   $('#cdescription').focus();
   $('#cdescription').val("");
-  $("#cselecttracteur").val("").change();
-  $("#cselectequipement").val("").change();
+  $("#cselecttracteur, #cselectequipement").val("").change();
 });
 
 // Ajout/modification camion

@@ -38,9 +38,7 @@ $('#m_te').on('shown.bs.modal', function() {
 
   // Remettre le formulaire à zéro
   function reinitialiserFormuTE() {
-    $('#cnameTE').val("");
-    $('#ccleTE').val("");
-    $('#cconsoTE').val("");
+    $('#cnameTE, #ccleTE, #cconsoTE').val("");
   }
 
   // Validation formulaire

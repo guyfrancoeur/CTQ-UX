@@ -105,10 +105,6 @@ tbody tr:hover {
   padding-left: 0px;
   width: 60px;
 }
-#colEdit {
-  padding-left: 0px;
-  width: 77px;
-}
 #colEdit2{
   text-align:left;
 }
@@ -175,7 +171,7 @@ tbody {
   font-size: 14px;
 }
 #colEdit {
-  width: 60px;
+  width: 77px;
 }
 .binfo:focus, #bsetprofil:focus, #bmaptrucker:focus, #bajoutcamion:focus,
 .bset:focus, .btrash:focus, .bP:focus, .bSt:focus, .bSte:focus, .bS:focus,

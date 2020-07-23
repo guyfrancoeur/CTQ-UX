@@ -44,6 +44,9 @@
       {"propriete":"text","obj":"#cchoosemessage","value":"Choisissez d'abord un type de mise en vente ci-dessous."},
       {"propriete":"text","obj":"#cavailabletrucks","value":"Camions disponibles"},
       {"propriete":"text","obj":"#bAvailableT","value":"Voir la liste des camions disponibles"},
+      {"propriete":"text","obj":"#cmessagevalidform1","value":"Votre demande a été envoyée avec succès."},
+      {"propriete":"text","obj":"#cmessagevalidform2","value":"Nous vous recontacterons sous peu."},
+      {"propriete":"text","obj":"#cmessageinvalidform","value":"Certains champs sont invalides."},
       {"propriete":"titleDropdown","obj":"#crequirements","value":"Des exigences ?"},
       {"propriete":"textDropdown","obj":"#crefrigerated","value":"Réfrigéré"},
       {"propriete":"textDropdown","obj":"#crush","value":"Le plus vite possible"},
@@ -66,11 +69,10 @@
       {"propriete":"data-original-title","obj":"#horiginedestination","value":"Aide"},
       {"propriete":"data-content","obj":"#hpublic","value":"L'enchère publique s'adresse à tout le monde. Vous recevrez beaucoup d'offres. Celle qui sera la moins chère remportera l'enchère. La réservation et le contrat est automatique. Vous n'avez rien d'autre à faire."},
       {"propriete":"data-content","obj":"#hfixed","value":"L'offre fixe s'adresse à tout le monde. Vous allez recevoir une (1) offre. Le premier offrant qui vous correspond au prix demandé remporte l'enchère. La réservation et le contrat est automatique. Vous n'avez rien d'autre à faire."},
-      {"propriete":"data-content","obj":"#hprivate","value":"L'enchère privée sera envoyée à une liste de votre choix. Vous recevrez beaucoup d'offres. Vous devrez sélectionner QUI remportera l'enchère. La réservation et le contrat est automatique."},
+      {"propriete":"data-content","obj":"#hprivate","value":"L'enchère privée sera envoyée à une liste de personnes de votre choix. Uniquement ces personnes là pourront faire une offre. Vous recevrez beaucoup d'offres. Vous devrez sélectionner QUI remportera l'enchère. La réservation et le contrat est automatique."},
       {"propriete":"data-content","obj":"#hcargo","value":"Dans cette section vous indiquerez les informations à propos du chargement (cargaison). Plus vous indiquerez d'informations, plus le prix sera bas."},
       {"propriete":"data-content","obj":"#horiginedestination","value":"Le chargement est situé au lieu de départ et va être livré à la destination de votre choix.estination. Ces champs sont obligatoires."},
       {"propriete":"data-original-title","obj":"#htoggleinstruction","value":"Cliquez sur ce bouton si vous souhaitez convertir les valeurs en pieds ou en mètres"},
-      {"propriete":"data-original-title","obj":"#hprivate","value":"Une enchère privée sera envoyée à une liste de personnes, uniquement ces personnes là pourront faire une offre."},
       {"propriete":"data-original-title","obj":"#infoIcon","value":"<i id='iconindice' class='fas fa-hand-point-right fa-sm'></i> <span id='cindicenbcamions'>Donnez plus d'informations à propos du chargement pour peut-être obtenir plus de camions disponibles !</span>"}
     ],
     "m.courriels":[
