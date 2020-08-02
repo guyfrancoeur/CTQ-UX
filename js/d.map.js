@@ -38,6 +38,9 @@ $(".OHform").keyup(function() {
       $(elt).removeClass("is-invalid");
     }
     if (($("#corigin").hasClass("is-valid")) && ($("#cdestination").hasClass("is-valid"))){
+      if($("#corigin").val() == $("#cdestination").val()){ // Si destination = origine
+        
+      }
       $('#toast1').toast('show');
       $("#infoIcon").tooltip('show');
     }else{
@@ -54,7 +57,7 @@ $('body').on('click', function (e) {
 });
 
 // ---- OpenLayers ----
-$('#m_d_map').on('shown.bs.modal', function() {
+$('#m_d_map').on('show.bs.modal', function() {
   var features = [];
   var layers = []
   layers.push(new ol.layer.Tile({
@@ -216,7 +219,7 @@ $('#m_d_map').on('shown.bs.modal', function() {
        var coordinate = evt.coordinate;
        overlay.setPosition(coordinate);
        container.style.display="block";
-       if (name == "Origine" && $('#en').hasClass("currentlanguage")){
+       if (name == "Origine" && (document.documentElement.lang == "en")){
          $("#popup").css("height","50px");
          $("#popup").css("width","150px");
          content.innerHTML = "<span style='margin-left:20px;font-weight:600;color:rgb(90,90,90);'>Origin</span>";
@@ -238,7 +241,7 @@ $('#m_d_map').on('shown.bs.modal', function() {
          $("#popup").css("height","130px");
          $("#popup").css("width","300px");
          var all = name.split(" ");
-         if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+         if (document.documentElement.lang == "en"){ // Si en anglais
            content.innerHTML = " <i class='fas fa-truck fa-sm iconPopup'></i> <span style='font-weight:600;'>Tractor : </span>" + all[0] + "<br/>" +
            " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Equipment : </span>" + all[1] + "<br/>" +
            " <i class='fas fa-map-signs fa-sm iconPopup'></i> <span style='font-weight:600;'>Postal code : </span>" + all[2] + "<br/>" +

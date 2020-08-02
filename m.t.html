@@ -17,7 +17,7 @@
       <p id="cMessageDeleteTracteur" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;">
         <i class="far fa-check-circle"></i> <span id="cMDT">Tractor deleted !</span></p>
     </div>
-    <br/>
+    <br/><br/>
     <div class="modal-body">
       <div class="row">
         <div class="col-xl-7 col-lg-6 col-12 pb-xl-0 pb-4">
@@ -238,6 +238,7 @@
                 <span id="activeicon" class="input-group-text" style="width:37px;"><i class="fas fa-toggle-on m-auto"></i></span>
               </div>
               <select id="cstatut" class="selectpicker form-control form-control-sm" title="Status" required>
+                <option class="defaultselectvalue" value="" disabled>Status</option>
                 <option id="cactif">Active</option>
                 <option id="cinactif">Inactive</option>
               </select>
@@ -247,6 +248,7 @@
                 <span class="input-group-text" style="width:37px;"><i class="fas fa-gas-pump m-auto"></i></span>
               </div>
               <select id="ctypefuel" class="selectpicker form-control form-control-sm" title="Type of fuel" required>
+                <option class="defaultselectvalue" value="" disabled>Type of fuel</option>
                 <option>Diesel</option>
                 <option id="cessenceSP">Unleaded gasoline</option>
                 <option id="cessence">Gasoline</option>

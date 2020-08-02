@@ -1,4 +1,5 @@
-$('#m_t').on('shown.bs.modal', function() {
+$('#m_t').on('show.bs.modal', function() {
+  $("#cMessageEditTracteur, #cMessageDeleteTracteur, #cMessageAddTracteur").hide();
   reinitialiserFormuTract();
   $("#formTracteur").removeClass('was-validated'); //Retirer traces validation formulaire
 
@@ -116,12 +117,12 @@ $('#m_t').on('shown.bs.modal', function() {
       if (mode_save_button_tracteur == "add"){
         addTract();
         $("#cMessageEditTracteur, #cMessageDeleteTracteur").hide();
-        $("#cMessageAddTracteur").show(0).delay(10000).hide(0); 
+        $("#cMessageAddTracteur").show(0).delay(10000).hide(); 
       }
       else{
         editTract();
         $("#cMessageDeleteTracteur, #cMessageAddTracteur").hide();
-        $("#cMessageEditTracteur").show(0).delay(10000).hide(0);
+        $("#cMessageEditTracteur").show(0).delay(10000).hide();
       }
       reinitialiserFormuTract();
     }
@@ -131,7 +132,7 @@ $('#m_t').on('shown.bs.modal', function() {
   function changerTitresT(elt){
     switch(elt){
       case "add":
-        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+        if (document.documentElement.lang == "en"){ // Si en anglais
           $('#taddtracteur').html("Add a new tractor");
           $('#baddT').html("Add");
         }
@@ -141,7 +142,7 @@ $('#m_t').on('shown.bs.modal', function() {
         }
         break;
       case "set":
-        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+        if (document.documentElement.lang == "en"){ // Si en anglais
           $('#taddtracteur').html("Modify this tractor");
           $('#baddT').html("Replace");
         }

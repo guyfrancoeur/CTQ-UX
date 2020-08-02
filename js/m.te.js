@@ -1,4 +1,5 @@
-$('#m_te').on('shown.bs.modal', function() {
+$('#m_te').on('show.bs.modal', function() {
+  $("#cMessageDeleteTE, #cMessageAddTE, #cMessageEditTE").hide();
   reinitialiserFormuTE();
   $("#formTE").removeClass('was-validated'); //Retirer traces validation formulaire
 
@@ -13,8 +14,7 @@ $('#m_te').on('shown.bs.modal', function() {
   var nTE, kTE, coutTE;
   // Boutons modification équipement (crayon)
   $('.bSte').click(function() {
-    $('#cnameTE').prop("disabled", false);
-    $('#cconsoTE').prop("disabled", false);
+    $('#cnameTE, #cconsoTE').prop("disabled", false);
     event.stopPropagation(); // empêcher affichage détails du collapse bootstrap
     $('#cnameTE').focus();
     // Récupérer les valeurs de le type d'équipement en question
@@ -51,7 +51,7 @@ $('#m_te').on('shown.bs.modal', function() {
       $("#formTE").removeClass('was-validated');
       editTE();
       $("#cMessageDeleteTE, #cMessageAddTE").hide();
-      $("#cMessageEditTE").show(0).delay(10000).hide(0);
+      $("#cMessageEditTE").show(0).delay(10000).hide();
       $('#cnameTE, #ccleTE, #cconsoTE').prop("disabled", true);
     }
   });

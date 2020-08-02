@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,30 +74,21 @@
             </div>
           </div>
           <form class="align-items-center" action="d.html" onsubmit="return verificationLogin();">
+            <br/><br/>
             <div class="form-group mb-0">
-              <label id="lemail" for="cemail"></label>
-              <div class="input-group rounded shadow-sm">
-                <div class="input-group-prepend label-absolute">
-                  <span id="hemail" class="input-group-text" data-trigger="hover focus" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Please enter your email here">
-                    <i class="fa fa-user"></i>
-                  </span>         
-                </div>
-                <input type="email" class="form-control" id="cemail" placeholder="email@example.ca" autofocus>
-              </div>
+              <input type="text" class="form-control form-control-sm form-control2" id="cemail" required>
+              <label id="lemail" for="cemail" class="form-control-placeholder">Email</label>
+              <span class="spanlabel"><i class="fa fa-user"></i></span>
             </div>
-              
-            <div class="form-group">
-              <label id="lpass" for="cpassword"></label>
-              <div class="input-group mb-2 rounded shadow-sm">
-                <div class="input-group-prepend label-absolute">
-                  <span id="hpassword" class="input-group-text" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Please enter your password here">
-                    <i class="fas fa-lock"></i>
-                  </span>
-                </div>
-                <input type="password" class="form-control" id="cpassword" placeholder="Password">
-              </div>
+            <br/>
+            <div class="form-group mb-0">
+              <input type="password" class="form-control form-control-sm form-control2" id="cpassword" autocomplete="current-password" required>
+              <label id="lpassword" for="cpassword" class="form-control-placeholder">Password</label>
+              <span class="spanlabel"><i class="fas fa-lock"></i></span>
+              <button id="beye" type="button" class="btn"><i class="fa fa-eye" aria-hidden="true"></i></button>
+              <button id="beyeslash" type="button" class="btn"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
             </div>
-              
+            <br/>
             <br/>
             <div class="form-group text-center">
               <label id="lslider" for="nsecure" class="col-sm-auto col-form-label p-0">Slide to the right => </label>

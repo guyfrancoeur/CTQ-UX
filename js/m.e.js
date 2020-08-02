@@ -1,11 +1,13 @@
-$('#m_e').on('shown.bs.modal', function() {
+$('#m_e').on('show.bs.modal', function() {
   reinitialiserFormuEqui();
+  $("#cMessageEditEquipement, #cMessageDeleteEquipement, #cMessageAddEquipement").hide();
   $("#formEquipement").removeClass('was-validated'); //Retirer traces validation formulaire
 
   // Bouton retour
   $("#bretourE").hide();
   $('#bretourE').click(function() {
     reinitialiserFormuEqui();
+    $("#formEquipement").removeClass('was-validated');
     changerTitres("add");
   });
 
@@ -106,11 +108,11 @@ $('#m_e').on('shown.bs.modal', function() {
       if (mode_save_button_equipement == "add") {
         addEqui();
         $("#cMessageEditEquipement, #cMessageDeleteEquipement").hide();
-        $("#cMessageAddEquipement").show(0).delay(10000).hide(0);
+        $("#cMessageAddEquipement").show(0).delay(10000).hide();
       } else {
         editEqui();
         $("#cMessageAddEquipement, #cMessageDeleteEquipement").hide();
-        $("#cMessageEditEquipement").show(0).delay(10000).hide(0);
+        $("#cMessageEditEquipement").show(0).delay(10000).hide();
       }
       reinitialiserFormuEqui();
     }
@@ -120,7 +122,7 @@ $('#m_e').on('shown.bs.modal', function() {
   function changerTitres(elt){
     switch(elt){
       case "add":
-        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+        if (document.documentElement.lang == "en"){ // Si en anglais
           $('#taddequi').html("Add a new equipment");
           $('#baddE').html("Add");
         } else { // Si en français
@@ -129,7 +131,7 @@ $('#m_e').on('shown.bs.modal', function() {
         }
         break;
       case "set":
-        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+        if (document.documentElement.lang == "en"){ // Si en anglais
           $('#taddequi').html("Modify this equipment");
           $('#baddE').html("Replace");
         } else { // Si en français
@@ -139,4 +141,39 @@ $('#m_e').on('shown.bs.modal', function() {
         break;
     }
   }
+
+  // Toggle button
+  $("#toogle").click(function() {
+    var operator;
+    if($(".cUnite").hasClass("meter")){
+      $(".cUnite").removeClass("meter");
+      $(".cUnite").addClass("feet");
+      if (document.documentElement.lang == "fr") $('.cUnite').html("pi"); // français
+      if (document.documentElement.lang == "en") $('.cUnite').html("ft"); // anglais
+      operator = "mtf";
+    }
+    else{
+      $('.cUnite').html("m");
+      $(".cUnite").addClass("meter");
+      $(".cUnite").removeClass("feet");
+      operator = "ftm";
+    }
+    $.each(["#clongueurE", "#clargeurE", "#chauteurE"], function(i, v) {
+      value = $(v).val();
+      if ((value != "") && (operator == "mtf")) $(v).val((Math.round((value * 0.3048) * 10)) /10); // Convertion mètres en pieds + arrondi à deux décimales
+      if ((value != "") && (operator == "ftm")) $(v).val((Math.round((value / 0.3048) * 10)) /10); // Convertion pieds en mètres + arrondi à deux décimales
+    });
+    $(".valtoconvert").each( function () { // Convertion des valeurs dans la liste des équipements (gauche)
+      if (operator == "mtf") $(this).html((Math.round(($(this).html() * 0.3048) * 10)) /10);
+      if (operator == "ftm") $(this).html((Math.round(($(this).html() / 0.3048) * 10)) /10);
+    });
+  });
+
+  // Tooltip on ToggleButton
+  $("#clongueurE, #clargeurE, #chauteurE").focus(function() {
+    $("#htoggleinstruction").tooltip('show');
+  });
+  $("#clongueurE, #clargeurE, #chauteurE").focusout(function() {
+    $("#htoggleinstruction").tooltip('hide');
+  });
 });

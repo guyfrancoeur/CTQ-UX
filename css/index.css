@@ -3,52 +3,40 @@ ul.links-list li a, ul.links-list li a:visited, ul.links-list li a:active, .nav-
   color: rgb(52,58,54);
   font-size:15px;
 }
-
 .nav-admin a.active{
   font-weight:bold;
 }
-
 ul.links-list li a:hover{
   text-decoration:underline;
 }
-
-.card{
-  border-radius:15px;
-}
-
 .card-footer{
   border-top: 0px;
 }
-
 .arrow-card{
+  border-radius:15px;
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.05);
   height:210px;
   cursor:pointer;
 }
-
 .arrow-card:hover{
   background-color: rgba(1,13,40,.9);
   color: white;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
   transition-duration: 400ms;
 }
-
 .arrow-card:hover a, .arrow-card:hover a:visited, .arrow-card:hover a:active{
   color: white;
   transition-duration: 300ms;
 }
-
 .arrow-card a{
   color: rgb(52,58,54);
 }
-
 .arrow-card a:hover{
   text-decoration:none;
 }
-
 .icon-file{
   color:rgb(189,98,6);
 }
-
 .vertical{
   padding-top:auto;
   padding-bottom:auto;

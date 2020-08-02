@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover();
  
-    //Cacher boutons validations (modale ajout équipement & modification profile)
+  //Cacher boutons validations (modale ajout équipement & modification profile)
   $(".bV, .bX, #bvalidprofil, #bcancelprofil").hide();
 });
 
@@ -76,15 +76,15 @@ $(document).on('show.bs.modal', '.modal', function() {
 // Validation suppression (modale)
 function messageSupprEquipement() {
   $("#cMessageEditEquipement, #cMessageAddEquipement").hide();
-  $("#cMessageDeleteEquipement").show(0).delay(10000).hide(0); 
+  $("#cMessageDeleteEquipement").show(0).delay(10000).hide(); 
 }
 function messageSupprTracteur() {
   $("#cMessageEditTracteur, #cMessageAddTracteur").hide();
-  $("#cMessageDeleteTracteur").show(0).delay(10000).hide(0);
+  $("#cMessageDeleteTracteur").show(0).delay(10000).hide();
 }
 function messageSupprTE() {
   $("#cMessageEditTE, #cMessageAddTE").hide();
-  $("#cMessageDeleteTE").show(0).delay(10000).hide(0);
+  $("#cMessageDeleteTE").show(0).delay(10000).hide();
 }
 function validationSuppression(x,obj) {
   $(".bYes").click(function() {

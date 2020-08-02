@@ -5,7 +5,7 @@ $( document ).ready(function() { // ou $(function () {
   $('.selectpicker').selectpicker();
   $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
-  
+
   // Chargement contenu modale
   $('#m_courriels').load('./m.courriels.html');
   $('#m_d_map').load('./m.d.map.html');
@@ -24,16 +24,34 @@ $("#closeToast2").click(function(){ $("#toast2").removeClass("show");});
 $("#closeToast3").click(function(){ $("#toast3").removeClass("show");});
 
 // Toggle button
-unite = 'm';
-$("#button-6").click(function() {
-  if(unite == "m"){
-    $('.cUnite').html("pi");
-    unite = "pi";
+$("#toogle").click(function() {
+  var operator;
+  if($(".cUnite").hasClass("meter")){
+    $(".cUnite").removeClass("meter");
+    $(".cUnite").addClass("feet");
+    if (document.documentElement.lang == "fr") $('.cUnite').html("pi"); // français
+    if (document.documentElement.lang == "en") $('.cUnite').html("ft"); // anglais
+    operator = "mtf";
   }
   else{
     $('.cUnite').html("m");
-    unite = "m";
+    $(".cUnite").addClass("meter");
+    $(".cUnite").removeClass("feet");
+    operator = "ftm";
   }
+  $.each(["#clength", "#cwidth", "#cheight"], function(i, v) {
+    value = $(v).val();
+    if ((value != "") && (operator == "mtf")) $(v).val((Math.round((value * 0.3048) * 10)) /10); // Convertion pieds en mètres + arrondi à deux décimales
+    if ((value != "") && (operator == "ftm")) $(v).val((Math.round((value / 0.3048) * 10)) /10); // Convertion pieds en mètres + arrondi à deux décimales
+  });
+});
+
+// Tooltip on ToggleButton
+$("#cwidth, #clength, #cheight").focus(function() {
+  $("#htoggleinstruction").tooltip('show');
+});
+$("#cheight, #cwidth, #clength").focusout(function() {
+  $("#htoggleinstruction").tooltip('hide');
 });
 
 // Validation courriel
@@ -43,31 +61,22 @@ function validateEmail(email) {
 }
 
 // Ajout courriel
-var addcourriel = document.getElementById("addcourriel");
-var inputcourriel = document.getElementById("cinputcourriel");
-var ul = document.getElementById("listecourriels");
 nbEmails = 0;
 var tabEmails = [];
-
 function saveMails(){
   var tabsplit = ($("#cinputcourriel").val()).split(';');
   tabsplit.forEach(function(element){
     if (validateEmail(element)){
       tabEmails.push(element);
-      var li = document.createElement("li");
-      li.id = "li" + nbEmails;
-      li.className = 'list-group-item';
-      li.className = 'd-flex';
-      li.className = 'justify-content-between';
-      li.className = 'align-items-center';
-      li.textContent = element;
-      ul.appendChild(li);
+      li = "<li id='li" + nbEmails + "' class='align-items-center'>" + element +
+      "<button type='button' class='close' aria-label='Close'><span id=" + nbEmails + " class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>" +
+      "</li>";
+      $("#listecourriels").append(li);
       $("#cinputcourriel").val("");
-      li.innerHTML += "<button type='button' class='close' aria-label='Close'><span id="+nbEmails+" class='cross' aria-hidden='true' onclick='removeItem(this)'>&times;</span></button>";
       nbEmails ++;
     }
   });
-  $('#m_d3').modal('hide');
+  $('#m_courriels').modal('hide');
 }
 
 // Suppression courriel
@@ -85,10 +94,6 @@ function selection(elem){
     cout = (1 - reduction).toFixed(2);
     $("#checkboxA").prop('checked',true);
     $("#checkboxB, #checkboxC").prop('checked',false);
-    $("#cinvalidMarket").hide();
-    $("#cmontant, #cdureeC").removeClass("is-invalid");
-    $("#cmontant, #cdureeC").removeClass("is-valid");
-    $("#cmontant, #cdureeC").val("");
     $('#cout').html(cout);
     $('#A').addClass('chosen');
     $('#A').addClass('clicked');
@@ -107,10 +112,6 @@ function selection(elem){
     cout = (2 - reduction).toFixed(2);
     $("#checkboxB").prop('checked',true);
     $("#checkboxA, #checkboxC").prop('checked',false);
-    $("#cinvalidMarket").hide();
-    $("#cdureeA, #cdureeC").removeClass("is-invalid");
-    $("#cdureeA, #cdureeC").removeClass("is-valid"); 
-    $("#cdureeA, #cdureeC").val("");
     $('#cout').html(cout);
     $('#B').addClass('chosen');
     $('#B').addClass('clicked');
@@ -130,10 +131,6 @@ function selection(elem){
     else{cout = 0;}
     $("#checkboxC").prop('checked',true);
     $("#checkboxA, #checkboxB").prop('checked',false);
-    $("#cinvalidMarket").hide();
-    $("#cdureeA, #cmontant").removeClass("is-invalid");
-    $("#cdureeA, #cmontant").removeClass("is-valid");
-    $("#cdureeA, #cmontant").val("");
     $('#cout').html(cout);
     $('#C').addClass('chosen');
     $('#C').removeClass('notchosen');
@@ -148,7 +145,11 @@ function selection(elem){
     $('#ctextA,#ctextB').removeClass('font-weight-bold');
     $('#cdureeA,#cmontant').prop("disabled", true);
     $('#cdureeA,#cmontant,#addcourriel').css("cursor", "pointer");
-  };
+  }
+  $("#cdureeA, #cmontant, #cdureeC").removeClass("is-invalid");
+  $("#cdureeA, #cmontant, #cdureeC").removeClass("is-valid");
+  $("#cdureeA, #cmontant, #cdureeC").val("");
+  $("#toast3").toast('hide');
 }
 
 // Réduction
@@ -166,8 +167,7 @@ function champRempli(elem){
   // Affichage modale camions disponibles si origine et destination entrée sont valides (toast Bootstrap)
   nbChampsRemplis = 0;
   if(($(elem).val() == "") || ($(elem).val() == [])){
-    $(elem).removeClass("is-valid");
-    if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = false;
+    if($(elem).attr("id") == "clength") tabChampsRemplis[0] = false;
     if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = false;
     if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = false;
     if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = false;
@@ -175,8 +175,7 @@ function champRempli(elem){
     if($(elem).attr("id") == "crequirements") tabChampsRemplis[5] = false;
   }
   else{
-    $(elem).addClass("is-valid");
-    if($(elem).attr("id") == "clongueur") tabChampsRemplis[0] = true;
+    if($(elem).attr("id") == "clength") tabChampsRemplis[0] = true;
     if($(elem).attr("id") == "cwidth") tabChampsRemplis[1] = true;
     if($(elem).attr("id") == "cheight") tabChampsRemplis[2] = true;
     if($(elem).attr("id") == "cweight") tabChampsRemplis[3] = true;
@@ -267,19 +266,11 @@ function animationReduction() {
   });
 }
 
-// Tooltip on ToggleButton
-$("#cwidth, #clongueur, #cheight").focus(function() {
-  $("#htoggleinstruction").tooltip('show');
-});
-$("#cheight, #cwidth, #clongueur").focusout(function() {
-  $("#htoggleinstruction").tooltip('hide');
-});
-
 // Validation formulaire
 $("#principalform").submit(function(event){
   var valid = 0;
   if (countChecked() >= 1){
-    $("#cinvalidMarket").hide();
+    $("#cchoosemessage").hide();
     switch ($(".groupcheckbox:checked").attr("id")){
       case ("checkboxA"):
         if ($("#cdureeA").val() == ""){
@@ -303,7 +294,7 @@ $("#principalform").submit(function(event){
   }else{
     // empêche le questionnaire de s'envoyer
     event.preventDefault();
-    $("#cinvalidMarket").show();
+    $("#cchoosemessage").show();
     valid = 0;
   }
   if($("#corigin").val() == ""){
@@ -332,6 +323,7 @@ function countChecked(){
 }
 
 function reinitialiserFormulaire(){
+  $("#crequirements").val("default").selectpicker("refresh");
   $("#cdestination, #corigin, #cdureeA, #cmontant, #cdureeC").removeClass("is-invalid is-valid");
   $("#A, #B, #C").removeClass("chosen notchosen clicked");
   $("#cdestination, #corigin, #cdureeA, #cmontant, #cdureeC").val("");

@@ -1,4 +1,4 @@
-$('#m_t_map').on('shown.bs.modal', function() { 
+$('#m_t_map').on('show.bs.modal', function() {
   var coordonnees = [];
   var checkedTruck = $(".custom-control-input:checked");
   $.each( checkedTruck, function( i, val ) { // Récupère les données des camions sélectionnés dans la page html
@@ -93,7 +93,7 @@ $('#m_t_map').on('shown.bs.modal', function() {
         overlay.setPosition(coordinate);
         container.style.display="block";
         var all = name.split(" ");
-        if ($('#en').hasClass("currentlanguage")){ // Si en anglais
+        if (document.documentElement.lang == "en"){ // Si en anglais
           content.innerHTML = " <i class='fas fa-truck fa-sm iconPopup'></i> <span style='font-weight:600;'>Tractor : </span>" + all[0] + "<br/>" +
           " <i class='fas fa-truck-loading fa-sm iconPopup'></i> <span style='font-weight:600;'>Equipment : </span>" + all[1] + "<br/>" +
           " <i class='fas fa-map-signs fa-sm iconPopup'></i> <span style='font-weight:600;'>Postal code : </span>" + all[2] + "<br/>" +

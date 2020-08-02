@@ -1,4 +1,4 @@
-// S�curit� login (Slider)
+// Sécurité login (Slider)
 $("#nsecure").slider({tooltip: 'always'}); //a la JQuery
 
 $("#nsecure").change(function(){
@@ -39,7 +39,25 @@ function verificationLogin(){
     return result;
 }
 
-$( document ).ready(function() {
-  console.log("doc is ready!");
-  $('[data-toggle="tooltip"]').tooltip();
+// Retirer input invalide quand la valeur est changée
+$("#cpassword, #cemail").change(function() {
+  if($(this).val() != ""){
+    $(this).removeClass("is-invalid");
+    $("#cinvalidMessage").hide();
+  }
+});
+
+// Mot de passe caché/visible (bouton oeil)
+$(document).ready(function() {
+  $("#beyeslash").hide();
+});
+$("#beye").click(function(){
+  $("#cpassword").attr('type',"text");
+  $("#beye").hide();
+  $("#beyeslash").show();
+});
+$("#beyeslash").click(function(){
+  $("#cpassword").attr('type',"password");
+  $("#beyeslash").hide();
+  $("#beye").show();
 });

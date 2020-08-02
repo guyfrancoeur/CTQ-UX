@@ -1,12 +1,6 @@
 /* ********* Languages ********* */
 function translateFunction(lang,name) {
-  if (lang == "fr"){
-    $("#fr").addClass("currentlanguage");
-    $("#en").removeClass("currentlanguage");
-  }else{
-    $("#en").addClass("currentlanguage");
-    $("#fr").removeClass("currentlanguage");
-  }
+  document.documentElement.lang = lang;
   $.ajax({
     url: "./data/" + lang + ".json",
     dataType: "json",
@@ -14,7 +8,6 @@ function translateFunction(lang,name) {
       $.each(data[name], function(n, tab) {
         $.each(tab, function(i, x) {
           if(x.propriete == "text") $(x.obj).text(x.value);
-          if(x.propriete == "html") $(x.obj).html(x.value);
           if(x.propriete == "titleDropdown") $(x.obj).selectpicker({title: x.value}).selectpicker('render');
           if(x.propriete == "textDropdown"){
             $(x.obj).text(x.value);
@@ -35,3 +28,7 @@ function translateFunction(lang,name) {
     }
   });
 }
+
+$('.modal').on('shown.bs.modal', function() {
+  $(this).off('shown.bs.modal');  // Évite la création d'un nouveau event listener à chaque ouverture de la modale
+});

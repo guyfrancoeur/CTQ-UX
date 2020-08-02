@@ -13,14 +13,17 @@ $('.bset').click(function() {
   $('#cselectequipement').val(equipement).change();
 });
 
-// Bouton ajout camion, réinitialiser la sélection (dropdown)
+// Bouton ajout camion
 $('#bajoutcamion').click(function() {
   changerTitresC("add");
   mode_save_button_camion = "add";
   $('#cdescription').focus();
+});
+
+function reinitialiserFormuCamion() {
   $('#cdescription').val("");
   $("#cselecttracteur, #cselectequipement").val("").change();
-});
+}
 
 // Ajout/modification camion
 function camionEvent() {
@@ -29,6 +32,8 @@ function camionEvent() {
       $(current_col).find("td").eq(0).find("button").attr('data-original-title', $('#cdescription').val());
       $(current_col).find("td").eq(1).html($('#cselecttracteur').val());
       $(current_col).find("td").eq(2).html($('#cselectequipement').val());
+      $("#cMessageAddCamion").hide();
+      $("#cMessageEditCamion").show(0).delay(10000).hide();
       break;
     case "add":
       var choix_description = $('#cdescription').val();
@@ -54,27 +59,31 @@ function camionEvent() {
           '<button type="button" class="btn p-0 btrash"><i class="fas fa-trash color-icon"></i></button>' +
         '</th></tr>';
         $('#tableCamions > tbody:last-child').append(html);
+        $("#cMessageEditCamion").hide();
+        $("#cMessageAddCamion").show(0).delay(10000).hide();
         break;
   }
-  $('#m_c').modal('hide');
   $('[data-toggle="tooltip"]').tooltip(); // Rendre fonctionnel le tooltip qui vient d'être ajouté
 }
 
 function changerTitresC(elt){
   switch (elt) {
     case "set":
-      if ($('#en').hasClass("currentlanguage")) $('#bsavecamiontext').html("Replace"); // Si en anglais
+      if (document.documentElement.lang == "en") $('#bsavecamiontext').html("Replace"); // Si en anglais
       else $('#bsavecamiontext').html("Remplacer"); // Si en français
       break;
     case "add":
-      if ($('#en').hasClass("currentlanguage")) $('#bsavecamiontext').html("Add"); // Si en anglais
+      if (document.documentElement.lang == "en") $('#bsavecamiontext').html("Add"); // Si en anglais
       else $('#bsavecamiontext').html("Ajouter"); // Si en français
       break;
   }
 }
 
 
-$('#m_c').on('shown.bs.modal', function() {
+$('#m_c').on('show.bs.modal', function() {
+  $("#formCamion").removeClass('was-validated');
+  $("#cMessageAddCamion, #cMessageEditCamion").hide();
+
   $('#cdescription').focus();
   $('.selectpicker').selectpicker();
   
@@ -83,10 +92,14 @@ $('#m_c').on('shown.bs.modal', function() {
     if (!$("#formCamion")[0].checkValidity()) {
       e.preventDefault();
       e.stopPropagation();
+      $("#formCamion").addClass('was-validated');
+      console.log("invalide");
     }
     else{
+      $("#formCamion").removeClass('was-validated');
       camionEvent();
+      reinitialiserFormuCamion();
+      console.log("valide");
     }
-    $("#formCamion")[0].classList.add('was-validated');
   });
 });

@@ -173,6 +173,12 @@
   position: absolute;
   transform: rotate(-120deg);
 }
+.defaultselectvalue span.text{
+  margin:0 !important;
+}
+.defaultselectvalue{
+  padding-bottom:7px;
+}
 @media (max-width: 768px) {
   #ticketpriceA{
     right:-14px;;
@@ -217,13 +223,6 @@ ul.listec li{
 .size1{
   width:45px;
   display: table;
-}
-.size2{
-  width:45px;
-  display: table;
-}
-#addcourriel{
-  height:31px;
 }
 .cout-style{
   border-bottom-left-radius:15px;
@@ -272,11 +271,11 @@ ul.listec li{
   border-color:#c8690f;
 }
 #addcourriel{
+  height:31px;
   color:rgb(120,120,120);
-  border-radius:0px;
+  border-radius:3px;
   border: 1px solid rgb(120,120,120);
 }
-
 .chosen{
   background-color: #FAFCFF;
   box-shadow: -1px 3px 6px 1px rgba(1,13,40,.2);
@@ -423,6 +422,7 @@ hr.style-two {
 #cindicenbcamions{
   font-size:12.5px;
 }
+
 .tooltip-inner{
   min-width: 310px;
   background-color:#BF7B37;
@@ -432,23 +432,35 @@ hr.style-two {
 .bs-tooltip-bottom .arrow::before{border-bottom-color:#BF7B37 !important;}
 .bs-tooltip-left .arrow::before{border-left-color:#BF7B37 !important;}
 .bs-tooltip-right .arrow::before{border-right-color:#BF7B37 !important;}
+
 .help{
   color:rgb(100,100,100);
 }
 .check-mark{
   color:#a85a12 !important; 
 }
-.dropdown-item:focus, .dropdown-item:active{
+
+.dropdown-item:focus, .dropdown-item:active, .dropdown-item:hover{
   background-color:#c76c16e1 !important;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
-.dropdown-item:focus > svg, .dropdown-item:active > svg,
-.dropdown-item:focus > .text, .dropdown-item:active > .text,
-.dropdown-item:focus > .text > .text-muted, .dropdown-item:active > .text > .text-muted,
-.dropdown-item:focus .check-mark, .dropdown-item:active .check-mark{
+/*
+.dropdown-menu > li:not(.disabled) > .dropdown-item:hover{
+  color:white !important;
+  background-color:#c76c16f5 !important;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}*/
+.dropdown-item:focus > svg, .dropdown-item:active > svg, .dropdown-item:hover > svg,
+.dropdown-item:focus > .text, .dropdown-item:active > .text, .dropdown-item:hover > .text,
+.dropdown-item:focus > .text > .text-muted, .dropdown-item:active > .text > .text-muted, .dropdown-item:hover > .text > .text-muted,
+.dropdown-item:focus .check-mark, .dropdown-item:active .check-mark, .dropdown-item:hover .check-mark{
   color:white !important;
 }
 .dropdown-item > .text, .filter-option-inner-inner{
   color:rgb(50,50,50) !important;
+}
+.bs-placeholder > .filter-option > .filter-option-inner > .filter-option-inner-inner{
+  color:rgb(140,140,140) !important;
 }
 .dropdown-item > svg, .filter-option-inner-inner > svg{
   color:rgb(110,110,110) !important;
@@ -493,7 +505,9 @@ hr.style-two {
   margin-right:-7px;
 }
 #closeToast3{
-  margin-top:-23px;
+  position:absolute;
+  right:13px;
+  top:3px;
   color:rgb(83, 56, 56);
   text-shadow:0 1px 0 rgb(100, 66, 66) !important;
 }
@@ -510,6 +524,59 @@ hr.style-two {
   color:rgb(142, 161, 131);
   font-size:11px;
 }
+.floatingicon{
+  color:rgb(220,220,220);
+  position:absolute;
+  margin-top:-27px;
+  left:11px;
+  font-size:14px;
+}
+#corigin, #cdestination{
+  padding-left:40px;
+}
+#clength, #cwidth, #cheight, #cweight, #cvalue, #cdureeC, #cmontant, #cdureeA{
+  padding-left: 90px;
+  border-right-color:rgb(235,235,235);
+}
+.input-group-text{
+  border-top-right-radius:3px !important;
+  border-bottom-right-radius:3px !important;
+  background-color:rgb(245,245,245);
+  color:rgb(110,110,110);
+}
+.form-control:disabled + .input-group-append > .input-group-text{
+  background-color: #d8daddb2;
+}
+.labelform{
+  position:absolute;
+  left:10px;
+  font-size:12px;
+  color:rgb(150,150,150);
+  margin-top:7px;
+  z-index:100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.lf2{
+  left:22px;
+}
+.intermed{
+  text-align: right;
+}
+.form-control.is-valid{
+  border-right-color:#28a745 !important;
+}
+.form-control.is-invalid{
+  border-right-color:#dc3545 !important;
+}
+#cchoosemessage{
+  display:none;
+  color:rgb(207, 148, 148);
+  margin:0;
+  font-size:12px;
+}
+
+
 @media screen and (max-width: 390px) {
   #tavailabletrucks{
     padding-right:0px !important;
@@ -527,7 +594,6 @@ hr.style-two {
     font-size:19px !important;
   }
 }
-
 @media screen and (max-width: 430px) {
   #container{
     padding:5px;
@@ -537,7 +603,6 @@ hr.style-two {
     padding-right:5px !important;
   }
 }
-
 @media screen and (max-width: 700px) {
   #textreduction2{
     text-align:left !important;
@@ -550,5 +615,18 @@ hr.style-two {
   #divbloc{
     padding-right:5px;
     padding-left:5px;
+  }
+}
+@media screen and (max-width: 310px) {
+  #cinfochargement{
+    font-size:18px;
+  }
+  #ctextA, #ctextB, #ctextC{
+    font-size:14px;
+  }
+}
+@media screen and (max-width: 318px) {
+  #tmcourriels{
+    font-size:17px !important;
   }
 }
