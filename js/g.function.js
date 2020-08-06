@@ -29,6 +29,6 @@ function translateFunction(lang,name) {
   });
 }
 
-$('.modal').on('shown.bs.modal', function() {
+$('#m_c, #m_courriels, #m_e, #m_t, #m_te, #m_v').on('shown.bs.modal', function() {
   $(this).off('shown.bs.modal');  // Évite la création d'un nouveau event listener à chaque ouverture de la modale
 });

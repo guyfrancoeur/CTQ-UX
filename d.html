@@ -76,7 +76,10 @@
                 <div class="col-12 col-xl-5 px-0">
                   <div class="card-group col-12 pt-1 pb-1 px-0">
                     <h5 class="card-title">
-                      <span id="horiginedestination" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-placement="top" data-toggle="popover" data-original-title="Help" data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory."></span>
+                      <span id="horiginedestination" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-html="true"
+                        data-placement="top" data-toggle="popover" data-original-title="<i class='fas fa-lightbulb iconHelpPopover'></i>Help"
+                        data-content="The cargo is located at the origin and is to be delivered at the destination. These fields are mandatory.">
+                      </span>
                       <span id="itinerary" class="pb-0 m-0 pt-2"> Itinerary</span>
                       <hr class="m-0 p-0 style-two" style="height:1px; width:150px;margin-left:25px !important;">
                     </h5>
@@ -94,15 +97,17 @@
                   <div class="card-group col-12 pb-1 px-0">
                     <h5 class="card-title d-flex justify-content-between col-12 pl-0 pr-xl-3 pr-0 mb-1">
                       <div class="col-9 px-0">
-                      <span id="hcargo" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-placement="top" data-toggle="popover" data-original-title="Help" data-content="In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."></span>
+                      <span id="hcargo" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-html="true"
+                      data-placement="top" data-toggle="popover" data-original-title="<i class='fas fa-lightbulb iconHelpPopover'></i>Help"
+                      data-content="In this section you enter information about the cargo (shipment). More info you give cheaper the price will be."></span>
                       <span id="cinfochargement" class="pb-0 m-0 px-0"> Cargo info</span> 
                       <hr class="m-0 p-0 style-two" style="width:150px;margin-left:25px !important;height:1px;">
                       </div>
                       <!-- Toggle Button -->
                       <div class="col-3 px-0">
                         <div class="can-toggle" id="htoggleinstruction" aria-hidden="true" data-placement="top" data-original-title="Click on this button if you want to convert to feet or meters">
-                          <input id="toogle" type="checkbox">
-                          <label for="toogle">
+                          <input id="toggle" type="checkbox">
+                          <label for="toggle">
                             <div id="divtoggle" class="switch" data-checked="m" data-unchecked="ft"></div>
                           </label>
                         </div>
@@ -169,7 +174,9 @@
                           <input type="checkbox" id="checkboxA" class="groupcheckbox">
                           <div class="row px-3 pt-2">
                             <div class="col-8">
-                              <span id="hpublic" class="fa fa-question-circle help" data-trigger="focus" data-placement="top" tabindex="0" style="cursor:pointer;" data-toggle="popover" data-original-title="Help" data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
+                              <span id="hpublic" class="fa fa-question-circle help" data-trigger="focus" data-placement="top" tabindex="0" style="cursor:pointer;"
+                              data-toggle="popover" data-original-title="<i class='fas fa-lightbulb iconHelpPopover'></i>Help" data-html="true"
+                              data-content="Public auction is for everyone. You will receive many offers. The lowest bidder wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                               <span id="ctextA">Public auction</span>
                             </div>
                             <div class="col-4 text-right pr-0 py-md-0 py-2">
@@ -193,7 +200,9 @@
                           <input type="checkbox" id="checkboxB" class="groupcheckbox">
                           <div class="row px-3 pt-2">
                             <div class="col-8 pr-0">
-                              <span id="hfixed" class="fa fa-question-circle help" data-toggle="popover" data-placement="top" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-original-title="Help" data-content="Fixed offer is for everyone you will receive one (1) offer. The first bidder to match you asked price wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
+                              <span id="hfixed" class="fa fa-question-circle help" data-toggle="popover" data-placement="top" data-trigger="focus" tabindex="0"
+                              style="cursor:pointer;" data-original-title="<i class='fas fa-lightbulb iconHelpPopover'></i>Help" data-html="true"
+                              data-content="Fixed offer is for everyone you will receive one (1) offer. The first bidder to match you asked price wins the auction. The booking and contract is automatic. You have nothing else to do."></span>
                               <span id="ctextB">Fixed price</span>
                             </div>
                             <div class="col-4 text-right px-0 py-md-0 py-2">
@@ -218,7 +227,9 @@
                           <input type="checkbox" id="checkboxC" class="groupcheckbox">
                           <div class="row px-3 py-2">
                             <div class="col-8">
-                              <span id="hprivate" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-placement="top" data-toggle="popover" data-original-title="Help" data-content="Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."></span>
+                              <span id="hprivate" class="fa fa-question-circle help" data-trigger="focus" tabindex="0" style="cursor:pointer;" data-placement="top"
+                              data-toggle="popover" data-original-title="<i class='fas fa-lightbulb iconHelpPopover'></i>Help" data-html="true"
+                              data-content="Private auction will be sent to a list of your choice you will receive many offers. You have to select WHO wins the auction. The booking and contract is automatic."></span>
                               <span id="ctextC"> Private auction</span>
                             </div>
                             <div class="col-4 text-right px-0 py-md-0 py-2">
@@ -300,7 +311,7 @@
   <div class="toast-header p-0 m-0">
       <div class="col"></div>
       <div class="col text-center">
-        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white" trigger=" click "
+        <i id="infoIcon" class="fa fa-info-circle fa-2x" style="margin-top:11px;color:white" data-trigger="click"
         aria-hidden="true" data-toggle="tooltip" data-html="true" data-placement="right"
         data-original-title="<i id='iconindice' class='fas fa-hand-point-right fa-sm'></i> 
         <span id='cindicenbcamions'>Give more informations about the cargo to get maybe more available trucks !</span>"></i>

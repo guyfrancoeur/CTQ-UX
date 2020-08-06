@@ -38,9 +38,6 @@ $(".OHform").keyup(function() {
       $(elt).removeClass("is-invalid");
     }
     if (($("#corigin").hasClass("is-valid")) && ($("#cdestination").hasClass("is-valid"))){
-      if($("#corigin").val() == $("#cdestination").val()){ // Si destination = origine
-        
-      }
       $('#toast1').toast('show');
       $("#infoIcon").tooltip('show');
     }else{
@@ -57,7 +54,7 @@ $('body').on('click', function (e) {
 });
 
 // ---- OpenLayers ----
-$('#m_d_map').on('show.bs.modal', function() {
+$('#m_d_map').on('shown.bs.modal', function() {
   var features = [];
   var layers = []
   layers.push(new ol.layer.Tile({

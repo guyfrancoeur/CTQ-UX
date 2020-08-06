@@ -97,8 +97,10 @@
                 <div class="card-header cardstyle">
                   <div class="card-title d-flex justify-content-between">
                     <div class="col text-left pl-0">
-                      <span id="hprofile" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" data-original-title="Help"  data-placement="top"
-                      data-html="true" data-animation="true" data-content='To edit the informations about your profile, click on the pencil &nbsp; <i class="fas fa-pen color2"></i>'></span>
+                      <span id="hprofile" class="fa fa-question-circle fa-lg color-help" data-trigger="focus" tabindex="0" data-toggle="popover" 
+                      data-original-title="Help"  data-placement="top" data-html="true" data-animation="true"
+                      data-content='To edit the informations about your profile, click on the pencil &nbsp; <i class="fas fa-pen color2"></i>'
+                      ></span>
                     </div>
                     <div class="col-11">
                       <span id="tprofil">Profile</span>
@@ -143,13 +145,18 @@
                     • With this button <span class="buttonInsideHelp2"><i class="fas fa-map-marked-alt"></i></span> you can see the trucks you have selected on a map. You have to select at least one.<br/>
                     • To modify a truck, you have to click on the pencil on the right <i class="fas fa-pencil-alt color2"></i><br/>
                     • To delete a truck, you have to click on the trash on the right <i class="fas fa-trash color2"></i><br/>
-                    • To change the location of the truck, you can click directly on the postal code which is an editable field.'></span>
+                    • To change the location of the truck, you can click directly on the postal code which is an editable field.'
+                    data-template='<div class="popover largepopover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body">zeffze</div></div>'
+                    ></span>
                   </div>
                   <h4 id="ttruck" class="col-auto p-0">
                     <span id="tlistecamions">Trucks list</span>
                   </h4>
                   <div class="col text-right p-0">
-                    <button id="bmaptrucker" class="btn py-0 px-2" type="button" data-toggle="modal" data-target="#m_t_map" disabled><i class="fas fa-map-marked-alt fa-lg color-icon-hover py-auto" ></i></button>
+                    <button id="bmaptrucker" class="btn py-0 px-2" type="button" data-toggle="modal" data-target="#m_t_map" disabled>
+                      <i id="tooltipmap" class="fas fa-map-marked-alt fa-lg color-icon-hover py-auto" 
+                      data-toggle="tooltip" data-html="true" data-placement="top" data-trigger="hover focus"
+                      data-original-title="<div class='diviconforbidden'><i class='fa fa-ban iconforbidden'></i></div>To activate this button you have to select at least one truck in the list below."></i></button>
                     <button id="bajoutcamion" class="btn py-0 px-2" type="button" data-toggle="modal" data-target="#m_c"><i class="fas fa-plus color-icon-hover py-auto"></i></button>
                   </div>
                 </div>
@@ -175,10 +182,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox1">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox1" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox1"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                              <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                              <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T1</td>
@@ -193,10 +206,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox2">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox2" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox2"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T2</td>
@@ -211,10 +230,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox3">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox3" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox3"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T3</td>
@@ -229,10 +254,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox4">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox4" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox4"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T4</td>
@@ -247,10 +278,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox5">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox5" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox5"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T5</td>
@@ -265,10 +302,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox6">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox6" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox6"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T6</td>
@@ -283,10 +326,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox7">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox7" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox7"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T7</td>
@@ -301,10 +350,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox8">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox8" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox8"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T8</td>
@@ -319,10 +374,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox9">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox9" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox9"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T9</td>
@@ -337,10 +398,16 @@
                       <td scope="row">
                         <div class="row ml-auto">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox10">
+                            <input type="checkbox" class="custom-control-input checkbox" id="checkbox10" onchange="checkonebox()">
                             <label class="custom-control-label" for="checkbox10"></label>
                           </div>
-                          <button type="button" class="btn p-0 binfo" data-toggle="tooltip" data-placement="left" title="Description" data-trigger="focus"><i class="fas fa-info-circle color-icon"></i></button>
+                          <button type="button" class="btn p-0 binfo" data-toggle="popover" tabindex="0" data-placement="left" data-html="true" 
+                            data-content="<i class='fas fa-thumbtack iconDescription'></i>
+                            <span class='descriptiontitle'>Description</span><hr class='hrdescri'>
+                            <div class='textdescription'>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.<br>- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>"
+                              data-trigger="focus">
+                            <i class="fas fa-info-circle color-icon"></i>
+                          </button>
                         </div>
                       </td>
                       <td>T10</td>

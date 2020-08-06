@@ -1,4 +1,4 @@
-$('#m_te').on('show.bs.modal', function() {
+$('#m_te').on('shown.bs.modal', function() {
   $("#cMessageDeleteTE, #cMessageAddTE, #cMessageEditTE").hide();
   reinitialiserFormuTE();
   $("#formTE").removeClass('was-validated'); //Retirer traces validation formulaire
@@ -51,8 +51,13 @@ $('#m_te').on('show.bs.modal', function() {
       $("#formTE").removeClass('was-validated');
       editTE();
       $("#cMessageDeleteTE, #cMessageAddTE").hide();
-      $("#cMessageEditTE").show(0).delay(10000).hide();
+      $("#cMessageEditTE").show();
+      setTimeout(function() { $("#cMessageEditTE").hide(); }, 7000);
       $('#cnameTE, #ccleTE, #cconsoTE').prop("disabled", true);
     }
   });
+});
+
+$('#m_te').on('hidden.bs.modal', function() {
+  $("#cMessageDeleteTE, #cMessageAddTE, #cMessageEditTE").hide();
 });

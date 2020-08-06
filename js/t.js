@@ -76,15 +76,18 @@ $(document).on('show.bs.modal', '.modal', function() {
 // Validation suppression (modale)
 function messageSupprEquipement() {
   $("#cMessageEditEquipement, #cMessageAddEquipement").hide();
-  $("#cMessageDeleteEquipement").show(0).delay(10000).hide(); 
+  $("#cMessageDeleteEquipement").show();
+  setTimeout(function() { $("#cMessageDeleteEquipement").hide(); }, 7000);
 }
 function messageSupprTracteur() {
   $("#cMessageEditTracteur, #cMessageAddTracteur").hide();
-  $("#cMessageDeleteTracteur").show(0).delay(10000).hide();
+  $("#cMessageDeleteTracteur").show();
+  setTimeout(function() { $("#cMessageDeleteTracteur").hide(); }, 7000);
 }
 function messageSupprTE() {
   $("#cMessageEditTE, #cMessageAddTE").hide();
-  $("#cMessageDeleteTE").show(0).delay(10000).hide();
+  $("#cMessageDeleteTE").show();
+  setTimeout(function() { $("#cMessageDeleteTE").hide(); }, 7000);
 }
 function validationSuppression(x,obj) {
   $(".bYes").click(function() {
@@ -106,15 +109,17 @@ function validationSuppression(x,obj) {
 }
 
 // Si au moins un camion est sélectionné (checkbox), on rend visible le bouton pour la modale qui contient une map
-$( ".custom-control-input" ).change(function() {
+function checkonebox() {
   if (countCheckedTruck() >= 1){
     if (countCheckedTruck() == 1 && ($(this).is(":checked"))) animationMap();
     $("#bmaptrucker").prop("disabled",false);
+    $('#tooltipmap').tooltip('disable');
   }
   if (countCheckedTruck() == 0){
     $("#bmaptrucker").prop("disabled",true);
+    $('#tooltipmap').tooltip('enable');
   }
-});
+}
 function countCheckedTruck(){ // Compte le nombre de checkbox sélectionnés
   var checkedTruck = $(".custom-control-input:checked");
   return checkedTruck.length;
@@ -134,7 +139,14 @@ function animationMap() {
 // Select all checkboxes
 $("#selectall").click(function () {
   $(".checkbox").prop('checked', $(this).prop('checked'));
-  if($("#selectall").is(':checked')) animationMap();
+  if($("#selectall").is(':checked')){
+    animationMap();
+    $("#bmaptrucker").prop("disabled",false);
+    $('#tooltipmap').tooltip('disable');
+  }else{
+    $("#bmaptrucker").prop("disabled",true);
+    $('#tooltipmap').tooltip('enable');
+  }
 });
 
 // Validation Code Postal camions (input)
@@ -176,6 +188,11 @@ $(".cpostalcode").keyup(function() {
     $(elt).removeClass("is-invalid");
   }
   return result;
+});
+
+// Cacher popover description camion quand scroll détecté
+$("tbody").scroll(function() {
+  $('[data-toggle="popover"]').popover('hide');
 });
 
 // Fonctions communes aux trois modales

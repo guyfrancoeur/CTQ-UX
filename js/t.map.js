@@ -1,4 +1,4 @@
-$('#m_t_map').on('show.bs.modal', function() {
+$('#m_t_map').on('shown.bs.modal', function() {
   var coordonnees = [];
   var checkedTruck = $(".custom-control-input:checked");
   $.each( checkedTruck, function( i, val ) { // Récupère les données des camions sélectionnés dans la page html
@@ -126,7 +126,7 @@ $('#m_t_map').on('show.bs.modal', function() {
     var padding = [80, 0, 50, 0];
     map.getView().fit(vectorSource.getExtent(), {
       size: map.getSize(),
-      padding: padding,
+      padding: padding
     });
   }
 });

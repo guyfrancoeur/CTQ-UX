@@ -1,4 +1,4 @@
-$('#m_t').on('show.bs.modal', function() {
+$('#m_t').on('shown.bs.modal', function() {
   $("#cMessageEditTracteur, #cMessageDeleteTracteur, #cMessageAddTracteur").hide();
   reinitialiserFormuTract();
   $("#formTracteur").removeClass('was-validated'); //Retirer traces validation formulaire
@@ -117,12 +117,14 @@ $('#m_t').on('show.bs.modal', function() {
       if (mode_save_button_tracteur == "add"){
         addTract();
         $("#cMessageEditTracteur, #cMessageDeleteTracteur").hide();
-        $("#cMessageAddTracteur").show(0).delay(10000).hide(); 
+        $("#cMessageAddTracteur").show();
+        setTimeout(function() { $("#cMessageAddTracteur").hide(); }, 7000);
       }
       else{
         editTract();
         $("#cMessageDeleteTracteur, #cMessageAddTracteur").hide();
-        $("#cMessageEditTracteur").show(0).delay(10000).hide();
+        $("#cMessageEditTracteur").show();
+        setTimeout(function() { $("#cMessageEditTracteur").hide(); }, 7000);
       }
       reinitialiserFormuTract();
     }
@@ -154,3 +156,7 @@ $('#m_t').on('show.bs.modal', function() {
     }
   }
 }); 
+
+$('#m_t').on('hidden.bs.modal', function() {
+  $("#cMessageEditTracteur, #cMessageDeleteTracteur, #cMessageAddTracteur").hide();
+});

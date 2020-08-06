@@ -10,12 +10,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <p id="cMessageEditEquipement" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;">
-        <i class="far fa-check-circle"></i> <span id="cMEE">Equipment modified !</span></p>
-      <p id="cMessageAddEquipement" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;">
-        <i class="far fa-check-circle"></i> <span id="cMAE">Equipment added !</span></p>
-      <p id="cMessageDeleteEquipement" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, -50%);color:#06A408;display:none;">
-        <i class="far fa-check-circle"></i> <span id="cMDE">Equipment deleted !</span></p>
+      <p id="cMessageEditEquipement"><i class="far fa-check-circle"></i> <span id="cMEE">Equipment modified !</span></p>
+      <p id="cMessageAddEquipement"><i class="far fa-check-circle"></i> <span id="cMAE">Equipment added !</span></p>
+      <p id="cMessageDeleteEquipement"><i class="far fa-check-circle"></i> <span id="cMDE">Equipment deleted !</span></p>
     </div>
     <br/><br/>
     <div class="modal-body">
@@ -26,8 +23,8 @@
             <!-- Toggle Button -->
             <div class="col-5" style="padding-right:40px;">
               <div class="can-toggle" id="htoggleinstruction" aria-hidden="true" data-placement="top" data-original-title="Click on this button if you want to convert to feet or meters">
-                <input id="toogle" type="checkbox">
-                <label for="toogle">
+                <input id="toggle" type="checkbox">
+                <label for="toggle">
                   <div id="divtoggle" class="switch" data-checked="m" data-unchecked="ft"></div>
                 </label>
               </div>

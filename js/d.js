@@ -24,7 +24,7 @@ $("#closeToast2").click(function(){ $("#toast2").removeClass("show");});
 $("#closeToast3").click(function(){ $("#toast3").removeClass("show");});
 
 // Toggle button
-$("#toogle").click(function() {
+$("#toggle").click(function() {
   var operator;
   if($(".cUnite").hasClass("meter")){
     $(".cUnite").removeClass("meter");

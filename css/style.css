@@ -211,6 +211,7 @@ body {
 }
 .popover{
   box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
   border-radius:0px;
   border-color:rgba(153, 180, 216, 0.3);
 }
@@ -218,14 +219,23 @@ body {
   text-align:center;
   background-color:rgb(247,247,247);
   letter-spacing: .7px;
-  font-weight: 700;
   letter-spacing: 3px;
   padding-top:13px;
   padding-bottom: 7px;
   font-family: 'Hind Guntur', sans-serif;
-  color:rgba(0,0,0,.6);
+  color:rgb(170,170,170);
   text-transform:uppercase;
+  font-size:14.5px;
 }
+
+.bs-popover-left > .arrow:after{border-left-color: white;}
+.bs-popover-right > .arrow:after{border-right-color: white;}
+.bs-popover-top > .arrow:after{border-top-color: white;}
+.bs-popover-bottom > .arrow:after{border-bottom-color: white;}
+.bs-popover-left > .arrow:before{border-left-color: transparent;}
+.bs-popover-right > .arrow:before{border-right-color: transparent;}
+.bs-popover-top > .arrow:before{border-top-color: transparent;}
+.bs-popover-bottom > .arrow:before{border-bottom-color: transparent;}
 
 /* Retirer outline quand un bouton/dropdown est cliqué */
 .help:focus, .dropdown-item:focus, .color-help:focus, .close:focus, #beye:focus, #beyeslash:focus,

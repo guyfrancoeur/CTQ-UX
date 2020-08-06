@@ -436,6 +436,13 @@ hr.style-two {
 .help{
   color:rgb(100,100,100);
 }
+.iconHelpPopover{
+  position:absolute;
+  left:10px;
+  top: 5px;
+  color:rgb(230,230,230);
+  font-size:26px;
+}
 .check-mark{
   color:#a85a12 !important; 
 }
@@ -444,12 +451,6 @@ hr.style-two {
   background-color:#c76c16e1 !important;
   box-shadow:0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
-/*
-.dropdown-menu > li:not(.disabled) > .dropdown-item:hover{
-  color:white !important;
-  background-color:#c76c16f5 !important;
-  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
-}*/
 .dropdown-item:focus > svg, .dropdown-item:active > svg, .dropdown-item:hover > svg,
 .dropdown-item:focus > .text, .dropdown-item:active > .text, .dropdown-item:hover > .text,
 .dropdown-item:focus > .text > .text-muted, .dropdown-item:active > .text > .text-muted, .dropdown-item:hover > .text > .text-muted,

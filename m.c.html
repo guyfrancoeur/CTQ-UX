@@ -1,4 +1,4 @@
-<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+<div class="modal-dialog modal-sm modal-dialog-centered" role="document" style="max-width:370px !important;">
   <div class="modal-content">
     <div class="modal-header px-0">
       <div class="divIconeModale"><i class="fas fa-truck-moving fa-lg iconModale"></i></div>
@@ -11,12 +11,10 @@
         </button>
       </div>
     </div>
+    <p id="cMessageEditCamion"><i class="far fa-check-circle"></i> <span id="cMEC">Truck modified !</span></p>
+    <p id="cMessageAddCamion"><i class="far fa-check-circle"></i> <span id="cMAC">Truck added !</span></p>
     <br/>
-    <p id="cMessageEditCamion" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, 30%);color:#06A408;display:none;">
-      <i class="far fa-check-circle"></i> <span id="cMEC">Truck modified !</span></p>
-    <p id="cMessageAddCamion" style="position:absolute;font-size:13px;left: 50%;top:20%;transform: translate(-50%, 30%);color:#06A408;display:none;">
-      <i class="far fa-check-circle"></i> <span id="cMAC">Truck added !</span></p>
-    <br/>
+    <h5 class="titlemodale my-3 col-12"><i class="fas fa-angle-right"></i> <span id="tyourtrucks">Add a new truck </span></h5>
     <div class="modal-body">
       <form id="formCamion">
         <div class="input-group input-group-sm pb-2">
@@ -27,7 +25,7 @@
               </svg>
             </span>
           </div>
-          <textarea id="cdescription" class="form-control" aria-label="With textarea" placeholder="Description" autofocus required></textarea>
+          <textarea id="cdescription" class="form-control" aria-label="With textarea" rows="4" placeholder="Description" autofocus required></textarea>
         </div>
         <div class="input-group input-group-sm pb-2">
           <div class="input-group-prepend">

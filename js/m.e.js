@@ -1,6 +1,5 @@
-$('#m_e').on('show.bs.modal', function() {
+$('#m_e').on('shown.bs.modal', function() {
   reinitialiserFormuEqui();
-  $("#cMessageEditEquipement, #cMessageDeleteEquipement, #cMessageAddEquipement").hide();
   $("#formEquipement").removeClass('was-validated'); //Retirer traces validation formulaire
 
   // Bouton retour
@@ -108,11 +107,13 @@ $('#m_e').on('show.bs.modal', function() {
       if (mode_save_button_equipement == "add") {
         addEqui();
         $("#cMessageEditEquipement, #cMessageDeleteEquipement").hide();
-        $("#cMessageAddEquipement").show(0).delay(10000).hide();
+        $("#cMessageAddEquipement").show();
+        setTimeout(function() { $("#cMessageAddEquipement").hide(); }, 7000);
       } else {
         editEqui();
         $("#cMessageAddEquipement, #cMessageDeleteEquipement").hide();
-        $("#cMessageEditEquipement").show(0).delay(10000).hide();
+        $("#cMessageEditEquipement").show();
+        setTimeout(function() { $("#cMessageEditEquipement").hide(); }, 7000);
       }
       reinitialiserFormuEqui();
     }
@@ -143,7 +144,7 @@ $('#m_e').on('show.bs.modal', function() {
   }
 
   // Toggle button
-  $("#toogle").click(function() {
+  $("#toggle").click(function() {
     var operator;
     if($(".cUnite").hasClass("meter")){
       $(".cUnite").removeClass("meter");
@@ -176,4 +177,8 @@ $('#m_e').on('show.bs.modal', function() {
   $("#clongueurE, #clargeurE, #chauteurE").focusout(function() {
     $("#htoggleinstruction").tooltip('hide');
   });
+});
+
+$('#m_e').on('hidden.bs.modal', function() {
+  $("#cMessageEditEquipement, #cMessageDeleteEquipement, #cMessageAddEquipement").hide();
 });
