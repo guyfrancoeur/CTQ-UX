@@ -1,9 +1,6 @@
 $('#m_e').on('shown.bs.modal', function() {
-  reinitialiserFormuEqui();
-  $("#formEquipement").removeClass('was-validated'); //Retirer traces validation formulaire
 
   // Bouton retour
-  $("#bretourE").hide();
   $('#bretourE').click(function() {
     reinitialiserFormuEqui();
     $("#formEquipement").removeClass('was-validated');
@@ -88,14 +85,6 @@ $('#m_e').on('shown.bs.modal', function() {
       $('#cselectequipement').append('<option value="' + nomE + '">' + nomE + '</option>').selectpicker('refresh'); // Ajouter le nouvel équipement au dropdown
   }
 
-  // Remettre le formulaire à zéro
-  function reinitialiserFormuEqui() {
-    $('#cnomE, #ccapaciteE, #clongueurE, #clargeurE, #chauteurE').val("");
-    $('#selectTE').val('default').selectpicker("refresh");
-    $("#bretourE").hide();
-    changerTitres("add");
-  }
-
   // Validation formulaire
   $("#baddEquipement").click(function(e) {
     if (!$("#formEquipement")[0].checkValidity()) {
@@ -118,30 +107,6 @@ $('#m_e').on('shown.bs.modal', function() {
       reinitialiserFormuEqui();
     }
   });
-
-  // Adapter le texte du titre et du bouton pour la modification d'un équipement
-  function changerTitres(elt){
-    switch(elt){
-      case "add":
-        if (document.documentElement.lang == "en"){ // Si en anglais
-          $('#taddequi').html("Add a new equipment");
-          $('#baddE').html("Add");
-        } else { // Si en français
-          $('#taddequi').html("Ajouter un nouvel équipement");
-          $('#baddE').html("Ajouter");
-        }
-        break;
-      case "set":
-        if (document.documentElement.lang == "en"){ // Si en anglais
-          $('#taddequi').html("Modify this equipment");
-          $('#baddE').html("Replace");
-        } else { // Si en français
-          $('#taddequi').html("Modifier cet équipement");
-          $('#baddE').html("Remplacer");
-        }
-        break;
-    }
-  }
 
   // Toggle button
   $("#toggle").click(function() {
@@ -179,6 +144,42 @@ $('#m_e').on('shown.bs.modal', function() {
   });
 });
 
+
 $('#m_e').on('hidden.bs.modal', function() {
+  reinitialiserFormuEqui();
   $("#cMessageEditEquipement, #cMessageDeleteEquipement, #cMessageAddEquipement").hide();
+  $("#formEquipement").removeClass('was-validated'); //Retirer traces validation formulaire
 });
+
+
+// Remettre le formulaire à zéro
+function reinitialiserFormuEqui() {
+  $('#cnomE, #ccapaciteE, #clongueurE, #clargeurE, #chauteurE').val("");
+  $('#selectTE').val('default').selectpicker("refresh");
+  $("#bretourE").hide();
+  changerTitres("add");
+}
+
+// Adapter le texte du titre et du bouton pour la modification d'un équipement
+function changerTitres(elt){
+  switch(elt){
+    case "add":
+      if (document.documentElement.lang == "en"){ // Si en anglais
+        $('#taddequi').html("Add a new equipment");
+        $('#baddE').html("Add");
+      } else { // Si en français
+        $('#taddequi').html("Ajouter un nouvel équipement");
+        $('#baddE').html("Ajouter");
+      }
+      break;
+    case "set":
+      if (document.documentElement.lang == "en"){ // Si en anglais
+        $('#taddequi').html("Modify this equipment");
+        $('#baddE').html("Replace");
+      } else { // Si en français
+        $('#taddequi').html("Modifier cet équipement");
+        $('#baddE').html("Remplacer");
+      }
+      break;
+  }
+}

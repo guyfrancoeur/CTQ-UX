@@ -357,6 +357,9 @@ input[type="checkbox"], input[type="checkbox"] + label{
   display:none;
   top:20%;
 }
+#tyourtrucks{
+  font-size:16px;
+}
 
 /* Modale suppression #m_v */
 #rondTrash {

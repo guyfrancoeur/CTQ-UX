@@ -117,6 +117,7 @@ $('#m_c').on('shown.bs.modal', function() {
     else{
       $("#formCamion").removeClass('was-validated');
       camionEvent();
+      changerTitresC("add");
       reinitialiserFormuCamion();
     }
   });

@@ -1,7 +1,4 @@
 $('#m_t').on('shown.bs.modal', function() {
-  $("#cMessageEditTracteur, #cMessageDeleteTracteur, #cMessageAddTracteur").hide();
-  reinitialiserFormuTract();
-  $("#formTracteur").removeClass('was-validated'); //Retirer traces validation formulaire
 
   // Couleur icon dans dropdown Statut tracteur
   $("#cstatut").change(function(){
@@ -96,15 +93,6 @@ $('#m_t').on('shown.bs.modal', function() {
     $('#cselecttracteur').append('<option value="' + nomT + '">' + nomT + '</option>').selectpicker('refresh'); // Ajouter le nouveau tracteur au dropdown
   }
 
-  // Remettre le formulaire à zéro
-  function reinitialiserFormuTract(){
-    $('#cnomtracteur, #cconsotracteur').val("");
-    $('#cstatut, #ctypefuel').val('default').selectpicker("refresh");
-    $("#activeicon").html('<i class="fas fa-toggle-on m-auto"></i></span>');
-    $("#bretourT").hide();
-    changerTitresT("add");
-  }
-
   // Validation formulaire
   $("#baddTracteur").click(function(e) {
     if (!$("#formTracteur")[0].checkValidity()) {
@@ -129,34 +117,46 @@ $('#m_t').on('shown.bs.modal', function() {
       reinitialiserFormuTract();
     }
   });
-
-  // Adapter le texte du titre et du bouton pour la modification d'un tracteur
-  function changerTitresT(elt){
-    switch(elt){
-      case "add":
-        if (document.documentElement.lang == "en"){ // Si en anglais
-          $('#taddtracteur').html("Add a new tractor");
-          $('#baddT').html("Add");
-        }
-        else{ // Si en français
-          $('#taddtracteur').html("Ajouter un nouveau tracteur");
-          $('#baddT').html("Ajouter");
-        }
-        break;
-      case "set":
-        if (document.documentElement.lang == "en"){ // Si en anglais
-          $('#taddtracteur').html("Modify this tractor");
-          $('#baddT').html("Replace");
-        }
-        else{ // Si en français
-          $('#taddtracteur').html("Modifier ce tracteur");
-          $('#baddT').html("Remplacer");
-        }
-        break;
-    }
-  }
 }); 
 
 $('#m_t').on('hidden.bs.modal', function() {
+  reinitialiserFormuTract();
   $("#cMessageEditTracteur, #cMessageDeleteTracteur, #cMessageAddTracteur").hide();
+  $("#formTracteur").removeClass('was-validated'); //Retirer traces validation formulaire
 });
+
+
+// Adapter le texte du titre et du bouton pour la modification d'un tracteur
+function changerTitresT(elt){
+  switch(elt){
+    case "add":
+      if (document.documentElement.lang == "en"){ // Si en anglais
+        $('#taddtracteur').html("Add a new tractor");
+        $('#baddT').html("Add");
+      }
+      else{ // Si en français
+        $('#taddtracteur').html("Ajouter un nouveau tracteur");
+        $('#baddT').html("Ajouter");
+      }
+      break;
+    case "set":
+      if (document.documentElement.lang == "en"){ // Si en anglais
+        $('#taddtracteur').html("Modify this tractor");
+        $('#baddT').html("Replace");
+      }
+      else{ // Si en français
+        $('#taddtracteur').html("Modifier ce tracteur");
+        $('#baddT').html("Remplacer");
+      }
+      break;
+  }
+}
+
+// Remettre le formulaire à zéro
+function reinitialiserFormuTract(){
+  $('#cnomtracteur, #cconsotracteur').val("");
+  $('#cstatut, #ctypefuel').val('default').selectpicker("refresh");
+  $("#activeicon").html('<i class="fas fa-toggle-on m-auto"></i></span>');
+  $("#bretourT").hide();
+  changerTitresT("add");
+}

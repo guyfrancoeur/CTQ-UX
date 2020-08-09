@@ -107,6 +107,7 @@ function selection(elem){
     $('#ctextB,#ctextC').removeClass('font-weight-bold');
     $('#cmontant,#addcourriel,#cdureeC').prop("disabled", true);
     $('#cmontant,#addcourriel,#cdureeC').css("cursor", "pointer");
+    $("#cmontant, #cdureeC").val("");
   };
   if(value == "B"){
     cout = (2 - reduction).toFixed(2);
@@ -125,6 +126,7 @@ function selection(elem){
     $('#ctextA,#ctextC').removeClass('font-weight-bold');
     $('#cdureeA,#cdureeC,#addcourriel').prop("disabled", true);
     $('#cdureeA,#cdureeC,#addcourriel').css("cursor", "pointer");
+    $("#cdureeA, #cdureeC").val("");
   };
   if(value == "C"){
     if(nbEmails != 0) cout = ((2 * nbEmails) - reduction).toFixed(2);
@@ -145,10 +147,10 @@ function selection(elem){
     $('#ctextA,#ctextB').removeClass('font-weight-bold');
     $('#cdureeA,#cmontant').prop("disabled", true);
     $('#cdureeA,#cmontant,#addcourriel').css("cursor", "pointer");
+    $("#cdureeA, #cmontant").val("");
   }
   $("#cdureeA, #cmontant, #cdureeC").removeClass("is-invalid");
   $("#cdureeA, #cmontant, #cdureeC").removeClass("is-valid");
-  $("#cdureeA, #cmontant, #cdureeC").val("");
   $("#toast3").toast('hide');
 }
 
