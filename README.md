@@ -1,6 +1,6 @@
 # CTQ-UX
 
-### UX - Coopérative des Transporteurs du Québec (CTQ)
+### UX - Coopérative de Transporteurs du Qualifiés (CTQ)
 
 
 Bienvenue à tous les développeurs qui désirent apprendre ou faire du code de qualité.
@@ -36,13 +36,13 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
     - JavaScript, simple et rapide.
 
 ### TODO
- - [ ] login : l.html
- - [ ] client (edition ajout) : mc.html
- - [ ] transporteur (edition ajout): mt.html
- - [ ] demande et réponse : d.html
+ - [x] login : l.html
+ - [x] client (edition ajout) : mc.html
+ - [x] transporteur (edition ajout): mt.html
+ - [x] demande et réponse : d.html
  - [ ] password oublié : mf.html
- - [ ] aide (help) intéractive
- - [ ] langue dynamique
+ - [x] aide (help) intéractive
+ - [x] langue dynamique
 
 - *m* dans le fichier veut dire qu'il s'agit d'une forme modale.
 
@@ -54,6 +54,9 @@ transporteur potentiel lui est présenté il peut donc choisir immédiatement sa
 - Par la suite prennez et developpez les tâches (approuvées).
 
 Lorsque vous travaillez sur une tâche, assurez-vous quelles soient bougées dans **En cours**, par la suite vers **En révision**, finalement vers **Complété**.
+
+###
+  Un gros merci à Marie qui a su démontrer en peu de temps que la mise en oeuvre de programme simple est possible et tout aussi efficace que performant. 
 
 ---
 Copyright 2020
