@@ -18,8 +18,8 @@ Outils :
 
 #### Objectif fonctionel
 Faire un logiciel qui puisse offrir aux donneurs de transports une plateforme sous la forme d'encan
-en temps réel pour les marchandises soient prises en charge par un transporteur.  Les transporteurs 
-rendent leurs camions disponibles.  Des que le manufacturier **post** un chargement, une liste de 
+en temps réel pour que les marchandises soient prises en charge par un transporteur.  Les transporteurs 
+rendent leurs camions disponibles.  Dès que le manufacturier publi (**post**) un chargement, une liste de 
 transporteur potentiel lui est présenté il peut donc choisir immédiatement sans délai celui de son choix. 
 
 #### Objectif technique
