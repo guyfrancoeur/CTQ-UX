@@ -40,8 +40,8 @@ function verificationLogin(){
     var currentURL = window.location.href;
     var typeLogin = currentURL.substr(currentURL.length - 1); // 0 = Créateur de chargement | 1 = Transporteur
     
-    if (typeLogin == 0) $("#formlogin").attr("action","http://www.salutem.co/CTQ-UX/d.html");
-    if (typeLogin == 1) $("#formlogin").attr("action","http://www.salutem.co/CTQ-UX/t.html");
+    if (typeLogin == 0) $("#formlogin").attr("action","https://www.salutem.co/CTQ-UX/d.html");
+    if (typeLogin == 1) $("#formlogin").attr("action","https://www.salutem.co/CTQ-UX/t.html");
 
     return result;
 }

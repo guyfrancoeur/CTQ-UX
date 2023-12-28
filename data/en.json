@@ -1,14 +1,14 @@
 {
   "all":[
     {"propriete":"text","obj":"#bhome","value":"Home"},
-    {"propriete":"text","obj":"#cfooter","value":"© 2020 Copyright • CTQ • All rights reserved."}
+    {"propriete":"text","obj":"#cfooter","value":"Copyright 2020 • CTQ • All rights reserved."}
   ],
 	"index": {
     "main":[
-      {"propriete":"text","obj":"#csignupcreateur","value":"Register as Load creator"},
+      {"propriete":"text","obj":"#csignupcreateur","value":"Register as Load/Freight creator"},
       {"propriete":"text","obj":"#csignuptransporteur","value":"Register as Transporter"},
       {"propriete":"text","obj":"#csignintransporteur","value":"Sign-in as Transporter"},
-      {"propriete":"text","obj":"#csignincreateur","value":"Sign-in as Load creator"}
+      {"propriete":"text","obj":"#csignincreateur","value":"Sign-in as Load/Freight creator"}
     ]
   },
   "l":{
