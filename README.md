@@ -1,11 +1,11 @@
 # CTQ-UX
 
-### UX - Coopérative de Transporteurs du Qualifiés (CTQ)
+### UX - Coopérative de Transporteurs Qualifiés (CTQ)
 
 
 Bienvenue à tous les développeurs qui désirent apprendre ou faire du code de qualité.
 
-Ce projet vise l'accomplissement d'interfaces visuelles.
+Ce projet vise l'accomplissement d'interfaces visuelles fonctionnelles en temps réel.
 
 Outils :
 - HTML 5
@@ -18,9 +18,9 @@ Outils :
 
 #### Objectif fonctionel
 Faire un logiciel qui puisse offrir aux donneurs de transports une plateforme sous la forme d'encan
-en temps réel pour les marchandises soient prises en charge par un transporteur.  Les transporteurs 
-rendent leurs camions disponibles.  Des que le manufacturier **post** un chargement, une liste de 
-transporteur potentiel lui est présenté il peut donc choisir immédiatement sans délai celui de son choix. 
+en temps réel pour que les marchandises soient prises en charge pour un transporteur.  Les transporteurs 
+rendent leurs camions disponibles.  Dès qu'un manufacturier **post** un chargement, une liste de 
+transporteur potentiel lui est présenté, il peut donc choisir immédiatement sans délai celui de son choix.
 
 #### Objectif technique
 - Produire une application simple qui puisse être utilisée par tous;
@@ -59,4 +59,4 @@ Lorsque vous travaillez sur une tâche, assurez-vous quelles soient bougées dan
   Un gros merci à Marie qui a su démontrer en peu de temps que la mise en oeuvre de programme simple est possible et tout aussi efficace que performant. 
 
 ---
-Copyright 2020
+Copyright 2020-2026 Guy Francoeur
